@@ -1,0 +1,1 @@
+window.globalProvideData('caption', '{"data":"WEBVTT%0D%0AKind:%20captions%0D%0ASource:%20Articulate%20Closed%20Captions%20Editor%0D%0ASource%20Version:%206.49.24347.0%0D%0A%0D%0A00:00:00.544%20--%3E%2000:00:07.229%0D%0ABagaimana%20Cara%20Menggunakan%20Kalkulator%20CEISA%E2%80%8A%20(Bea%20Cukai),%20mari%20ikuti%20langkah%20berikut%20ini.%0D%0A%0D%0A"}')
