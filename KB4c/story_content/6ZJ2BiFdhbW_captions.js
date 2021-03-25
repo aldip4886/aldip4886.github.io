@@ -1,0 +1,1 @@
+window.globalProvideData('caption', '{"data":"WEBVTT%0D%0AKind:%20captions%0D%0ASource:%20Articulate%20Closed%20Captions%20Editor%0D%0ASource%20Version:%206.49.24347.0%0D%0A%0D%0A00:00:00.544%20--%3E%2000:00:06.547%0D%0AYang%20keempat%20tiga%20adalah%20Simulasi%20Barang%20Pribadi%20Penumpang%20(Personal%20Use)%0D%0A%0D%0A"}')
