@@ -1,0 +1,1 @@
+window.globalProvideData('caption', '{"data":"WEBVTT%0D%0AKind:%20captions%0D%0ASource:%20Articulate%20Closed%20Captions%20Editor%0D%0ASource%20Version:%206.49.24347.0%0D%0A%0D%0A00:00:00.864%20--%3E%2000:00:07.763%0D%0ASobat%20BC,%20sebelumnya%20kita%20kulik%20dulu%20definisi%20pembawaan%20uang%20tunai%20dan%20IPL%0D%0A%0D%0A"}')
