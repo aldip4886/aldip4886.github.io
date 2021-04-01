@@ -132,14 +132,11 @@ function AICC_Finish(strExitType, blnStatusWasSet){
 			AICC_Status = LESSON_STATUS_INCOMPLETE;
 		}
 	}
+
+	window.AICCComm.PrepareCourseExit(this.actionConceded);
 	
 	//Commit Data
 	AICC_CommitData();
-	
-	//only kill time if we actually saved some data
-	if (blnCommitSavedData == true){
-		KillTime();
-	}
 	
 	//Make ExitAU Request
 	window.AICCComm.MakeExitAURequest();
@@ -162,6 +159,7 @@ function AICC_CommitData(){
 	//if there is data to save, make a putparam request
 	blnCommitSavedData = false;
 	if (IsThereDirtyAICCData()){
+		AICC_SaveTime(GetSessionAccumulatedTime());
 		
 		blnCommitSavedData = true;
 		
@@ -177,81 +175,15 @@ function AICC_CommitData(){
 		if ( /*AICC_CourseID != "" && */ AICC_aryInteractions.length > 0){
 			
 			WriteToDebug("Saving Interactions");
-			
-			//strAICCData = FormAICCInteractionsData();
-			//window.AICCComm.MakePutInteractionsRequest(strAICCData);
-			
-			//MR - 5/31/05 - Saba won't always accept two request if they come immediately after one another. Introduce an artifical delay between
-			//requests to ensure that they both get processed.
-			//window.setTimeout("AICC_SendInteractions()", 250);
-			
-			//MR - 12/14/05 - Replaced setTimeout call to properly handle this being invoked onunload
-			KillTime();
 			AICC_SendInteractions();
 		}
 		
+
 		ClearDirtyAICCData();	//if the PutParam request fails, the data will be set back to dirty via a call to AICC_PutParamFailed()
-		
+
 	}
-	
+
 	return true;
-}
-
-
-function KillTime(){
-	/*
-	This function is necessary to space out the requests made by normal form posts
-	in a cross domain environment. If two requests are sent too close together, on some
-	server platforms, the first request will be ignored. We can't use a setTimout call
-	because there are situations where this wait needs to happen in the onunload event.
-	
-	First try to make requests for a file (on the content server) using the XmlHttp object. 
-	If that is not available try an alternate method.
-	
-	We are using a document.write as the spaced because it is an expensive operation and
-	we have seen several instances where it provides enough spacing (when used to write to
-	the debug window) to seperate the requests.
-	*/
-	
-	WriteToDebug("In KillTime");
-	
-	if (USE_AICC_KILL_TIME === false){
-		WriteToDebug("Configuration disallows use of KillTime, exiting");
-		return;
-	}
-	
-	var start = new Date();
-	
-	if (window.AICCComm.blnCanUseXMLHTTP == false){
-	
-		if (window.AICCComm.blnXMLHTTPIsAvailable == true){
-			
-			var numBlankRequests = 3;
-			
-			for (var i=0; i < numBlankRequests; i++){
-				window.AICCComm.GetBlankHtmlPage(i);
-			}
-		}
-		else{
-		
-			window.NothingFrame.document.open();
-
-			var numLoops = 1000;
-			
-			while (((new Date()) - start) < 200)
-			{
-				window.NothingFrame.document.write("waiting");
-			}
-			
-			window.NothingFrame.document.close();
-		}
-	
-	}
-	
-	var end = new Date();
-	
-	WriteToDebug("Killed " + (end - start) + "milliseconds.");
-
 }
 
 
@@ -306,6 +238,7 @@ function AICC_SetDataChunk(strData){
 	WriteToDebug("In AICC_SetDataChunk, strData=" + strData );
 	SetDirtyAICCData();
 	AICC_Data_Chunk = strData;
+	AICC_CommitData();
 	return true;
 }
 
@@ -447,7 +380,6 @@ function AICC_SaveTime(intMilliSeconds){
 	
 	AICC_intSessionTimeMilliseconds = intMilliSeconds;
 	
-	SetDirtyAICCData();
 	
 	return true;
 }

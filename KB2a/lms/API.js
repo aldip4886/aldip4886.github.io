@@ -444,7 +444,7 @@ function SetReachedEnd(){
 }
 
 //public
-function ConcedeControl()
+function ConcedeControl(userAction)
 {
 	WriteToDebug("Conceding control with type: " + EXIT_BEHAVIOR);
 	ClearErrorInfo();
@@ -454,6 +454,17 @@ function ConcedeControl()
 	//the ExecFinish function always uses the ExitTypeFinish behavior (which is to set the status to completed
 	//if no status was previously set)
 	
+	if (userAction && this.objLMS.Standard === "AICC") {
+		objLMS.actionConceded = true;
+		Suspend();
+	} else {
+		Suspend();
+		PerformConcedeActions();
+	}
+}
+
+
+function PerformConcedeActions() {	
 	var contentRoot = null;
 	var urlBase = null;
 	
@@ -464,12 +475,10 @@ function ConcedeControl()
 			
 			if (contentRoot==window.top)
 			{
-				Suspend();				
 				contentRoot.window.close();
 			}  
 			else
 			{
-				Suspend();
 				if (contentRoot != null){
                     //DE - 10/26/2010 - Add ability to specify absolute URL for EXIT_TARGET
                     if(IsAbsoluteUrl(EXIT_TARGET)){
@@ -482,18 +491,14 @@ function ConcedeControl()
 			}
 			break;
 		case "ALWAYS_CLOSE":
-			Suspend();
 			window.close();
 			break;
 		case "ALWAYS_CLOSE_TOP":
-			Suspend();
 			window.top.close();
 			break;
 		case "NOTHING":
-			Suspend();
 			break;
 		case "REDIR_CONTENT_FRAME":
-			Suspend();
 			contentRoot = SearchParentsForContentRoot();
 			if (contentRoot != null){
                 //DE - 10/26/2010 - Add ability to specify absolute URL for EXIT_TARGET
