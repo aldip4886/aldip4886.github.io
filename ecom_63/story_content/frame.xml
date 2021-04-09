@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00000000001" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="175" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
+<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns10100000001" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="175" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
   <layouts>
-    <layout name="npnxnanbsnfns00000000001" font="Lato" controllayout="npnxnanbsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
-    <layout name="pxabnsnfns00000000001" font="Lato" controllayout="pxabnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
-    <layout name="npxnabnsnfns00000000001" font="Lato" controllayout="npxnabnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
-    <layout name="npnxnanbnsnfns00000000001" font="Lato" controllayout="npnxnanbnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
-    <layout name="pxabnsnfns00000000000" font="Lato" controllayout="pxabnsnfns00000000000" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
-    <layout name="npnxnabnsnfns00000000001" font="Lato" controllayout="npnxnabnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
-    <layout name="npnxnanbnsnfns10110000001" font="Lato" controllayout="npnxnanbnsnfns10110000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
+    <layout name="npnxnanbsnfns10100000001" font="Lato" controllayout="npnxnanbsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="pxabnsnfns10100000001" font="Lato" controllayout="pxabnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="npxnabnsnfns10100000001" font="Lato" controllayout="npxnabnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="npnxnanbnsnfns10100000001" font="Lato" controllayout="npnxnanbnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="pxabnsnfns10100000000" font="Lato" controllayout="pxabnsnfns10100000000" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="npnxnabnsnfns10100000001" font="Lato" controllayout="npnxnabnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="npnxnanbnsnfns10110000001" font="Lato" controllayout="npnxnanbnsnfns10110000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
   </layouts>
   <control_options>
     <optiongroups>
@@ -60,14 +60,14 @@
       <optiongroup name="controls">
         <options>
           <option name="volume" value="false" />
-          <option name="seekbar" value="false">
+          <option name="seekbar" value="true">
             <options>
-              <option name="readonly" value="false" />
-              <option name="readonlyOnce" value="false" />
+              <option name="readonly" value="true" />
+              <option name="readonlyOnce" value="true" />
             </options>
           </option>
           <option name="pauseplay" value="false" />
-          <option name="replay" value="false" />
+          <option name="replay" value="true" />
           <option name="search" value="false" />
           <option name="closed_captions" value="true">
             <options>
@@ -92,10 +92,10 @@
     </optiongroups>
   </control_options>
   <control_layouts>
-    <control_layout name="npnxnanbsnfns00000000001">
+    <control_layout name="npnxnanbsnfns10100000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -115,10 +115,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="pxabnsnfns00000000001">
+    <control_layout name="pxabnsnfns10100000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="true" />
@@ -138,10 +138,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="npxnabnsnfns00000000001">
+    <control_layout name="npxnabnsnfns10100000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -161,10 +161,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="npnxnanbnsnfns00000000001">
+    <control_layout name="npnxnanbnsnfns10100000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -184,10 +184,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="pxabnsnfns00000000000">
+    <control_layout name="pxabnsnfns10100000000">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="true" />
@@ -207,10 +207,10 @@
       </control>
       <control name="close_btn" enabled="false" />
     </control_layout>
-    <control_layout name="npnxnabnsnfns00000000001">
+    <control_layout name="npnxnabnsnfns10100000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -255,7 +255,7 @@
     </control_layout>
   </control_layouts>
   <colorschemes>
-    <colorscheme name="npnxnanbnsnfns00000000001">
+    <colorscheme name="npnxnanbnsnfns10100000001">
       <color_group name="accessibility">
         <group_colors>
           <color name="focus_rect">
@@ -1312,7 +1312,7 @@
     </colorscheme>
   </colorschemes>
   <string_tables>
-    <string_table name="npnxnanbnsnfns00000000001">
+    <string_table name="npnxnanbnsnfns10100000001">
       <string id="three_image_items">items</string>
       <string id="three_image_viewed">viewed</string>
       <string id="three_image_of">of</string>
