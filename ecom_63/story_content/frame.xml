@@ -69,7 +69,7 @@
           <option name="pauseplay" value="false" />
           <option name="replay" value="true" />
           <option name="search" value="false" />
-          <option name="closed_captions" value="true">
+          <option name="closed_captions" value="false">
             <options>
               <option name="font" value="Lato" />
             </options>

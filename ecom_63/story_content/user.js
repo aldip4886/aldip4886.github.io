@@ -2,10 +2,10 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6IdlsjDyOZk":
+      case "5VIF27ndrVz":
         Script1();
         break;
-      case "5qb8gleMMvy":
+      case "6myxWHxjo2E":
         Script2();
         break;
   }
@@ -29,7 +29,7 @@ function add_line() {
 if(document.getElementById('bgSong')==null){
 	add_line();
 var audio = document.getElementById('bgSong');
-audio.volume = 0.05;
+audio.volume = 0.5;
 }
 
 }
@@ -40,7 +40,7 @@ function Script2()
 this.Location= player.GetVar("location");
 
 var audio = document.getElementById('bgSong');
-audio.src=Location+"BV0NSFn1 (2).mp3";
+audio.src=Location+"musik.mp3";
 audio.load();
 audio.play();
 }
