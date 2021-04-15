@@ -6,7 +6,7 @@
     <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
       <general>
         <title>
-          <langstring xml:lang="x-none">KB6c</langstring>
+          <langstring xml:lang="x-none">KB6e</langstring>
         </title>
       </general>
       <lifecycle>
@@ -50,11 +50,11 @@
       </rights>
     </lom>
   </metadata>
-  <organizations default="KB6c_ORG">
-    <organization identifier="KB6c_ORG">
-      <title>KB6c</title>
+  <organizations default="KB6e_ORG">
+    <organization identifier="KB6e_ORG">
+      <title>KB6e</title>
       <item identifier="Eksim_BPP_SCO" isvisible="true" identifierref="__5wY01BygSc4_course_id_RES">
-        <title>KB6c</title>
+        <title>KB6e</title>
       </item>
     </organization>
   </organizations>
@@ -63,14 +63,15 @@
       <file href="story_content/thumbnail.jpg" />
       <file href="story_content/video_6XpBaybKvZo_22_48_1280x720.mp4" />
       <file href="mobile/poster_6d7PjCVLjcW_video_6XpBaybKvZo_22_48_1280x720.jpg" />
-      <file href="story_content/WebObjects/5o5FZcjGGxh/BV0NSFn1 (2).mp3" />
-      <file href="story_content/WebObjects/5o5FZcjGGxh/index.html" />
-      <file href="story_content/WebObjects/5o5FZcjGGxh/mixaund-motivate-me.mp3" />
-      <file href="story_content/WebObjects/5o5FZcjGGxh/Products Archive - Yummy Sounds.mp3" />
-      <file href="mobile/5o5FZcjGGxh61GQOJUBW8x{Width=58, Height=44}Light_80_DX116_DY116_CX58_CY44.jpg" />
+      <file href="story_content/WebObjects/5hph0YJVJHi/BV0NSFn1 (2).mp3" />
+      <file href="story_content/WebObjects/5hph0YJVJHi/index.html" />
+      <file href="story_content/WebObjects/5hph0YJVJHi/mixaund-motivate-me.mp3" />
+      <file href="story_content/WebObjects/5hph0YJVJHi/Products Archive - Yummy Sounds.mp3" />
+      <file href="mobile/5hph0YJVJHi6bSzgxv1RaA{Width=60, Height=38}Light_80_DX120_DY120_CX60_CY38.jpg" />
       <file href="mobile/5mPqqrLLKrH_80_DX1920_DY1920_CX960_CY540.gif" />
       <file href="mobile/5zyBOtpEuQb_80_DX2012_DY2012_CX1509_CY987.png" />
       <file href="story_content/5ij4UEz2lZi_44100_48_0.mp3" />
+      <file href="story_content/5iDqylQxG74_captions.js" />
       <file href="story_content/6XURmNqu7OG_44100_48_0.mp3" />
       <file href="story_content/video_5xS5MhIsY7o_22_48_1280x720.mp4" />
       <file href="mobile/poster_5Vs5rrTd1of_video_5xS5MhIsY7o_22_48_1280x720.jpg" />
@@ -78,14 +79,18 @@
       <file href="mobile/69ZVULEodS1_X_80_DX180_DY180_CX135_CY135.gif" />
       <file href="mobile/6h18QQSbHU0_80_B-36_C-97_RFF9F9F_DX2560_DY2560_CX1920_CY882.png" />
       <file href="story_content/6NWfx1IJZuz_44100_48_0.mp3" />
+      <file href="story_content/5gY4TozSUtk_captions.js" />
       <file href="mobile/5WaTPqtHryJ_80_DX1044_DY1044_CX782_CY357.png" />
       <file href="story_content/6S5eYocdKOR_44100_48_0.mp3" />
+      <file href="story_content/6YEK8ai6giV_captions.js" />
       <file href="mobile/6dIrDnCxsIt_80_DX2406_DY2406_CX1804_CY824.png" />
       <file href="mobile/5YjKO1JnGNz_80_DX144_DY144_CX108_CY108.gif" />
       <file href="story_content/6EEX4HXILfZ_44100_48_0.mp3" />
+      <file href="story_content/6nUiT4UW66X_captions.js" />
       <file href="mobile/6AZDJ7z1aRs_80_DX1240_DY1240_CX930_CY741.png" />
       <file href="mobile/6oXgp9ZzC17_80_DX1174_DY1174_CX880_CY495.gif" />
       <file href="story_content/69Wdh72tsLj_44100_48_0.mp3" />
+      <file href="story_content/6RJUC3sT1IY_captions.js" />
       <file href="mobile/6LSsyADjXjF_80_DX304_DY304_CX228_CY228.png" />
       <file href="mobile/6PtKUgQsPPP_80_DX310_DY310_CX232_CY232.png" />
       <file href="mobile/5sLQmfy1llE_80_DX256_DY256_CX192_CY192.png" />
@@ -99,8 +104,11 @@
       <file href="mobile/6M8WhppF7ts_80_DX738_DY738_CX553_CY353.png" />
       <file href="mobile/6CKIF4txImT_80_DX796_DY796_CX597_CY435.png" />
       <file href="story_content/5qS0MREZHql_44100_48_0.mp3" />
+      <file href="story_content/64r4QpANj6r_captions.js" />
       <file href="story_content/5yhpG3qLVQn_44100_48_0.mp3" />
+      <file href="story_content/5ypotSKCbkI_captions.js" />
       <file href="story_content/6TfmJ37PIfh_44100_48_0.mp3" />
+      <file href="story_content/6YFMXZpBDvi_captions.js" />
       <file href="story_content/6GR0KofwgNR_44100_48_0.mp3" />
       <file href="story_content/video_5jlbgWMQzyK_22_48_1280x720.mp4" />
       <file href="mobile/poster_6PKAaydUeXs_video_5jlbgWMQzyK_22_48_1280x720.jpg" />

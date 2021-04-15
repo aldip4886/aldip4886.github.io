@@ -1,0 +1,1 @@
+window.globalProvideData('caption', '{"data":"WEBVTT%0D%0AKind:%20captions%0D%0ASource:%20Articulate%20Closed%20Captions%20Editor%0D%0ASource%20Version:%206.49.24347.0%0D%0A%0D%0A00:00:00.032%20--%3E%2000:00:07.578%0D%0AGambar%20berikut%20menunjukkan%20alur%20pelayanan%20dan%20pengawasan%20menggunakan%20dokumen%20CN.%0D%0A%0D%0A"}')
