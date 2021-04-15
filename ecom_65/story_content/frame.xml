@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns10100000001" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="175" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
+<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00000000001" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="100" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
   <layouts>
-    <layout name="npnxnanbsnfns10100000001" font="Lato" controllayout="npnxnanbsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
-    <layout name="pxabnsnfns10100000001" font="Lato" controllayout="pxabnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
-    <layout name="npxnabnsnfns10100000001" font="Lato" controllayout="npxnabnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
-    <layout name="npnxnanbnsnfns10100000001" font="Lato" controllayout="npnxnanbnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
-    <layout name="pxabnsnfns10100000000" font="Lato" controllayout="pxabnsnfns10100000000" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
-    <layout name="npnxnabnsnfns10100000001" font="Lato" controllayout="npnxnabnsnfns10100000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
-    <layout name="npnxnanbnsnfns10110000001" font="Lato" controllayout="npnxnanbnsnfns10110000001" colorscheme="npnxnanbnsnfns10100000001" string_table="npnxnanbnsnfns10100000001" />
+    <layout name="npnxnanbsnfns00000000001" font="Lato" controllayout="npnxnanbsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
+    <layout name="pxabnsnfns00000000001" font="Lato" controllayout="pxabnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
+    <layout name="npxnabnsnfns00000000001" font="Lato" controllayout="npxnabnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
+    <layout name="npnxnanbnsnfns00000000001" font="Lato" controllayout="npnxnanbnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
+    <layout name="pxabnsnfns00000000000" font="Lato" controllayout="pxabnsnfns00000000000" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
+    <layout name="npnxnabnsnfns00000000001" font="Lato" controllayout="npnxnabnsnfns00000000001" colorscheme="npnxnanbnsnfns00000000001" string_table="npnxnanbnsnfns00000000001" />
   </layouts>
   <control_options>
     <optiongroups>
@@ -60,14 +59,14 @@
       <optiongroup name="controls">
         <options>
           <option name="volume" value="false" />
-          <option name="seekbar" value="true">
+          <option name="seekbar" value="false">
             <options>
-              <option name="readonly" value="true" />
-              <option name="readonlyOnce" value="true" />
+              <option name="readonly" value="false" />
+              <option name="readonlyOnce" value="false" />
             </options>
           </option>
           <option name="pauseplay" value="false" />
-          <option name="replay" value="true" />
+          <option name="replay" value="false" />
           <option name="search" value="false" />
           <option name="closed_captions" value="false">
             <options>
@@ -79,7 +78,7 @@
       </optiongroup>
       <optiongroup name="bottombaroptions">
         <options>
-          <option name="bottombar_enabled" value="true" />
+          <option name="bottombar_enabled" value="false" />
         </options>
       </optiongroup>
       <optiongroup name="buttonoptions">
@@ -92,10 +91,10 @@
     </optiongroups>
   </control_options>
   <control_layouts>
-    <control_layout name="npnxnanbsnfns10100000001">
+    <control_layout name="npnxnanbsnfns00000000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -115,10 +114,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="pxabnsnfns10100000001">
+    <control_layout name="pxabnsnfns00000000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="true" />
@@ -138,10 +137,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="npxnabnsnfns10100000001">
+    <control_layout name="npxnabnsnfns00000000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -161,10 +160,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="npnxnanbnsnfns10100000001">
+    <control_layout name="npnxnanbnsnfns00000000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -184,10 +183,10 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="pxabnsnfns10100000000">
+    <control_layout name="pxabnsnfns00000000000">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="true" />
@@ -207,10 +206,10 @@
       </control>
       <control name="close_btn" enabled="false" />
     </control_layout>
-    <control_layout name="npnxnabnsnfns10100000001">
+    <control_layout name="npnxnabnsnfns00000000001">
       <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
       <control name="pauseplay" enabled="false" />
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
@@ -230,32 +229,9 @@
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="npnxnanbnsnfns10110000001">
-      <control name="volume" enabled="false" />
-      <control name="seekbar" enabled="true" />
-      <control name="replay" enabled="true" />
-      <control name="pauseplay" enabled="true" />
-      <control name="logo" enabled="false" />
-      <control name="previous" enabled="false" />
-      <control name="next" enabled="false" />
-      <control name="swipeleft" enabled="false" />
-      <control name="swiperight" enabled="false" />
-      <control name="submit" enabled="false" />
-      <control name="finish" enabled="false" />
-      <control name="submitall" enabled="false" />
-      <control name="resources" enabled="false" />
-      <control name="glossary" enabled="false" />
-      <control name="transcript" enabled="false" />
-      <control name="outline" enabled="false">
-        <controls>
-          <control name="search" enabled="false" />
-        </controls>
-      </control>
-      <control name="close_btn" enabled="true" />
-    </control_layout>
   </control_layouts>
   <colorschemes>
-    <colorscheme name="npnxnanbnsnfns10100000001">
+    <colorscheme name="npnxnanbnsnfns00000000001">
       <color_group name="accessibility">
         <group_colors>
           <color name="focus_rect">
@@ -1312,7 +1288,7 @@
     </colorscheme>
   </colorschemes>
   <string_tables>
-    <string_table name="npnxnanbnsnfns10100000001">
+    <string_table name="npnxnanbnsnfns00000000001">
       <string id="three_image_items">items</string>
       <string id="three_image_viewed">viewed</string>
       <string id="three_image_of">of</string>
@@ -1420,23 +1396,20 @@
             <slidelink slideid="_player.5fasT0QvOEm.5k8YWwZ1XMb" displaytext="Bumper" expand="false" type="slide" />
           </links>
         </slidelink>
-        <slidelink slideid="_player.5lYrvghjYvA" displaytext="Landing Page" expand="true" type="slide">
+        <slidelink slideid="_player.5rIaB01ol1e" displaytext="Landing Page" expand="true" type="slide">
           <links>
-            <slidelink slideid="_player.5lYrvghjYvA.68Xb3dyQU8v" displaytext="Opening" expand="false" type="slide" />
+            <slidelink slideid="_player.5rIaB01ol1e.5dHOcmjt3Qz" displaytext="Opening" expand="false" type="slide" />
           </links>
         </slidelink>
-        <slidelink slideid="_player.6VbbYZWMwlT" displaytext="Materi" expand="true" type="slide">
+        <slidelink slideid="_player.5lYrvghjYvA" displaytext="Untitled Scene" expand="true" type="slide">
           <links>
-            <slidelink slideid="_player.6VbbYZWMwlT.5iarjaI38M7" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.6VbbYZWMwlT.5iErDNwBqX8" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.6VbbYZWMwlT.6kf51SZsOc0" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.6VbbYZWMwlT.6Vd9bNm5QYy" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.6VbbYZWMwlT.6hXbVlKHcK3" displaytext="Untitled Slide" expand="false" type="slide" />
-          </links>
-        </slidelink>
-        <slidelink slideid="_player.69KPQ7zs0Wt" displaytext="Closing" expand="true" type="slide">
-          <links>
-            <slidelink slideid="_player.69KPQ7zs0Wt.6Nnq1FFuvNM" displaytext="Untitled Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.5lQNh4yqckX" displaytext="Ketentuan Umum Pajak Dalam Rangka Impor Barang Bawaan Penumpang" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.6SpTfgqEHpN" displaytext="Tarif PPN dan PPh Pasal 22 Terhadap Impor Barang Bawaan Penumpang" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.5l3YkxwCsDQ" displaytext="Perhitungan PPN dan PPh Pasal 22 Terhadap Impor Barang Bawaan Penumpang" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.5ps1s4uOdMU" displaytext="Perhitungan PPN dan PPh Pasal 22 Terhadap Impor Barang Bawaan Penumpang" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.5r6ASJbUXRj" displaytext="Perhitungan PPN dan PPh Pasal 22 Terhadap Impor Barang Bawaan Penumpang" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.6esDKA5bu7k" displaytext="Closing" expand="false" type="slide" />
+            <slidelink slideid="_player.5lYrvghjYvA.6KfYyBTH4it" displaytext="Ketentuan Umum Pajak Dalam Rangka Impor Barang Bawaan Penumpang" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
