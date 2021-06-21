@@ -2,10 +2,10 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "5j9icdgvVEF":
+      case "6iMUghMrQaa":
         Script1();
         break;
-      case "6dQngLwgBOj":
+      case "5mK3jAAIsZz":
         Script2();
         break;
   }
@@ -29,7 +29,7 @@ function add_line() {
 if(document.getElementById('bgSong')==null){
 	add_line();
 var audio = document.getElementById('bgSong');
-audio.volume = 5;
+audio.volume = 1;
 }
 
 }
