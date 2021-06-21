@@ -6,7 +6,7 @@
     <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
       <general>
         <title>
-          <langstring xml:lang="x-none">KB6e</langstring>
+          <langstring xml:lang="x-none">KB6c</langstring>
         </title>
       </general>
       <lifecycle>
@@ -50,11 +50,11 @@
       </rights>
     </lom>
   </metadata>
-  <organizations default="KB6e_ORG">
-    <organization identifier="KB6e_ORG">
-      <title>KB6e</title>
+  <organizations default="KB6c_ORG">
+    <organization identifier="KB6c_ORG">
+      <title>KB6c</title>
       <item identifier="Eksim_BPP_SCO" isvisible="true" identifierref="__5wY01BygSc4_course_id_RES">
-        <title>KB6e</title>
+        <title>KB6c</title>
       </item>
     </organization>
   </organizations>
