@@ -16,7 +16,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="Konsep Dasar Kawasan Berikat" />
+              <option name="title_text" value="Konsep Dasar Kawasan Berikat_2" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -85,9 +85,9 @@
       </optiongroup>
       <optiongroup name="buttonoptions">
         <options>
-          <option name="next" value="icon" />
-          <option name="previous" value="icon" />
-          <option name="submit" value="icon" />
+          <option name="next" value="icontext" />
+          <option name="previous" value="icontext" />
+          <option name="submit" value="icontext" />
         </options>
       </optiongroup>
     </optiongroups>
@@ -1443,6 +1443,13 @@
         <slidelink slideid="" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="true" type="slide" />
         <slidelink slideid="" displaytext="Konsep Fasilitas Kawasan Berikat" expand="true" type="slide" />
         <slidelink slideid="" displaytext="Kawasan Berikat Mandiri" expand="true" type="slide" />
+        <slidelink slideid="_player.5dXPOY86q4C" displaytext="Dampak Ekonomi KB dan KITE" expand="true" type="slide">
+          <links>
+            <slidelink slideid="_player.5dXPOY86q4C.5w7F2Rf1lLc" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.5dXPOY86q4C.67PaiAwODak" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.5dXPOY86q4C.6lYsFHRSR75" displaytext="Dampak Ekonomi KB dan KITE" expand="false" type="slide" />
+          </links>
+        </slidelink>
       </links>
     </outline>
   </nav_data>
