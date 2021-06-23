@@ -2,10 +2,10 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "5vTTB0xGkyk":
+      case "62HHCCEqYor":
         Script1();
         break;
-      case "5XyJpeBeya0":
+      case "5bjzVrTU3lt":
         Script2();
         break;
   }
@@ -29,7 +29,7 @@ function add_line() {
 if(document.getElementById('bgSong')==null){
 	add_line();
 var audio = document.getElementById('bgSong');
-audio.volume = 0.07;
+audio.volume = 0.3;
 }
 
 }
@@ -40,7 +40,7 @@ function Script2()
 this.Location= player.GetVar("location");
 
 var audio = document.getElementById('bgSong');
-audio.src=Location+"Corporation - no piano melody.mp3";
+audio.src=Location+"Corporate Inspiring .mp3";
 audio.load();
 audio.play();
 }
