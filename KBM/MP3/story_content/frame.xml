@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00000000101" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="100" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
+<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00001000101" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="100" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
   <layouts>
-    <layout name="npnxnanbsnfns10111000101" font="Lato" controllayout="npnxnanbsnfns10111000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="pxabnsnfns10111000101" font="Lato" controllayout="pxabnsnfns10111000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="npxnabnsnfns10111000101" font="Lato" controllayout="npxnabnsnfns10111000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="npnxnanbnsnfns10111000101" font="Lato" controllayout="npnxnanbnsnfns10111000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="pxabnsnfns10111000100" font="Lato" controllayout="pxabnsnfns10111000100" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="npnxnanbnsnfns00000000101" font="Lato" controllayout="npnxnanbnsnfns00000000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="pxabnsnfns00000000101" font="Lato" controllayout="pxabnsnfns00000000101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
-    <layout name="npnxnanbnsnfns00001100101" font="Lato" controllayout="npnxnanbnsnfns00001100101" colorscheme="npnxnanbnsnfns00000000101" string_table="npnxnanbnsnfns00000000101" />
+    <layout name="npnxnanbsnfns10111000101" font="Lato" controllayout="npnxnanbsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="pxabnsnfns10111000101" font="Lato" controllayout="pxabnsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="npxnabnsnfns10111000101" font="Lato" controllayout="npxnabnsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="npnxnanbnsnfns10111000101" font="Lato" controllayout="npnxnanbnsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="pxabnsnfns10111000100" font="Lato" controllayout="pxabnsnfns10111000100" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="npnxnanbnsnfns00001000101" font="Lato" controllayout="npnxnanbnsnfns00001000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="npnxabnsnfns10111000101" font="Lato" controllayout="npnxabnsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
   </layouts>
   <control_options>
     <optiongroups>
@@ -16,7 +15,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="Konsep Dasar Kawasan Berikat_2" />
+              <option name="title_text" value="Pemasukan dan Pengeluaran Barang di Kawasan Berikat Mandiri" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -30,7 +29,7 @@
           </option>
           <optionlist name="tabs">
             <listitems>
-              <listitem name="resources" value="true" group="linkright" />
+              <listitem name="resources" value="false" group="linkright" />
               <listitem name="outline" value="true" group="sidebar" />
               <listitem name="glossary" value="false" group="sidebar" />
               <listitem name="transcript" value="false" group="sidebar" />
@@ -51,7 +50,7 @@
       <optiongroup name="menuoptions">
         <options>
           <option name="flow" value="restricted" />
-          <option name="wraplistitems" value="true" />
+          <option name="wraplistitems" value="false" />
           <option name="tooltips" value="true" />
           <option name="autocollapse" value="true" />
           <option name="autonumber" value="true" />
@@ -85,9 +84,9 @@
       </optiongroup>
       <optiongroup name="buttonoptions">
         <options>
-          <option name="next" value="icontext" />
-          <option name="previous" value="icontext" />
-          <option name="submit" value="icontext" />
+          <option name="next" value="icon" />
+          <option name="previous" value="icon" />
+          <option name="submit" value="icon" />
         </options>
       </optiongroup>
     </optiongroups>
@@ -208,7 +207,7 @@
       </control>
       <control name="close_btn" enabled="false" />
     </control_layout>
-    <control_layout name="npnxnanbnsnfns00000000101">
+    <control_layout name="npnxnanbnsnfns00001000101">
       <control name="volume" enabled="true" />
       <control name="seekbar" enabled="false" />
       <control name="replay" enabled="false" />
@@ -224,50 +223,27 @@
       <control name="resources" enabled="false" />
       <control name="glossary" enabled="false" />
       <control name="transcript" enabled="false" />
-      <control name="outline" enabled="false">
+      <control name="outline" enabled="true">
         <controls>
           <control name="search" enabled="false" />
         </controls>
       </control>
       <control name="close_btn" enabled="true" />
     </control_layout>
-    <control_layout name="pxabnsnfns00000000101">
+    <control_layout name="npnxabnsnfns10111000101">
       <control name="volume" enabled="true" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
-      <control name="pauseplay" enabled="false" />
+      <control name="seekbar" enabled="true" />
+      <control name="replay" enabled="true" />
+      <control name="pauseplay" enabled="true" />
       <control name="logo" enabled="false" />
-      <control name="previous" enabled="true" />
-      <control name="next" enabled="true" />
+      <control name="previous" enabled="false" />
+      <control name="next" enabled="false" />
       <control name="swipeleft" enabled="true" />
       <control name="swiperight" enabled="true" />
       <control name="submit" enabled="false" />
       <control name="finish" enabled="false" />
       <control name="submitall" enabled="false" />
       <control name="resources" enabled="false" />
-      <control name="glossary" enabled="false" />
-      <control name="transcript" enabled="false" />
-      <control name="outline" enabled="false">
-        <controls>
-          <control name="search" enabled="false" />
-        </controls>
-      </control>
-      <control name="close_btn" enabled="true" />
-    </control_layout>
-    <control_layout name="npnxnanbnsnfns00001100101">
-      <control name="volume" enabled="true" />
-      <control name="seekbar" enabled="false" />
-      <control name="replay" enabled="false" />
-      <control name="pauseplay" enabled="false" />
-      <control name="logo" enabled="false" />
-      <control name="previous" enabled="false" />
-      <control name="next" enabled="false" />
-      <control name="swipeleft" enabled="false" />
-      <control name="swiperight" enabled="false" />
-      <control name="submit" enabled="false" />
-      <control name="finish" enabled="false" />
-      <control name="submitall" enabled="false" />
-      <control name="resources" enabled="true" />
       <control name="glossary" enabled="false" />
       <control name="transcript" enabled="false" />
       <control name="outline" enabled="true">
@@ -279,7 +255,7 @@
     </control_layout>
   </control_layouts>
   <colorschemes>
-    <colorscheme name="npnxnanbnsnfns00000000101">
+    <colorscheme name="npnxnanbnsnfns00001000101">
       <color_group name="accessibility">
         <group_colors>
           <color name="focus_rect">
@@ -1336,7 +1312,7 @@
     </colorscheme>
   </colorschemes>
   <string_tables>
-    <string_table name="npnxnanbnsnfns00000000101">
+    <string_table name="npnxnanbnsnfns00001000101">
       <string id="three_image_items">items</string>
       <string id="three_image_viewed">viewed</string>
       <string id="three_image_of">of</string>
@@ -1439,51 +1415,16 @@
   <nav_data>
     <outline>
       <links>
-        <slidelink slideid="_player.5lqH6PhUclo.5q36rFQNurz" displaytext="Daftar Isi" expand="false" type="slide" />
-        <slidelink slideid="_player.6Jx7g9JfcBw" displaytext="Konsep Dasar Kepabeanan dan Fasilitas Kepabeanan" expand="false" type="slide">
-          <links>
-            <slidelink slideid="_player.6Jx7g9JfcBw.6YfWP4yGC0Q" displaytext="Konsep Dasar Kepabeanan dan Fasilitas Kepabeanan" expand="false" type="slide" />
-            <slidelink slideid="_player.6Jx7g9JfcBw.61xqUStHzYQ" displaytext="Pengertian Kepabeanan" expand="false" type="slide" />
-            <slidelink slideid="_player.6Jx7g9JfcBw.6jd2SeRdFLX" displaytext="Fasilitas Kepabeanan" expand="false" type="slide" />
-            <slidelink slideid="_player.6Jx7g9JfcBw.5jxlCMamAbY" displaytext="Jenis Fasilitas Bea Masuk" expand="false" type="slide" />
-            <slidelink slideid="_player.6Jx7g9JfcBw.6JpqUHu49sJ" displaytext="Kawasan Berfasilitas" expand="false" type="slide" />
-          </links>
-        </slidelink>
-        <slidelink slideid="_player.5dXPOY86q4C" displaytext="Tujuan Pemberian dan Dampak Ekonomi Fasilitas Kepabeanan" expand="false" type="slide">
-          <links>
-            <slidelink slideid="_player.5dXPOY86q4C.67PaiAwODak" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="false" type="slide" />
-            <slidelink slideid="_player.5dXPOY86q4C.6lYsFHRSR75" displaytext="Dampak Ekonomi KB dan KITE" expand="false" type="slide" />
-          </links>
-        </slidelink>
-        <slidelink slideid="_player.6iHg2FNbX1X" displaytext="Konsep Fasilitas Kawasan Berikat" expand="false" type="slide">
-          <links>
-            <slidelink slideid="_player.6iHg2FNbX1X.5kggotR1kK1" displaytext="Konsep Kawasan Berikat" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.6bLTd8H4Sc9" displaytext="Latar Belakang dan Sasaran Kawasan Berikat" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.6LqVEU2uFYd" displaytext="Kawasan Berikat dalam Konsep Kepabeanan" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.6fbUuAI983e" displaytext="Fasilitas di Kawasan Berikat" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.5bgfz0dPd7Y" displaytext="Definisi dan Dasar Hukum Kawasan Berikat" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.5yej4wzCyJB" displaytext="Syarat Perizinan Kawasan Berikat" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.6QqfqFsFvdf" displaytext="Tanggung Jawab Kawasan Berikat" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.5Xbf83dch7k" displaytext="Pemasukan dan Pengeluaran Barang" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.6Rq1U5UlqiL" displaytext="Perlakuan Kepabeanan dan Perpajakan" expand="false" type="slide" />
-            <slidelink slideid="_player.6iHg2FNbX1X.5z7dd9CxW4y" displaytext="Dasar Pengenaan Bea Masuk dan PDRI" expand="false" type="slide" />
-          </links>
-        </slidelink>
-        <slidelink slideid="_player.5hRkjabdRtP" displaytext="Konsep Fasilitas Kawasan Berikat Mandiri" expand="false" type="slide">
-          <links>
-            <slidelink slideid="_player.5hRkjabdRtP.5upfafEJknJ" displaytext="Konsep Fasilitas Kawasan Berikat Mandiri" expand="false" type="slide" />
-            <slidelink slideid="_player.5hRkjabdRtP.5oXpNqyA14U" displaytext="Definisi Kawasan Berikat Mandiri" expand="false" type="slide" />
-            <slidelink slideid="_player.5hRkjabdRtP.5ZvedYCERBs" displaytext="Syarat Penetapan Kawasan Berikat Mandiri" expand="false" type="slide" />
-            <slidelink slideid="_player.5hRkjabdRtP.6bJC4xIE4MO" displaytext="Kegiatan di Kawasan Berikat Mandiri" expand="false" type="slide" />
-            <slidelink slideid="_player.5hRkjabdRtP.6FCVBNFU0t2" displaytext="Latar Belakang Kawasan Berikat Mandiri" expand="false" type="slide" />
-            <slidelink slideid="_player.5hRkjabdRtP.6Zedo0BWELe" displaytext="Pola Pelayanan dan Pengawasan Kawasan Berikat Mandiri" expand="false" type="slide" />
-            <slidelink slideid="_player.5hRkjabdRtP.5hS4Cg4LMRA" displaytext="Benefit Kawasan Berikat Mandiri" expand="false" type="slide" />
-          </links>
-        </slidelink>
+        <slidelink slideid="_player.6OhNEHIV7FY.6lz7qVeeGRZ" displaytext="Dokumen Pabean Untuk Pemasukan Barang ke KB/KBM" expand="false" type="slide" />
+        <slidelink slideid="_player.6OhNEHIV7FY.5nWOVFychIP" displaytext="Dokumen Pabean Untuk Pengeluaran Barang dari KB/KBM" expand="false" type="slide" />
+        <slidelink slideid="_player.6OhNEHIV7FY.5uR1e594lKl" displaytext="Dokumen Pabean Untuk Pengeluaran Barang dari KB/KBM" expand="false" type="slide" />
+        <slidelink slideid="_player.6OhNEHIV7FY.6bUXpOOnOvh" displaytext="Fasilitas Kepabeanan" expand="false" type="slide" />
+        <slidelink slideid="_player.6OhNEHIV7FY.5d3WNwH7GA6" displaytext="Kewajiban Petugas Hanggar di Kawasan Berikat" expand="false" type="slide" />
+        <slidelink slideid="_player.6OhNEHIV7FY.6ePS6ygbMAH" displaytext="Kewajiban LO di KB Mandiri" expand="false" type="slide" />
       </links>
     </outline>
   </nav_data>
-  <resource_data description="&lt;p align='left'&gt;&lt;font face='Lato' style='font-size: 11px;' size='11' color='#545454'&gt;Here are some useful links and documents:&lt;/font&gt;&lt;/p&gt;" />
+  <resource_data description="" />
   <transcript_data />
   <glossary_data />
 </bwFrame>
