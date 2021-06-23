@@ -1439,15 +1439,45 @@
   <nav_data>
     <outline>
       <links>
-        <slidelink slideid="" displaytext="Konsep Dasar Kepabeanan dan Fasilitas Kepabeanan" expand="true" type="slide" />
-        <slidelink slideid="" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="true" type="slide" />
-        <slidelink slideid="" displaytext="Konsep Fasilitas Kawasan Berikat" expand="true" type="slide" />
-        <slidelink slideid="" displaytext="Kawasan Berikat Mandiri" expand="true" type="slide" />
-        <slidelink slideid="_player.5dXPOY86q4C" displaytext="Dampak Ekonomi KB dan KITE" expand="true" type="slide">
+        <slidelink slideid="_player.5lqH6PhUclo.5q36rFQNurz" displaytext="Daftar Isi" expand="false" type="slide" />
+        <slidelink slideid="_player.6Jx7g9JfcBw" displaytext="Konsep Dasar Kepabeanan dan Fasilitas Kepabeanan" expand="false" type="slide">
           <links>
-            <slidelink slideid="_player.5dXPOY86q4C.5w7F2Rf1lLc" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.6Jx7g9JfcBw.6YfWP4yGC0Q" displaytext="Konsep Dasar Kepabeanan dan Fasilitas Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.6Jx7g9JfcBw.61xqUStHzYQ" displaytext="Pengertian Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.6Jx7g9JfcBw.6jd2SeRdFLX" displaytext="Fasilitas Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.6Jx7g9JfcBw.5jxlCMamAbY" displaytext="Jenis Fasilitas Bea Masuk" expand="false" type="slide" />
+            <slidelink slideid="_player.6Jx7g9JfcBw.6JpqUHu49sJ" displaytext="Kawasan Berfasilitas" expand="false" type="slide" />
+          </links>
+        </slidelink>
+        <slidelink slideid="_player.5dXPOY86q4C" displaytext="Tujuan Pemberian dan Dampak Ekonomi Fasilitas Kepabeanan" expand="true" type="slide">
+          <links>
             <slidelink slideid="_player.5dXPOY86q4C.67PaiAwODak" displaytext="Tujuan Pemberian Fasilitas Kepabeanan" expand="false" type="slide" />
             <slidelink slideid="_player.5dXPOY86q4C.6lYsFHRSR75" displaytext="Dampak Ekonomi KB dan KITE" expand="false" type="slide" />
+          </links>
+        </slidelink>
+        <slidelink slideid="_player.6iHg2FNbX1X" displaytext="Konsep Fasilitas Kawasan Berikat" expand="true" type="slide">
+          <links>
+            <slidelink slideid="_player.6iHg2FNbX1X.5kggotR1kK1" displaytext="Konsep Kawasan Berikat" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.6bLTd8H4Sc9" displaytext="Latar Belakang dan Sasaran Kawasan Berikat" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.6LqVEU2uFYd" displaytext="Kawasan Berikat dalam Konsep Kepabeanan" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.6fbUuAI983e" displaytext="Fasilitas di Kawasan Berikat" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.5bgfz0dPd7Y" displaytext="Definisi dan Dasar Hukum Kawasan Berikat" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.5yej4wzCyJB" displaytext="Syarat Perizinan Kawasan Berikat" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.6QqfqFsFvdf" displaytext="Tanggung Jawab Kawasan Berikat" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.5Xbf83dch7k" displaytext="Pemasukan dan Pengeluaran Barang" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.6Rq1U5UlqiL" displaytext="Perlakuan Kepabeanan dan Perpajakan" expand="false" type="slide" />
+            <slidelink slideid="_player.6iHg2FNbX1X.5z7dd9CxW4y" displaytext="Dasar Pengenaan Bea Masuk dan PDRI" expand="false" type="slide" />
+          </links>
+        </slidelink>
+        <slidelink slideid="_player.5hRkjabdRtP" displaytext="Konsep Fasilitas Kawasan Berikat Mandiri" expand="true" type="slide">
+          <links>
+            <slidelink slideid="_player.5hRkjabdRtP.5upfafEJknJ" displaytext="Konsep Fasilitas Kawasan Berikat Mandiri" expand="false" type="slide" />
+            <slidelink slideid="_player.5hRkjabdRtP.5oXpNqyA14U" displaytext="Definisi Kawasan Berikat Mandiri" expand="false" type="slide" />
+            <slidelink slideid="_player.5hRkjabdRtP.5ZvedYCERBs" displaytext="Syarat Penetapan Kawasan Berikat Mandiri" expand="false" type="slide" />
+            <slidelink slideid="_player.5hRkjabdRtP.6bJC4xIE4MO" displaytext="Kegiatan di Kawasan Berikat Mandiri" expand="false" type="slide" />
+            <slidelink slideid="_player.5hRkjabdRtP.6FCVBNFU0t2" displaytext="Latar Belakang Kawasan Berikat Mandiri" expand="false" type="slide" />
+            <slidelink slideid="_player.5hRkjabdRtP.6Zedo0BWELe" displaytext="Pola Pelayanan dan Pengawasan Kawasan Berikat Mandiri" expand="false" type="slide" />
+            <slidelink slideid="_player.5hRkjabdRtP.5hS4Cg4LMRA" displaytext="Benefit Kawasan Berikat Mandiri" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
