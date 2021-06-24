@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00001000101" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="100" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x4F81BD">
+<bwFrame xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" default_layout="npnxnanbnsnfns00001000101" textdirection="ltr" textengine="DirectWrite" device="false" fontscale="125" kbshortcuts="false" skip_nav_enabled="true" chromeless="false" outputtype="undefined" theme="unified" themeAccentColor="0x1F497D">
   <layouts>
     <layout name="npnxnanbsnfns10111000101" font="Lato" controllayout="npnxnanbsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
     <layout name="pxabnsnfns10111000101" font="Lato" controllayout="pxabnsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
@@ -8,6 +8,7 @@
     <layout name="pxabnsnfns10111000100" font="Lato" controllayout="pxabnsnfns10111000100" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
     <layout name="npnxnanbnsnfns00001000101" font="Lato" controllayout="npnxnanbnsnfns00001000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
     <layout name="npnxabnsnfns10111000101" font="Lato" controllayout="npnxabnsnfns10111000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
+    <layout name="pxabnsnfns00001000101" font="Lato" controllayout="pxabnsnfns00001000101" colorscheme="npnxnanbnsnfns00001000101" string_table="npnxnanbnsnfns00001000101" />
   </layouts>
   <control_options>
     <optiongroups>
@@ -21,16 +22,16 @@
           <option name="logo_enabled" value="false">
             <options />
           </option>
-          <option name="sidebar_enabled" value="true">
+          <option name="sidebar_enabled" value="false">
             <options>
               <option name="sidebarpos" value="left" />
-              <option name="closed" value="true" />
+              <option name="closed" value="false" />
             </options>
           </option>
           <optionlist name="tabs">
             <listitems>
+              <listitem name="outline" value="true" group="linkleft" />
               <listitem name="resources" value="false" group="linkright" />
-              <listitem name="outline" value="true" group="sidebar" />
               <listitem name="glossary" value="false" group="sidebar" />
               <listitem name="transcript" value="false" group="sidebar" />
             </listitems>
@@ -238,6 +239,29 @@
       <control name="logo" enabled="false" />
       <control name="previous" enabled="false" />
       <control name="next" enabled="false" />
+      <control name="swipeleft" enabled="true" />
+      <control name="swiperight" enabled="true" />
+      <control name="submit" enabled="false" />
+      <control name="finish" enabled="false" />
+      <control name="submitall" enabled="false" />
+      <control name="resources" enabled="false" />
+      <control name="glossary" enabled="false" />
+      <control name="transcript" enabled="false" />
+      <control name="outline" enabled="true">
+        <controls>
+          <control name="search" enabled="false" />
+        </controls>
+      </control>
+      <control name="close_btn" enabled="true" />
+    </control_layout>
+    <control_layout name="pxabnsnfns00001000101">
+      <control name="volume" enabled="true" />
+      <control name="seekbar" enabled="false" />
+      <control name="replay" enabled="false" />
+      <control name="pauseplay" enabled="false" />
+      <control name="logo" enabled="false" />
+      <control name="previous" enabled="true" />
+      <control name="next" enabled="true" />
       <control name="swipeleft" enabled="true" />
       <control name="swiperight" enabled="true" />
       <control name="submit" enabled="false" />
@@ -1134,7 +1158,7 @@
           <color name="brandhighlight">
             <fill type="linear" rotation="90">
               <colors>
-                <color rgb="0x4F81BD" alpha="100" stop="0" />
+                <color rgb="0x1F497D" alpha="100" stop="0" />
               </colors>
             </fill>
           </color>
