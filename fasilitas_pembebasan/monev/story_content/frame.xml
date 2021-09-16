@@ -1537,11 +1537,7 @@
             <slidelink slideid="_player.5w0mjfhfBvJ.6LrETrX9AEe" displaytext="Jangka Waktu MOnev" expand="false" type="slide" />
           </links>
         </slidelink>
-        <slidelink slideid="_player.6Qsre4Y9B8H" displaytext="Update Aplikasi" expand="true" type="slide">
-          <links>
-            <slidelink slideid="_player.6Qsre4Y9B8H.5jdETzv8y0I" displaytext="Update Aplikasi" expand="false" type="slide" />
-          </links>
-        </slidelink>
+        <slidelink slideid="" displaytext="Update Aplikasi" expand="true" type="slide" />
         <slidelink slideid="_player.5cxH0U8tnof" displaytext="Tahapan Monitoring dan Evaluasi" expand="true" type="slide">
           <links>
             <slidelink slideid="_player.5cxH0U8tnof.6Ca25fSKIgz" displaytext="Tahapan Monitoring dan Evaluasi" expand="false" type="slide" />
