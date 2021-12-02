@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="Untitled1" />
+              <option name="title_text" value="variable" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
