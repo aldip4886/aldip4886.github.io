@@ -1596,8 +1596,8 @@
         </slidelink>
         <slidelink slideid="_player.5skOM14QPp3" displaytext="Intro Scene" expand="true" type="slide">
           <links>
-            <slidelink slideid="_player.5skOM14QPp3.5gL5vLXOpLx" displaytext="Untitled Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.5skOM14QPp3.6C2mAm7bqUK" displaytext="Intro Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5skOM14QPp3.5gL5vLXOpLx" displaytext="intro_slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5skOM14QPp3.6C2mAm7bqUK" displaytext="pembawaan_uang_perhiasan_lartas" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
