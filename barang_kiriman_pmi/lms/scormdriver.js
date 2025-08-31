@@ -61,7 +61,7 @@ var CLOUDURL = "__CLOUDURL__";
 
 var blnDebug = true;                        //set this to false if you don't want the overhead of recording debug information
 
-var strLMSStandard = "SCORM";    //used in versions that support multiple standards, set to "NONE" to default
+var strLMSStandard = "__LMS_STANDARD__";    //used in versions that support multiple standards, set to "NONE" to default
                                             //to StandAlone mode. Possible values = "AUTO", "NONE", "SCORM", "AICC", "SCORM2004", "TCAPI", "CMI5"
                                             //AUTO mode will automatically determine the best standard to use
                                             //(it first tries AICC based on "AICC_URL" query param, then TCAPI and CMI5 based on "endpoint" and other
@@ -2868,14 +2868,14 @@ function SCORM2004_GetProgressMeasure(){
 }
 /*
     cmi.progress_measure cmi.completion_status
-    0 ?not attempted?
-    1 ?completed?
-    0 > value < 1 ?incomplete? (typically, unless a cmi.completion_threshold is defined and the cmi.progress_measure is >= the cmi.completion_threshold)
+    0 Ònot attemptedÓ
+    1 ÒcompletedÓ
+    0 > value < 1 ÒincompleteÓ (typically, unless a cmi.completion_threshold is defined and the cmi.progress_measure is >= the cmi.completion_threshold)
 
 
-    GetValue(?cmi.progress_measure?)
-    SetValue(?cmi.progress_measure?,?0.75?)
-    SetValue(?cmi.progress_measure?,?1.0?)
+    GetValue(Òcmi.progress_measureÓ)
+    SetValue(Òcmi.progress_measureÓ,Ó0.75Ó)
+    SetValue(Òcmi.progress_measureÓ,Ó1.0Ó)
 
 */
 
@@ -3528,15 +3528,15 @@ function SCORM2004_GetNavigationRequest(){
 }
 
 /*
-o ?continue?: Indicates to the LMS that the content asserts that a Continue navigation request should be processed immediately following the SCO?s termination.
-o ?previous?: Indicates to the LMS that the content asserts that a Previous navigation request should be processed immediately following the SCO?s termination.
-o ?choice?: Indicates to the LMS that the content asserts that a Choice navigation request should be processed immediately following the SCO?s termination.
-o ?exit?: Indicates to the LMS that the content asserts that an Exit navigation request should be processed immediately following the SCO?s termination.
-o ?exitAll?: Indicates to the LMS that the content asserts that an Exit All navigation request should be processed immediately following the SCO?s termination.
-o ?abandon?: Indicates to the LMS that the content asserts that an Abandon navigation request should be processed immediately following the SCO?s termination.
-o ?abandonAll?: Indicates to the LMS that the content asserts that an Abandon All navigation request should be processed immediately following the SCO?s termination.
-o ?suspendAll?: Indicates to the LMS that the content asserts that a Suspend All navigation request should be processed immediately following the SCO?s termination.
-o ?_none_?: Indicates to the LMS that the content asserts that any previous navigation request indicated by the SCO should not be processed immediately following the SCO?s termination. Setting this value effectively clears any pending navigation request.
+o “continue”: Indicates to the LMS that the content asserts that a Continue navigation request should be processed immediately following the SCO’s termination.
+o “previous”: Indicates to the LMS that the content asserts that a Previous navigation request should be processed immediately following the SCO’s termination.
+o “choice”: Indicates to the LMS that the content asserts that a Choice navigation request should be processed immediately following the SCO’s termination.
+o “exit”: Indicates to the LMS that the content asserts that an Exit navigation request should be processed immediately following the SCO’s termination.
+o “exitAll”: Indicates to the LMS that the content asserts that an Exit All navigation request should be processed immediately following the SCO’s termination.
+o “abandon”: Indicates to the LMS that the content asserts that an Abandon navigation request should be processed immediately following the SCO’s termination.
+o “abandonAll”: Indicates to the LMS that the content asserts that an Abandon All navigation request should be processed immediately following the SCO’s termination.
+o “suspendAll”: Indicates to the LMS that the content asserts that a Suspend All navigation request should be processed immediately following the SCO’s termination.
+o “_none_”: Indicates to the LMS that the content asserts that any previous navigation request indicated by the SCO should not be processed immediately following the SCO’s termination. Setting this value effectively clears any pending navigation request.
 */
 
 //---------------------------------------------------------------------------------
@@ -19277,25 +19277,25 @@ if (typeof module !== "undefined" && module.exports) {
         u.push(c);
       }
 
-      // 0xDC00 ? c ? 0xDFFF
+      // 0xDC00 ≤ c ≤ 0xDFFF
       else if (0xDC00 <= c && c <= 0xDFFF) {
         // Append to U a U+FFFD REPLACEMENT CHARACTER.
         u.push(0xFFFD);
       }
 
-      // 0xD800 ? c ? 0xDBFF
+      // 0xD800 ≤ c ≤ 0xDBFF
       else if (0xD800 <= c && c <= 0xDBFF) {
-        // 1. If i = n?1, then append to U a U+FFFD REPLACEMENT
+        // 1. If i = n−1, then append to U a U+FFFD REPLACEMENT
         // CHARACTER.
         if (i === n - 1) {
           u.push(0xFFFD);
         }
-        // 2. Otherwise, i < n?1:
+        // 2. Otherwise, i < n−1:
         else {
           // 1. Let d be the code unit in S at index i+1.
           var d = string.charCodeAt(i + 1);
 
-          // 2. If 0xDC00 ? d ? 0xDFFF, then:
+          // 2. If 0xDC00 ≤ d ≤ 0xDFFF, then:
           if (0xDC00 <= d && d <= 0xDFFF) {
             // 1. Let a be c & 0x3FF.
             var a = c & 0x3FF;
@@ -20077,7 +20077,7 @@ if (typeof module !== "undefined" && module.exports) {
     }
 
     // 4. Return a code point whose value is code point offset +
-    // pointer ? offset.
+    // pointer − offset.
     return code_point_offset + pointer - offset;
   }
 
@@ -20109,7 +20109,7 @@ if (typeof module !== "undefined" && module.exports) {
     }
 
     // 3. Return a pointer whose value is pointer offset + code point
-    // ? offset.
+    // − offset.
     return pointer_offset + code_point - offset;
   }
 
@@ -20567,7 +20567,7 @@ if (typeof module !== "undefined" && module.exports) {
         // 0xC2 to 0xDF
         if (inRange(bite, 0xC2, 0xDF)) {
           // Set utf-8 bytes needed to 1 and utf-8 code point to byte
-          // ? 0xC0.
+          // − 0xC0.
           utf8_bytes_needed = 1;
           utf8_code_point = bite - 0xC0;
         }
@@ -20581,7 +20581,7 @@ if (typeof module !== "undefined" && module.exports) {
           if (bite === 0xED)
             utf8_upper_boundary = 0x9F;
           // 3. Set utf-8 bytes needed to 2 and utf-8 code point to
-          // byte ? 0xE0.
+          // byte − 0xE0.
           utf8_bytes_needed = 2;
           utf8_code_point = bite - 0xE0;
         }
@@ -20595,7 +20595,7 @@ if (typeof module !== "undefined" && module.exports) {
           if (bite === 0xF4)
             utf8_upper_boundary = 0x8F;
           // 3. Set utf-8 bytes needed to 3 and utf-8 code point to
-          // byte ? 0xF0.
+          // byte − 0xF0.
           utf8_bytes_needed = 3;
           utf8_code_point = bite - 0xF0;
         }
@@ -20607,7 +20607,7 @@ if (typeof module !== "undefined" && module.exports) {
         }
 
         // Then (byte is in the range 0xC2 to 0xF4, inclusive) set
-        // utf-8 code point to utf-8 code point << (6 ? utf-8 bytes
+        // utf-8 code point to utf-8 code point << (6 × utf-8 bytes
         // needed) and return continue.
         utf8_code_point = utf8_code_point << (6 * utf8_bytes_needed);
         return null;
@@ -20637,8 +20637,8 @@ if (typeof module !== "undefined" && module.exports) {
       utf8_upper_boundary = 0xBF;
 
       // 6. Increase utf-8 bytes seen by one and set utf-8 code point
-      // to utf-8 code point + (byte ? 0x80) << (6 ? (utf-8 bytes
-      // needed ? utf-8 bytes seen)).
+      // to utf-8 code point + (byte − 0x80) << (6 × (utf-8 bytes
+      // needed − utf-8 bytes seen)).
       utf8_bytes_seen += 1;
       utf8_code_point += (bite - 0x80) << (6 * (utf8_bytes_needed -
                                                 utf8_bytes_seen));
@@ -20705,13 +20705,13 @@ if (typeof module !== "undefined" && module.exports) {
       }
 
       // 4.Let bytes be a byte sequence whose first byte is (code
-      // point >> (6 ? count)) + offset.
+      // point >> (6 × count)) + offset.
       var bytes = [(code_point >> (6 * count)) + offset];
 
       // 5. Run these substeps while count is greater than 0:
       while (count > 0) {
 
-        // 1. Set temp to code point >> (6 ? (count ? 1)).
+        // 1. Set temp to code point >> (6 × (count − 1)).
         var temp = code_point >> (6 * (count - 1));
 
         // 2. Append to bytes 0x80 | (temp & 0x3F).
@@ -20765,7 +20765,7 @@ if (typeof module !== "undefined" && module.exports) {
       if (isASCIIByte(bite))
         return bite;
 
-      // 3. Let code point be the index code point for byte ? 0x80 in
+      // 3. Let code point be the index code point for byte − 0x80 in
       // index single-byte.
       var code_point = index[bite - 0x80];
 
@@ -20902,9 +20902,9 @@ if (typeof module !== "undefined" && module.exports) {
         // 1. Let code point be null.
         code_point = null;
         // 2. If byte is in the range 0x30 to 0x39, set code point to
-        // the index gb18030 ranges code point for (((gb18030 first ?
-        // 0x81) ? 10 + gb18030 second ? 0x30) ? 126 + gb18030 third ?
-        // 0x81) ? 10 + byte ? 0x30.
+        // the index gb18030 ranges code point for (((gb18030 first −
+        // 0x81) × 10 + gb18030 second − 0x30) × 126 + gb18030 third −
+        // 0x81) × 10 + byte − 0x30.
         if (inRange(bite, 0x30, 0x39)) {
           code_point = indexGB18030RangesCodePointFor(
               (((gb18030_first - 0x81) * 10 + (gb18030_second - 0x30)) * 126 +
@@ -20971,7 +20971,7 @@ if (typeof module !== "undefined" && module.exports) {
         var offset = bite < 0x7F ? 0x40 : 0x41;
 
         // 4. If byte is in the range 0x40 to 0x7E or 0x80 to 0xFE,
-        // set pointer to (lead ? 0x81) ? 190 + (byte ? offset).
+        // set pointer to (lead − 0x81) × 190 + (byte − offset).
         if (inRange(bite, 0x40, 0x7E) || inRange(bite, 0x80, 0xFE))
           pointer = (lead - 0x81) * 190 + (bite - offset);
 
@@ -21079,19 +21079,19 @@ if (typeof module !== "undefined" && module.exports) {
       // 9. Let byte1 be floor(pointer / 10 / 126 / 10).
       var byte1 = floor(pointer / 10 / 126 / 10);
 
-      // 10. Set pointer to pointer ? byte1 ? 10 ? 126 ? 10.
+      // 10. Set pointer to pointer − byte1 × 10 × 126 × 10.
       pointer = pointer - byte1 * 10 * 126 * 10;
 
       // 11. Let byte2 be floor(pointer / 10 / 126).
       var byte2 = floor(pointer / 10 / 126);
 
-      // 12. Set pointer to pointer ? byte2 ? 10 ? 126.
+      // 12. Set pointer to pointer − byte2 × 10 × 126.
       pointer = pointer - byte2 * 10 * 126;
 
       // 13. Let byte3 be floor(pointer / 10).
       var byte3 = floor(pointer / 10);
 
-      // 14. Let byte4 be pointer ? byte3 ? 10.
+      // 14. Let byte4 be pointer − byte3 × 10.
       var byte4 = pointer - byte3 * 10;
 
       // 15. Return four bytes whose values are byte1 + 0x81, byte2 +
@@ -21163,7 +21163,7 @@ if (typeof module !== "undefined" && module.exports) {
         var offset = bite < 0x7F ? 0x40 : 0x62;
 
         // 2. If byte is in the range 0x40 to 0x7E or 0xA1 to 0xFE,
-        // set pointer to (lead ? 0x81) ? 157 + (byte ? offset).
+        // set pointer to (lead − 0x81) × 157 + (byte − offset).
         if (inRange(bite, 0x40, 0x7E) || inRange(bite, 0xA1, 0xFE))
           pointer = (lead - 0x81) * 157 + (bite - offset);
 
@@ -21319,7 +21319,7 @@ if (typeof module !== "undefined" && module.exports) {
 
       // 3. If euc-jp lead is 0x8E and byte is in the range 0xA1 to
       // 0xDF, set euc-jp lead to 0x00 and return a code point whose
-      // value is 0xFF61 + byte ? 0xA1.
+      // value is 0xFF61 + byte − 0xA1.
       if (eucjp_lead === 0x8E && inRange(bite, 0xA1, 0xDF)) {
         eucjp_lead = 0x00;
         return 0xFF61 + bite - 0xA1;
@@ -21344,8 +21344,8 @@ if (typeof module !== "undefined" && module.exports) {
         var code_point = null;
 
         // 2. If lead and byte are both in the range 0xA1 to 0xFE, set
-        // code point to the index code point for (lead ? 0xA1) ? 94 +
-        // byte ? 0xA1 in index jis0208 if the euc-jp jis0212 flag is
+        // code point to the index code point for (lead − 0xA1) × 94 +
+        // byte − 0xA1 in index jis0208 if the euc-jp jis0212 flag is
         // unset and in index jis0212 otherwise.
         if (inRange(lead, 0xA1, 0xFE) && inRange(bite, 0xA1, 0xFE)) {
           code_point = indexCodePointFor(
@@ -21418,7 +21418,7 @@ if (typeof module !== "undefined" && module.exports) {
         return 0x7E;
 
       // 5. If code point is in the range U+FF61 to U+FF9F, return two
-      // bytes whose values are 0x8E and code point ? 0xFF61 + 0xA1.
+      // bytes whose values are 0x8E and code point − 0xFF61 + 0xA1.
       if (inRange(code_point, 0xFF61, 0xFF9F))
         return [0x8E, code_point - 0xFF61 + 0xA1];
 
@@ -21588,7 +21588,7 @@ if (typeof module !== "undefined" && module.exports) {
         // 0x21 to 0x5F
         if (inRange(bite, 0x21, 0x5F)) {
           // Unset the iso-2022-jp output flag and return a code point
-          // whose value is 0xFF61 + byte ? 0x21.
+          // whose value is 0xFF61 + byte − 0x21.
           iso2022jp_output_flag = false;
           return 0xFF61 + bite - 0x21;
         }
@@ -21655,7 +21655,7 @@ if (typeof module !== "undefined" && module.exports) {
           // 1. Set the iso-2022-jp decoder state to lead byte.
           iso2022jp_decoder_state = states.LeadByte;
 
-          // 2. Let pointer be (iso-2022-jp lead ? 0x21) ? 94 + byte ? 0x21.
+          // 2. Let pointer be (iso-2022-jp lead − 0x21) × 94 + byte − 0x21.
           var pointer = (iso2022jp_lead - 0x21) * 94 + bite - 0x21;
 
           // 3. Let code point be the index code point for pointer in
@@ -21955,7 +21955,7 @@ if (typeof module !== "undefined" && module.exports) {
         var lead_offset = (lead < 0xA0) ? 0x81 : 0xC1;
 
         // 3. If byte is in the range 0x40 to 0x7E or 0x80 to 0xFC,
-        // set pointer to (lead ? lead offset) ? 188 + byte ? offset.
+        // set pointer to (lead − lead offset) × 188 + byte − offset.
         if (inRange(bite, 0x40, 0x7E) || inRange(bite, 0x80, 0xFC))
           pointer = (lead - lead_offset) * 188 + bite - offset;
 
@@ -21966,7 +21966,7 @@ if (typeof module !== "undefined" && module.exports) {
 
         // 5. If code point is null and pointer is in the range 8836
         // to 10528, return a code point whose value is 0xE000 +
-        // pointer ? 8836.
+        // pointer − 8836.
         if (code_point === null && pointer !== null &&
             inRange(pointer, 8836, 10528))
           return 0xE000 + pointer - 8836;
@@ -21990,7 +21990,7 @@ if (typeof module !== "undefined" && module.exports) {
         return bite;
 
       // 5. If byte is in the range 0xA1 to 0xDF, return a code point
-      // whose value is 0xFF61 + byte ? 0xA1.
+      // whose value is 0xFF61 + byte − 0xA1.
       if (inRange(bite, 0xA1, 0xDF))
         return 0xFF61 + bite - 0xA1;
 
@@ -22038,7 +22038,7 @@ if (typeof module !== "undefined" && module.exports) {
         return 0x7E;
 
       // 5. If code point is in the range U+FF61 to U+FF9F, return a
-      // byte whose value is code point ? 0xFF61 + 0xA1.
+      // byte whose value is code point − 0xFF61 + 0xA1.
       if (inRange(code_point, 0xFF61, 0xFF9F))
         return code_point - 0xFF61 + 0xA1;
 
@@ -22128,7 +22128,7 @@ if (typeof module !== "undefined" && module.exports) {
         euckr_lead = 0x00;
 
         // 1. If byte is in the range 0x41 to 0xFE, set pointer to
-        // (lead ? 0x81) ? 190 + (byte ? 0x41).
+        // (lead − 0x81) × 190 + (byte − 0x41).
         if (inRange(bite, 0x41, 0xFE))
           pointer = (lead - 0x81) * 190 + (bite - 0x41);
 
@@ -22312,8 +22312,8 @@ if (typeof module !== "undefined" && module.exports) {
         utf16_lead_surrogate = null;
 
         // 1. If code unit is in the range U+DC00 to U+DFFF, return a
-        // code point whose value is 0x10000 + ((lead surrogate ?
-        // 0xD800) << 10) + (code unit ? 0xDC00).
+        // code point whose value is 0x10000 + ((lead surrogate −
+        // 0xD800) << 10) + (code unit − 0xDC00).
         if (inRange(code_unit, 0xDC00, 0xDFFF)) {
           return 0x10000 + (lead_surrogate - 0xD800) * 0x400 +
               (code_unit - 0xDC00);
@@ -22368,12 +22368,12 @@ if (typeof module !== "undefined" && module.exports) {
       if (inRange(code_point, 0x0000, 0xFFFF))
         return convertCodeUnitToBytes(code_point, utf16_be);
 
-      // 3. Let lead be ((code point ? 0x10000) >> 10) + 0xD800,
+      // 3. Let lead be ((code point − 0x10000) >> 10) + 0xD800,
       // converted to bytes using utf-16be encoder flag.
       var lead = convertCodeUnitToBytes(
         ((code_point - 0x10000) >> 10) + 0xD800, utf16_be);
 
-      // 4. Let trail be ((code point ? 0x10000) & 0x3FF) + 0xDC00,
+      // 4. Let trail be ((code point − 0x10000) & 0x3FF) + 0xDC00,
       // converted to bytes using utf-16be encoder flag.
       var trail = convertCodeUnitToBytes(
         ((code_point - 0x10000) & 0x3FF) + 0xDC00, utf16_be);
@@ -22434,7 +22434,7 @@ if (typeof module !== "undefined" && module.exports) {
       if (isASCIIByte(bite))
         return bite;
 
-      // 3. Return a code point whose value is 0xF780 + byte ? 0x80.
+      // 3. Return a code point whose value is 0xF780 + byte − 0x80.
       return 0xF780 + bite - 0x80;
     };
   }
@@ -22463,7 +22463,7 @@ if (typeof module !== "undefined" && module.exports) {
         return code_point;
 
       // 3. If code point is in the range U+F780 to U+F7FF, return a
-      // byte whose value is code point ? 0xF780 + 0x80.
+      // byte whose value is code point − 0xF780 + 0x80.
       if (inRange(code_point, 0xF780, 0xF7FF))
         return code_point - 0xF780 + 0x80;
 
@@ -23411,14 +23411,14 @@ if (typeof module !== "undefined" && module.exports) {
   // best solution in a regex-golf we did a couple of ages ago at
   // * http://mathiasbynens.be/demo/url-regex
   // * http://rodneyrehm.de/t/url-regex.html
-  URI.find_uri_expression = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>???]))/ig;
+  URI.find_uri_expression = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»]))/ig;
   URI.findUri = {
     // valid "scheme://" or "www."
     start: /\b(?:([a-z][a-z0-9.+-]*:\/\/)|www\.)/gi,
     // everything up to the next whitespace
     end: /[\s\r\n]|$/,
     // trim trailing punctuation captured by end RegExp
-    trim: /[`!()\[\]{};:'".,<>???]+$/
+    trim: /[`!()\[\]{};:'".,<>?«»]+$/
   };
   // http://www.iana.org/assignments/uri-schemes.html
   // http://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers#Well-known_ports
@@ -23956,7 +23956,7 @@ if (typeof module !== "undefined" && module.exports) {
   };
   URI.buildQuery = function(data, duplicateQueryParameters, escapeQuerySpace) {
     // according to http://tools.ietf.org/html/rfc3986 or http://labs.apache.org/webarch/uri/rfc/rfc3986.html
-    // being ?-._~!$&'()*+,;=:@/?? %HEX and alnum are allowed
+    // being »-._~!$&'()*+,;=:@/?« %HEX and alnum are allowed
     // the RFC explicitly states ?/foo being a valid use case, no mention of parameter syntax!
     // URI.js treats the query string as being application/x-www-form-urlencoded
     // see http://www.w3.org/TR/REC-html40/interact/forms.html#form-content-type
