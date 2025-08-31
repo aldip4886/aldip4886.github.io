@@ -31,7 +31,7 @@ function add_line() {
 if(document.getElementById('bgSong')==null){
 	add_line();
 var audio = document.getElementById('bgSong');
-audio.volume = 0.2;
+audio.volume = 0.1;
 }
 }
 
