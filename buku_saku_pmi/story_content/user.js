@@ -13,4 +13,16 @@ var showPointer = player.showPointer;
 var hidePointer = player.hidePointer;
 var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
+window.Script1 = function()
+{
+  const player = GetPlayer();
+const uNamejs = player.GetVar("name");
+}
+
+window.Script2 = function()
+{
+  const player = GetPlayer();
+const uNamejs = player.GetVar("name");
+}
+
 };

@@ -2,6 +2,12 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
+      case "6bO1eZ4oNhA":
+        Script1();
+        break;
+      case "6AYzgJd7qfP":
+        Script2();
+        break;
   }
 }
 
@@ -25,6 +31,6 @@ function getActor() {
   return {
     "mbox": "mailto:myexample@domain.com",
     "objectType": "Agent",
-    "name": "%name%"
+    "name": uNamejs
   };
 }
