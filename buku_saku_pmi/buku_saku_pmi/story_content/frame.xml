@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="false">
             <options>
-              <option name="title_text" value="Buku Saku Pekerja Migran Indonesia" />
+              <option name="title_text" value="buku_saku_pmi" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
