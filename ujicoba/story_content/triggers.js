@@ -2,7 +2,7 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "67FpwPsyCP1":
+      case "6CyRmHt2X1h":
         Script1();
         break;
   }
@@ -26,7 +26,10 @@ var slideHeight = player.slideHeight;
 };
 function getActor() {
   return {
-    "mbox": "mailto: " + email,
     "objectType": "Agent",
-    "name": uname
+    "account": {
+      "homePage": "https://www.example.com",
+      "name": "Random" + Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+    }
+  };
 }
