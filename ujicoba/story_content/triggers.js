@@ -2,8 +2,11 @@ function ExecuteScript(strId)
 {
   switch (strId)
   {
-      case "6CyRmHt2X1h":
+      case "6ZChgAWfzmy":
         Script1();
+        break;
+      case "5iJ4Tklwe2V":
+        Script2();
         break;
   }
 }
@@ -29,7 +32,7 @@ function getActor() {
     "objectType": "Agent",
     "account": {
       "homePage": "https://www.example.com",
-      "name": "Random" + Math.floor(Math.random() * Number.MAX_SAFE_INTEGER)
+      "name": uname
     }
   };
 }

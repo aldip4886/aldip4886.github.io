@@ -23,4 +23,14 @@ const uEmailjs = player.GetVar("email");
 
 }
 
+window.Script2 = function()
+{
+  const player = GetPlayer();
+const uNamejs = player.GetVar("uname");
+const uEmailjs = player.GetVar("email");
+
+
+
+}
+
 };
