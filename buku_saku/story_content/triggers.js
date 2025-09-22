@@ -21,10 +21,3 @@ var hidePointer = player.hidePointer;
 var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
 };
-function getActor() {
-  return {
-    "mbox": "mailto:myexample@domain.com",
-    "objectType": "Agent",
-    "name": uNamejs
-  };
-}
