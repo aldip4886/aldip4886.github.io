@@ -1,4 +1,11 @@
-window.InitUserScripts = function()
+function ExecuteScript(strId)
+{
+  switch (strId)
+  {
+  }
+}
+
+window.InitExecuteScripts = function()
 {
 var player = GetPlayer();
 var object = player.object;
@@ -13,10 +20,4 @@ var showPointer = player.showPointer;
 var hidePointer = player.hidePointer;
 var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
-window.Script1 = function()
-{
-  const player = GetPlayer();
-const uNamejs = player.GetVar("name");
-}
-
 };
