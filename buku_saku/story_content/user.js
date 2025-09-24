@@ -1,14 +1,4 @@
-function ExecuteScript(strId)
-{
-  switch (strId)
-  {
-      case "6ceNBc1EMd2":
-        Script1();
-        break;
-  }
-}
-
-window.InitExecuteScripts = function()
+window.InitUserScripts = function()
 {
 var player = GetPlayer();
 var object = player.object;
@@ -24,10 +14,3 @@ var hidePointer = player.hidePointer;
 var slideWidth = player.slideWidth;
 var slideHeight = player.slideHeight;
 };
-function getActor() {
-  return {
-    "mbox": "mailto:myexample@domain.com",
-    "objectType": "Agent",
-    "name": uNamejs
-  };
-}
