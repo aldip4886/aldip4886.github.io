@@ -1,0 +1,21 @@
+scan semua file dalam direktori project ini.
+file utama project ini adalah index.html.
+Sekarang edit bagian feedback.
+Tambahkan button Selesai pada akhir halaman ini dan gunakan javascript ini pada button itu:
+<script>
+        function jalankanLanjutSlide() {
+            try {
+                // Mengambil referensi Storyline player dari dalam iframe
+                const player = parent.GetPlayer();
+
+                // Mengubah variabel Storyline menjadi True
+                player.SetVar("JumpNext", true);
+            } catch (error) {
+                console.error("Gagal berkomunikasi dengan Storyline:", error);
+                alert("Fungsi ini hanya berjalan jika dijalankan di dalam Articulate Storyline (LMS/Web server).");
+            }
+        }
+    </script>
+
+Jangan mengubah bagian lainnya.
+Simpan respon anda pada file lain  di direktori yang sama
