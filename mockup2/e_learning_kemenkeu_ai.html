@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Kementerian Keuangan RI</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kemenkeu: {
+                            navy: '#0A2240',
+                            navyLight: '#15335B',
+                            gold: '#F4B223',
+                            goldHover: '#E09F12',
+                            slate: '#F8FAFC',
+                            charcoal: '#1E293B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+        mark { background-color: #F4B223; color: #0A2240; border-radius: 2px; padding: 0 2px; font-weight: bold; }
+        
+        /* Keyframe Pulse Animation for FAQ (Navy Light) */
+        @keyframes pulse-navy {
+            0% { box-shadow: 0 0 0 0 rgba(21, 51, 91, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(21, 51, 91, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(21, 51, 91, 0); }
+        }
+        
+        /* Keyframe Pulse Animation for Chatbot (Gold) */
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(244, 178, 35, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(244, 178, 35, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(244, 178, 35, 0); }
+        }
+
+        .pulse-navy-btn {
+            animation: pulse-navy 2s infinite;
+        }
+
+        .pulse-gold-btn {
+            animation: pulse-gold 2s infinite;
+        }
+
+        /* ROBUST CSS PSEUDO-FULLSCREEN FALLBACK FOR SANDBOXED IFRAMES */
+        .pseudo-fullscreen {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            max-width: 100vw !important;
+            max-height: 100vh !important;
+            z-index: 9999 !important;
+            border-radius: 0 !important;
+            margin: 0 !important;
+            background-color: #020617 !important; /* Slate 955 */
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+        }
+
+        .pseudo-fullscreen > div:first-child {
+            margin: auto 0 !important; /* Centers the 16:9 viewport vertically in portrait screens */
+            width: 100% !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-kemenkeu-charcoal flex flex-col min-h-screen selection:bg-kemenkeu-gold selection:text-kemenkeu-navy overflow-x-hidden pt-6">
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl w-full mx-auto px-4 py-6">
+        <!-- Main Grid Layout Container -->
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 w-full items-start" id="main-grid-layout">
+            
+            <!-- Left Side: Player & Controls -->
+            <div class="lg:col-span-4 flex flex-col space-y-4 transition-all duration-300" id="player-column-wrapper">
+                
+                <!-- Player Container strictly holding 16:9 aspect ratio -->
+                <div id="player-wrapper" class="relative bg-slate-900 rounded-2xl shadow-xl border border-slate-800 overflow-hidden group w-full">
+                    
+                    <!-- 16:9 Slide Display Area -->
+                    <div class="w-full aspect-[16/9] relative overflow-hidden text-white flex flex-col justify-between">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-kemenkeu-navy to-slate-900 opacity-95 z-0"></div>
+                        <div class="absolute -top-10 -right-10 w-96 h-96 bg-kemenkeu-gold/5 rounded-full blur-3xl"></div>
+
+                        <!-- Slide Contents Inside -->
+                        <div class="relative z-10 flex-1 flex flex-col p-4 md:p-6 justify-between h-full">
+                            
+                            <!-- TOP SLIDE AREA: Kolom Pencarian Bersisian dengan Nomor Slide -->
+                            <div class="flex justify-between items-center bg-black/40 p-2.5 rounded-xl border border-white/5 backdrop-blur-sm">
+                                <span class="font-bold tracking-widest text-kemenkeu-gold uppercase text-[9px] md:text-xs flex items-center gap-1.5 opacity-80">
+                                    <i class="fa-solid fa-shield-halved"></i> BPPK Kemenkeu
+                                </span>
+                                
+                                <!-- SEARCH BAR INPUT -->
+                                <div class="flex items-center space-x-3">
+                                    <div class="relative w-44 md:w-64">
+                                        <input type="text" id="slide-internal-search" oninput="searchInsideSlideContent()" placeholder="Cari teks di dalam modul..." class="w-full pl-7 pr-8 py-1 bg-white/10 border border-white/15 hover:border-white/20 text-white placeholder-slate-400 rounded-lg text-[11px] focus:outline-none focus:ring-1 focus:ring-kemenkeu-gold focus:bg-slate-900/90 transition-all">
+                                        <div class="absolute inset-y-0 left-2.5 flex items-center pointer-events-none text-slate-400 text-[10px]">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <!-- Tombol Reset "X" di dalam Form Pencarian -->
+                                        <button id="clear-search-btn" onclick="clearSearch()" class="absolute inset-y-0 right-2.5 flex items-center text-slate-400 hover:text-white transition-colors hidden focus:outline-none" title="Reset pencarian">
+                                            <i class="fa-solid fa-circle-xmark text-[11px]"></i>
+                                        </button>
+                                    </div>
+                                    <span class="font-bold text-slate-300 text-[10px] md:text-xs shrink-0 bg-white/5 px-2.5 py-1 rounded-md border border-white/5" id="slide-number">Slide 1 / 5</span>
+                                </div>
+                            </div>
+
+                            <!-- DYNAMIC SLIDE DISPLAY CONTAINER -->
+                            <div class="flex-1 flex flex-col justify-center my-2 max-w-2xl mx-auto w-full" id="dynamic-slide-content-area">
+                                <!-- Konten Slide Di-render Secara Dinamis oleh JavaScript -->
+                            </div>
+
+                        </div>
+
+                        <!-- FLOATING ICONS EMBEDDED INSIDE THE SLIDE VIEWPORT CONTAINER -->
+                        <div class="absolute right-4 bottom-4 z-30 flex flex-col space-y-2">
+                            <!-- FAQ Floating Button with Gold Style -->
+                            <button onclick="toggleFloatingWindow('faq')" id="fab-faq" class="pulse-gold-btn w-9 h-9 md:w-11 md:h-11 rounded-full bg-kemenkeu-gold hover:bg-kemenkeu-goldHover text-kemenkeu-navy flex items-center justify-center transition-all shadow-xl focus:outline-none">
+                                <i class="fa-solid fa-circle-question text-base md:text-lg"></i>
+                            </button>
+                            <!-- Chatbot Floating Button with Pulse Effect -->
+                            <button onclick="toggleFloatingWindow('chatbot')" id="fab-chatbot" class="pulse-gold-btn w-9 h-9 md:w-11 md:h-11 rounded-full bg-kemenkeu-gold hover:bg-kemenkeu-goldHover text-kemenkeu-navy flex items-center justify-center transition-all shadow-xl focus:outline-none">
+                                <i class="fa-solid fa-robot text-base md:text-lg"></i>
+                            </button>
+                        </div>
+
+                        <!-- FLOATING WINDOW 1: FAQ INTERACTIVE CENTER -->
+                        <div id="window-faq" class="absolute top-14 right-4 bottom-4 w-72 md:w-80 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-slate-200 z-30 transform translate-x-[120%] transition-transform duration-300 flex flex-col text-kemenkeu-charcoal hidden">
+                            <div class="bg-kemenkeu-navy text-white px-3 py-2 flex justify-between items-center rounded-t-xl border-b border-slate-800">
+                                <span class="text-xs font-bold flex items-center gap-1.5"><i class="fa-solid fa-circle-question text-kemenkeu-gold"></i> Portal FAQ DJBC</span>
+                                <button onclick="closeFloatingWindow('faq')" class="text-white hover:text-kemenkeu-gold text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            
+                            <!-- FAQ Filters Area -->
+                            <div class="p-2 border-b border-slate-150 bg-slate-50 space-y-1.5">
+                                <div class="relative">
+                                    <input type="text" id="faq-search" onkeyup="filterFAQs()" placeholder="Cari pertanyaan / regulasi..." class="w-full text-[10px] px-2.5 py-1 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-kemenkeu-navy">
+                                    <div class="absolute inset-y-0 right-2 flex items-center text-slate-400 text-[9px] hover:text-slate-600 cursor-pointer hidden" id="faq-clear-btn" onclick="clearFAQSearch()">
+                                        <i class="fa-solid fa-circle-xmark"></i>
+                                    </div>
+                                </div>
+                                <div class="flex gap-1">
+                                    <select id="faq-category-filter" onchange="filterFAQs()" class="flex-1 text-[9px] py-1 px-1 border border-slate-200 bg-white rounded-lg focus:outline-none">
+                                        <option value="ALL">Semua Kategori</option>
+                                    </select>
+                                    <select id="faq-difficulty-filter" onchange="filterFAQs()" class="w-20 text-[9px] py-1 px-1 border border-slate-200 bg-white rounded-lg focus:outline-none">
+                                        <option value="ALL">Tingkat</option>
+                                        <option value="Dasar">Dasar</option>
+                                        <option value="Menengah">Menengah</option>
+                                        <option value="Sangat Penting">Sangat Penting</option>
+                                    </select>
+                                    <button id="faq-fav-toggle" onclick="toggleFavFilter()" class="w-6 h-6 flex items-center justify-center border border-slate-200 bg-white rounded-lg text-[9px] text-slate-400 hover:text-amber-500" title="Hanya Favorit">
+                                        <i class="fa-regular fa-star" id="faq-fav-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ Dynamic Accordion List Container -->
+                            <div class="flex-1 p-2 overflow-y-auto space-y-2 text-[11px] custom-scrollbar bg-slate-100/50" id="faq-list-container"></div>
+                        </div>
+
+                        <!-- FLOATING WINDOW 2: SRIKANDI BOT CHAT INTERFACE -->
+                        <div id="window-chatbot" class="absolute top-14 right-4 bottom-4 w-72 md:w-80 bg-white/95 backdrop-blur-md rounded-xl shadow-2xl border border-slate-200 z-30 transform translate-x-[120%] transition-transform duration-300 flex flex-col text-kemenkeu-charcoal hidden">
+                            <div class="bg-kemenkeu-navy text-white px-3 py-2 flex justify-between items-center rounded-t-xl border-b border-slate-800">
+                                <div>
+                                    <span class="text-xs font-bold block flex items-center gap-1.5"><i class="fa-solid fa-robot text-kemenkeu-gold"></i> Srikandi AI Bot</span>
+                                    <span class="text-[9px] text-slate-400 block -mt-0.5">Asisten Cerdas Instansi</span>
+                                </div>
+                                <button onclick="closeFloatingWindow('chatbot')" class="text-white hover:text-kemenkeu-gold text-xs p-1"><i class="fa-solid fa-xmark"></i></button>
+                            </div>
+                            <div id="chat-messages" class="flex-1 p-3 overflow-y-auto space-y-2 text-[11px] bg-slate-50/50">
+                                <div class="bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm text-slate-700 leading-relaxed">
+                                    Halo! Saya <strong>Srikandi AI</strong>. Silakan tanyakan hal-hal terkait pilar fiskal, passing grade evaluasi, maupun sistem pengelolaan APBN Indonesia.
+                                </div>
+                            </div>
+                            <div class="p-2 border-t bg-white flex items-center space-x-1">
+                                <input type="text" id="chat-input" onkeypress="handleChatEnter(event)" placeholder="Ketik pesan anda..." class="flex-1 text-[11px] px-2 py-1.5 border rounded-lg focus:outline-none">
+                                <button onclick="sendMessage()" class="p-2 bg-kemenkeu-navy hover:bg-kemenkeu-navyLight text-white rounded-lg text-[10px]">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- E-Learning Control Toolbar (Footer Controls) -->
+                    <div class="bg-kemenkeu-navy px-4 py-2.5 flex flex-wrap items-center justify-between gap-3 border-t border-kemenkeu-navyLight z-10 relative">
+                        <div class="flex items-center space-x-2">
+                            <button id="btn-play-pause" onclick="togglePlay()" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-kemenkeu-gold flex items-center justify-center transition-all shadow-sm">
+                                <i id="play-pause-icon" class="fa-solid fa-play text-xs"></i>
+                            </button>
+                            <button id="btn-prev" onclick="prevSlide()" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-white flex items-center justify-center transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-sm">
+                                <i class="fa-solid fa-chevron-left text-xs"></i>
+                            </button>
+                            <button id="btn-next" onclick="nextSlide()" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-white flex items-center justify-center transition-all disabled:opacity-30 disabled:cursor-not-allowed shadow-sm">
+                                <i class="fa-solid fa-chevron-right text-xs"></i>
+                            </button>
+                        </div>
+
+                        <!-- INTEGRATED PROGRESS BAR IN TOOLBAR (Sejajar Navigasi Tanpa Judul "Kemajuan Belajar") -->
+                        <div class="flex-1 min-w-[120px] max-w-xs mx-4 flex items-center space-x-2">
+                            <div class="flex-1 bg-slate-800 h-2 rounded-full overflow-hidden">
+                                <div id="course-progress-bar" class="bg-emerald-500 h-full transition-all duration-300" style="width: 20%"></div>
+                            </div>
+                            <span class="text-[11px] font-bold text-slate-300 whitespace-nowrap" id="course-progress-percent">20% Selesai</span>
+                        </div>
+
+                        <div class="flex items-center space-x-2 text-white">
+                            <span class="text-[11px] text-slate-400 font-medium hidden sm:inline">Navigasi Ke:</span>
+                            <select id="slide-selector" onchange="jumpToSlide(this.value)" class="bg-kemenkeu-navyLight text-white text-xs font-semibold py-1.5 px-2.5 rounded-lg border border-slate-700 focus:outline-none">
+                                <option value="1">Slide 1: Pengantar Fiskal & APBN</option>
+                                <option value="2">Slide 2: Struktur Komposisi Keuangan</option>
+                                <option value="3">Slide 3: Alur Siklus APBN</option>
+                                <option value="4">Slide 4: Nilai-Nilai Pengelolaan</option>
+                                <option value="5">Slide 5: Evaluasi Mandiri</option>
+                            </select>
+                        </div>
+
+                        <button id="btn-fullscreen" onclick="toggleFullscreen()" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-white flex items-center justify-center transition-all shadow-sm">
+                            <i class="fa-solid fa-expand text-xs"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Lower Panel Row: Kemajuan Belajar & Deskripsi Pembelajaran telah dibersihkan secara masif -->
+
+            </div>
+
+            <!-- RIGHT SIDEBAR: DEFAULT HIDDEN (Akan disuntikkan kelas flex/hidden oleh JS) -->
+            <div id="search-sidebar" class="w-full bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-[480px] transition-all duration-300 hidden">
+                <div class="bg-kemenkeu-navy text-white px-4 py-3 flex items-center justify-between shadow-sm">
+                    <div class="flex items-center space-x-2">
+                        <span class="text-xs font-bold uppercase tracking-wider"><i class="fa-solid fa-list-check text-kemenkeu-gold mr-1.5"></i> Hasil Pencarian Teks</span>
+                        <span class="text-[9px] bg-indigo-600 text-white px-2 py-0.5 rounded font-extrabold" id="sidebar-match-counter">0 Cocok</span>
+                    </div>
+                    <!-- Tombol untuk menutup sidebar secara instan -->
+                    <button onclick="closeSearchSidebar()" class="text-slate-300 hover:text-white transition-colors focus:outline-none text-xs px-1" title="Tutup hasil pencarian">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="divide-y divide-slate-100 overflow-y-auto flex-1 text-xs" id="sidebar-results-container"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // Core State Management
+        let currentSlide = 1;
+        const totalSlides = 5;
+        let isPlaying = false;
+        let playInterval = null;
+        let autoplayProgress = 0;
+        const autoplayDurationPerSlide = 8000; 
+        const tickRate = 100;
+        let completedSlides = { 1: true };
+        let activeSearchSearchKeyword = ""; 
+
+        // Database Content Map for Deep Text Search
+        const slideDataset = [
+            {
+                id: 1,
+                title: "Slide 1: Pengantar Fiskal & APBN",
+                subtitle: "Modul Dasar Keuangan Negara",
+                content: "Pengenalan APBN & Kebijakan Fiskal Indonesia. Mempelajari mekanisme penyusunan, pilar-pilar pendapatan, serta strategi alokasi anggaran belanja negara demi kesejahteraan masyarakat secara berkelanjutan.",
+                desc: "Halaman pendahuluan menjelaskan pokok pengertian dasar fiskal, peran krusial anggaran, serta strategi makroekonomi domestik."
+            },
+            {
+                id: 2,
+                title: "Slide 2: Struktur Komposisi Anggaran",
+                subtitle: "Struktur Komposisi APBN",
+                content: "Analisis rasio pendapatan negara vs rencana belanja negara saat ini. Pilar Pendapatan Negara disepakati sebesar Rp2.637 Triliun. Rencana Belanja Negara dianggarkan sebesar Rp3.325 Triliun Belanja Prioritas Infrastruktur Hijau.",
+                desc: "Grafik representasi data mengenai target pendapatan Rp2.637 Triliun berbanding alokasi belanja Rp3.325 Triliun."
+            },
+            {
+                id: 3,
+                title: "Slide 3: Alur Siklus Penyusunan",
+                subtitle: "Tahapan Siklus APBN",
+                content: "Alur penganggaran tahunan dari perencanaan awal hingga pengawasan berkala. Tahap 1 Perencanaan RKP Jan - Apr. Tahap 2 Pembahasan DPR Mei - Okt. Tahap 3 Pelaksanaan APBN Jan - Des. Tahap 4 Pelaporan Audit Pengawasan.",
+                desc: "Penjelasan periodisasi siklus rancangan tahunan anggaran keuangan, mulai dari pagu indikatif hingga audit berkala."
+            },
+            {
+                id: 4,
+                title: "Slide 4: Nilai Utama Pengelolaan",
+                subtitle: "Nilai-Nilai Utama Kementerian Keuangan",
+                content: "Internalisasi nilai luhur dasar institusi. Integritas Luhur: Menjunjung tinggi kejujuran, moralitas, dan kode etik moral tertinggi. Profesionalisme Kerja: Bekerja tuntas, akurat, dengan kompetensi terbaik. Sinergi Instansi Korporat: Membangun kolaborasi produktif antar instansi.",
+                desc: "Internalisasi nilai luhur dasar institusi (Integritas, Profesionalisme, dan Sinergi) dalam mengelola instansi perpajakan negara."
+            },
+            {
+                id: 5,
+                title: "Slide 5: Evaluasi Pengujian Kognitif",
+                subtitle: "Kuis Pilihan Ganda",
+                content: "Evaluasi Mandiri. Siapakah pemegang otoritas pengelola fiskal tertinggi di Indonesia menurut undang-undang? Pilihan opsi jawaban: Bank Indonesia (BI), Kementerian Keuangan (Kemenkeu), Otoritas Jasa Keuangan (OJK), Badan Pemeriksa Keuangan (BPK) Passing Grade 80%.",
+                desc: "Lembar uji kompetensi pilihan ganda guna mengevaluasi daya serap pemahaman materi pelatihan."
+            }
+        ];
+
+        // INTEGRATED CUSTOMS & TECHNICAL FAQ DATASET
+        const faqDatabase = [
+            {
+                id: 1,
+                kategori: "Klasifikasi Barang & HS",
+                pertanyaan: "Bagaimana cara menentukan klasifikasi barang impor jika produk terdiri dari multi-komponen campuran?",
+                jawaban: "Sesuai Ketentuan Umum Interpretasi Harmonized System (KUMHS) 3(b), barang campuran harus diklasifikasikan berdasarkan komponen materi atau zat penyusun yang memberikan karakter esensial barang tersebut. Jika KUMHS 3(b) belum dapat memberikan solusi, klasifikasi dilakukan berdasarkan KUMHS 3(c) yaitu menempatkannya pada pos tarif terakhir berdasarkan urutan numerik dari pos-pos yang setara.",
+                regulasi: "KUMHS 3(b) & 3(c) - Buku Tarif Kepabeanan Indonesia (BTKI)",
+                kesulitan: "Sangat Penting"
+            },
+            {
+                id: 2,
+                kategori: "Nilai Pabean",
+                pertanyaan: "Apakah biaya pengangkutan (freight) wajib ditambahkan ke dalam penentuan Nilai Pabean (CIF)?",
+                jawaban: "Ya, biaya transportasi/pengangkutan barang ke pelabuhan tujuan impor wajib dimasukkan ke dalam Nilai Transaksi sebagai unsur pembentuk Nilai Pabean. Hal ini didasarkan pada metode penilaian impor Cost, Insurance, and Freight (CIF). Jika biaya freight sebenarnya tidak tercantum jelas di invoice, maka digunakan persentase estimasi standar berdasarkan zona asal muat barang.",
+                regulasi: "PMK No. 160/PMK.04/2018 tentang Nilai Pabean untuk Penghitungan Bea Masuk",
+                kesulitan: "Sangat Penting"
+            },
+            {
+                id: 3,
+                kategori: "Fasilitas KITE",
+                pertanyaan: "Apa perbedaan krusial antara fasilitas KITE Pembebasan dan KITE Pengembalian?",
+                jawaban: "KITE Pembebasan memberikan pembebasan Bea Masuk serta Pajak Pertambahan Nilai (PPN) tidak dipungut atas impor bahan baku untuk diolah, dirakit, atau dipasang pada barang yang hasil produksinya akan diekspor. Sedangkan KITE Pengembalian mewajibkan importir membayar Bea Masuk terlebih dahulu saat impor, lalu setelah barang hasil olahannya diekspor, importir mengajukan pengembalian (refund) Bea Masuk yang telah dibayarkan tersebut.",
+                regulasi: "PMK No. 145/PMK.04/2022 tentang Kemudahan Impor Kemudahan Ekspor",
+                kesulitan: "Menengah"
+            },
+            {
+                id: 4,
+                kategori: "Kawasan Berikat",
+                pertanyaan: "Bagaimana ketentuan pengenaan Bea Masuk atas penjualan barang hasil produksi Kawasan Berikat ke TLDDP?",
+                jawaban: "Penjualan dari Kawasan Berikat ke TLDDP dikenai Bea Masuk sebesar tarif bahan baku dengan dasar nilai pabean berupa nilai bahan baku impor yang terkandung saat dimasukkan ke Kawasan Berikat. Apabila tarif bea masuk bahan baku tersebut lebih tinggi dari tarif barang jadi hasil produksinya, maka dapat dipilih tarif barang jadi guna memberikan keadilan komersial, dengan wajib melunasi PPN/PPnBM.",
+                regulasi: "PMK No. 131/PMK.04/2018 jo. PMK No. 65/PMK.04/2021",
+                kesulitan: "Sangat Penting"
+            },
+            {
+                id: 5,
+                kategori: "Tatalaksana Impor",
+                pertanyaan: "Apa sanksi administratif jika importir melakukan kesalahan deklarasi jumlah barang pada PIB?",
+                jawaban: "Apabila kesalahan pemberitahuan jenis atau jumlah barang impor mengakibatkan kurangnya pembayaran Bea Masuk, importir dikenai sanksi administrasi berupa denda yang dihitung secara proporsional berjenjang dari persentase nilai kekurangan bayar tersebut, berkisar antara 100% hingga 1000% dari nilai Bea Masuk yang kurang dibayar.",
+                regulasi: "Pasal 82 ayat (5) Undang-Undang No. 17 Tahun 2006 tentang Kepabeanan",
+                kesulitan: "Sangat Penting"
+            },
+            {
+                id: 6,
+                kategori: "Barang Kiriman",
+                pertanyaan: "Berapakah batasan nilai pembebasan (de minimis value) terbaru atas barang kiriman impor melalui PJT?",
+                jawaban: "Pemberian pembebasan Bea Masuk atas impor barang kiriman diberikan untuk barang dengan nilai pabean (FOB) maksimal USD 3 per penerima barang per kiriman. Untuk nilai barang kiriman di atas USD 3 hingga USD 1.500 dikenai tarif flat Bea Masuk sebesar 7,5% dan PPN Impor sebesar 11% (kecuali untuk barang tekstil, tas, sepatu, dan buku yang memiliki tarif khusus sendiri).",
+                regulasi: "PMK No. 96/PMK.04/2023 tentang Ketentuan Impor Barang Kiriman",
+                kesulitan: "Dasar"
+            },
+            {
+                id: 7,
+                kategori: "Tatalaksana Ekspor",
+                pertanyaan: "Kapan eksportir wajib menyerahkan Pemberitahuan Ekspor Barang (PEB) ke Kantor Bea Cukai?",
+                jawaban: "PEB wajib disampaikan oleh eksportir sebelum barang dimasukkan ke Kawasan Pabean pelabuhan muat. Penyampaian PEB dapat dilakukan paling cepat 7 (tujuh) hari sebelum tanggal perkiraan ekspor, kecuali untuk ekspor barang curah yang mendapat fasilitas penyerahan berkala atau kondisi khusus lainnya.",
+                regulasi: "PMK No. 155/PMK.04/2022 tentang Ketentuan Pabean di Bidang Ekspor",
+                kesulitan: "Dasar"
+            }
+        ];
+
+        let favorites = [];
+        let filterFavsOnly = false;
+
+        window.onload = function() {
+            // Load favorites state from LocalStorage
+            const storedFavs = localStorage.getItem('djbc_faq_favorites');
+            if (storedFavs) {
+                favorites = JSON.parse(storedFavs);
+            }
+            updateUIForSlide();
+            updateFAQCategoryFilter();
+            renderFAQs();
+        };
+
+        // DYNAMIC SLIDE CONTENT RENDERER
+        function renderSlideView() {
+            const container = document.getElementById('dynamic-slide-content-area');
+            if (!container) return;
+
+            let htmlContent = "";
+            const k = activeSearchSearchKeyword;
+
+            function highlight(text) {
+                if (!k) return text;
+                const regex = new RegExp(`(${k})`, 'gi');
+                return text.replace(regex, `<mark>$1</mark>`);
+            }
+
+            if (currentSlide === 1) {
+                htmlContent = `
+                    <div class="flex flex-col items-center justify-center text-center space-y-3 animate-fade-in">
+                        <div class="inline-block bg-kemenkeu-gold/20 text-kemenkeu-gold text-[10px] md:text-xs font-bold px-3 py-0.5 rounded-full border border-kemenkeu-gold/30">
+                            ${highlight(slideDataset[0].subtitle)}
+                        </div>
+                        <h2 class="text-lg md:text-2xl font-extrabold tracking-tight text-white leading-tight">
+                            ${highlight("Pengenalan APBN & Kebijakan Fiskal Indonesia")}
+                        </h2>
+                        <p class="text-slate-300 text-[11px] md:text-xs font-light max-w-xl leading-relaxed">
+                            ${highlight(slideDataset[0].content)}
+                        </p>
+                    </div>`;
+            } else if (currentSlide === 2) {
+                htmlContent = `
+                    <div class="flex flex-col space-y-3 animate-fade-in">
+                        <div>
+                            <h3 class="text-base md:text-lg font-bold text-kemenkeu-gold">${highlight(slideDataset[1].subtitle)}</h3>
+                            <p class="text-[10px] md:text-xs text-slate-300">Analisis rasio pendapatan negara vs rencana belanja negara saat ini.</p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-1 text-xs">
+                            <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-semibold text-slate-300">${highlight("Pilar Pendapatan Negara")}</span>
+                                    <span class="text-xs font-bold text-emerald-400">Rp2.637 Triliun</span>
+                                </div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-emerald-400 h-full rounded-full" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 p-3 rounded-xl border border-white/10">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-[10px] font-semibold text-slate-300">${highlight("Rencana Belanja Negara (Prioritas Hijau)")}</span>
+                                    <span class="text-xs font-bold text-blue-400">Rp3.325 Triliun</span>
+                                </div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-blue-400 h-full rounded-full" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            } else if (currentSlide === 3) {
+                htmlContent = `
+                    <div class="flex flex-col space-y-3 animate-fade-in">
+                        <div>
+                            <h3 class="text-base md:text-lg font-bold text-kemenkeu-gold">${highlight(slideDataset[2].subtitle)}</h3>
+                            <p class="text-[10px] md:text-xs text-slate-300">Alur penganggaran tahunan dari perencanaan awal hingga pengawasan berkala.</p>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-[10px]">
+                            <div class="bg-[#0A2240] p-2 rounded-lg border border-kemenkeu-gold flex flex-col items-center">
+                                <div class="w-5 h-5 bg-kemenkeu-gold text-kemenkeu-navy rounded-full flex items-center justify-center font-bold mb-1 text-[11px]">1</div>
+                                <span class="font-bold text-white">${highlight("Perencanaan RKP")}</span>
+                                <span class="text-[9px] text-slate-300">Jan - Apr</span>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded-lg border border-white/10 flex flex-col items-center">
+                                <div class="w-5 h-5 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold mb-1 text-[11px]">2</div>
+                                <span class="font-bold text-slate-200">${highlight("Pembahasan DPR")}</span>
+                                <span class="text-[9px] text-slate-400">Mei - Okt</span>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded-lg border border-white/10 flex flex-col items-center">
+                                <div class="w-5 h-5 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold mb-1 text-[11px]">3</div>
+                                <span class="font-bold text-slate-200">${highlight("Pelaksanaan APBN")}</span>
+                                <span class="text-[9px] text-slate-400">Jan - Des</span>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded-lg border border-white/10 flex flex-col items-center">
+                                <div class="w-5 h-5 bg-slate-700 text-white rounded-full flex items-center justify-center font-bold mb-1 text-[11px]">4</div>
+                                <span class="font-bold text-slate-200">${highlight("Pelaporan Audit")}</span>
+                                <span class="text-[9px] text-slate-400">Pasca Tahun</span>
+                            </div>
+                        </div>
+                    </div>`;
+            } else if (currentSlide === 4) {
+                htmlContent = `
+                    <div class="flex flex-col space-y-2 animate-fade-in">
+                        <h3 class="text-base md:text-md font-bold text-kemenkeu-gold">${highlight(slideDataset[3].subtitle)}</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+                            <div class="bg-white/5 p-2 rounded-xl border border-white/10 flex items-start space-x-2">
+                                <div class="text-kemenkeu-gold mt-0.5"><i class="fa-solid fa-star text-[10px]"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white text-[11px]">${highlight("Integritas Luhur")}</h4>
+                                    <p class="text-[9px] text-slate-300 mt-0.5">Menjunjung tinggi kejujuran, moralitas, dan kode etik moral tertinggi.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded-xl border border-white/10 flex items-start space-x-2">
+                                <div class="text-kemenkeu-gold mt-0.5"><i class="fa-solid fa-briefcase text-[10px]"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white text-[11px]">${highlight("Profesionalisme Kerja")}</h4>
+                                    <p class="text-[9px] text-slate-300 mt-0.5">Bekerja tuntas, akurat, dengan kompetensi terbaik.</p>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 p-2 rounded-xl border border-white/10 flex items-start space-x-2">
+                                <div class="text-kemenkeu-gold mt-0.5"><i class="fa-solid fa-handshake text-[10px]"></i></div>
+                                <div>
+                                    <h4 class="font-bold text-white text-[11px]">${highlight("Sinergi Instansi")}</h4>
+                                    <p class="text-[9px] text-slate-300 mt-0.5">Membangun kolaborasi produktif antar instansi.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            } else if (currentSlide === 5) {
+                htmlContent = `
+                    <div class="flex flex-col space-y-2 animate-fade-in text-left">
+                        <div>
+                            <span class="bg-amber-500/20 text-kemenkeu-gold text-[9px] font-bold uppercase px-2 py-0.5 rounded border border-amber-500/30">Evaluasi Mandiri</span>
+                            <h3 class="text-xs md:text-xs font-bold text-white mt-1">${highlight("Siapakah pemegang otoritas pengelola fiskal tertinggi di Indonesia menurut undang-undang?")}</h3>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[10px]">
+                            <button onclick="checkAnswer(false, this)" class="quiz-option text-left p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-between w-full">
+                                <span>A. Bank Indonesia (BI)</span> <i class="fa-regular fa-circle text-slate-400"></i>
+                            </button>
+                            <button onclick="checkAnswer(true, this)" class="quiz-option text-left p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-between w-full">
+                                <span>B. ${highlight("Kementerian Keuangan (Kemenkeu)")}</span> <i class="fa-regular fa-circle text-slate-400"></i>
+                            </button>
+                            <button onclick="checkAnswer(false, this)" class="quiz-option text-left p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-between w-full">
+                                <span>C. Otoritas Jasa Keuangan (OJK)</span> <i class="fa-regular fa-circle text-slate-400"></i>
+                            </button>
+                            <button onclick="checkAnswer(false, this)" class="quiz-option text-left p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-between w-full">
+                                <span>D. Badan Pemeriksa Keuangan (BPK)</span> <i class="fa-regular fa-circle text-slate-400"></i>
+                            </button>
+                        </div>
+                        <div id="quiz-feedback" class="text-[10px] text-slate-300 h-3 font-medium text-center md:text-left"></div>
+                    </div>`;
+            }
+
+            container.innerHTML = htmlContent;
+        }
+
+        // DEEP CONTENT SEARCH ENGINE & VISIBILITY CONTROL
+        function searchInsideSlideContent() {
+            const queryInput = document.getElementById('slide-internal-search');
+            const mainGrid = document.getElementById('main-grid-layout');
+            const playerWrapper = document.getElementById('player-column-wrapper');
+            const sidebar = document.getElementById('search-sidebar');
+            const resultsContainer = document.getElementById('sidebar-results-container');
+            const counterTag = document.getElementById('sidebar-match-counter');
+            const clearBtn = document.getElementById('clear-search-btn');
+
+            const keyword = queryInput.value.toLowerCase().trim();
+            activeSearchSearchKeyword = keyword;
+
+            if (!keyword) {
+                if (clearBtn) clearBtn.classList.add('hidden');
+                
+                sidebar.classList.add('hidden');
+                sidebar.classList.remove('lg:flex');
+                playerWrapper.className = "lg:col-span-4 flex flex-col space-y-4 transition-all duration-300";
+                renderSlideView(); 
+                return;
+            }
+
+            if (clearBtn) clearBtn.classList.remove('hidden');
+
+            sidebar.classList.remove('hidden');
+            sidebar.classList.add('lg:flex');
+            playerWrapper.className = "lg:col-span-3 flex flex-col space-y-4 transition-all duration-300";
+
+            resultsContainer.innerHTML = '';
+            let matchCount = 0;
+
+            slideDataset.forEach(slide => {
+                const fullPool = `${slide.title} ${slide.subtitle} ${slide.content} ${slide.desc}`.toLowerCase();
+                
+                if (fullPool.includes(keyword)) {
+                    matchCount++;
+                    const isActive = (slide.id === currentSlide);
+                    
+                    const contextString = `${slide.subtitle}: ${slide.content} ${slide.desc}`;
+                    const startPos = Math.max(0, contextString.toLowerCase().indexOf(keyword) - 15);
+                    const endPos = Math.min(contextString.length, startPos + keyword.length + 55);
+                    let snippet = contextString.substring(startPos, endPos);
+                    
+                    const regex = new RegExp(`(${keyword})`, 'gi');
+                    snippet = snippet.replace(regex, `<mark>$1</mark>`);
+
+                    const card = document.createElement('div');
+                    card.onclick = () => jumpToSlide(slide.id);
+                    card.className = `p-3 hover:bg-slate-50 cursor-pointer transition-all border-l-4 ${isActive ? 'border-kemenkeu-gold bg-indigo-50/20' : 'border-transparent'} flex flex-col space-y-1`;
+                    
+                    card.innerHTML = `
+                        <div class="flex items-center justify-between text-[11px]">
+                            <span class="font-bold text-kemenkeu-navy">${slide.title}</span>
+                            <span class="text-[9px] text-slate-400 font-medium">Buka <i class="fa-solid fa-arrow-right text-[8px]"></i></span>
+                        </div>
+                        <p class="text-[10px] text-slate-500 leading-relaxed italic">"...${snippet}..."</p>
+                    `;
+                    resultsContainer.appendChild(card);
+                }
+            });
+
+            counterTag.innerText = `${matchCount} Cocok`;
+
+            if (matchCount === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="text-center py-12 px-4 text-slate-400">
+                        <i class="fa-solid fa-ban text-3xl mb-2 text-slate-200 block"></i>
+                        Kata kunci tidak ditemukan pada materi apa pun.
+                    </div>
+                `;
+            }
+
+            renderSlideView();
+        }
+
+        function clearSearch() {
+            const queryInput = document.getElementById('slide-internal-search');
+            if (queryInput) {
+                queryInput.value = '';
+                searchInsideSlideContent(); 
+            }
+        }
+
+        function closeSearchSidebar() {
+            clearSearch(); 
+        }
+
+        // Master UI Sync State
+        function updateUIForSlide() {
+            for (let i = 1; i <= totalSlides; i++) {
+                const el = document.getElementById(`slide-${i}`);
+                if (el) {
+                    if (i === currentSlide) el.classList.remove('hidden');
+                    else el.classList.add('hidden');
+                }
+            }
+
+            completedSlides[currentSlide] = true;
+            
+            const currentData = slideDataset.find(s => s.id === currentSlide);
+            const activeTitleEl = document.getElementById('active-slide-title');
+            if (activeTitleEl) {
+                activeTitleEl.innerText = currentData.title;
+            }
+            document.getElementById('slide-number').innerText = `Slide ${currentSlide} / ${totalSlides}`;
+            
+            const descEl = document.getElementById('slide-description-text');
+            if (descEl) {
+                descEl.innerHTML = currentData.desc;
+            }
+            
+            document.getElementById('slide-selector').value = currentSlide;
+
+            document.getElementById('btn-prev').disabled = (currentSlide === 1);
+            document.getElementById('btn-next').disabled = (currentSlide === totalSlides);
+
+            const completedCount = Object.keys(completedSlides).length;
+            const percent = Math.round((completedCount / totalSlides) * 100);
+            document.getElementById('course-progress-percent').innerText = `${percent}% Selesai`;
+            document.getElementById('course-progress-bar').style.width = `${percent}%`;
+
+            renderSlideView();
+            searchInsideSlideContent();
+            resetAutoplayProgressBar();
+        }
+
+        // Navigation Handlers
+        function nextSlide() {
+            if (currentSlide < totalSlides) { currentSlide++; updateUIForSlide(); }
+            else { pauseSlide(); }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) { currentSlide--; updateUIForSlide(); }
+        }
+
+        function jumpToSlide(index) {
+            currentSlide = parseInt(index);
+            updateUIForSlide();
+        }
+
+        function togglePlay() {
+            if (isPlaying) { pauseSlide(); } 
+            else { playSlide(); }
+        }
+
+        function playSlide() {
+            isPlaying = true;
+            document.getElementById('play-pause-icon').className = "fa-solid fa-pause text-xs";
+            document.getElementById('btn-play-pause').classList.add('bg-kemenkeu-gold', 'text-kemenkeu-navy');
+
+            autoplayProgress = 0;
+            playInterval = setInterval(() => {
+                autoplayProgress += (tickRate / autoplayDurationPerSlide) * 100;
+                const bar = document.getElementById('autoplay-progress-bar');
+                if (bar) bar.style.width = `${autoplayProgress}%`;
+
+                if (autoplayProgress >= 100) {
+                    autoplayProgress = 0;
+                    if (currentSlide < totalSlides) { nextSlide(); } 
+                    else { jumpToSlide(1); }
+                }
+            }, tickRate);
+        }
+
+        function pauseSlide() {
+            isPlaying = false;
+            document.getElementById('play-pause-icon').className = "fa-solid fa-play text-xs";
+            document.getElementById('btn-play-pause').classList.remove('bg-kemenkeu-gold', 'text-kemenkeu-navy');
+            clearInterval(playInterval);
+            const bar = document.getElementById('autoplay-progress-bar');
+            if (bar) bar.style.width = `0%`;
+        }
+
+        function resetAutoplayProgressBar() {
+            autoplayProgress = 0;
+            const bar = document.getElementById('autoplay-progress-bar');
+            if (bar) bar.style.width = `0%`;
+            if (isPlaying) {
+                clearInterval(playInterval);
+                playSlide();
+            }
+        }
+
+        function toggleFullscreen() {
+            const wrapper = document.getElementById('player-wrapper');
+            const icon = document.getElementById('btn-fullscreen').querySelector('i');
+            
+            const isInFullscreen = document.fullscreenElement || 
+                                   document.webkitFullscreenElement || 
+                                   document.mozFullScreenElement || 
+                                   document.msFullscreenElement ||
+                                   wrapper.classList.contains('pseudo-fullscreen');
+            
+            if (!isInFullscreen) {
+                const requestFS = wrapper.requestFullscreen || 
+                                  wrapper.webkitRequestFullscreen || 
+                                  wrapper.mozRequestFullScreen || 
+                                  wrapper.msRequestFullscreen;
+                
+                if (requestFS) {
+                    requestFS.call(wrapper)
+                        .then(() => {
+                            icon.className = "fa-solid fa-compress text-xs";
+                        })
+                        .catch(err => {
+                            console.warn("Iframe memblokir fullscreen asli, beralih ke Pseudo-Fullscreen.", err);
+                            enablePseudoFullscreen(wrapper, icon);
+                        });
+                } else {
+                    enablePseudoFullscreen(wrapper, icon);
+                }
+            } else {
+                const exitFS = document.exitFullscreen || 
+                               document.webkitExitFullscreen || 
+                               document.mozCancelFullScreen || 
+                               document.msExitFullscreen;
+                
+                if (exitFS && !wrapper.classList.contains('pseudo-fullscreen')) {
+                    exitFS.call(document)
+                        .then(() => {
+                            icon.className = "fa-solid fa-expand text-xs";
+                        })
+                        .catch(() => {
+                            disablePseudoFullscreen(wrapper, icon);
+                        });
+                } else {
+                    disablePseudoFullscreen(wrapper, icon);
+                }
+            }
+        }
+
+        function enablePseudoFullscreen(wrapper, icon) {
+            wrapper.classList.add('pseudo-fullscreen');
+            icon.className = "fa-solid fa-compress text-xs";
+            document.body.style.overflow = 'hidden';
+        }
+
+        function disablePseudoFullscreen(wrapper, icon) {
+            wrapper.classList.remove('pseudo-fullscreen');
+            icon.className = "fa-solid fa-expand text-xs";
+            document.body.style.overflow = '';
+        }
+
+        const fullscreenEvents = ['fullscreenchange', 'webkitfullscreenchange', 'mozfullscreenchange', 'MSFullscreenChange'];
+        fullscreenEvents.forEach(evt => {
+            document.addEventListener(evt, () => {
+                const wrapper = document.getElementById('player-wrapper');
+                const icon = document.getElementById('btn-fullscreen').querySelector('i');
+                const isNativeFS = document.fullscreenElement || 
+                                   document.webkitFullscreenElement || 
+                                   document.mozFullscreenElement || 
+                                   document.msFullscreenElement;
+                if (!isNativeFS && !wrapper.classList.contains('pseudo-fullscreen')) {
+                    icon.className = "fa-solid fa-expand text-xs";
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                const wrapper = document.getElementById('player-wrapper');
+                const icon = document.getElementById('btn-fullscreen').querySelector('i');
+                if (wrapper.classList.contains('pseudo-fullscreen')) {
+                    disablePseudoFullscreen(wrapper, icon);
+                }
+            }
+        });
+
+        // Inside Window Drawer Toggles
+        function toggleFloatingWindow(type) {
+            const targetWindow = document.getElementById(`window-${type}`);
+            const otherType = type === 'faq' ? 'chatbot' : 'faq';
+            const otherWindow = document.getElementById(`window-${otherType}`);
+
+            if (otherWindow) {
+                otherWindow.classList.add('hidden');
+                otherWindow.style.transform = 'translateX(120%)';
+            }
+
+            if (targetWindow.classList.contains('hidden')) {
+                targetWindow.classList.remove('hidden');
+                setTimeout(() => targetWindow.style.transform = 'translateX(0)', 10);
+            } else {
+                closeFloatingWindow(type);
+            }
+        }
+
+        function closeFloatingWindow(type) {
+            const targetWindow = document.getElementById(`window-${type}`);
+            targetWindow.style.transform = 'translateX(120%)';
+            setTimeout(() => targetWindow.classList.add('hidden'), 300);
+        }
+
+        /* PORTED DJBC PORTAL FAQ LOGIC */
+        function updateFAQCategoryFilter() {
+            const selectFilter = document.getElementById('faq-category-filter');
+            const categories = [...new Set(faqDatabase.map(faq => faq.kategori))];
+            
+            selectFilter.innerHTML = '<option value="ALL">Kategori</option>';
+            categories.forEach(cat => {
+                const opt = document.createElement('option');
+                opt.value = cat;
+                opt.textContent = cat;
+                selectFilter.appendChild(opt);
+            });
+        }
+
+        function toggleFavFilter() {
+            filterFavsOnly = !filterFavsOnly;
+            const btn = document.getElementById('faq-fav-toggle');
+            const icon = document.getElementById('faq-fav-icon');
+
+            if (filterFavsOnly) {
+                btn.classList.add('bg-amber-500', 'border-amber-500', 'text-slate-950');
+                btn.classList.remove('bg-white', 'text-slate-400');
+                icon.className = "fa-solid fa-star text-slate-950";
+            } else {
+                btn.classList.add('bg-white', 'text-slate-400');
+                btn.classList.remove('bg-amber-500', 'border-amber-500', 'text-slate-950');
+                icon.className = "fa-regular fa-star";
+            }
+            renderFAQs();
+        }
+
+        function toggleFavoriteFAQ(id) {
+            const index = favorites.indexOf(id);
+            if (index > -1) {
+                favorites.splice(index, 1);
+            } else {
+                favorites.push(id);
+            }
+            localStorage.setItem('djbc_faq_favorites', JSON.stringify(favorites));
+            renderFAQs();
+        }
+
+        function clearFAQSearch() {
+            const input = document.getElementById('faq-search');
+            if (input) {
+                input.value = '';
+                document.getElementById('faq-clear-btn').classList.add('hidden');
+                renderFAQs();
+            }
+        }
+
+        function toggleFAQAccordion(id) {
+            const target = document.getElementById(id);
+            const chevron = document.getElementById(`faq-chevron-${id}`);
+            
+            if (target.classList.contains('hidden')) {
+                target.classList.remove('hidden');
+                if (chevron) chevron.innerHTML = `<i class="fa-solid fa-chevron-up"></i>`;
+            } else {
+                target.classList.add('hidden');
+                if (chevron) chevron.innerHTML = `<i class="fa-solid fa-chevron-down"></i>`;
+            }
+        }
+
+        function renderFAQs() {
+            const container = document.getElementById('faq-list-container');
+            if (!container) return;
+            container.innerHTML = '';
+
+            const searchValue = document.getElementById('faq-search').value.toLowerCase();
+            const categoryValue = document.getElementById('faq-category-filter').value;
+            const difficultyValue = document.getElementById('faq-difficulty-filter').value;
+            const clearBtn = document.getElementById('faq-clear-btn');
+
+            if (searchValue) {
+                if (clearBtn) clearBtn.classList.remove('hidden');
+            } else {
+                if (clearBtn) clearBtn.classList.add('hidden');
+            }
+
+            const filtered = faqDatabase.filter(faq => {
+                const matchesSearch = faq.pertanyaan.toLowerCase().includes(searchValue) || 
+                                     faq.jawaban.toLowerCase().includes(searchValue) || 
+                                     faq.regulasi.toLowerCase().includes(searchValue);
+                const matchesCategory = categoryValue === 'ALL' || faq.kategori === categoryValue;
+                const matchesDifficulty = difficultyValue === 'ALL' || faq.kesulitan === difficultyValue;
+                const matchesFavs = !filterFavsOnly || favorites.includes(faq.id);
+
+                return matchesSearch && matchesCategory && matchesDifficulty && matchesFavs;
+            });
+
+            if (filtered.length === 0) {
+                container.innerHTML = `<div class="text-center text-slate-400 py-6 italic text-[10px]">Pertanyaan tidak ditemukan.</div>`;
+                return;
+            }
+
+            filtered.forEach(faq => {
+                const isFav = favorites.includes(faq.id);
+                const item = document.createElement('div');
+                item.className = "bg-white border rounded-lg overflow-hidden shadow-sm flex flex-col";
+                
+                const diffBadgeColor = faq.kesulitan === 'Sangat Penting' ? 'bg-red-50 text-red-700 border-red-200' :
+                                      faq.kesulitan === 'Menengah' ? 'bg-orange-50 text-orange-700 border-orange-200' : 'bg-slate-100 text-slate-700 border-slate-200';
+
+                item.innerHTML = `
+                    <div class="p-2.5 flex items-start gap-2 cursor-pointer hover:bg-slate-50 transition" onclick="toggleFAQAccordion('faq-item-ans-${faq.id}')">
+                        <div class="flex-grow space-y-1">
+                            <div class="flex flex-wrap items-center gap-1">
+                                <span class="bg-amber-150 text-amber-800 text-[8px] font-black uppercase px-1 py-0.2 rounded border border-amber-200">${faq.kategori}</span>
+                                <span class="border text-[8px] font-bold px-1 py-0.2 rounded ${diffBadgeColor}">${faq.kesulitan}</span>
+                            </div>
+                            <div class="font-bold text-slate-800 text-[10px] leading-snug">${faq.pertanyaan}</div>
+                        </div>
+                        <div class="flex items-center gap-2 self-center shrink-0">
+                            <button onclick="event.stopPropagation(); toggleFavoriteFAQ(${faq.id})" class="text-xs transition transform hover:scale-110">
+                                <i class="${isFav ? 'fa-solid text-amber-500' : 'fa-regular text-slate-400'} fa-star"></i>
+                            </button>
+                            <span class="text-slate-400 text-[10px]" id="faq-chevron-faq-item-ans-${faq.id}">
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div id="faq-item-ans-${faq.id}" class="hidden p-2.5 border-t bg-slate-50/50 space-y-2 text-[9px] leading-relaxed text-slate-600">
+                        <div class="font-medium text-slate-700">${faq.jawaban}</div>
+                        <div class="pt-1.5 border-t border-slate-200 flex items-center gap-1">
+                            <span class="text-slate-400 font-bold uppercase text-[8px]">Rujukan:</span>
+                            <span class="font-semibold text-slate-700 bg-slate-100 py-0.5 px-1 rounded border border-slate-200">${faq.regulasi}</span>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function filterFAQs() {
+            renderFAQs();
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const txt = input.value.trim();
+            if (!txt) return;
+
+            const box = document.getElementById('chat-messages');
+            const userMsg = document.createElement('div');
+            userMsg.className = "bg-kemenkeu-gold/20 border border-kemenkeu-gold/40 text-kemenkeu-navy font-semibold p-2 rounded-lg self-end ml-6 text-right";
+            userMsg.innerText = txt;
+            box.appendChild(userMsg);
+            input.value = '';
+
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = "bg-white p-2.5 rounded-lg border border-slate-100 shadow-sm text-slate-700 leading-relaxed";
+                botMsg.innerHTML = `<strong>Srikandi AI:</strong> Menanggapi kata pencarian kueri Anda mengenai "<em>${txt}</em>", gunakan bar pencarian internal di atas slide untuk melacak cuplikan materi rujukan secara real-time.`;
+                box.appendChild(botMsg);
+                box.scrollTop = box.scrollHeight;
+            }, 700);
+
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function handleChatEnter(e) { if (e.key === 'Enter') sendMessage(); }
+
+        function checkAnswer(isCorrect, btn) {
+            document.querySelectorAll('.quiz-option').forEach(o => {
+                o.className = "quiz-option text-left p-2.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center justify-between w-full";
+                o.querySelector('i').className = "fa-regular fa-circle text-slate-400";
+            });
+
+            const fb = document.getElementById('quiz-feedback');
+            if (isCorrect) {
+                btn.className = "quiz-option text-left p-2.5 rounded-lg bg-emerald-500/20 border border-emerald-400 text-white flex items-center justify-between w-full";
+                btn.querySelector('i').className = "fa-solid fa-circle-check text-emerald-400";
+                fb.innerHTML = `<span class="text-emerald-400 font-bold"><i class="fa-solid fa-square-check"></i> Jawaban Benar! Kementerian Keuangan memegang penuh mandat otoritas fiskal nasional.</span>`;
+            } else {
+                btn.className = "quiz-option text-left p-2.5 rounded-lg bg-red-500/20 border border-red-400 text-white flex items-center justify-between w-full";
+                btn.querySelector('i').className = "fa-solid fa-circle-xmark text-red-400";
+                fb.innerHTML = `<span class="text-red-400 font-medium"><i class="fa-solid fa-circle-exclamation"></i> Kurang tepat. Silakan tinjau kembali materi struktur APBN pada Slide 2.</span>`;
+            }
+        }
+    </script>
+</body>
+</html>
