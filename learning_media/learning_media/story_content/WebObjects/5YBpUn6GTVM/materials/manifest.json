@@ -1,0 +1,38 @@
+{
+  "generatedAt": "2026-05-24T00:00:00+07:00",
+  "basePath": "./materials",
+  "knowledge": [
+    {
+      "name": "01 Hook.jpg",
+      "path": "./materials/knowledge/01 Hook.jpg",
+      "type": "image",
+      "size": 228006
+    },
+    {
+      "name": "02 Kerangka-Dasar-Kepabeanan-Dari-Konsep-ke-Pengawasan-DJBC.pdf",
+      "path": "./materials/knowledge/02 Kerangka-Dasar-Kepabeanan-Dari-Konsep-ke-Pengawasan-DJBC.pdf",
+      "type": "pdf",
+      "size": 3084998
+    },
+    {
+      "name": "03 Video Pembahasan Soal.mp4",
+      "path": "./materials/knowledge/03 Video Pembahasan Soal.mp4",
+      "type": "video",
+      "size": 42196879
+    }
+  ],
+  "resource": [
+    {
+      "name": "CTA.png",
+      "path": "./materials/resource/CTA.png",
+      "type": "image",
+      "size": 2162198
+    },
+    {
+      "name": "Pengantar-Konsep-Perdagangan-Internasional (2).pdf",
+      "path": "./materials/resource/Pengantar-Konsep-Perdagangan-Internasional (2).pdf",
+      "type": "pdf",
+      "size": 996563
+    }
+  ]
+}
