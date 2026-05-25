@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyline Controller</title>
+    <style>
+        /* Opsional: Mengatur tampilan tombol agar menarik */
+        .btn-next {
+            padding: 12px 24px;
+            font-size: 16px;
+            background-color: #007bc4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .btn-next:hover {
+            background-color: #005994;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Membuat elemen tombol di HTML -->
+    <button class="btn-next" onclick="jalankanLanjutSlide()">Lanjut ke Slide Berikutnya</button>
+
+    <!-- 2. Menambahkan script JavaScript -->
+    <script>
+        function jalankanLanjutSlide() {
+            try {
+                // Mengambil referensi Storyline player dari dalam iframe
+                const player = parent.GetPlayer();
+
+                // Mengubah variabel Storyline menjadi True
+                player.SetVar("JumpNext", true);
+            } catch (error) {
+                console.error("Gagal berkomunikasi dengan Storyline:", error);
+                alert("Fungsi ini hanya berjalan jika dijalankan di dalam Articulate Storyline (LMS/Web server).");
+            }
+        }
+    </script>
+
+</body>
+</html>
