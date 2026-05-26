@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Media - Perdagangan Internasional & Kepabeanan DJBC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kemenkeu: {
+                            navy: '#0A2240',
+                            navyLight: '#15335B',
+                            gold: '#F4B223',
+                            goldHover: '#E09F12',
+                            charcoal: '#1E293B'
+                        }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        ::-webkit-scrollbar { width: 7px; height: 7px; }
+        ::-webkit-scrollbar-track { background: #e2e8f0; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 999px; }
+        mark { background: #F4B223; color: #0A2240; border-radius: 3px; padding: 0 3px; font-weight: 800; }
+        @keyframes pulse-gold {
+            0% { box-shadow: 0 0 0 0 rgba(244,178,35,.7); }
+            70% { box-shadow: 0 0 0 12px rgba(244,178,35,0); }
+            100% { box-shadow: 0 0 0 0 rgba(244,178,35,0); }
+        }
+        .pulse-gold-btn { animation: pulse-gold 2.4s infinite; }
+        .slide-shell {
+            background:
+                radial-gradient(circle at 80% 10%, rgba(244,178,35,.18), transparent 34%),
+                radial-gradient(circle at 12% 88%, rgba(20,184,166,.16), transparent 30%),
+                linear-gradient(135deg, #0A2240 0%, #0f2f54 52%, #111827 100%);
+        }
+        .pseudo-fullscreen {
+            position: fixed !important;
+            inset: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            z-index: 9999 !important;
+            border-radius: 0 !important;
+            background: #020617 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        .tab-active { background: #0A2240; color: #fff; border-color: #0A2240; }
+        .tap-target { min-width: 44px; min-height: 44px; }
+    </style>
+</head>
+<body class="bg-slate-100 text-kemenkeu-charcoal min-h-screen selection:bg-kemenkeu-gold selection:text-kemenkeu-navy">
+    <main class="max-w-7xl mx-auto p-3 md:p-6 space-y-4">
+        <header>
+            <h1 class="text-xl md:text-3xl font-black text-kemenkeu-navy leading-tight">Perdagangan Internasional & Kerangka Dasar Kepabeanan DJBC</h1>
+        </header>
+
+        <nav class="bg-white border border-slate-200 rounded-xl shadow-sm p-2 flex flex-wrap gap-2" aria-label="Navigasi utama modul">
+            <button onclick="switchView('diagnostic')" id="tab-diagnostic" class="main-tab tab-active px-3 py-2 rounded-lg border text-xs font-black">
+                <i class="fa-solid fa-clipboard-question mr-1"></i> Diagnostik Test
+            </button>
+            <button onclick="switchView('learning')" id="tab-learning" class="main-tab px-3 py-2 rounded-lg border text-xs font-black text-slate-700 bg-white">
+                <i class="fa-solid fa-book-open-reader mr-1"></i> Modul Pembelajaran
+            </button>
+            <button onclick="switchView('assignment')" id="tab-assignment" class="main-tab px-3 py-2 rounded-lg border text-xs font-black text-slate-700 bg-white">
+                <i class="fa-solid fa-file-pen mr-1"></i> Assignment dan Rubrik
+            </button>
+            <button onclick="switchView('posttest')" id="tab-posttest" class="main-tab px-3 py-2 rounded-lg border text-xs font-black text-slate-700 bg-white">
+                <i class="fa-solid fa-square-poll-vertical mr-1"></i> Post Test
+            </button>
+            <button onclick="switchView('feedback')" id="tab-feedback" class="main-tab px-3 py-2 rounded-lg border text-xs font-black text-slate-700 bg-white">
+                <i class="fa-solid fa-comments mr-1"></i> Feedback
+            </button>
+        </nav>
+        <div id="sequence-alert" class="hidden rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold text-amber-900"></div>
+
+        <section id="view-diagnostic" class="main-view bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden"></section>
+
+        <section id="view-learning" class="main-view hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 items-start" id="main-grid-layout">
+                <div class="lg:col-span-4 transition-all duration-300" id="player-column-wrapper">
+                    <div id="player-wrapper" class="bg-slate-950 rounded-xl md:rounded-2xl shadow-xl border border-slate-800 overflow-hidden">
+                        <div class="relative aspect-[16/9] slide-shell overflow-hidden text-white">
+                            <div class="relative z-10 h-full flex flex-col p-3 md:p-5">
+                                <div class="flex items-center justify-between gap-2 bg-black/35 border border-white/10 rounded-xl p-2 backdrop-blur-md">
+                                    <div class="min-w-0">
+                                        <div class="flex items-center gap-2">
+                                            <span class="w-8 h-8 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy flex items-center justify-center font-black">K</span>
+                                            <div class="min-w-0">
+                                                <p class="text-[10px] md:text-xs font-black tracking-widest uppercase text-kemenkeu-gold truncate">BPPK - DJBC Learning Module</p>
+                                                <p class="text-[10px] text-slate-300 truncate" id="active-source">Sumber: PDF Pengantar Perdagangan Internasional</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="relative w-40 md:w-72">
+                                            <input id="slide-search" oninput="searchInsideContent()" type="text" placeholder="Cari konsep, istilah, atau rujukan..." class="w-full pl-8 pr-8 py-2 rounded-lg bg-white/10 border border-white/15 text-xs text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-kemenkeu-gold">
+                                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-[11px] text-slate-400"></i>
+                                            <button id="clear-search-btn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-300 hover:text-white" aria-label="Bersihkan pencarian">
+                                                <i class="fa-solid fa-circle-xmark"></i>
+                                            </button>
+                                        </div>
+                                        <span class="text-[10px] md:text-xs font-black px-2 py-1 rounded-md bg-white/10 border border-white/10 whitespace-nowrap" id="slide-number">Item 1 / 9</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex-1 min-h-0 flex items-center py-2 md:py-4">
+                                    <div id="dynamic-slide-content-area" class="w-full"></div>
+                                </div>
+                            </div>
+
+                            <div class="absolute right-3 bottom-16 md:bottom-20 z-30 flex flex-col gap-2">
+                                <button onclick="toggleFloatingWindow('faq')" class="pulse-gold-btn tap-target rounded-full bg-kemenkeu-gold hover:bg-kemenkeu-goldHover text-kemenkeu-navy shadow-xl" title="Buka FAQ">
+                                    <i class="fa-solid fa-circle-question"></i>
+                                </button>
+                                <button onclick="toggleFloatingWindow('chatbot')" class="pulse-gold-btn tap-target rounded-full bg-kemenkeu-gold hover:bg-kemenkeu-goldHover text-kemenkeu-navy shadow-xl" title="Buka chatbot">
+                                    <i class="fa-solid fa-robot"></i>
+                                </button>
+                            </div>
+
+                            <aside id="window-faq" class="hidden absolute top-14 right-3 bottom-3 w-[19rem] md:w-96 bg-white/95 text-slate-800 rounded-xl shadow-2xl border border-slate-200 z-40 translate-x-[120%] transition-transform duration-300 flex flex-col overflow-hidden">
+                                <header class="bg-kemenkeu-navy text-white px-3 py-2 flex justify-between items-center">
+                                    <span class="text-xs font-black"><i class="fa-solid fa-circle-question text-kemenkeu-gold mr-1"></i> FAQ Materi Resmi</span>
+                                    <button onclick="closeFloatingWindow('faq')" class="tap-target !min-w-8 !min-h-8 text-slate-300 hover:text-white" aria-label="Tutup FAQ"><i class="fa-solid fa-xmark"></i></button>
+                                </header>
+                                <div class="p-2 border-b bg-slate-50">
+                                    <input id="faq-search" oninput="renderFAQs()" class="w-full text-xs px-3 py-2 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-kemenkeu-gold" placeholder="Cari FAQ, konsep, atau istilah...">
+                                </div>
+                                <div id="faq-list-container" class="flex-1 overflow-y-auto p-2 space-y-2 text-xs"></div>
+                            </aside>
+
+                            <aside id="window-chatbot" class="hidden absolute top-14 right-3 bottom-3 w-[19rem] md:w-96 bg-white/95 text-slate-800 rounded-xl shadow-2xl border border-slate-200 z-40 translate-x-[120%] transition-transform duration-300 flex flex-col overflow-hidden">
+                                <header class="bg-kemenkeu-navy text-white px-3 py-2 flex justify-between items-center">
+                                    <div>
+                                        <span class="text-xs font-black block"><i class="fa-solid fa-robot text-kemenkeu-gold mr-1"></i> Srikandi AI Bot</span>
+                                        <span class="text-[9px] text-slate-300">Simulasi RAG berbasis dua PDF modul</span>
+                                    </div>
+                                    <button onclick="closeFloatingWindow('chatbot')" class="tap-target !min-w-8 !min-h-8 text-slate-300 hover:text-white" aria-label="Tutup chatbot"><i class="fa-solid fa-xmark"></i></button>
+                                </header>
+                                <div id="chat-messages" class="flex-1 overflow-y-auto p-3 space-y-2 text-xs bg-slate-50">
+                                    <div class="bg-white p-3 rounded-lg border border-slate-200 shadow-sm">Halo. Saya akan menjawab berdasarkan ringkasan sumber modul. Coba tanya: "apa itu kepabeanan", "mengapa negara berdagang", atau "apa fungsi DJBC?"</div>
+                                </div>
+                                <div class="p-2 bg-white border-t flex gap-2">
+                                    <input id="chat-input" onkeypress="handleChatEnter(event)" class="flex-1 text-xs px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-kemenkeu-gold" placeholder="Tanya materi...">
+                                    <button onclick="sendMessage()" class="tap-target !min-w-11 !min-h-10 rounded-lg bg-kemenkeu-navy text-white hover:bg-kemenkeu-navyLight" aria-label="Kirim"><i class="fa-solid fa-paper-plane"></i></button>
+                                </div>
+                            </aside>
+                        </div>
+
+                        <div class="bg-kemenkeu-navy px-3 md:px-4 py-3 flex flex-wrap items-center gap-3 border-t border-kemenkeu-navyLight">
+                            <div class="flex items-center gap-2">
+                                <button id="btn-play-pause" onclick="togglePlay()" class="tap-target !min-w-10 !min-h-10 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-kemenkeu-gold"><i id="play-pause-icon" class="fa-solid fa-play text-xs"></i></button>
+                                <button id="btn-prev" onclick="prevSlide()" class="tap-target !min-w-10 !min-h-10 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-white disabled:opacity-30"><i class="fa-solid fa-chevron-left text-xs"></i></button>
+                                <button id="btn-next" onclick="nextSlide()" class="tap-target !min-w-10 !min-h-10 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-white disabled:opacity-30"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                            </div>
+                            <div id="course-progress-group" class="flex-1 min-w-[180px] flex items-center gap-2">
+                                <div class="flex-1 h-2 rounded-full bg-slate-800 overflow-hidden">
+                                    <div id="course-progress-bar" class="h-full bg-emerald-500 transition-all" style="width: 13%"></div>
+                                </div>
+                                <span id="course-progress-percent" class="text-[11px] font-black text-slate-200 whitespace-nowrap">13% Selesai</span>
+                            </div>
+                            <div id="video-progress-group" class="hidden flex-1 min-w-[260px] flex-wrap items-center gap-2">
+                                <button onclick="skipIntegratedVideo(-10)" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 text-white hover:bg-[#1C3E69]" title="Mundur 10 detik"><i class="fa-solid fa-rotate-left text-xs"></i></button>
+                                <span id="video-current-time" class="text-[11px] font-black text-slate-300 tabular-nums">00:00</span>
+                                <input id="video-seek" type="range" min="0" max="100" value="0" oninput="seekIntegratedVideo(this.value)" class="flex-1 accent-kemenkeu-gold">
+                                <span id="video-duration" class="text-[11px] font-black text-slate-300 tabular-nums">00:00</span>
+                                <button onclick="skipIntegratedVideo(10)" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 text-white hover:bg-[#1C3E69]" title="Maju 10 detik"><i class="fa-solid fa-rotate-right text-xs"></i></button>
+                                <button onclick="toggleVideoMute()" class="w-8 h-8 rounded-lg bg-kemenkeu-navyLight border border-slate-700 text-white hover:bg-[#1C3E69]" title="Mute"><i id="video-volume-icon" class="fa-solid fa-volume-high text-xs"></i></button>
+                                <input id="video-volume" type="range" min="0" max="100" value="100" oninput="setIntegratedVideoVolume(this.value)" class="w-20 accent-kemenkeu-gold" title="Volume">
+                                <select id="video-speed" onchange="setIntegratedVideoSpeed(this.value)" class="bg-kemenkeu-navyLight text-white text-[11px] font-bold py-1.5 px-2 rounded-lg border border-slate-700" title="Playback speed">
+                                    <option value="0.75">0.75x</option>
+                                    <option value="1" selected>1x</option>
+                                    <option value="1.25">1.25x</option>
+                                    <option value="1.5">1.5x</option>
+                                    <option value="2">2x</option>
+                                </select>
+                            </div>
+                            <select id="slide-selector" onchange="jumpToSlide(this.value)" class="max-w-full md:max-w-xs bg-kemenkeu-navyLight text-white text-xs font-bold py-2 px-3 rounded-lg border border-slate-700 focus:outline-none"></select>
+                            <button onclick="toggleFullscreen()" id="btn-fullscreen" class="tap-target !min-w-10 !min-h-10 rounded-lg bg-kemenkeu-navyLight border border-slate-700 hover:bg-[#1C3E69] text-white" aria-label="Fullscreen"><i class="fa-solid fa-expand text-xs"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <aside id="search-sidebar" class="hidden bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden h-[540px] flex-col">
+                    <header class="bg-kemenkeu-navy px-4 py-3 text-white flex items-center justify-between">
+                        <span class="text-xs font-black uppercase"><i class="fa-solid fa-list-check text-kemenkeu-gold mr-1"></i> Hasil Pencarian</span>
+                        <button onclick="clearSearch()" class="text-slate-300 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+                    </header>
+                    <div id="sidebar-results-container" class="divide-y divide-slate-100 overflow-y-auto flex-1 text-xs"></div>
+                </aside>
+            </div>
+            <div class="mt-4 flex justify-end">
+                <button id="learning-next-btn" onclick="switchView('assignment')" class="px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black disabled:opacity-40 disabled:cursor-not-allowed">
+                    Lanjut ke Assignment dan Rubrik <i class="fa-solid fa-arrow-right ml-1"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="view-assignment" class="main-view hidden bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden"></section>
+        <section id="view-posttest" class="main-view hidden bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden"></section>
+        <section id="view-feedback" class="main-view hidden bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden"></section>
+        <section id="view-analytics" class="main-view hidden bg-white border border-slate-200 rounded-xl shadow-sm overflow-hidden"></section>
+    </main>
+
+    <script>
+        const slides = [
+            {
+                id: 1,
+                title: "Orientasi Modul",
+                source: "Kombinasi dua PDF materi resmi",
+                badge: "Learning Path",
+                subtitle: "Dari Konsep Perdagangan Internasional ke Pengawasan Kepabeanan",
+                body: "Modul ini mempertemukan pemahaman ekonomi global dengan praktik kepabeanan Indonesia. Learner diarahkan memahami mengapa perdagangan terjadi, bagaimana ekspor-impor dibaca, lalu bagaimana DJBC menyeimbangkan pelayanan dan pengawasan.",
+                bullets: ["Capaian: menjelaskan ekspor, impor, neraca perdagangan, spesialisasi, kepabeanan, kawasan pabean, pemberitahuan pabean, dan fungsi DJBC.", "Aktivitas: eksplorasi slide, FAQ, chatbot berbasis sumber, kuis diagnostik, post-test, assignment studi kasus, dan rubrik.", "Tracking: progress slide, skor asesmen, learning gain, status assignment, dan event analitik siap dipetakan ke SCORM/backend."],
+                keywords: "perdagangan internasional kepabeanan DJBC learner SCORM RAG AI assignment rubrik analitik"
+            },
+            {
+                id: 2,
+                title: "Konteks Global",
+                source: "PDF Pengantar Konsep Perdagangan Internasional, halaman 2, 5, 6",
+                badge: "Global Trade",
+                subtitle: "Perdagangan internasional adalah jaringan transaksi sehari-hari",
+                body: "Barang yang digunakan sehari-hari sering lahir dari rantai lintas negara: bahan mentah, riset, komponen, produksi, distribusi, hingga konsumsi akhir dapat tersebar di berbagai kawasan.",
+                bullets: ["Perdagangan barang dan jasa global bernilai sangat besar dan melibatkan lebih dari seratus negara eksportir utama.", "Global value chain membuat satu produk dapat diproduksi melalui banyak negara sebelum sampai ke konsumen.", "Teknologi transportasi, komunikasi, liberalisasi perdagangan, dan perjanjian dagang memperdalam keterhubungan ekonomi."],
+                keywords: "konteks global global value chain supply chain perdagangan barang jasa transaksi lintas negara teknologi distribusi"
+            },
+            {
+                id: 3,
+                title: "Ekspor, Impor, Neraca",
+                source: "PDF Pengantar Konsep Perdagangan Internasional, halaman 3-4",
+                badge: "Core Concept",
+                subtitle: "Ekspor dan impor dibaca bersama neraca perdagangan",
+                body: "Ekspor adalah sudut pandang penjual yang mengirim barang atau jasa ke luar negeri. Impor adalah sudut pandang pembeli yang memperoleh barang atau jasa dari luar negeri. Selisih keduanya membentuk neraca perdagangan.",
+                bullets: ["Surplus terjadi ketika ekspor lebih besar dari impor, tetapi tetap perlu dibaca dalam konteks struktur ekonomi.", "Defisit terjadi ketika impor lebih besar dari ekspor; ini dapat mencerminkan ketergantungan, fase pertumbuhan, atau investasi pembangunan.", "Neraca perdagangan dipengaruhi nilai tukar, harga komoditas, kebijakan ekonomi, dan dinamika geopolitik."],
+                keywords: "ekspor impor neraca perdagangan surplus defisit nilai tukar komoditas geopolitik"
+            },
+            {
+                id: 4,
+                title: "Mengapa Negara Berdagang?",
+                source: "PDF Pengantar Konsep Perdagangan Internasional, halaman 7-8",
+                badge: "Economic Rationale",
+                subtitle: "Keterbatasan sumber daya mendorong spesialisasi",
+                body: "Tidak ada negara yang mampu memproduksi semua kebutuhannya secara efisien. Perdagangan memungkinkan negara fokus pada keunggulan produksi, lalu menukarnya dengan kebutuhan lain.",
+                bullets: ["Faktor utama: keterbatasan sumber daya, perbedaan teknologi, dan biaya produksi yang berbeda antarnegara.", "Spesialisasi membuat negara mengalokasikan sumber daya pada produk atau layanan yang relatif paling efisien.", "Dengan perdagangan, produksi global dapat meningkat meskipun sumber daya tetap terbatas."],
+                keywords: "mengapa negara berdagang sumber daya teknologi biaya produksi spesialisasi efisiensi global"
+            },
+            {
+                id: 5,
+                title: "Keunggulan Absolut & Komparatif",
+                source: "PDF Pengantar Konsep Perdagangan Internasional, halaman 9-10",
+                badge: "Trade Theory",
+                subtitle: "Dari Adam Smith ke David Ricardo",
+                body: "Keunggulan absolut menekankan efisiensi biaya yang lebih rendah dibanding negara lain. Keunggulan komparatif menekankan opportunity cost: perdagangan tetap menguntungkan bila negara berfokus pada produksi dengan biaya peluang paling rendah.",
+                bullets: ["Adam Smith: negara mengekspor barang yang bisa diproduksi lebih efisien dan mengimpor barang yang lebih mahal diproduksi sendiri.", "Kelemahan teori absolut: sulit menjelaskan perdagangan ketika satu negara unggul dalam semua produk.", "David Ricardo: dasar modern perdagangan adalah spesialisasi relatif berdasarkan opportunity cost."],
+                keywords: "keunggulan absolut komparatif Adam Smith David Ricardo opportunity cost spesialisasi relatif"
+            },
+            {
+                id: 6,
+                title: "Kerangka Kepabeanan",
+                source: "PDF Kerangka Dasar Kepabeanan DJBC, halaman 1-3",
+                badge: "Customs Foundation",
+                subtitle: "Kepabeanan bukan sekadar pungutan",
+                body: "Kepabeanan adalah segala sesuatu yang berhubungan dengan pengawasan lalu lintas barang yang masuk atau keluar daerah pabean sekaligus pemungutan bea masuk dan bea keluar.",
+                bullets: ["Dua sisi selalu berjalan bersama: pengawasan untuk kepatuhan dan keamanan, serta pelayanan untuk memperlancar perdagangan sah.", "Empat fungsi utama: revenue collection, community protection, trade facilitation, dan industrial assistance.", "DJBC menjalankan peran strategis dalam penerimaan negara, perlindungan masyarakat, kelancaran arus barang, dan dukungan industri."],
+                keywords: "kepabeanan pengawasan pelayanan bea masuk bea keluar DJBC revenue collection community protection trade facilitation industrial assistance"
+            },
+            {
+                id: 7,
+                title: "Daerah, Kawasan, dan Pemberitahuan Pabean",
+                source: "PDF Kerangka Dasar Kepabeanan DJBC, halaman 4-7",
+                badge: "Customs Process",
+                subtitle: "Lokasi barang dan deklarasi menentukan perlakuan",
+                body: "Daerah Pabean adalah garis aturan tempat ketentuan kepabeanan berlaku. Di dalamnya terdapat kawasan pabean dan tempat penimbunan sementara yang berada di bawah pengawasan DJBC.",
+                bullets: ["Kawasan Pabean dapat berupa area pelabuhan, bandar udara, atau tempat lain yang ditetapkan untuk lalu lintas barang.", "TPS menyimpan barang yang belum diselesaikan kewajiban pabeannya dan memiliki batas waktu penimbunan.", "Pemberitahuan pabean, baik manual maupun elektronik melalui sistem, menjadi deklarasi resmi importir atau eksportir kepada negara."],
+                keywords: "daerah pabean kawasan pabean TPS tempat penimbunan sementara pemberitahuan pabean BC 1.1 PIB PEB CEISA elektronik"
+            },
+            {
+                id: 8,
+                title: "Impor & Manajemen Risiko DJBC",
+                source: "PDF Kerangka Dasar Kepabeanan DJBC, halaman 8-10",
+                badge: "Risk-Based Control",
+                subtitle: "Pelayanan dan pengawasan diseimbangkan melalui risiko terukur",
+                body: "Impor adalah kegiatan memasukkan barang dari luar Daerah Pabean ke dalam Daerah Pabean. Kewajiban kepabeanan mulai berlaku saat barang secara fisik memasuki daerah pabean.",
+                bullets: ["Tujuan impor memengaruhi fasilitas, besaran bea, dan prosedur: dipakai, sementara, ditimbun di TPB, dipindah ke TPS lain, angkut lanjut/terus, atau re-ekspor.", "Manajemen risiko mempercepat clearance untuk pelaku patuh dan memfokuskan pemeriksaan pada entitas atau kiriman berisiko tinggi.", "Self-check akhir: definisi kepabeanan, empat fungsi utama, daerah/kawasan pabean, pemberitahuan pabean, dan keseimbangan pengawasan-pelayanan."],
+                keywords: "impor daerah pabean tujuan impor TPB TPS angkut lanjut re-ekspor manajemen risiko jalur hijau AEO PRM"
+            },
+            {
+                id: 9,
+                type: "video",
+                title: "Video Pembahasan Soal",
+                source: "Video pembelajaran: Video Pembahasan Soal.mp4",
+                badge: "Video Pembahasan",
+                subtitle: "Pembahasan Soal dan Penguatan Konsep",
+                body: "Video ini merangkum pembahasan soal dan penguatan konsep setelah peserta mempelajari slide perdagangan internasional dan kepabeanan.",
+                bullets: ["Gunakan video sebagai penguatan setelah membaca slide utama.", "Progress modul memperhitungkan durasi video yang benar-benar ditonton.", "Catat istilah yang belum kuat, lalu gunakan deep search untuk kembali ke slide terkait."],
+                keywords: "video pembahasan soal perdagangan internasional kepabeanan DJBC modul pembelajaran",
+                videoSrc: "Video Pembahasan Soal.mp4"
+            }
+        ];
+
+        const faqs = [
+            { q: "Apa definisi perdagangan internasional?", a: "Pertukaran barang dan jasa antarnegara berdasarkan kesepakatan, hukum, standar, sistem pembayaran, dan pengiriman lintas negara.", ref: "Pengantar Perdagangan Internasional, hlm. 3", tag: "Perdagangan" },
+            { q: "Apa beda ekspor dan impor?", a: "Ekspor dilihat dari sisi penjual yang mengirim barang atau jasa ke luar negeri; impor dilihat dari sisi pembeli yang memperoleh barang atau jasa dari luar negeri.", ref: "Pengantar Perdagangan Internasional, hlm. 3", tag: "Perdagangan" },
+            { q: "Apakah defisit neraca perdagangan selalu buruk?", a: "Tidak selalu. Defisit harus dibaca dalam konteks ekonomi, misalnya kebutuhan investasi, struktur produksi, nilai tukar, dan harga komoditas.", ref: "Pengantar Perdagangan Internasional, hlm. 4", tag: "Ekonomi" },
+            { q: "Apa inti keunggulan komparatif?", a: "Negara sebaiknya fokus pada barang dengan opportunity cost paling rendah, bukan semata biaya absolut paling rendah.", ref: "Pengantar Perdagangan Internasional, hlm. 10", tag: "Teori" },
+            { q: "Apa definisi kepabeanan?", a: "Segala sesuatu yang berhubungan dengan pengawasan lalu lintas barang masuk/keluar daerah pabean sekaligus pemungutan bea masuk dan bea keluar.", ref: "Kerangka Dasar Kepabeanan DJBC, hlm. 2", tag: "Kepabeanan" },
+            { q: "Apa empat fungsi utama kepabeanan?", a: "Revenue collection, community protection, trade facilitation, dan industrial assistance.", ref: "Kerangka Dasar Kepabeanan DJBC, hlm. 3", tag: "Kepabeanan" },
+            { q: "Mengapa pemberitahuan pabean penting?", a: "Karena pemberitahuan pabean adalah deklarasi resmi importir/eksportir kepada negara dan menjadi awal proses kepatuhan.", ref: "Kerangka Dasar Kepabeanan DJBC, hlm. 6", tag: "Proses" },
+            { q: "Bagaimana DJBC menyeimbangkan pelayanan dan pengawasan?", a: "Melalui manajemen risiko: mempercepat arus perdagangan sah untuk pelaku patuh dan memfokuskan pemeriksaan pada kiriman berisiko tinggi.", ref: "Kerangka Dasar Kepabeanan DJBC, hlm. 10", tag: "Pengawasan" }
+        ];
+
+        const diagnosticQuestions = [
+            { comp: "Konsep Dasar", topic: "Definisi perdagangan internasional", ref: "Slide 2-3: Konteks global dan ekspor-impor", q: "Perdagangan internasional paling tepat dipahami sebagai...", options: ["Pertukaran barang dan jasa antarnegara", "Pemungutan bea masuk oleh pemerintah daerah", "Penjualan barang hanya di pasar domestik", "Pencatatan semua transaksi tunai dalam negeri"], answer: 0, why: "Materi mendefinisikan perdagangan internasional sebagai pertukaran barang dan jasa antarnegara." },
+            { comp: "Ekspor-Impor", topic: "Perbedaan ekspor dan impor", ref: "Slide 3: Ekspor, Impor, Neraca", q: "Ekspor adalah kegiatan yang dilihat dari sisi...", options: ["Penjual yang mengirim barang atau jasa ke luar negeri", "Pembeli yang mendatangkan barang ke dalam negeri", "Petugas yang menyimpan barang di TPS", "Bank yang menukar mata uang"], answer: 0, why: "Ekspor adalah penjualan barang atau jasa ke luar negeri dari sisi penjual." },
+            { comp: "Neraca Perdagangan", topic: "Surplus dan defisit neraca perdagangan", ref: "Slide 3: Ekspor, Impor, Neraca", q: "Surplus neraca perdagangan terjadi ketika...", options: ["Nilai ekspor lebih besar daripada impor", "Nilai impor selalu sama dengan ekspor", "Semua barang diperiksa fisik", "Tidak ada barang yang masuk daerah pabean"], answer: 0, why: "Surplus terjadi saat ekspor lebih besar dari impor." },
+            { comp: "Teori Perdagangan", topic: "Keunggulan komparatif dan opportunity cost", ref: "Slide 5: Keunggulan Absolut & Komparatif", q: "Konsep kunci dalam keunggulan komparatif adalah...", options: ["Opportunity cost", "Tarif tunggal", "Lokasi pelabuhan", "Jumlah dokumen manual"], answer: 0, why: "Keunggulan komparatif menekankan biaya peluang yang dikorbankan." },
+            { comp: "Kepabeanan", topic: "Pengawasan dan pelayanan dalam kepabeanan", ref: "Slide 6: Kerangka Kepabeanan", q: "Dua sisi yang berjalan bersamaan dalam kepabeanan modern adalah...", options: ["Pengawasan dan pelayanan", "Produksi dan konsumsi", "Surplus dan defisit", "Pajak daerah dan retribusi"], answer: 0, why: "Materi kepabeanan menekankan pengawasan dan pelayanan sebagai dua sisi yang tidak dapat dipisahkan." }
+        ];
+
+        const postQuestions = [
+            { comp: "Global Value Chain", topic: "Global value chain", ref: "Slide 2: Konteks Global", q: "Contoh smartphone dengan desain, komponen, perakitan, dan bahan mentah dari berbagai negara menunjukkan konsep...", options: ["Global value chain", "Autarki ekonomi", "Defisit anggaran", "Pasar tertutup"], answer: 0, why: "Global value chain menggambarkan produksi yang tersebar lintas negara." },
+            { comp: "Motif Perdagangan", topic: "Alasan negara berdagang", ref: "Slide 4: Mengapa Negara Berdagang?", q: "Negara berdagang karena...", options: ["Tidak semua kebutuhan dapat diproduksi sendiri secara efisien", "Semua negara memiliki biaya produksi sama", "Perdagangan menghapus kebutuhan regulasi", "Setiap negara wajib memiliki komoditas identik"], answer: 0, why: "Keterbatasan sumber daya, teknologi, dan biaya produksi mendorong perdagangan." },
+            { comp: "Spesialisasi", topic: "Spesialisasi dan efisiensi global", ref: "Slide 4: Mengapa Negara Berdagang?", q: "Spesialisasi dalam perdagangan internasional berarti negara...", options: ["Fokus pada produk yang dapat diproduksi relatif lebih efisien", "Menghentikan seluruh impor", "Memproduksi semua barang sendiri", "Mengabaikan kualitas dan biaya"], answer: 0, why: "Spesialisasi mendorong efisiensi global melalui fokus pada keunggulan relatif." },
+            { comp: "Keunggulan Absolut", topic: "Teori Adam Smith", ref: "Slide 5: Keunggulan Absolut & Komparatif", q: "Menurut Adam Smith, negara sebaiknya mengekspor barang yang...", options: ["Dapat diproduksi dengan biaya lebih rendah dibanding negara lain", "Selalu memiliki tarif paling tinggi", "Tidak memiliki pasar luar negeri", "Tidak dapat diproduksi secara lokal"], answer: 0, why: "Keunggulan absolut menekankan efisiensi biaya dibanding negara lain." },
+            { comp: "Kepabeanan", topic: "Definisi kepabeanan", ref: "Slide 6: Kerangka Kepabeanan", q: "Definisi kepabeanan mencakup pengawasan lalu lintas barang dan...", options: ["Pemungutan bea masuk dan bea keluar", "Penetapan harga semua barang domestik", "Pemberian subsidi produksi nasional", "Pencetakan mata uang perdagangan"], answer: 0, why: "Kepabeanan mencakup pengawasan barang masuk/keluar daerah pabean dan pemungutan bea." },
+            { comp: "Fungsi DJBC", topic: "Community protection", ref: "Slide 6: Kerangka Kepabeanan", q: "Community protection dalam kepabeanan berkaitan dengan...", options: ["Mencegah masuknya barang ilegal, berbahaya, atau terlarang", "Mendorong impor tanpa pengawasan", "Menghapus seluruh dokumen pabean", "Menentukan nilai tukar mata uang"], answer: 0, why: "Community protection melindungi masyarakat dan ketahanan nasional dari barang berbahaya atau ilegal." },
+            { comp: "Kawasan Pabean", topic: "Kawasan pabean dan TPS", ref: "Slide 7: Daerah, Kawasan, dan Pemberitahuan Pabean", q: "Kawasan Pabean adalah area tertentu di pelabuhan, bandar udara, atau tempat lain yang...", options: ["Ditetapkan untuk lalu lintas barang di bawah pengawasan DJBC", "Bebas dari seluruh ketentuan kepabeanan", "Hanya dipakai untuk kegiatan perbankan", "Tidak membutuhkan dokumen barang"], answer: 0, why: "Kawasan Pabean adalah zona di bawah pengawasan DJBC untuk lalu lintas barang." },
+            { comp: "Pemberitahuan Pabean", topic: "Pemberitahuan pabean", ref: "Slide 7: Daerah, Kawasan, dan Pemberitahuan Pabean", q: "Pemberitahuan pabean penting karena berfungsi sebagai...", options: ["Deklarasi resmi importir atau eksportir kepada negara", "Tanda bahwa barang pasti bebas pemeriksaan", "Pengganti seluruh kewajiban pembayaran", "Dokumen promosi dagang internasional"], answer: 0, why: "Pemberitahuan pabean adalah titik awal kepatuhan dan deklarasi resmi kepada negara." },
+            { comp: "Impor", topic: "Kewajiban impor", ref: "Slide 8: Impor & Manajemen Risiko DJBC", q: "Kewajiban kepabeanan atas barang impor mulai berlaku saat barang...", options: ["Memasuki Daerah Pabean secara fisik", "Dibayar melalui transfer bank", "Dipesan melalui katalog", "Ditawarkan dalam kontrak dagang"], answer: 0, why: "Materi menyebut kewajiban berlaku saat barang fisik memasuki Daerah Pabean." },
+            { comp: "Manajemen Risiko", topic: "Manajemen risiko DJBC", ref: "Slide 8: Impor & Manajemen Risiko DJBC", q: "Manajemen risiko dalam kepabeanan membantu DJBC untuk...", options: ["Mempercepat barang patuh dan memfokuskan pemeriksaan pada kiriman berisiko", "Memeriksa semua barang dengan intensitas sama", "Menghapus peran pelayanan", "Mengabaikan data elektronik"], answer: 0, why: "Manajemen risiko menyeimbangkan trade facilitation dan pengawasan berbasis profil risiko." }
+        ];
+
+        const rubricRows = [
+            { criterion: "Ketepatan konsep perdagangan internasional dan impor", weight: "25%", level: "Menghubungkan ekspor, impor, neraca perdagangan, global value chain, dan tujuan impor secara benar." },
+            { criterion: "Pemahaman proses kepabeanan", weight: "30%", level: "Menjelaskan daerah pabean, kawasan pabean, TPS, dan pemberitahuan pabean dengan urutan proses yang logis." },
+            { criterion: "Analisis risiko dan fasilitasi perdagangan", weight: "25%", level: "Menunjukkan cara DJBC menyeimbangkan community protection, trade facilitation, dan manajemen risiko." },
+            { criterion: "Argumentasi, struktur, dan rujukan sumber", weight: "20%", level: "Jawaban tersusun jelas, berbasis sumber modul, dan memiliki rekomendasi yang dapat ditindaklanjuti." }
+        ];
+
+        let currentSlide = 1;
+        let completedSlides = { 1: true };
+        let isPlaying = false;
+        let playInterval = null;
+        let diagnosticScore = null;
+        let postScore = null;
+        let assignmentScore = null;
+        let pendingAssignmentSubmission = null;
+        let videoCompletionPercent = 0;
+        let scormEvents = [{ event: "Initialize", value: "SCORM runtime mock initialized", time: new Date().toLocaleTimeString('id-ID') }];
+        const quizState = {
+            diagnostic: { current: 0, answers: [], submitted: false },
+            posttest: { current: 0, answers: [], submitted: false }
+        };
+
+        function escapeHtml(str) {
+            return String(str).replace(/[&<>"']/g, s => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[s]));
+        }
+
+        function highlight(text) {
+            const query = document.getElementById('slide-search')?.value.trim();
+            const safe = escapeHtml(text);
+            if (!query) return safe;
+            const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return safe.replace(re, '<mark>$1</mark>');
+        }
+
+        function switchView(name) {
+            if (!canAccessTab(name)) {
+                showSequenceAlert(name);
+                updateNavigationLocks();
+                return;
+            }
+            hideSequenceAlert();
+            document.querySelectorAll('.main-view').forEach(view => view.classList.add('hidden'));
+            document.querySelectorAll('.main-tab').forEach(tab => {
+                tab.classList.remove('tab-active');
+                tab.classList.add('text-slate-700', 'bg-white');
+            });
+            document.getElementById(`view-${name}`).classList.remove('hidden');
+            const activeTab = document.getElementById(`tab-${name}`);
+            if (activeTab) {
+                activeTab.classList.add('tab-active');
+                activeTab.classList.remove('text-slate-700', 'bg-white');
+            }
+            if (name === 'feedback') renderFeedbackView();
+            if (name === 'analytics') renderAnalyticsView();
+            pushScormEvent("View", `active-tab=${name}`);
+        }
+
+        function canAccessTab(name) {
+            if (name === 'diagnostic') return true;
+            if (name === 'learning') return quizState.diagnostic.submitted;
+            if (name === 'assignment') return quizState.diagnostic.submitted && isModuleComplete();
+            if (name === 'posttest') return quizState.diagnostic.submitted && isModuleComplete() && assignmentScore !== null;
+            if (name === 'feedback') return quizState.diagnostic.submitted && isModuleComplete() && assignmentScore !== null && postScore !== null;
+            if (name === 'analytics') return isInstructorAnalyticsMode();
+            return false;
+        }
+
+        function isModuleComplete() {
+            const slideTotal = getSlideItems().length;
+            return Object.keys(completedSlides).length >= slideTotal && videoCompletionPercent >= 95;
+        }
+
+        function getSlideItems() {
+            return slides.filter(item => item.type !== 'video');
+        }
+
+        function calculateModuleCompletion() {
+            const slideTotal = getSlideItems().length;
+            const completedSlideUnits = Object.keys(completedSlides).length;
+            const videoUnit = Math.min(100, videoCompletionPercent) / 100;
+            return Math.round(((completedSlideUnits + videoUnit) / (slideTotal + 1)) * 100);
+        }
+
+        function getModuleDropOffPoint() {
+            const incompleteSlide = getSlideItems().find(item => !completedSlides[item.id]);
+            if (incompleteSlide) return incompleteSlide.title;
+            if (videoCompletionPercent < 95) return `Video Pembahasan Soal (${videoCompletionPercent}% ditonton)`;
+            return 'Tidak terdeteksi';
+        }
+
+        function isInstructorAnalyticsMode() {
+            const params = new URLSearchParams(window.location.search);
+            return ['instructor', 'instructional-designer', 'designer'].includes((params.get('role') || '').toLowerCase());
+        }
+
+        function showSequenceAlert(name) {
+            const requirements = {
+                learning: "Selesaikan Diagnostik Test terlebih dahulu untuk membuka Modul Pembelajaran.",
+                assignment: "Selesaikan Diagnostik Test dan buka seluruh item Modul Pembelajaran terlebih dahulu.",
+                posttest: "Selesaikan Assignment dan Rubrik terlebih dahulu sebelum membuka Post Test.",
+                feedback: "Selesaikan seluruh aktivitas sebelumnya: Diagnostik Test, Modul Pembelajaran, Assignment, dan Post Test.",
+                analytics: "SCORM and Analytics hanya tersedia melalui front end instruktur atau instructional designer."
+            };
+            const alert = document.getElementById('sequence-alert');
+            alert.textContent = requirements[name] || "Tab ini belum tersedia.";
+            alert.classList.remove('hidden');
+        }
+
+        function hideSequenceAlert() {
+            document.getElementById('sequence-alert').classList.add('hidden');
+        }
+
+        function updateNavigationLocks() {
+            ['diagnostic', 'learning', 'assignment', 'posttest', 'feedback'].forEach(name => {
+                const tab = document.getElementById(`tab-${name}`);
+                const unlocked = canAccessTab(name);
+                tab.disabled = !unlocked;
+                tab.classList.toggle('opacity-45', !unlocked);
+                tab.classList.toggle('cursor-not-allowed', !unlocked);
+                tab.title = unlocked ? '' : 'Selesaikan aktivitas sebelumnya untuk membuka tab ini.';
+                const lockIcon = tab.querySelector('.lock-state');
+                if (!unlocked && !lockIcon) {
+                    tab.insertAdjacentHTML('beforeend', ' <i class="lock-state fa-solid fa-lock text-[10px] ml-1"></i>');
+                }
+                if (unlocked && lockIcon) lockIcon.remove();
+            });
+            const nextBtn = document.getElementById('learning-next-btn');
+            if (nextBtn) nextBtn.disabled = !canAccessTab('assignment');
+        }
+
+        function renderSlide() {
+            const data = slides.find(s => s.id === currentSlide);
+            document.getElementById('active-source').textContent = `Sumber: ${data.source}`;
+            document.getElementById('slide-number').textContent = `${data.type === 'video' ? 'Video' : 'Slide'} ${currentSlide} / ${slides.length}`;
+            document.getElementById('slide-selector').value = currentSlide;
+            document.getElementById('btn-prev').disabled = currentSlide === 1;
+            document.getElementById('btn-next').disabled = currentSlide === slides.length;
+            if (data.type !== 'video') completedSlides[currentSlide] = true;
+
+            if (data.type === 'video') {
+                document.getElementById('dynamic-slide-content-area').innerHTML = `
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 md:gap-5 items-center">
+                        <div class="lg:col-span-3 rounded-xl overflow-hidden border border-white/10 bg-black/50 shadow-2xl">
+                            <video id="integrated-learning-video" class="w-full aspect-video bg-black" preload="metadata" onloadedmetadata="syncVideoToolbar()" ontimeupdate="syncVideoToolbar()" onplay="onIntegratedVideoPlay()" onpause="onIntegratedVideoPause()" onended="onIntegratedVideoEnded()">
+                                <source src="${escapeHtml(data.videoSrc)}" type="video/mp4">
+                                Browser Anda belum dapat memutar video ini. Letakkan file video di folder Plan dengan nama video_pembelajaran.mp4 atau ubah atribut src pada elemen video.
+                            </video>
+                        </div>
+                        <div class="lg:col-span-2 space-y-3">
+                            <span class="inline-flex items-center gap-2 text-[10px] md:text-xs font-black uppercase tracking-widest text-kemenkeu-gold">
+                                <i class="fa-solid fa-circle-play"></i> ${highlight(data.badge)}
+                            </span>
+                            <h2 class="text-2xl md:text-4xl font-black leading-tight">${highlight(data.subtitle)}</h2>
+                            <p class="text-sm md:text-base text-slate-200 leading-relaxed">${highlight(data.body)}</p>
+                            <div class="grid gap-2">
+                                ${data.bullets.map((b, index) => `
+                                    <div class="rounded-xl border border-white/12 bg-white/10 p-3 backdrop-blur-sm">
+                                        <div class="flex gap-3">
+                                            <span class="shrink-0 w-8 h-8 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy flex items-center justify-center text-xs font-black">${String(index + 1).padStart(2, '0')}</span>
+                                            <p class="text-xs md:text-sm text-slate-100 leading-relaxed">${highlight(b)}</p>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `;
+                updateProgress();
+                updateToolbarForContent(data);
+                syncVideoToolbar();
+                pushScormEvent("SetValue", `location=video-pembahasan-soal`);
+                updateNavigationLocks();
+                renderFeedbackView();
+                return;
+            }
+
+            document.getElementById('dynamic-slide-content-area').innerHTML = `
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 md:gap-5 items-center">
+                    <div class="lg:col-span-3 space-y-3">
+                        <span class="inline-flex items-center gap-2 text-[10px] md:text-xs font-black uppercase tracking-widest text-kemenkeu-gold">
+                            <i class="fa-solid fa-book-open-reader"></i> ${highlight(data.badge)}
+                        </span>
+                        <h2 class="text-2xl md:text-5xl font-black leading-tight max-w-4xl">${highlight(data.subtitle)}</h2>
+                        <p class="text-sm md:text-lg text-slate-200 leading-relaxed max-w-3xl">${highlight(data.body)}</p>
+                    </div>
+                    <div class="lg:col-span-2 grid gap-2">
+                        ${data.bullets.map((b, index) => `
+                            <div class="rounded-xl border border-white/12 bg-white/10 p-3 md:p-4 backdrop-blur-sm">
+                                <div class="flex gap-3">
+                                    <span class="shrink-0 w-8 h-8 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy flex items-center justify-center text-xs font-black">${String(index + 1).padStart(2, '0')}</span>
+                                    <p class="text-xs md:text-sm text-slate-100 leading-relaxed">${highlight(b)}</p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            updateProgress();
+            updateToolbarForContent(data);
+            pushScormEvent("SetValue", `location=slide-${currentSlide}`);
+            updateNavigationLocks();
+            renderFeedbackView();
+        }
+
+        function updateProgress() {
+            const percent = calculateModuleCompletion();
+            document.getElementById('course-progress-bar').style.width = `${percent}%`;
+            document.getElementById('course-progress-percent').textContent = `${percent}% Selesai`;
+        }
+
+        function updateToolbarForContent(data) {
+            const isVideo = data.type === 'video';
+            document.getElementById('course-progress-group').classList.toggle('hidden', isVideo);
+            document.getElementById('course-progress-group').classList.toggle('flex', !isVideo);
+            document.getElementById('video-progress-group').classList.toggle('hidden', !isVideo);
+            document.getElementById('video-progress-group').classList.toggle('flex', isVideo);
+            document.getElementById('play-pause-icon').className = "fa-solid fa-play text-xs";
+        }
+
+        function nextSlide() {
+            if (currentSlide < slides.length) {
+                currentSlide += 1;
+                renderSlide();
+            } else {
+                pauseSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide -= 1;
+                renderSlide();
+            }
+        }
+
+        function jumpToSlide(value) {
+            currentSlide = Number(value);
+            renderSlide();
+        }
+
+        function togglePlay() {
+            const data = slides.find(s => s.id === currentSlide);
+            if (data?.type === 'video') {
+                toggleIntegratedVideo();
+                return;
+            }
+            isPlaying ? pauseSlide() : playSlide();
+        }
+
+        function playSlide() {
+            isPlaying = true;
+            document.getElementById('play-pause-icon').className = "fa-solid fa-pause text-xs";
+            clearInterval(playInterval);
+            playInterval = setInterval(() => {
+                if (currentSlide < slides.length) nextSlide();
+                else jumpToSlide(1);
+            }, 7000);
+        }
+
+        function pauseSlide() {
+            isPlaying = false;
+            document.getElementById('play-pause-icon').className = "fa-solid fa-play text-xs";
+            clearInterval(playInterval);
+        }
+
+        function toggleIntegratedVideo() {
+            const video = document.getElementById('integrated-learning-video');
+            if (!video) return;
+            if (video.paused) video.play();
+            else video.pause();
+        }
+
+        function onIntegratedVideoPlay() {
+            document.getElementById('play-pause-icon').className = "fa-solid fa-pause text-xs";
+            pushScormEvent('Video', 'played=video-pembahasan-soal');
+        }
+
+        function onIntegratedVideoPause() {
+            document.getElementById('play-pause-icon').className = "fa-solid fa-play text-xs";
+        }
+
+        function onIntegratedVideoEnded() {
+            document.getElementById('play-pause-icon').className = "fa-solid fa-play text-xs";
+            videoCompletionPercent = 100;
+            updateProgress();
+            pushScormEvent('Video', 'completed=video-pembahasan-soal');
+            updateNavigationLocks();
+        }
+
+        function syncVideoToolbar() {
+            const video = document.getElementById('integrated-learning-video');
+            const seek = document.getElementById('video-seek');
+            if (!video || !seek) return;
+            const duration = Number.isFinite(video.duration) ? video.duration : 0;
+            seek.value = duration ? Math.round((video.currentTime / duration) * 100) : 0;
+            if (duration) {
+                videoCompletionPercent = Math.max(videoCompletionPercent, Math.round((video.currentTime / duration) * 100));
+                updateProgress();
+                updateNavigationLocks();
+            }
+            document.getElementById('video-current-time').textContent = formatVideoTime(video.currentTime || 0);
+            document.getElementById('video-duration').textContent = formatVideoTime(duration);
+        }
+
+        function seekIntegratedVideo(value) {
+            const video = document.getElementById('integrated-learning-video');
+            if (!video || !Number.isFinite(video.duration)) return;
+            video.currentTime = (Number(value) / 100) * video.duration;
+            syncVideoToolbar();
+        }
+
+        function skipIntegratedVideo(seconds) {
+            const video = document.getElementById('integrated-learning-video');
+            if (!video) return;
+            video.currentTime = Math.max(0, Math.min(video.duration || 0, video.currentTime + seconds));
+            syncVideoToolbar();
+        }
+
+        function toggleVideoMute() {
+            const video = document.getElementById('integrated-learning-video');
+            if (!video) return;
+            video.muted = !video.muted;
+            syncVideoVolumeIcon();
+        }
+
+        function setIntegratedVideoVolume(value) {
+            const video = document.getElementById('integrated-learning-video');
+            if (!video) return;
+            video.volume = Number(value) / 100;
+            video.muted = video.volume === 0;
+            syncVideoVolumeIcon();
+        }
+
+        function setIntegratedVideoSpeed(value) {
+            const video = document.getElementById('integrated-learning-video');
+            if (!video) return;
+            video.playbackRate = Number(value);
+        }
+
+        function syncVideoVolumeIcon() {
+            const video = document.getElementById('integrated-learning-video');
+            const icon = document.getElementById('video-volume-icon');
+            if (!video || !icon) return;
+            icon.className = `fa-solid ${video.muted || video.volume === 0 ? 'fa-volume-xmark' : video.volume < 0.5 ? 'fa-volume-low' : 'fa-volume-high'} text-xs`;
+        }
+
+        function formatVideoTime(seconds) {
+            const safe = Math.max(0, Math.floor(seconds || 0));
+            const mins = String(Math.floor(safe / 60)).padStart(2, '0');
+            const secs = String(safe % 60).padStart(2, '0');
+            return `${mins}:${secs}`;
+        }
+
+        function toggleFullscreen() {
+            const wrapper = document.getElementById('player-wrapper');
+            const icon = document.querySelector('#btn-fullscreen i');
+            if (!wrapper.classList.contains('pseudo-fullscreen')) {
+                wrapper.classList.add('pseudo-fullscreen');
+                document.body.style.overflow = 'hidden';
+                icon.className = "fa-solid fa-compress text-xs";
+            } else {
+                wrapper.classList.remove('pseudo-fullscreen');
+                document.body.style.overflow = '';
+                icon.className = "fa-solid fa-expand text-xs";
+            }
+        }
+
+        function searchInsideContent() {
+            const query = document.getElementById('slide-search').value.trim().toLowerCase();
+            const sidebar = document.getElementById('search-sidebar');
+            const player = document.getElementById('player-column-wrapper');
+            const results = document.getElementById('sidebar-results-container');
+            document.getElementById('clear-search-btn').classList.toggle('hidden', !query);
+
+            if (!query) {
+                sidebar.classList.add('hidden');
+                sidebar.classList.remove('flex');
+                player.className = "lg:col-span-4 transition-all duration-300";
+                renderSlide();
+                return;
+            }
+
+            sidebar.classList.remove('hidden');
+            sidebar.classList.add('flex');
+            player.className = "lg:col-span-3 transition-all duration-300";
+            const matches = buildDeepSearchResults(query);
+            results.innerHTML = matches.length ? `
+                <div class="px-3 py-2 bg-slate-50 border-b border-slate-100 text-[11px] font-black text-slate-500 uppercase tracking-wider">
+                    ${matches.length} lokasi ditemukan
+                </div>
+                ${matches.map(match => `
+                    <button onclick="goToSearchResult(${match.slideId})" class="w-full text-left p-3 hover:bg-slate-50">
+                        <div class="flex justify-between gap-2 items-start">
+                            <div class="font-black text-kemenkeu-navy">${escapeHtml(match.slideTitle)}</div>
+                            <span class="text-[10px] text-slate-500 whitespace-nowrap">${match.kind} ${match.slideId}</span>
+                        </div>
+                        <p class="mt-1 text-[10px] font-black uppercase tracking-wider text-amber-700">${escapeHtml(match.location)}</p>
+                        <p class="mt-1 text-slate-600 leading-relaxed">${markQuery(match.snippet, query)}</p>
+                        <p class="mt-2 text-[10px] font-bold text-slate-400">${escapeHtml(match.source)}</p>
+                    </button>
+                `).join('')}
+            ` : `<div class="p-6 text-center text-slate-400">Tidak ada hasil pada seluruh materi pembelajaran.</div>`;
+            renderSlide();
+            pushScormEvent("Interaction", `search=${query.slice(0, 30)}`);
+        }
+
+        function buildDeepSearchResults(query) {
+            const locations = [];
+            slides.forEach(slide => {
+                const fields = [
+                    { label: "Judul slide", text: slide.title },
+                    { label: "Subjudul", text: slide.subtitle },
+                    { label: "Isi utama", text: slide.body },
+                    ...slide.bullets.map((text, index) => ({ label: `Poin materi ${index + 1}`, text })),
+                    { label: "Kata kunci", text: slide.keywords },
+                    { label: "Rujukan sumber", text: slide.source }
+                ];
+                fields.forEach(field => {
+                    const haystack = field.text.toLowerCase();
+                    let index = haystack.indexOf(query);
+                    while (index !== -1) {
+                        locations.push({
+                            slideId: slide.id,
+                            slideTitle: slide.title,
+                            kind: slide.type === 'video' ? 'Video' : 'Slide',
+                            source: slide.source,
+                            location: field.label,
+                            snippet: makeSnippet(field.text, index, query.length)
+                        });
+                        index = haystack.indexOf(query, index + query.length);
+                    }
+                });
+            });
+            return locations;
+        }
+
+        function makeSnippet(text, index, length) {
+            const start = Math.max(0, index - 70);
+            const end = Math.min(text.length, index + length + 90);
+            return `${start > 0 ? '...' : ''}${text.slice(start, end)}${end < text.length ? '...' : ''}`;
+        }
+
+        function markQuery(text, query) {
+            const safe = escapeHtml(text);
+            const re = new RegExp(`(${query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return safe.replace(re, '<mark>$1</mark>');
+        }
+
+        function goToSearchResult(slideId) {
+            currentSlide = Number(slideId);
+            renderSlide();
+        }
+
+        function clearSearch() {
+            document.getElementById('slide-search').value = '';
+            searchInsideContent();
+        }
+
+        function toggleFloatingWindow(type) {
+            const target = document.getElementById(`window-${type}`);
+            const other = document.getElementById(type === 'faq' ? 'window-chatbot' : 'window-faq');
+            other.classList.add('hidden');
+            other.style.transform = 'translateX(120%)';
+            if (target.classList.contains('hidden')) {
+                target.classList.remove('hidden');
+                setTimeout(() => target.style.transform = 'translateX(0)', 10);
+            } else {
+                closeFloatingWindow(type);
+            }
+        }
+
+        function closeFloatingWindow(type) {
+            const target = document.getElementById(`window-${type}`);
+            target.style.transform = 'translateX(120%)';
+            setTimeout(() => target.classList.add('hidden'), 300);
+        }
+
+        function renderFAQs() {
+            const query = (document.getElementById('faq-search')?.value || '').toLowerCase();
+            const filtered = faqs.filter(f => `${f.q} ${f.a} ${f.ref} ${f.tag}`.toLowerCase().includes(query));
+            document.getElementById('faq-list-container').innerHTML = filtered.map((f, i) => `
+                <details class="bg-white border border-slate-200 rounded-lg overflow-hidden" ${i === 0 && !query ? 'open' : ''}>
+                    <summary class="cursor-pointer p-3 font-black text-kemenkeu-navy">${escapeHtml(f.q)} <span class="ml-1 text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded">${escapeHtml(f.tag)}</span></summary>
+                    <div class="px-3 pb-3 text-slate-600 leading-relaxed">
+                        <p>${escapeHtml(f.a)}</p>
+                        <p class="mt-2 text-[10px] font-bold text-slate-500">Rujukan: ${escapeHtml(f.ref)}</p>
+                    </div>
+                </details>
+            `).join('') || `<div class="p-5 text-center text-slate-400">FAQ tidak ditemukan.</div>`;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const text = input.value.trim();
+            if (!text) return;
+            const box = document.getElementById('chat-messages');
+            box.insertAdjacentHTML('beforeend', `<div class="bg-kemenkeu-gold/25 border border-kemenkeu-gold/40 text-kemenkeu-navy font-bold p-3 rounded-lg ml-8 text-right">${escapeHtml(text)}</div>`);
+            input.value = '';
+            const corpus = [...faqs, ...slides.map(s => ({ q: s.title, a: `${s.body} ${s.bullets.join(' ')}`, ref: s.source, tag: s.badge }))];
+            const words = text.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+            const best = corpus
+                .map(item => ({ item, score: words.reduce((sum, w) => sum + (`${item.q} ${item.a} ${item.ref}`.toLowerCase().includes(w) ? 1 : 0), 0) }))
+                .sort((a, b) => b.score - a.score)[0];
+            const answer = best && best.score > 0
+                ? `<strong>Srikandi AI:</strong> Berdasarkan sumber modul, ${escapeHtml(best.item.a)}<div class="mt-2 text-[10px] font-bold text-slate-500">Rujukan: ${escapeHtml(best.item.ref)}</div>`
+                : `<strong>Srikandi AI:</strong> Saya belum menemukan rujukan yang cukup kuat pada knowledge base mockup ini. Coba gunakan istilah seperti ekspor, impor, neraca, kepabeanan, kawasan pabean, atau manajemen risiko.`;
+            setTimeout(() => {
+                box.insertAdjacentHTML('beforeend', `<div class="bg-white border border-slate-200 shadow-sm p-3 rounded-lg mr-8 leading-relaxed">${answer}</div>`);
+                box.scrollTop = box.scrollHeight;
+            }, 450);
+            pushScormEvent("Interaction", `chatbot-query=${text.slice(0, 24)}`);
+            box.scrollTop = box.scrollHeight;
+        }
+
+        function handleChatEnter(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+
+        function renderQuestionView(targetId, title, description, questions, type) {
+            const state = quizState[type];
+            const currentIndex = Math.min(state.current, questions.length - 1);
+            const q = questions[currentIndex];
+            const selected = state.answers[currentIndex];
+            document.getElementById(targetId).innerHTML = `
+                <div class="bg-kemenkeu-navy text-white p-4 md:p-5">
+                    <h2 class="text-lg md:text-2xl font-black">${title}</h2>
+                    <p class="mt-1 text-sm text-slate-300 max-w-4xl">${description}</p>
+                </div>
+                <div class="p-4 md:p-5 grid grid-cols-1 xl:grid-cols-5 gap-4">
+                    <div class="xl:col-span-4">
+                        ${state.submitted ? renderQuizFeedback(type, questions) : `
+                            <article class="rounded-lg bg-slate-50 border border-slate-200 p-4 md:p-5">
+                                <div class="flex items-start justify-between gap-3">
+                                    <div>
+                                        <p class="text-[11px] font-black uppercase text-slate-500">Soal ${currentIndex + 1} dari ${questions.length} - ${escapeHtml(q.comp)}</p>
+                                        <p class="font-bold text-base md:text-lg mt-2">${escapeHtml(q.q)}</p>
+                                    </div>
+                                    <span class="shrink-0 w-10 h-10 rounded-lg bg-white border border-slate-200 flex items-center justify-center text-sm font-black text-kemenkeu-navy">${currentIndex + 1}</span>
+                                </div>
+                                <div class="mt-5 grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    ${q.options.map((opt, oi) => `
+                                        <button onclick="selectQuizAnswer('${type}', ${oi})" class="quiz-btn text-left text-sm p-3 rounded-lg border ${selected === oi ? 'bg-kemenkeu-gold/20 border-kemenkeu-gold text-kemenkeu-navy font-black' : 'bg-white border-slate-200 hover:border-kemenkeu-gold'}">
+                                            <span class="font-black">${String.fromCharCode(65 + oi)}.</span> ${escapeHtml(opt)}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                                <div class="mt-5 flex flex-wrap items-center justify-between gap-3">
+                                    <button onclick="moveQuiz('${type}', -1)" class="px-4 py-2 rounded-lg border border-slate-200 bg-white text-sm font-black text-slate-700 disabled:opacity-40" ${currentIndex === 0 ? 'disabled' : ''}>
+                                        <i class="fa-solid fa-chevron-left mr-1"></i> Sebelumnya
+                                    </button>
+                                    <div class="flex items-center gap-2">
+                                        ${questions.map((_, index) => `
+                                            <span class="w-2.5 h-2.5 rounded-full ${index === currentIndex ? 'bg-kemenkeu-navy' : state.answers[index] !== undefined ? 'bg-emerald-500' : 'bg-slate-300'}"></span>
+                                        `).join('')}
+                                    </div>
+                                    ${currentIndex < questions.length - 1 ? `
+                                        <button onclick="moveQuiz('${type}', 1)" class="px-4 py-2 rounded-lg bg-kemenkeu-navy text-white text-sm font-black disabled:opacity-40" ${selected === undefined ? 'disabled' : ''}>
+                                            Berikutnya <i class="fa-solid fa-chevron-right ml-1"></i>
+                                        </button>
+                                    ` : `
+                                        <button onclick="submitQuiz('${type}')" class="px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black disabled:opacity-40" ${state.answers.length < questions.length || state.answers.some(a => a === undefined) ? 'disabled' : ''}>
+                                            Kirim Jawaban <i class="fa-solid fa-paper-plane ml-1"></i>
+                                        </button>
+                                    `}
+                                </div>
+                            </article>
+                        `}
+                    </div>
+                    <aside class="xl:col-span-1">
+                        <div class="sticky top-4 rounded-lg border border-slate-200 bg-white p-4">
+                            <p class="text-[11px] uppercase font-black tracking-widest text-slate-500">Status</p>
+                            <div id="${type}-score" class="mt-2 text-3xl font-black text-kemenkeu-navy">${state.submitted ? getQuizScore(type, questions).score : '-'}</div>
+                            <p id="${type}-status" class="mt-1 text-xs text-slate-500">${state.submitted ? 'Feedback tersedia.' : `${state.answers.filter(a => a !== undefined).length} dari ${questions.length} soal dijawab.`}</p>
+                            <div class="mt-4 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div id="${type}-bar" class="h-full bg-kemenkeu-gold rounded-full transition-all" style="width:${Math.round((state.answers.filter(a => a !== undefined).length / questions.length) * 100)}%"></div>
+                            </div>
+                            ${state.submitted ? `<button onclick="resetQuiz('${type}')" class="mt-4 w-full px-3 py-2 rounded-lg border border-slate-200 bg-slate-50 text-xs font-black text-slate-700">Ulangi Test</button>` : ''}
+                        </div>
+                    </aside>
+                </div>
+            `;
+        }
+
+        function selectQuizAnswer(type, selected) {
+            const questions = type === 'diagnostic' ? diagnosticQuestions : postQuestions;
+            const state = quizState[type];
+            state.answers[state.current] = selected;
+            renderQuestionView(type === 'diagnostic' ? 'view-diagnostic' : 'view-posttest', type === 'diagnostic' ? 'Diagnostik Test' : 'Post Test', type === 'diagnostic' ? 'Lima soal awal untuk memetakan pemahaman peserta sebelum masuk modul pembelajaran.' : 'Sepuluh soal akhir dengan blueprint yang selaras untuk mengukur capaian setelah pembelajaran.', questions, type);
+        }
+
+        function moveQuiz(type, step) {
+            const questions = type === 'diagnostic' ? diagnosticQuestions : postQuestions;
+            const state = quizState[type];
+            state.current = Math.max(0, Math.min(questions.length - 1, state.current + step));
+            renderQuestionView(type === 'diagnostic' ? 'view-diagnostic' : 'view-posttest', type === 'diagnostic' ? 'Diagnostik Test' : 'Post Test', type === 'diagnostic' ? 'Lima soal awal untuk memetakan pemahaman peserta sebelum masuk modul pembelajaran.' : 'Sepuluh soal akhir dengan blueprint yang selaras untuk mengukur capaian setelah pembelajaran.', questions, type);
+        }
+
+        function submitQuiz(type) {
+            const questions = type === 'diagnostic' ? diagnosticQuestions : postQuestions;
+            const state = quizState[type];
+            if (state.answers.length < questions.length || state.answers.some(a => a === undefined)) return;
+            state.submitted = true;
+            const result = getQuizScore(type, questions);
+                if (type === 'diagnostic') diagnosticScore = result.score;
+                if (type === 'posttest') postScore = result.score;
+                pushScormEvent("SetValue", `${type}_score=${result.score}`);
+                renderQuestionView(type === 'diagnostic' ? 'view-diagnostic' : 'view-posttest', type === 'diagnostic' ? 'Diagnostik Test' : 'Post Test', type === 'diagnostic' ? 'Lima soal awal untuk memetakan pemahaman peserta sebelum masuk modul pembelajaran.' : 'Sepuluh soal akhir dengan blueprint yang selaras untuk mengukur capaian setelah pembelajaran.', questions, type);
+                updateNavigationLocks();
+                renderAnalyticsView();
+                renderFeedbackView();
+            }
+
+        function getQuizScore(type, questions) {
+            const answers = quizState[type].answers;
+            const correct = answers.filter((answer, index) => answer === questions[index].answer).length;
+            return { correct, total: questions.length, score: Math.round((correct / questions.length) * 100) };
+        }
+
+        function renderQuizFeedback(type, questions) {
+            const result = getQuizScore(type, questions);
+            const answers = quizState[type].answers;
+            const wrong = questions
+                .map((q, index) => ({ q, index, selected: answers[index], correct: answers[index] === q.answer }))
+                .filter(item => !item.correct);
+            const correct = questions
+                .map((q, index) => ({ q, index, selected: answers[index], correct: answers[index] === q.answer }))
+                .filter(item => item.correct);
+
+            if (type === 'diagnostic') {
+                const suggestions = wrong.length ? wrong.map(item => item.q) : questions.slice(0, 3);
+                return `
+                    <div class="rounded-lg border border-slate-200 bg-white p-4 md:p-5">
+                        <p class="text-[11px] uppercase font-black tracking-widest text-slate-500">Feedback Diagnostik</p>
+                        <h3 class="mt-2 text-2xl font-black text-kemenkeu-navy">Skor ${result.score}</h3>
+                        <p class="mt-2 text-sm text-slate-600">Anda menjawab benar ${result.correct} dari ${result.total} soal. Hasil ini dipakai untuk merekomendasikan fokus belajar sebelum masuk modul pembelajaran.</p>
+                        <div class="max-h-[420px] overflow-y-auto mt-4">${renderAnswerReview(type, questions)}</div>
+                        <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+                            ${suggestions.map(q => `
+                                <div class="rounded-lg bg-amber-50 border border-amber-200 p-3">
+                                    <p class="text-xs font-black text-amber-800">${escapeHtml(q.comp)}</p>
+                                    <p class="mt-1 text-sm font-bold text-slate-800">${escapeHtml(q.topic)}</p>
+                                    <p class="mt-1 text-xs text-slate-600">Saran belajar: pelajari ${escapeHtml(q.ref)} dan catat definisi kunci serta contoh penerapannya.</p>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <div class="mt-5 flex justify-end">
+                            <button onclick="switchView('learning')" class="px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black">
+                                Lanjut ke Modul Pembelajaran <i class="fa-solid fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+
+            const strength = correct.length ? [...new Set(correct.map(item => item.q.comp))] : ["Belum terlihat konsisten"];
+            const weakness = wrong.length ? [...new Set(wrong.map(item => item.q.comp))] : ["Tidak ada kelemahan utama pada paket soal ini"];
+            return `
+                <div class="space-y-4">
+                    <div class="rounded-lg border border-slate-200 bg-white p-4 md:p-5">
+                        <p class="text-[11px] uppercase font-black tracking-widest text-slate-500">Feedback Post Test</p>
+                        <h3 class="mt-2 text-2xl font-black text-kemenkeu-navy">Skor ${result.score}</h3>
+                        <p class="mt-2 text-sm text-slate-600">Anda menjawab benar ${result.correct} dari ${result.total} soal. Berikut analisis strength, weakness, dan rujukan materi untuk jawaban yang belum tepat.</p>
+                        ${renderAnswerReview(type, questions)}
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div class="rounded-lg bg-emerald-50 border border-emerald-200 p-4">
+                            <h4 class="font-black text-emerald-800">Strength</h4>
+                            <ul class="mt-2 space-y-1 text-sm text-emerald-900">${strength.map(item => `<li><i class="fa-solid fa-check mr-1"></i>${escapeHtml(item)}</li>`).join('')}</ul>
+                        </div>
+                        <div class="rounded-lg bg-red-50 border border-red-200 p-4">
+                            <h4 class="font-black text-red-800">Weakness</h4>
+                            <ul class="mt-2 space-y-1 text-sm text-red-900">${weakness.map(item => `<li><i class="fa-solid fa-triangle-exclamation mr-1"></i>${escapeHtml(item)}</li>`).join('')}</ul>
+                        </div>
+                    </div>
+                    ${wrong.length ? `
+                        <div class="rounded-lg border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-50 px-4 py-3 font-black text-kemenkeu-navy">Referensi untuk Jawaban Salah</div>
+                            <div class="divide-y divide-slate-100 max-h-[360px] overflow-y-auto">
+                                ${wrong.map(item => `
+                                    <div class="p-4">
+                                        <p class="text-[11px] font-black uppercase text-slate-500">Soal ${item.index + 1} - ${escapeHtml(item.q.comp)}</p>
+                                        <p class="mt-1 text-sm font-bold">${escapeHtml(item.q.q)}</p>
+                                        <p class="mt-2 text-sm text-slate-600">Jawaban benar: <strong>${escapeHtml(item.q.options[item.q.answer])}</strong>. ${escapeHtml(item.q.why)}</p>
+                                        <p class="mt-1 text-xs font-black text-amber-700">Pelajari ulang: ${escapeHtml(item.q.ref)}</p>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                    <div class="rounded-lg bg-sky-50 border border-sky-200 p-4 text-sm text-sky-900">
+                        <strong>Saran perbaikan:</strong> ulangi bagian yang masuk daftar weakness, gunakan pencarian pada Modul Pembelajaran untuk menemukan istilah kunci, lalu susun ringkasan 3 kalimat untuk setiap konsep yang belum kuat.
+                    </div>
+                    <div class="flex justify-end">
+                        <button onclick="switchView('feedback')" class="px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black">
+                            Lanjut ke Feedback <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAnswerReview(type, questions) {
+            const answers = quizState[type].answers;
+            return `
+                <div class="rounded-lg border border-slate-200 overflow-hidden">
+                    <div class="bg-slate-50 px-4 py-3 font-black text-kemenkeu-navy">Review Jawaban per Soal</div>
+                    <div class="divide-y divide-slate-100 ${type === 'posttest' ? 'max-h-[420px] overflow-y-auto' : ''}">
+                        ${questions.map((q, index) => {
+                            const isCorrect = answers[index] === q.answer;
+                            return `
+                                <div class="p-3 md:p-4 grid grid-cols-1 md:grid-cols-5 gap-3">
+                                    <div class="md:col-span-3">
+                                        <p class="text-[11px] font-black uppercase text-slate-500">Soal ${index + 1} - ${escapeHtml(q.comp)}</p>
+                                        <p class="mt-1 text-sm font-bold text-slate-800">${escapeHtml(q.q)}</p>
+                                        <p class="mt-2 text-xs text-slate-600">Jawaban peserta: <strong>${escapeHtml(q.options[answers[index]])}</strong></p>
+                                        <p class="mt-1 text-xs text-slate-600">Jawaban benar: <strong>${escapeHtml(q.options[q.answer])}</strong></p>
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-black ${isCorrect ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}">
+                                            <i class="fa-solid ${isCorrect ? 'fa-circle-check' : 'fa-circle-xmark'} mr-1"></i> ${isCorrect ? 'Benar' : 'Salah'}
+                                        </span>
+                                        <p class="mt-2 text-xs text-slate-600">${escapeHtml(q.why)}</p>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function resetQuiz(type) {
+            quizState[type] = { current: 0, answers: [], submitted: false };
+            if (type === 'diagnostic') diagnosticScore = null;
+            if (type === 'posttest') postScore = null;
+            const questions = type === 'diagnostic' ? diagnosticQuestions : postQuestions;
+            renderQuestionView(type === 'diagnostic' ? 'view-diagnostic' : 'view-posttest', type === 'diagnostic' ? 'Diagnostik Test' : 'Post Test', type === 'diagnostic' ? 'Lima soal awal untuk memetakan pemahaman peserta sebelum masuk modul pembelajaran.' : 'Sepuluh soal akhir dengan blueprint yang selaras untuk mengukur capaian setelah pembelajaran.', questions, type);
+            updateNavigationLocks();
+            renderAnalyticsView();
+            renderFeedbackView();
+        }
+
+        function renderAssignmentView() {
+            document.getElementById('view-assignment').innerHTML = `
+                <div class="bg-kemenkeu-navy text-white p-4 md:p-5">
+                    <h2 class="text-lg md:text-2xl font-black">Assignment dan Rubrik</h2>
+                    <p class="mt-1 text-sm text-slate-300 max-w-4xl">Satu tugas performa berbasis studi kasus untuk menguji transfer konsep perdagangan internasional ke proses kepabeanan.</p>
+                </div>
+                <div class="p-4 md:p-5 space-y-4">
+                    <article class="border border-slate-200 rounded-lg p-4 bg-slate-50">
+                        <p class="text-[11px] font-black uppercase tracking-widest text-slate-500">Soal Assignment</p>
+                        <h3 class="mt-2 text-lg font-black text-kemenkeu-navy">Studi Kasus Importasi Komponen Elektronik</h3>
+                        <p class="mt-3 text-sm text-slate-700 leading-relaxed">Sebuah perusahaan mengimpor komponen elektronik untuk kebutuhan produksi dalam negeri. Barang tiba di kawasan pabean dan ditempatkan sementara sebelum kewajiban pabean diselesaikan. Buat memo analisis yang menjelaskan alur kewajiban pabean, risiko kepatuhan, serta rekomendasi agar DJBC tetap dapat memfasilitasi perdagangan sah tanpa melemahkan pengawasan.</p>
+                        <div class="mt-4 space-y-2 text-sm">
+                            <div class="bg-white border rounded-lg p-3"><strong>Output:</strong> memo 800-1.000 kata atau infografik proses.</div>
+                            <div class="bg-white border rounded-lg p-3"><strong>Wajib memuat:</strong> ekspor-impor, daerah/kawasan pabean, TPS, pemberitahuan pabean, fungsi DJBC, dan manajemen risiko.</div>
+                            <div class="bg-white border rounded-lg p-3"><strong>Catatan:</strong> hasil penilaian AI adalah rekomendasi awal dan tetap dapat ditinjau instruktur.</div>
+                        </div>
+                    </article>
+                    <article class="space-y-4">
+                        <div class="border border-slate-200 rounded-lg overflow-hidden">
+                            <div class="bg-slate-50 border-b border-slate-200 p-3 flex flex-wrap items-center gap-2">
+                                <button onclick="formatAssignment('bold')" class="w-9 h-9 rounded-lg border bg-white text-kemenkeu-navy font-black" title="Bold"><i class="fa-solid fa-bold"></i></button>
+                                <button onclick="formatAssignment('italic')" class="w-9 h-9 rounded-lg border bg-white text-kemenkeu-navy font-black" title="Italic"><i class="fa-solid fa-italic"></i></button>
+                                <button onclick="formatAssignment('insertUnorderedList')" class="w-9 h-9 rounded-lg border bg-white text-kemenkeu-navy font-black" title="Bullet list"><i class="fa-solid fa-list-ul"></i></button>
+                                <span class="text-xs text-slate-500 font-bold ml-1">Editor HTML jawaban essay</span>
+                            </div>
+                            <div id="assignment-editor" contenteditable="true" class="min-h-[260px] p-4 text-sm leading-relaxed focus:outline-none" aria-label="Editor jawaban assignment">
+                                <p>Tulis analisis Anda di sini...</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <label class="rounded-lg border border-dashed border-slate-300 bg-slate-50 p-4 cursor-pointer hover:border-kemenkeu-gold">
+                                <span class="block text-sm font-black text-kemenkeu-navy"><i class="fa-solid fa-file-arrow-up mr-1"></i> Browse dan Upload File</span>
+                                <span class="block text-xs text-slate-500 mt-1">PDF, DOCX, PPTX, XLSX, atau gambar pendukung.</span>
+                                <input id="assignment-file" type="file" class="hidden" onchange="showSelectedFile()">
+                                <span id="selected-file-name" class="block mt-2 text-xs font-bold text-amber-700">Belum ada file dipilih.</span>
+                            </label>
+                            <div class="rounded-lg border border-slate-200 p-4 bg-white">
+                                <p class="text-sm font-black text-kemenkeu-navy">Submit Assignment</p>
+                                <p class="mt-1 text-xs text-slate-500">Mockup akan menampilkan rekomendasi grading AI berbasis rubrik setelah jawaban dikirim.</p>
+                                <button onclick="submitAssignment()" class="mt-3 px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black">
+                                    Submit Jawaban <i class="fa-solid fa-paper-plane ml-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="assignment-confirmation" class="hidden rounded-lg border border-amber-200 bg-amber-50 p-4">
+                            <p class="font-black text-amber-900">Konfirmasi Pengiriman Jawaban</p>
+                            <p class="mt-1 text-sm text-amber-900">Pastikan jawaban essay dan/atau file lampiran sudah final. Setelah dikonfirmasi, mockup AI powered grading akan menampilkan feedback dan menggantikan isi tab Assignment.</p>
+                            <div class="mt-3 flex flex-wrap gap-2">
+                                <button onclick="confirmAssignmentSubmission()" class="px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black">Konfirmasi Pengiriman</button>
+                                <button onclick="cancelAssignmentConfirmation()" class="px-4 py-2 rounded-lg bg-white border border-amber-300 text-amber-900 text-sm font-black">Periksa Kembali</button>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm border border-slate-200 rounded-lg overflow-hidden">
+                                <thead class="bg-kemenkeu-navy text-white text-xs">
+                                    <tr>
+                                        <th class="p-3 text-left">Kriteria Rubrik</th>
+                                        <th class="p-3 text-left">Bobot</th>
+                                        <th class="p-3 text-left">Level Baik</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    ${rubricRows.map(row => `
+                                        <tr>
+                                            <td class="p-3 font-bold">${escapeHtml(row.criterion)}</td>
+                                            <td class="p-3 font-black text-kemenkeu-navy">${escapeHtml(row.weight)}</td>
+                                            <td class="p-3 text-slate-600">${escapeHtml(row.level)}</td>
+                                        </tr>
+                                    `).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="assignment-feedback" class="hidden"></div>
+                    </article>
+                </div>
+            `;
+        }
+
+        function formatAssignment(command) {
+            document.execCommand(command, false, null);
+            document.getElementById('assignment-editor').focus();
+        }
+
+        function showSelectedFile() {
+            const file = document.getElementById('assignment-file').files[0];
+            document.getElementById('selected-file-name').textContent = file ? `File terpilih: ${file.name}` : 'Belum ada file dipilih.';
+        }
+
+        function submitAssignment() {
+            const editorText = document.getElementById('assignment-editor').innerText.trim();
+            const file = document.getElementById('assignment-file').files[0];
+            const hasAnswer = editorText && editorText !== 'Tulis analisis Anda di sini...';
+            pendingAssignmentSubmission = {
+                hasAnswer,
+                fileName: file ? file.name : '',
+                wordCount: hasAnswer ? editorText.split(/\s+/).filter(Boolean).length : 0
+            };
+            document.getElementById('assignment-confirmation').classList.remove('hidden');
+            pushScormEvent("Interaction", "assignment-submit-clicked");
+        }
+
+        function cancelAssignmentConfirmation() {
+            document.getElementById('assignment-confirmation').classList.add('hidden');
+        }
+
+        function confirmAssignmentSubmission() {
+            const submission = pendingAssignmentSubmission || { hasAnswer: false, fileName: '', wordCount: 0 };
+            const hasAnswer = submission.hasAnswer;
+            const hasFile = Boolean(submission.fileName);
+            const scores = [
+                { score: hasAnswer ? 82 : 65, note: hasAnswer ? "Konsep ekspor-impor dan tujuan importasi sudah muncul, tetapi neraca perdagangan belum dikaitkan secara eksplisit." : "Jawaban tertulis masih minim; perlu menyebut ekspor-impor dan konteks importasi." },
+                { score: hasAnswer ? 88 : 70, note: "Alur kawasan pabean, TPS, dan pemberitahuan pabean sudah menjadi inti analisis." },
+                { score: hasAnswer ? 78 : 62, note: "Analisis risiko sudah ada, namun dapat diperkaya dengan contoh profiling, jalur hijau, atau pemeriksaan selektif." },
+                { score: hasFile ? 86 : 74, note: hasFile ? "Rujukan dan lampiran pendukung meningkatkan keterlacakan jawaban." : "Belum ada lampiran; rujukan materi perlu dibuat lebih eksplisit." }
+            ];
+            const total = Math.round(scores.reduce((sum, item, index) => sum + item.score * (parseInt(rubricRows[index].weight, 10) / 100), 0));
+            assignmentScore = total;
+            document.getElementById('view-assignment').innerHTML = `
+                <div class="bg-kemenkeu-navy text-white p-4 md:p-5">
+                    <h2 class="text-lg md:text-2xl font-black">Feedback Assignment dan Rubrik</h2>
+                    <p class="mt-1 text-sm text-slate-300 max-w-4xl">Hasil mockup AI powered grading setelah peserta mengonfirmasi pengiriman jawaban.</p>
+                </div>
+                <div class="p-4 md:p-5 space-y-4">
+                    <div class="rounded-lg border border-slate-200 overflow-hidden">
+                    <div class="bg-emerald-50 border-b border-emerald-200 p-4">
+                        <p class="text-[11px] uppercase tracking-widest font-black text-emerald-700">Mockup Feedback Assignment</p>
+                        <h3 class="mt-1 text-2xl font-black text-emerald-900">Rekomendasi Skor: ${total}</h3>
+                        <p class="mt-1 text-sm text-emerald-900">Submission dikonfirmasi${hasFile ? ` dengan lampiran ${escapeHtml(submission.fileName)}` : ' tanpa lampiran'}. Jumlah kata terdeteksi: ${submission.wordCount}. Penilaian berikut adalah simulasi rekomendasi AI dan tetap perlu review instruktur.</p>
+                    </div>
+                    <div class="divide-y divide-slate-100">
+                        ${rubricRows.map((row, index) => `
+                            <div class="p-4 grid grid-cols-1 md:grid-cols-5 gap-3">
+                                <div class="md:col-span-2">
+                                    <p class="font-black text-kemenkeu-navy">${escapeHtml(row.criterion)}</p>
+                                    <p class="text-xs text-slate-500">Bobot ${escapeHtml(row.weight)}</p>
+                                </div>
+                                <div class="md:col-span-1">
+                                    <span class="inline-flex px-2 py-1 rounded bg-kemenkeu-gold/20 text-kemenkeu-navy text-sm font-black">${scores[index].score}</span>
+                                </div>
+                                <p class="md:col-span-2 text-sm text-slate-600">${escapeHtml(scores[index].note)}</p>
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="bg-slate-50 p-4 text-sm text-slate-700">
+                        <strong>Feedback umum assignment:</strong> Jawaban sudah mengarah pada hubungan antara perdagangan internasional dan proses kepabeanan. Perbaikan utama adalah memperjelas urutan proses sejak barang masuk daerah pabean, menambahkan rujukan slide, dan memberi contoh konkret bagaimana manajemen risiko membedakan pelaku patuh dan kiriman berisiko tinggi.
+                    </div>
+                </div>
+                <div class="flex justify-end">
+                    <button onclick="switchView('posttest')" class="px-4 py-2 rounded-lg bg-kemenkeu-gold text-kemenkeu-navy text-sm font-black">
+                        Lanjut ke Post Test <i class="fa-solid fa-arrow-right ml-1"></i>
+                    </button>
+                </div>
+                </div>
+            `;
+            pushScormEvent("SetValue", `assignment_score=${total}`);
+            updateNavigationLocks();
+            renderAnalyticsView();
+            renderFeedbackView();
+        }
+
+        function pushScormEvent(event, value) {
+            if (scormEvents.length > 14) scormEvents.shift();
+            scormEvents.push({ event, value, time: new Date().toLocaleTimeString('id-ID') });
+            if (!document.getElementById('view-analytics').classList.contains('hidden')) renderAnalyticsView();
+        }
+
+        function renderAnalyticsView() {
+            const moduleCompletion = calculateModuleCompletion();
+            const gain = diagnosticScore !== null && postScore !== null ? postScore - diagnosticScore : null;
+            const moduleVisited = Object.keys(completedSlides).length;
+            const dropOff = getModuleDropOffPoint();
+            const eventCounts = scormEvents.reduce((acc, item) => {
+                acc[item.event] = (acc[item.event] || 0) + 1;
+                return acc;
+            }, {});
+            const postWrong = quizState.posttest.submitted
+                ? postQuestions.filter((q, index) => quizState.posttest.answers[index] !== q.answer)
+                : [];
+            const postWeakTopics = [...new Set(postWrong.map(q => q.comp))];
+            const searchEvents = scormEvents.filter(e => e.value.startsWith('search=')).map(e => e.value.replace('search=', ''));
+            const chatEvents = scormEvents.filter(e => e.value.startsWith('chatbot-query=')).length;
+            const learnerRows = buildLearnerPerformanceRows(moduleCompletion, gain);
+            const activityRows = buildActivityRows(searchEvents, chatEvents, moduleCompletion);
+            const questionRows = buildQuestionRows(postWrong);
+            document.getElementById('view-analytics').innerHTML = `
+                <div class="bg-kemenkeu-navy text-white p-4 md:p-5">
+                    <h2 class="text-lg md:text-2xl font-black">SCORM and Analitik</h2>
+                    <p class="mt-1 text-sm text-slate-300 max-w-4xl">Tampilan simulasi data yang dapat dikirim ke LMS dan database analitik untuk personalized learning serta perbaikan desain pembelajaran.</p>
+                </div>
+                <div class="p-4 md:p-5 space-y-4">
+                    <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+                        ${analyticsKpi("Completion", `${moduleCompletion}%`, `${moduleVisited}/${getSlideItems().length} slide dibuka; video ${videoCompletionPercent}%`, "fa-route")}
+                        ${analyticsKpi("Assignment", assignmentScore === null ? "-" : assignmentScore, assignmentScore === null ? "Belum submit" : "Rubrik AI grading tersedia", "fa-file-circle-check")}
+                        ${analyticsKpi("Post Test", postScore === null ? "-" : postScore, postScore === null ? "Belum submit" : `${postWrong.length} topik perlu review`, "fa-square-poll-vertical")}
+                        ${analyticsKpi("Learning Gain", gain === null ? "-" : `${gain >= 0 ? '+' : ''}${gain}`, diagnosticScore === null ? "Butuh diagnostik & post test" : "Selisih diagnostik ke post test", "fa-chart-simple")}
+                    </section>
+
+                    <section class="border border-slate-200 rounded-lg overflow-hidden">
+                        <div class="bg-slate-50 p-4 flex flex-wrap items-center justify-between gap-3">
+                            <div>
+                                <h3 class="font-black text-kemenkeu-navy">Learners Performance Analytics</h3>
+                                <p class="text-xs text-slate-500 mt-1">Metric performa peserta yang mengakses modul, termasuk nilai setiap aktivitas.</p>
+                            </div>
+                            <button onclick="downloadAnalyticsCSV('learners')" class="px-3 py-2 rounded-lg bg-kemenkeu-navy text-white text-xs font-black"><i class="fa-solid fa-download mr-1"></i> Download CSV</button>
+                        </div>
+                        <div class="overflow-x-auto max-h-[260px]">
+                            <table class="w-full text-sm">
+                                <thead class="bg-kemenkeu-navy text-white text-xs sticky top-0">
+                                    <tr><th class="p-3 text-left">Peserta</th><th class="p-3 text-left">Completion</th><th class="p-3 text-left">Diagnostik</th><th class="p-3 text-left">Assignment</th><th class="p-3 text-left">Post Test</th><th class="p-3 text-left">Overall</th><th class="p-3 text-left">Status</th></tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    ${learnerRows.map(row => `<tr>${row.map(cell => `<td class="p-3">${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                        <article class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-black text-kemenkeu-navy">Learning Activities Analytics</h3>
+                            <div class="mt-3 space-y-3 text-sm">
+                                ${metricBar("Progress item modul", moduleCompletion, "%")}
+                                ${metricBar("Kelengkapan diagnostik", quizState.diagnostic.submitted ? 100 : Math.round((quizState.diagnostic.answers.filter(a => a !== undefined).length / diagnosticQuestions.length) * 100), "%")}
+                                ${metricBar("Kelengkapan post test", quizState.posttest.submitted ? 100 : Math.round((quizState.posttest.answers.filter(a => a !== undefined).length / postQuestions.length) * 100), "%")}
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${searchEvents.length}</strong><br>Pencarian materi</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${chatEvents}</strong><br>Interaksi chatbot</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${scormEvents.length}</strong><br>Total event terekam</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${Math.max(1, searchEvents.length + chatEvents)}</strong><br>Help-seeking actions</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${assignmentScore === null ? 0 : 1}</strong><br>Submission attempts</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${videoCompletionPercent}%</strong><br>Video watch rate</div>
+                                </div>
+                                <div class="rounded bg-sky-50 border border-sky-100 p-3 text-xs text-sky-900">
+                                    Metrik umum: completion rate, engagement count, help-seeking rate, assessment attempt, submission status, video watch rate, dan progress persistence.
+                                </div>
+                            </div>
+                            <button onclick="downloadAnalyticsCSV('activities')" class="mt-3 px-3 py-2 rounded-lg bg-slate-100 text-kemenkeu-navy text-xs font-black"><i class="fa-solid fa-download mr-1"></i> Download Raw Data</button>
+                        </article>
+
+                        <article class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-black text-kemenkeu-navy">Learning Module Analytics</h3>
+                            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Item terakhir: ${escapeHtml(slides.find(s => s.id === currentSlide)?.title || '-')}</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Drop-off point potensial: ${moduleCompletion < 100 ? escapeHtml(dropOff) : 'Modul selesai'}</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Topik yang dicari: ${searchEvents.length ? searchEvents.map(escapeHtml).join(', ') : 'Belum ada pencarian'}</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Rekomendasi LMS berikutnya: ${postWeakTopics.length ? `Remedial ${postWeakTopics.map(escapeHtml).join(', ')}` : 'Pengayaan studi kasus impor dan manajemen risiko'}</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Content coverage: ${Object.keys(completedSlides).length}/${getSlideItems().length} slide dan ${videoCompletionPercent}% video.</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Content effectiveness proxy: ${postScore === null ? 'Menunggu post test' : postScore >= 75 ? 'Efektif untuk mayoritas kompetensi' : 'Perlu penguatan materi atau contoh'}.</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Navigation behavior: ${searchEvents.length ? 'Non-linear eksploratif melalui pencarian' : 'Linear/sequential tanpa pencarian aktif'}.</li>
+                                <li><i class="fa-solid fa-circle text-[7px] text-teal-500 mr-2"></i>Revision priority: ${postWeakTopics.length ? postWeakTopics.map(escapeHtml).join(', ') : 'Belum ada prioritas revisi berbasis soal'}.</li>
+                            </ul>
+                        </article>
+
+                        <article class="border border-slate-200 rounded-lg p-4">
+                            <h3 class="font-black text-kemenkeu-navy">Question Analytics</h3>
+                            <div class="mt-3 space-y-2 text-sm">
+                                <div class="rounded bg-slate-50 border p-3">
+                                    <p class="font-black">Topik lemah post test</p>
+                                    <p class="mt-1 text-slate-600">${postWeakTopics.length ? postWeakTopics.map(escapeHtml).join(', ') : 'Belum ada kelemahan terdeteksi atau post test belum selesai.'}</p>
+                                </div>
+                                <div class="rounded bg-slate-50 border p-3">
+                                    <p class="font-black">Estimasi butir perlu evaluasi ID</p>
+                                    <p class="mt-1 text-slate-600">${postWrong.length >= 4 ? 'Beberapa butir perlu dicek tingkat kesulitan dan distraktor.' : 'Belum ada sinyal butir bermasalah yang kuat.'}</p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-2 text-xs">
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${postScore === null ? '-' : `${postScore}%`}</strong><br>Facility index proxy</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${postWrong.length}</strong><br>Incorrect count</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${postWeakTopics.length}</strong><br>Weak competencies</div>
+                                    <div class="rounded bg-slate-50 border p-2"><strong>${postWrong.length >= 4 ? 'High' : 'Normal'}</strong><br>Distractor review signal</div>
+                                </div>
+                                <div class="rounded bg-purple-50 border border-purple-100 p-3 text-xs text-purple-900">
+                                    Metrik umum: item difficulty/facility index, discrimination proxy, distractor effectiveness, competency mastery, wrong-answer pattern, dan blueprint coverage.
+                                </div>
+                            </div>
+                            <button onclick="downloadAnalyticsCSV('questions')" class="mt-3 px-3 py-2 rounded-lg bg-slate-100 text-kemenkeu-navy text-xs font-black"><i class="fa-solid fa-download mr-1"></i> Download Question Data</button>
+                        </article>
+                    </section>
+
+                    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <article class="border border-sky-200 bg-sky-50 rounded-lg p-4">
+                            <h3 class="font-black text-sky-900">Personalized Learning Signals</h3>
+                            <ul class="mt-3 space-y-2 text-sm text-sky-950">
+                                <li><strong>Next best activity:</strong> ${postScore === null ? 'Selesaikan post test untuk memetakan capaian akhir.' : postWeakTopics.length ? `Ulangi materi ${postWeakTopics.map(escapeHtml).join(', ')}.` : 'Lanjut ke pengayaan studi kasus dan diskusi kebijakan.'}</li>
+                                <li><strong>Pola belajar:</strong> ${searchEvents.length || chatEvents ? 'Peserta aktif menggunakan bantuan belajar saat menemukan istilah penting.' : 'Peserta belum banyak memakai bantuan pencarian atau chatbot.'}</li>
+                                <li><strong>Intervensi:</strong> ${moduleCompletion < 100 ? 'Dorong peserta menyelesaikan seluruh item modul terlebih dahulu.' : 'Berikan latihan penerapan pada kasus impor nyata.'}</li>
+                            </ul>
+                        </article>
+                        <article class="border border-amber-200 bg-amber-50 rounded-lg p-4">
+                            <h3 class="font-black text-amber-900">Feedback untuk Instructional Designer</h3>
+                            <ul class="mt-3 space-y-2 text-sm text-amber-950">
+                                <li>Tambahkan contoh visual untuk topik yang sering menjadi weakness pada post test.</li>
+                                <li>Jika pencarian banyak terjadi pada istilah tertentu, tambahkan glosarium atau callout definisi di slide terkait.</li>
+                                <li>Jika drop-off terjadi sebelum video, pertimbangkan ringkasan transisi sebelum item terakhir.</li>
+                                <li>Review distraktor soal jika banyak peserta salah pada kompetensi yang sama meski completion tinggi.</li>
+                            </ul>
+                        </article>
+                    </section>
+
+                    <section class="border border-slate-200 rounded-lg p-4">
+                        <h3 class="font-black text-kemenkeu-navy">SCORM Runtime Log</h3>
+                        <div class="mt-3 h-56 overflow-y-auto rounded-lg bg-slate-950 text-slate-100 text-[11px] p-3 font-mono space-y-1">
+                            ${scormEvents.slice().reverse().map(e => `<div><span class="text-amber-300">${e.time}</span> ${escapeHtml(e.event)} :: ${escapeHtml(e.value)}</div>`).join('')}
+                        </div>
+                    </section>
+                </div>
+            `;
+        }
+
+        function analyticsKpi(label, value, note, icon) {
+            return `
+                <article class="rounded-lg border border-slate-200 bg-white p-4">
+                    <div class="flex items-center gap-3">
+                        <span class="w-10 h-10 rounded-lg bg-kemenkeu-navy text-kemenkeu-gold flex items-center justify-center"><i class="fa-solid ${icon}"></i></span>
+                        <div>
+                            <p class="text-xs font-black uppercase text-slate-500">${label}</p>
+                            <p class="text-2xl font-black text-kemenkeu-navy">${value}</p>
+                        </div>
+                    </div>
+                    <p class="mt-2 text-xs text-slate-500">${note}</p>
+                </article>
+            `;
+        }
+
+        function buildLearnerPerformanceRows(moduleCompletion, gain) {
+            const available = [moduleCompletion, assignmentScore, postScore].filter(v => typeof v === 'number');
+            const overallCurrent = available.length ? Math.round(available.reduce((a, b) => a + b, 0) / available.length) : 0;
+            return [
+                ['Peserta Saat Ini', `${moduleCompletion}%`, diagnosticScore ?? '-', assignmentScore ?? '-', postScore ?? '-', overallCurrent, canAccessTab('feedback') ? 'Selesai' : 'In progress'],
+                ['Peserta Simulasi A', '100%', '80', '88', '90', '93', 'Selesai'],
+                ['Peserta Simulasi B', '78%', '60', '72', '68', '73', 'Perlu intervensi'],
+                ['Peserta Simulasi C', '92%', '70', '84', '76', '84', 'Selesai sebagian']
+            ];
+        }
+
+        function buildActivityRows(searchEvents, chatEvents, moduleCompletion) {
+            return [
+                ['viewed_module_item', Object.keys(completedSlides).length, `${moduleCompletion}%`, 'Completion dihitung dari slide dan durasi video'],
+                ['watched_video_percent', `${videoCompletionPercent}%`, 'Video Pembahasan Soal.mp4', 'Menentukan unlock assignment bersama slide completion'],
+                ['searched_content', searchEvents.length, searchEvents.join('|') || '-', 'Menunjukkan istilah yang perlu glosarium/callout'],
+                ['asked_chatbot', chatEvents, 'Srikandi AI Bot', 'Mengindikasikan kebutuhan bantuan konseptual'],
+                ['submitted_assignment', assignmentScore === null ? 0 : 1, assignmentScore ?? '-', 'Mengukur transfer konsep ke studi kasus'],
+                ['help_seeking_rate', Math.max(0, searchEvents.length + chatEvents), 'search + chatbot', 'Sinyal kebutuhan dukungan belajar'],
+                ['persistence_signal', moduleCompletion >= 80 ? 'high' : 'medium/low', `${moduleCompletion}%`, 'Sinyal ketekunan menyelesaikan modul'],
+                ['engagement_event_count', scormEvents.length, 'SCORM mock log', 'Jumlah aktivitas terukur pada sesi']
+            ];
+        }
+
+        function buildQuestionRows(postWrong) {
+            return postQuestions.map((q, index) => {
+                const answered = quizState.posttest.answers[index];
+                const isWrong = quizState.posttest.submitted && answered !== q.answer;
+                return [
+                    `Q${index + 1}`,
+                    q.comp,
+                    q.topic,
+                    quizState.posttest.submitted ? (isWrong ? 'Salah' : 'Benar') : 'Belum dijawab',
+                    isWrong ? q.ref : '-',
+                    postWrong.length >= 4 && isWrong ? 'Review distraktor dan penjelasan materi' : 'Normal',
+                    quizState.posttest.submitted ? (isWrong ? '0' : '1') : '-'
+                ];
+            });
+        }
+
+        function downloadAnalyticsCSV(kind) {
+            const moduleCompletion = calculateModuleCompletion();
+            const gain = diagnosticScore !== null && postScore !== null ? postScore - diagnosticScore : null;
+            const searchEvents = scormEvents.filter(e => e.value.startsWith('search=')).map(e => e.value.replace('search=', ''));
+            const chatEvents = scormEvents.filter(e => e.value.startsWith('chatbot-query=')).length;
+            const postWrong = quizState.posttest.submitted ? postQuestions.filter((q, index) => quizState.posttest.answers[index] !== q.answer) : [];
+            const configs = {
+                learners: {
+                    filename: 'learners_performance_analytics.csv',
+                    header: ['peserta', 'completion', 'diagnostik', 'assignment', 'post_test', 'overall', 'status'],
+                    rows: buildLearnerPerformanceRows(moduleCompletion, gain)
+                },
+                activities: {
+                    filename: 'learning_activities_raw_data.csv',
+                    header: ['event', 'count_or_value', 'context', 'interpretation'],
+                    rows: buildActivityRows(searchEvents, chatEvents, moduleCompletion)
+                },
+                questions: {
+                    filename: 'question_analytics.csv',
+                    header: ['question_id', 'competency', 'topic', 'current_result', 'reference_if_wrong', 'id_recommendation', 'facility_proxy_current_user'],
+                    rows: buildQuestionRows(postWrong)
+                }
+            };
+            const config = configs[kind];
+            if (!config) return;
+            const csv = [config.header, ...config.rows]
+                .map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(','))
+                .join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = config.filename;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        function renderFeedbackView() {
+            const completion = calculateModuleCompletion();
+            const components = [
+                { label: "Penyelesaian modul pembelajaran", value: completion, note: `${Object.keys(completedSlides).length} slide dibuka dan ${videoCompletionPercent}% durasi video ditonton` },
+                { label: "Nilai assignment", value: assignmentScore, note: assignmentScore === null ? "Belum submit assignment" : "Berdasarkan rekomendasi rubrik assignment" },
+                { label: "Nilai post test", value: postScore, note: postScore === null ? "Belum submit post test" : "Berdasarkan jawaban post test terakhir" }
+            ];
+            const available = components.filter(item => typeof item.value === 'number');
+            const overall = available.length ? Math.round(available.reduce((sum, item) => sum + item.value, 0) / available.length) : 0;
+            const strengths = buildFeedbackStrengths(completion);
+            const weaknesses = buildFeedbackWeaknesses(completion);
+
+            document.getElementById('view-feedback').innerHTML = `
+                <div class="bg-kemenkeu-navy text-white p-4 md:p-5">
+                    <h2 class="text-lg md:text-2xl font-black">Feedback Keseluruhan</h2>
+                    <p class="mt-1 text-sm text-slate-300 max-w-4xl">Ringkasan performa peserta berdasarkan penyelesaian modul pembelajaran, assignment, dan post test.</p>
+                </div>
+                <div class="p-4 md:p-5 space-y-4">
+                    <section class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+                        <article class="lg:col-span-1 rounded-xl bg-kemenkeu-navy text-white p-5">
+                            <p class="text-[11px] uppercase tracking-widest font-black text-kemenkeu-gold">Nilai Keseluruhan</p>
+                            <div class="mt-3 text-5xl font-black">${overall}</div>
+                            <p class="mt-2 text-sm text-slate-300">Rata-rata dari komponen yang sudah tersedia. Lengkapi assignment dan post test agar nilai final lebih representatif.</p>
+                        </article>
+                        <article class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-3">
+                            ${components.map(item => `
+                                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                                    <p class="text-xs font-black text-slate-500 uppercase">${escapeHtml(item.label)}</p>
+                                    <div class="mt-2 text-3xl font-black text-kemenkeu-navy">${item.value === null ? '-' : item.value}</div>
+                                    <div class="mt-3 h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full bg-kemenkeu-gold rounded-full" style="width:${item.value === null ? 0 : item.value}%"></div>
+                                    </div>
+                                    <p class="mt-2 text-xs text-slate-500">${escapeHtml(item.note)}</p>
+                                </div>
+                            `).join('')}
+                        </article>
+                    </section>
+                    <section class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                        <article class="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                            <h3 class="font-black text-emerald-800">Strength</h3>
+                            <ul class="mt-3 space-y-2 text-sm text-emerald-950">
+                                ${strengths.map(item => `<li class="flex gap-2"><i class="fa-solid fa-circle-check mt-0.5"></i><span>${escapeHtml(item)}</span></li>`).join('')}
+                            </ul>
+                        </article>
+                        <article class="rounded-xl border border-red-200 bg-red-50 p-4">
+                            <h3 class="font-black text-red-800">Weakness</h3>
+                            <ul class="mt-3 space-y-2 text-sm text-red-950">
+                                ${weaknesses.map(item => `<li class="flex gap-2"><i class="fa-solid fa-triangle-exclamation mt-0.5"></i><span>${escapeHtml(item)}</span></li>`).join('')}
+                            </ul>
+                        </article>
+                    </section>
+                    <section class="rounded-xl border border-sky-200 bg-sky-50 p-4">
+                        <h3 class="font-black text-sky-900">Saran Meningkatkan Pemahaman</h3>
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-sm text-sky-950">
+                            <div class="rounded-lg bg-white/70 border border-sky-100 p-3"><strong>Ulangi konsep inti:</strong> gunakan deep search untuk meninjau ekspor-impor, neraca, keunggulan komparatif, kawasan pabean, dan manajemen risiko.</div>
+                            <div class="rounded-lg bg-white/70 border border-sky-100 p-3"><strong>Perkuat transfer kasus:</strong> bandingkan jawaban assignment dengan rubrik, lalu tambahkan rujukan slide yang eksplisit.</div>
+                            <div class="rounded-lg bg-white/70 border border-sky-100 p-3"><strong>Gunakan feedback post test:</strong> lihat referensi materi pada jawaban salah dan susun catatan ringkas untuk tiap weakness.</div>
+                        </div>
+                    </section>
+                </div>
+            `;
+        }
+
+        function buildFeedbackStrengths(completion) {
+            const strengths = [];
+            if (completion >= 80) strengths.push("Konsistensi eksplorasi modul baik; sebagian besar materi sudah dibuka.");
+            if (assignmentScore !== null && assignmentScore >= 75) strengths.push("Assignment menunjukkan kemampuan menghubungkan konsep perdagangan dengan proses kepabeanan.");
+            if (postScore !== null && postScore >= 75) strengths.push("Post test menunjukkan penguasaan konsep inti yang cukup kuat.");
+            if (quizState.diagnostic.submitted) strengths.push("Peserta sudah memiliki baseline pemahaman dari diagnostik test.");
+            return strengths.length ? strengths : ["Aktivitas awal sudah terekam; lanjutkan modul, assignment, dan post test agar pola kekuatan terlihat lebih jelas."];
+        }
+
+        function buildFeedbackWeaknesses(completion) {
+            const weaknesses = [];
+            if (completion < 80) weaknesses.push("Penyelesaian modul belum optimal; beberapa slide atau video belum dibuka.");
+            if (assignmentScore === null) weaknesses.push("Assignment belum dikumpulkan, sehingga kemampuan aplikasi konsep pada studi kasus belum dapat dinilai.");
+            else if (assignmentScore < 75) weaknesses.push("Assignment perlu diperkuat pada argumentasi, rujukan sumber, dan analisis risiko.");
+            if (postScore === null) weaknesses.push("Post test belum dikerjakan, sehingga capaian akhir belum dapat dikonfirmasi.");
+            else if (postScore < 75) weaknesses.push("Post test menunjukkan masih ada konsep yang perlu ditinjau ulang melalui referensi materi.");
+            return weaknesses.length ? weaknesses : ["Tidak ada kelemahan mayor dari aktivitas yang sudah diselesaikan; fokus berikutnya adalah menjaga konsistensi dan ketepatan rujukan."];
+        }
+
+        function metricBar(label, value, suffix) {
+            const width = typeof value === 'number' ? value : 0;
+            const display = suffix === "-" ? "-" : `${value}${suffix}`;
+            return `
+                <div>
+                    <div class="flex justify-between font-bold"><span>${label}</span><span>${display}</span></div>
+                    <div class="h-2 bg-slate-100 rounded-full mt-1"><div class="h-full bg-kemenkeu-gold rounded-full" style="width:${Math.max(0, Math.min(100, width))}%"></div></div>
+                </div>
+            `;
+        }
+
+        function init() {
+            document.getElementById('slide-selector').innerHTML = slides.map(s => `<option value="${s.id}">${s.type === 'video' ? 'Video' : 'Slide'} ${s.id}: ${escapeHtml(s.title)}</option>`).join('');
+            renderQuestionView('view-diagnostic', 'Diagnostik Test', 'Lima soal awal untuk memetakan pemahaman peserta sebelum masuk modul pembelajaran.', diagnosticQuestions, 'diagnostic');
+            renderSlide();
+            renderFAQs();
+            renderAssignmentView();
+            renderQuestionView('view-posttest', 'Post Test', 'Sepuluh soal akhir dengan blueprint yang selaras untuk mengukur capaian setelah pembelajaran.', postQuestions, 'posttest');
+            renderFeedbackView();
+            renderAnalyticsView();
+            updateNavigationLocks();
+            if (isInstructorAnalyticsMode() && window.location.hash === '#analytics') {
+                switchView('analytics');
+            } else {
+                switchView('diagnostic');
+            }
+            document.addEventListener('keydown', e => {
+                if (e.target.tagName === 'INPUT' || !document.getElementById('view-learning').classList.contains('hidden')) {
+                    if (e.target.tagName === 'INPUT') return;
+                    if (e.key === 'ArrowRight') nextSlide();
+                    if (e.key === 'ArrowLeft') prevSlide();
+                    if (e.key === 'Escape' && document.getElementById('player-wrapper').classList.contains('pseudo-fullscreen')) toggleFullscreen();
+                }
+            });
+        }
+
+        init();
+    </script>
+</body>
+</html>
