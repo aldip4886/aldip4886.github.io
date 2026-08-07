@@ -84,7 +84,7 @@ window.UserProfile = {
 
             if (res.ok) {
                 // Ekstrak token dari Authorization Header / X-Auth-Token jika tersedia
-                const authHeader = res.headers.get('Authorization') || res.headers.get('X-Auth-Token') || res.headers.get('token');
+                const authHeader = res.headers.get('Authorization') ;
                 if (authHeader) {
                     const cleanToken = authHeader.replace(/^Bearer\s+/i, '').trim();
                     this.saveToken(cleanToken);
