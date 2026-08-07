@@ -1,0 +1,66 @@
+/* Sticky Bottom "Did You Know?" Bar Styles */
+
+#did-you-know-bar {
+    height: 48px;
+    background-color: var(--djbc-gold-light);
+    color: var(--djbc-navy);
+    padding: 0 var(--spacing-lg);
+    border-top: 1px solid rgba(13, 33, 55, 0.1);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideUpDYK 300ms ease-out;
+}
+
+.dyk-content {
+    font-size: var(--text-small);
+    font-weight: 500;
+    gap: var(--spacing-sm);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 80%;
+}
+
+.dyk-icon {
+    font-size: 1.15rem;
+    animation: dykBulbWiggle 4s infinite ease-in-out;
+    display: inline-block;
+}
+
+#dyk-next-btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--djbc-navy);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all var(--transition-fast);
+}
+
+#dyk-next-btn:hover {
+    opacity: 0.7;
+    transform: translateX(2px);
+}
+
+/* Animations */
+@keyframes slideUpDYK {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes dykBulbWiggle {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(-15deg); }
+    20% { transform: rotate(12deg); }
+    30% { transform: rotate(-10deg); }
+    40% { transform: rotate(8deg); }
+    50% { transform: rotate(0deg); }
+}

@@ -1,0 +1,148 @@
+/* Sidebar Component Styles */
+
+.sidebar-header {
+    height: 70px;
+    padding: 0 var(--spacing-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(13, 33, 55, 0.2);
+    gap: var(--spacing-sm);
+}
+
+.sidebar-logo {
+    filter: drop-shadow(0 0 4px rgba(245, 166, 35, 0.2));
+}
+
+.sidebar-header-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-white);
+    letter-spacing: 0.5px;
+}
+
+.sidebar-subtitle {
+    font-size: 0.65rem;
+    color: var(--djbc-gold);
+    font-weight: 500;
+}
+
+/* Sidebar Search Bar */
+.sidebar-search-container {
+    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-sm);
+}
+
+.search-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+#sidebar-search-input {
+    width: 100%;
+    padding: 8px 36px 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--text-white);
+    font-size: 0.8rem;
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+#sidebar-search-input:focus {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--djbc-gold);
+    box-shadow: 0 0 8px rgba(245, 166, 35, 0.2);
+}
+
+#sidebar-search-clear {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1;
+    transition: color var(--transition-fast);
+}
+
+#sidebar-search-clear:hover {
+    color: var(--text-white);
+}
+
+#sidebar-search-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+    transition: color var(--transition-fast);
+}
+
+#sidebar-search-input:focus ~ #sidebar-search-btn {
+    color: var(--djbc-gold);
+}
+
+/* Navigation Group & Items */
+.sidebar-nav {
+    overflow-y: auto;
+    padding: var(--spacing-sm) 0;
+}
+
+.menu-section {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.3);
+    padding: var(--spacing-md) var(--spacing-lg) var(--spacing-xs);
+}
+
+.nav-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px var(--spacing-lg);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: all var(--transition-fast);
+}
+
+.sidebar-nav-item:hover {
+    color: var(--text-white);
+    background-color: var(--bg-sidebar-hover);
+    text-decoration: none;
+}
+
+.sidebar-nav-item.active {
+    color: var(--text-white);
+    background-color: var(--djbc-blue);
+    border-left-color: var(--djbc-gold);
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.nav-icon {
+    margin-right: var(--spacing-sm);
+    font-size: 1rem;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+}

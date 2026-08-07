@@ -1,0 +1,87 @@
+/* Badge and Tag Component Styles */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 8px;
+    border-radius: var(--radius-full);
+    font-size: 0.725rem;
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Kategori Unit (PRD Schema) */
+.badge-kanpus {
+    background-color: rgba(14, 116, 144, 0.1);
+    color: var(--color-kanpus);
+    border: 1px solid rgba(14, 116, 144, 0.2);
+}
+
+.badge-vertikal {
+    background-color: rgba(5, 150, 105, 0.1);
+    color: var(--color-vertikal);
+    border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.badge-upt {
+    background-color: rgba(124, 58, 237, 0.1);
+    color: var(--color-upt);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+/* Sub-type badges */
+.badge-kanwil {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--color-kanwil);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-kpu {
+    background-color: rgba(5, 150, 105, 0.1);
+    color: var(--color-kpu);
+    border: 1px solid rgba(5, 150, 105, 0.2);
+}
+
+.badge-kppbc {
+    background-color: rgba(52, 211, 153, 0.1);
+    color: var(--color-kppbc);
+    border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badge-blbc {
+    background-color: rgba(139, 92, 246, 0.1);
+    color: var(--color-blbc);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.badge-pso {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--color-pso);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+/* Semantic Badges */
+.badge-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--success);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-warning {
+    background-color: rgba(245, 158, 11, 0.1);
+    color: var(--warning);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.badge-danger {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--danger);
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.badge-info {
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--djbc-blue-light);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}

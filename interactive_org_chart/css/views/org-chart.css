@@ -1,0 +1,86 @@
+/* Org Chart Canvas View Specific Styles */
+
+#explorer-screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+#org-chart-canvas-container {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+    background-color: var(--bg-page);
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+    flex: 1;
+}
+
+#org-chart-canvas-container svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+}
+
+/* Node Styling */
+.org-node {
+    transition: transform var(--transition-fast);
+}
+
+.org-node rect {
+    transition: all var(--transition-fast);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.05));
+}
+
+.org-node:hover rect {
+    transform: translateY(-2px);
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.12));
+}
+
+/* Color accents on hovers based on unit classes */
+.node-kanpus:hover rect {
+    fill: rgba(0, 128, 128, 0.05);
+}
+
+.node-kanwil:hover rect {
+    fill: rgba(16, 185, 129, 0.05);
+}
+
+.node-kpu:hover rect {
+    fill: rgba(5, 150, 105, 0.05);
+}
+
+.node-blbc:hover rect {
+    fill: rgba(139, 92, 246, 0.05);
+}
+
+.node-pso:hover rect {
+    fill: rgba(99, 102, 241, 0.05);
+}
+
+/* Root node special zoom hover styling */
+.node-root:hover rect {
+    fill: #0D2137 !important;
+    filter: drop-shadow(0 4px 15px rgba(245, 166, 35, 0.4));
+}
+
+/* Error text layout overlay */
+.error-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-white);
+    border: 1px solid var(--danger);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    color: var(--danger);
+    font-weight: 600;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+

@@ -1,0 +1,497 @@
+{
+  "id": "upt-djbc",
+  "nama": "Unit Pelaksana Teknis DJBC",
+  "singkatan": "UPT DJBC",
+  "level": "group",
+  "children": [
+    {
+      "id": "blbc-jakarta",
+      "nama": "Balai Laboratorium Bea dan Cukai Kelas I Jakarta",
+      "singkatan": "BLBC Kelas I Jakarta",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3a",
+      "jabatan_pimpinan": "Kepala Balai Laboratorium Kelas I",
+      "dasar_hukum": "PMK Nomor 121 Tahun 2024",
+      "kategori_fungsi": "upt-laboratorium",
+      "kategori_strategis": [
+        "trade-facilitator"
+      ],
+      "pembina_teknis": "dit-teknis-kepab",
+      "pembina_adm": "kanwil-jakarta",
+      "tugas": "Melaksanakan pengujian barang secara laboratoris dan/atau identifikasi barang, serta pengembangan laboratorium di bidang kepabeanan dan cukai berdasarkan ketentuan peraturan perundang-undangan.",
+      "fungsi": [
+        "Pelaksanaan pengujian barang secara laboratoris dan/atau identifikasi barang di bidang kepabeanan dan cukai",
+        "Pelaksanaan asistensi teknis terkait pengujian barang secara laboratoris dan/atau identifikasi barang",
+        "Pengelolaan, pemeliharaan, perawatan sarana laboratorium, dan perencanaan pengadaan peralatan khusus",
+        "Perencanaan, pelaksanaan, dan evaluasi atas sistem manajemen laboratorium berdasarkan standar internasional",
+        "Pelaksanaan standardisasi, pembakuan metode pengujian barang, dan pengendalian mutu pengujian",
+        "Pelaksanaan analisis hasil/metode pengujian dan pengembangan metode pengujian/identifikasi barang",
+        "Penyiapan pelaksanaan kerja sama dengan lembaga nasional/internasional di bidang pengujian",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik, dan pelaksanaan urusan tata usaha"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, komunikasi publik, pemantauan tindak lanjut hasil pemeriksaan, pengendalian intern, serta kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-teknis-lab",
+          "nama": "Seksi Teknis Laboratorium",
+          "level": "eselon-4",
+          "tugas": "Melakukan pelaksanaan asistensi teknis dan pengujian barang secara laboratoris dan/atau identifikasi barang, serta pengelolaan, pemeliharaan, perawatan sarana laboratorium, dan perencanaan pengadaan peralatan khusus yang berkaitan dengan pengujian barang secara laboratoris dan/atau identifikasi barang."
+        },
+        {
+          "id": "seksi-penjaminan-mutu",
+          "nama": "Seksi Penjaminan Mutu Laboratorium",
+          "level": "eselon-4",
+          "tugas": "Melakukan perencanaan, pelaksanaan, dan evaluasi atas sistem manajemen laboratorium berdasarkan standar internasional, pelaksanaan standardisasi dan pembakuan metode pengujian barang, pelaksanaan pengendalian mutu pengujian barang, pelaksanaan analisis hasil dan/atau metode atas pengujian barang, pelaksanaan pengembangan metode pengujian dan/atau identifikasi barang, serta penyiapan pelaksanaan kerja sama dengan lembaga nasional dan/atau internasional di bidang pengujian barang secara laboratoris dan/atau identifikasi barang di bidang kepabeanan dan cukai."
+        }
+      ],
+      "satuan_pelayanan": [
+        "Lab BC Tanjung Priok",
+        "Lab BC Soekarno-Hatta",
+        "Lab BC Merak",
+        "Lab BC Bandung",
+        "Lab BC Pontianak",
+        "Lab BC Kantor Pos Pasar Baru",
+        "Lab BC Cikarang"
+      ]
+    },
+    {
+      "id": "blbc-medan",
+      "nama": "Balai Laboratorium Bea dan Cukai Kelas I Medan",
+      "singkatan": "BLBC Kelas I Medan",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3a",
+      "jabatan_pimpinan": "Kepala Balai Laboratorium Kelas I",
+      "dasar_hukum": "PMK Nomor 121 Tahun 2024",
+      "kategori_fungsi": "upt-laboratorium",
+      "kategori_strategis": [
+        "trade-facilitator"
+      ],
+      "pembina_teknis": "dit-teknis-kepab",
+      "pembina_adm": "kanwil-sumut",
+      "tugas": "Melaksanakan pengujian barang secara laboratoris dan/atau identifikasi barang, serta pengembangan laboratorium di bidang kepabeanan dan cukai berdasarkan ketentuan peraturan perundang-undangan.",
+      "fungsi": [
+        "Pelaksanaan pengujian barang secara laboratoris dan/atau identifikasi barang di bidang kepabeanan dan cukai",
+        "Pelaksanaan asistensi teknis terkait pengujian barang secara laboratoris dan/atau identifikasi barang",
+        "Pengelolaan, pemeliharaan, perawatan sarana laboratorium, dan perencanaan pengadaan peralatan khusus",
+        "Perencanaan, pelaksanaan, dan evaluasi atas sistem manajemen laboratorium berdasarkan standar internasional",
+        "Pelaksanaan standardisasi, pembakuan metode pengujian barang, dan pengendalian mutu pengujian",
+        "Pelaksanaan analisis hasil/metode pengujian dan pengembangan metode pengujian/identifikasi barang",
+        "Penyiapan pelaksanaan kerja sama dengan lembaga nasional/internasional di bidang pengujian",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik, dan pelaksanaan urusan tata usaha"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, komunikasi publik, pemantauan tindak lanjut hasil pemeriksaan, pengendalian intern, serta kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-teknis-lab",
+          "nama": "Seksi Teknis Laboratorium",
+          "level": "eselon-4",
+          "tugas": "Melakukan pelaksanaan asistensi teknis dan pengujian barang secara laboratoris dan/atau identifikasi barang, serta pengelolaan, pemeliharaan, perawatan sarana laboratorium, dan perencanaan pengadaan peralatan khusus yang berkaitan dengan pengujian barang secara laboratoris dan/atau identifikasi barang."
+        },
+        {
+          "id": "seksi-penjaminan-mutu",
+          "nama": "Seksi Penjaminan Mutu Laboratorium",
+          "level": "eselon-4",
+          "tugas": "Melakukan perencanaan, pelaksanaan, dan evaluasi atas sistem manajemen laboratorium berdasarkan standar internasional, pelaksanaan standardisasi dan pembakuan metode pengujian barang, pelaksanaan pengendalian mutu pengujian barang, pelaksanaan analisis hasil dan/atau metode atas pengujian barang, pelaksanaan pengembangan metode pengujian dan/atau identifikasi barang, serta penyiapan pelaksanaan kerja sama dengan lembaga nasional dan/atau internasional di bidang pengujian barang secara laboratoris dan/atau identifikasi barang di bidang kepabeanan dan cukai."
+        }
+      ],
+      "satuan_pelayanan": [
+        "Lab BC Dumai",
+        "Lab BC Lampung",
+        "Lab BC Palembang",
+        "Lab BC Tanjungpandan",
+        "Lab BC Batam",
+        "Lab BC Kuala Tanjung",
+        "Lab BC Jambi",
+        "Lab BC Teluk Bayur",
+        "Lab BC Banda Aceh",
+        "Lab BC Pekanbaru"
+      ]
+    },
+    {
+      "id": "blbc-surabaya",
+      "nama": "Balai Laboratorium Bea dan Cukai Kelas I Surabaya",
+      "singkatan": "BLBC Kelas I Surabaya",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3a",
+      "jabatan_pimpinan": "Kepala Balai Laboratorium Kelas I",
+      "dasar_hukum": "PMK Nomor 121 Tahun 2024",
+      "kategori_fungsi": "upt-laboratorium",
+      "kategori_strategis": [
+        "trade-facilitator"
+      ],
+      "pembina_teknis": "dit-teknis-kepab",
+      "pembina_adm": "kanwil-jatim-i",
+      "tugas": "Melaksanakan pengujian barang secara laboratoris dan/atau identifikasi barang, serta pengembangan laboratorium di bidang kepabeanan dan cukai berdasarkan ketentuan peraturan perundang-undangan.",
+      "fungsi": [
+        "Pelaksanaan pengujian barang secara laboratoris dan/atau identifikasi barang di bidang kepabeanan dan cukai",
+        "Pelaksanaan asistensi teknis terkait pengujian barang secara laboratoris dan/atau identifikasi barang",
+        "Pengelolaan, pemeliharaan, perawatan sarana laboratorium, dan perencanaan pengadaan peralatan khusus",
+        "Perencanaan, pelaksanaan, dan evaluasi atas sistem manajemen laboratorium berdasarkan standar internasional",
+        "Pelaksanaan standardisasi, pembakuan metode pengujian barang, dan pengendalian mutu pengujian",
+        "Pelaksanaan analisis hasil/metode pengujian dan pengembangan metode pengujian/identifikasi barang",
+        "Penyiapan pelaksanaan kerja sama dengan lembaga nasional/internasional di bidang pengujian",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik, dan pelaksanaan urusan tata usaha"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, komunikasi publik, pemantauan tindak lanjut hasil pemeriksaan, pengendalian intern, serta kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-teknis-lab",
+          "nama": "Seksi Teknis Laboratorium",
+          "level": "eselon-4",
+          "tugas": "Melakukan pelaksanaan asistensi teknis dan pengujian barang secara laboratoris dan/atau identifikasi barang, serta pengelolaan, pemeliharaan, perawatan sarana laboratorium, dan perencanaan pengadaan peralatan khusus yang berkaitan dengan pengujian barang secara laboratoris dan/atau identifikasi barang."
+        },
+        {
+          "id": "seksi-penjaminan-mutu",
+          "nama": "Seksi Penjaminan Mutu Laboratorium",
+          "level": "eselon-4",
+          "tugas": "Melakukan perencanaan, pelaksanaan, dan evaluasi atas sistem manajemen laboratorium berdasarkan standar internasional, pelaksanaan standardisasi dan pembakuan metode pengujian barang, pelaksanaan pengendalian mutu pengujian barang, pelaksanaan analisis hasil dan/atau metode atas pengujian barang, pelaksanaan pengembangan metode pengujian dan/atau identifikasi barang, serta penyiapan pelaksanaan kerja sama dengan lembaga nasional dan/atau internasional di bidang pengujian barang secara laboratoris dan/atau identifikasi barang di bidang kepabeanan dan cukai."
+        }
+      ],
+      "satuan_pelayanan": [
+        "Lab BC Tanjung Emas",
+        "Lab BC Ngurah Rai",
+        "Lab BC Pangkalan Bun",
+        "Lab BC Pantoloan",
+        "Lab BC Bitung",
+        "Lab BC Kotabaru",
+        "Lab BC Balikpapan",
+        "Lab BC Banjarmasin",
+        "Lab BC Sampit",
+        "Lab BC Gresik"
+      ]
+    },
+    {
+      "id": "pso-karimun",
+      "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe A Tanjung Balai Karimun",
+      "singkatan": "PSO BC Tipe A Karimun",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3a",
+      "jabatan_pimpinan": "Kepala Pangkalan Tipe A",
+      "dasar_hukum": "PMK Nomor 132 Tahun 2024",
+      "kategori_fungsi": "upt-pangkalan",
+      "kategori_strategis": [
+        "community-protector"
+      ],
+      "pembina_teknis": "dit-p2",
+      "pembina_adm": "kanwil-kepri",
+      "tugas": "Melaksanakan pengelolaan dan pengoperasian sarana operasi bea dan cukai dalam menunjang patroli dan operasi pencegahan dan penindakan pelanggaran ketentuan peraturan perundang-undangan di bidang kepabeanan dan cukai.",
+      "fungsi": [
+        "Pelaksanaan pengelolaan dan penyiapan pembinaan awak kapal dan olah gerak kapal",
+        "Penyiapan, pemeliharaan, perawatan dan pengoperasian sarana operasi dan sarana pendukung",
+        "Pelaksanaan, pemantauan, dan pengelolaan hubungan komunikasi kapal",
+        "Pelaksanaan pengelolaan dan penilikan kelaiklautan kapal",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik dan disiplin",
+        "Pelaksanaan urusan tata usaha, SDM, keuangan, kearsipan, rumah tangga, dan pengelolaan kinerja/risiko"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, penyusunan rencana strategis, rencana kerja, laporan akuntabilitas, dan komunikasi publik, pengelolaan barang milik negara, perlengkapan, dan perbekalan, pemeliharaan dan perawatan senjata api, pemantauan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional, pengendalian intern, dan kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-telekomunikasi-penginderaan",
+          "nama": "Seksi Telekomunikasi dan Penginderaan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, pengoperasian, dan perbaikan atas peralatan radio kapal, stasiun radio, peralatan navigasi, peralatan radar kapal, sistem telekomunikasi dan penginderaan lainnya berikut komponen penunjangnya serta pemantauan hubungan radio."
+        },
+        {
+          "id": "seksi-pengawakan",
+          "nama": "Seksi Pengawakan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan dan penyiapan pembinaan atas kesiapan dan kelengkapan awak kapal, pengelolaan olah gerak, pengaturan penempatan kapal dan petugas jaga kapal saat tidak berlayar serta penyiapan dan pengoperasian senjata api."
+        },
+        {
+          "id": "seksi-kelaiklautan",
+          "nama": "Seksi Kelaiklautan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan atas kelengkapan peralatan kapal, peralatan keselamatan, dan kebutuhan pelayaran, serta pengelolaan dan penilikan atas kelaiklautan kapal beserta administrasi dokumen terkait."
+        },
+        {
+          "id": "seksi-pengelolaan-kapal",
+          "nama": "Seksi Pengelolaan Kapal dan Sarana Pendukung",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, dan perbaikan atas bangunan kapal, permesinan, propulsi, kelistrikan, urusan dok, serta pemasangan dan perawatan boya-boya, rambu-rambu navigasi, dan sarana pendukung kapal lainnya."
+        }
+      ],
+      "subpangkalan": [
+        "Subpangkalan Sarana Operasi Batam"
+      ]
+    },
+    {
+      "id": "pso-lhokseumawe",
+      "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Lhokseumawe",
+      "singkatan": "PSO BC Tipe B Lhokseumawe",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3b",
+      "jabatan_pimpinan": "Kepala Pangkalan Tipe B",
+      "dasar_hukum": "PMK Nomor 132 Tahun 2024",
+      "kategori_fungsi": "upt-pangkalan",
+      "kategori_strategis": [
+        "community-protector"
+      ],
+      "pembina_teknis": "dit-p2",
+      "pembina_adm": "kanwil-aceh",
+      "tugas": "Melaksanakan pengelolaan dan pengoperasian sarana operasi bea dan cukai dalam menunjang patroli dan operasi pencegahan dan penindakan pelanggaran ketentuan peraturan perundang-undangan di bidang kepabeanan dan cukai.",
+      "fungsi": [
+        "Pelaksanaan pengelolaan dan penyiapan pembinaan awak kapal dan olah gerak kapal",
+        "Penyiapan, pemeliharaan, perawatan dan pengoperasian sarana operasi, telekomunikasi dan sarana pendukung",
+        "Pelaksanaan, pemantauan, dan pengelolaan hubungan komunikasi kapal",
+        "Pelaksanaan pengelolaan dan penilikan kelaiklautan kapal",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik dan disiplin",
+        "Pelaksanaan urusan tata usaha, SDM, keuangan, kearsipan, rumah tangga, dan pengelolaan kinerja/risiko"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, penyusunan rencana strategis, rencana kerja, laporan akuntabilitas, dan komunikasi publik, pengelolaan barang milik negara, perlengkapan, dan perbekalan, pemeliharaan dan perawatan senjata api, pemantauan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional, pengendalian intern, dan kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-pengelolaan-kapal-telekomunikasi",
+          "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, dan perbaikan atas bangunan kapal, permesinan, propulsi, kelistrikan, urusan dok, peralatan radio kapal, stasiun radio, peralatan navigasi, peralatan radar kapal, sistem telekomunikasi dan penginderaan lainnya berikut komponen penunjangnya, pemasangan dan perawatan boya-boya, rambu-rambu navigasi, dan sarana pendukung kapal lainnya, serta pemantauan hubungan radio."
+        },
+        {
+          "id": "seksi-pengawakan",
+          "nama": "Seksi Pengawakan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan dan penyiapan pembinaan atas kesiapan dan kelengkapan awak kapal, pengelolaan olah gerak, pengaturan penempatan kapal dan petugas jaga kapal saat tidak berlayar serta penyiapan dan pengoperasian senjata api."
+        },
+        {
+          "id": "seksi-kelaiklautan",
+          "nama": "Seksi Kelaiklautan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan atas kelengkapan peralatan kapal, peralatan keselamatan, dan kebutuhan pelayaran, serta pengelolaan dan penilikan atas kelaiklautan kapal beserta administrasi dokumen terkait."
+        }
+      ],
+      "subpangkalan": [
+        "Subpangkalan Sarana Operasi Belawan"
+      ]
+    },
+    {
+      "id": "pso-tanjungpriok",
+      "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Tanjung Priok",
+      "singkatan": "PSO BC Tipe B Tanjung Priok",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3b",
+      "jabatan_pimpinan": "Kepala Pangkalan Tipe B",
+      "dasar_hukum": "PMK Nomor 132 Tahun 2024",
+      "kategori_fungsi": "upt-pangkalan",
+      "kategori_strategis": [
+        "community-protector"
+      ],
+      "pembina_teknis": "dit-p2",
+      "pembina_adm": "kanwil-jakarta",
+      "tugas": "Melaksanakan pengelolaan dan pengoperasian sarana operasi bea dan cukai dalam menunjang patroli dan operasi pencegahan dan penindakan pelanggaran ketentuan peraturan perundang-undangan di bidang kepabeanan dan cukai.",
+      "fungsi": [
+        "Pelaksanaan pengelolaan dan penyiapan pembinaan awak kapal dan olah gerak kapal",
+        "Penyiapan, pemeliharaan, perawatan dan pengoperasian sarana operasi, telekomunikasi dan sarana pendukung",
+        "Pelaksanaan, pemantauan, dan pengelolaan hubungan komunikasi kapal",
+        "Pelaksanaan pengelolaan dan penilikan kelaiklautan kapal",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik dan disiplin",
+        "Pelaksanaan urusan tata usaha, SDM, keuangan, kearsipan, rumah tangga, dan pengelolaan kinerja/risiko"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, penyusunan rencana strategis, rencana kerja, laporan akuntabilitas, dan komunikasi publik, pengelolaan barang milik negara, perlengkapan, dan perbekalan, pemeliharaan dan perawatan senjata api, pemantauan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional, pengendalian intern, dan kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-pengelolaan-kapal-telekomunikasi",
+          "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, dan perbaikan atas bangunan kapal, permesinan, propulsi, kelistrikan, urusan dok, peralatan radio kapal, stasiun radio, peralatan navigasi, peralatan radar kapal, sistem telekomunikasi dan penginderaan lainnya berikut komponen penunjangnya, pemasangan dan perawatan boya-boya, rambu-rambu navigasi, dan sarana pendukung kapal lainnya, serta pemantauan hubungan radio."
+        },
+        {
+          "id": "seksi-pengawakan",
+          "nama": "Seksi Pengawakan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan dan penyiapan pembinaan atas kesiapan dan kelengkapan awak kapal, pengelolaan olah gerak, pengaturan penempatan kapal dan petugas jaga kapal saat tidak berlayar serta penyiapan dan pengoperasian senjata api."
+        },
+        {
+          "id": "seksi-kelaiklautan",
+          "nama": "Seksi Kelaiklautan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan atas kelengkapan peralatan kapal, peralatan keselamatan, dan kebutuhan pelayaran, serta pengelolaan dan penilikan atas kelaiklautan kapal beserta administrasi dokumen terkait."
+        }
+      ],
+      "subpangkalan": []
+    },
+    {
+      "id": "pso-pantoloan",
+      "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Pantoloan",
+      "singkatan": "PSO BC Tipe B Pantoloan",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3b",
+      "jabatan_pimpinan": "Kepala Pangkalan Tipe B",
+      "dasar_hukum": "PMK Nomor 132 Tahun 2024",
+      "kategori_fungsi": "upt-pangkalan",
+      "kategori_strategis": [
+        "community-protector"
+      ],
+      "pembina_teknis": "dit-p2",
+      "pembina_adm": "kanwil-sulbagut",
+      "tugas": "Melaksanakan pengelolaan dan pengoperasian sarana operasi bea dan cukai dalam menunjang patroli dan operasi pencegahan dan penindakan pelanggaran ketentuan peraturan perundang-undangan di bidang kepabeanan dan cukai.",
+      "fungsi": [
+        "Pelaksanaan pengelolaan and penyiapan pembinaan awak kapal dan olah gerak kapal",
+        "Penyiapan, pemeliharaan, perawatan dan pengoperasian sarana operasi, telekomunikasi dan sarana pendukung",
+        "Pelaksanaan, pemantauan, dan pengelolaan hubungan komunikasi kapal",
+        "Pelaksanaan pengelolaan dan penilikan kelaiklautan kapal",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik dan disiplin",
+        "Pelaksanaan urusan tata usaha, SDM, keuangan, kearsipan, rumah tangga, dan pengelolaan kinerja/risiko"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, penyusunan rencana strategis, rencana kerja, laporan akuntabilitas, dan komunikasi publik, pengelolaan barang milik negara, perlengkapan, dan perbekalan, pemeliharaan dan perawatan senjata api, pemantauan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional, pengendalian intern, dan kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-pengelolaan-kapal-telekomunikasi",
+          "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, dan perbaikan atas bangunan kapal, permesinan, propulsi, kelistrikan, urusan dok, peralatan radio kapal, stasiun radio, peralatan navigasi, peralatan radar kapal, sistem telekomunikasi dan penginderaan lainnya berikut komponen penunjangnya, pemasangan dan perawatan boya-boya, rambu-rambu navigasi, dan sarana pendukung kapal lainnya, serta pemantauan hubungan radio."
+        },
+        {
+          "id": "seksi-pengawakan",
+          "nama": "Seksi Pengawakan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan dan penyiapan pembinaan atas kesiapan dan kelengkapan awak kapal, pengelolaan olah gerak, pengaturan penempatan kapal dan petugas jaga kapal saat tidak berlayar serta penyiapan dan pengoperasian senjata api."
+        },
+        {
+          "id": "seksi-kelaiklautan",
+          "nama": "Seksi Kelaiklautan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan atas kelengkapan peralatan kapal, peralatan keselamatan, dan kebutuhan pelayaran, serta pengelolaan dan penilikan atas kelaiklautan kapal beserta administrasi dokumen terkait."
+        }
+      ],
+      "subpangkalan": [
+        "Subpangkalan Sarana Operasi Tarakan"
+      ]
+    },
+    {
+      "id": "pso-sorong",
+      "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Sorong",
+      "singkatan": "PSO BC Tipe B Sorong",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3b",
+      "jabatan_pimpinan": "Kepala Pangkalan Tipe B",
+      "dasar_hukum": "PMK Nomor 132 Tahun 2024",
+      "kategori_fungsi": "upt-pangkalan",
+      "kategori_strategis": [
+        "community-protector"
+      ],
+      "pembina_teknis": "dit-p2",
+      "pembina_adm": "kanwil-papua",
+      "tugas": "Melaksanakan pengelolaan dan pengoperasian sarana operasi bea dan cukai dalam menunjang patroli dan operasi pencegahan dan penindakan pelanggaran ketentuan peraturan perundang-undangan di bidang kepabeanan dan cukai.",
+      "fungsi": [
+        "Pelaksanaan pengelolaan dan penyiapan pembinaan awak kapal dan olah gerak kapal",
+        "Penyiapan, pemeliharaan, perawatan dan pengoperasian sarana operasi, telekomunikasi dan sarana pendukung",
+        "Pelaksanaan, pemantauan, dan pengelolaan hubungan komunikasi kapal",
+        "Pelaksanaan pengelolaan dan penilikan kelaiklautan kapal",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik dan disiplin",
+        "Pelaksanaan urusan tata usaha, SDM, keuangan, kearsipan, rumah tangga, dan pengelolaan kinerja/risiko"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, penyusunan rencana strategis, rencana kerja, laporan akuntabilitas, dan komunikasi publik, pengelolaan barang milik negara, perlengkapan, dan perbekalan, pemeliharaan dan perawatan senjata api, pemantauan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional, pengendalian intern, dan kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-pengelolaan-kapal-telekomunikasi",
+          "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, dan perbaikan atas bangunan kapal, permesinan, propulsi, kelistrikan, urusan dok, peralatan radio kapal, stasiun radio, peralatan navigasi, peralatan radar kapal, sistem telekomunikasi dan penginderaan lainnya berikut komponen penunjangnya, pemasangan dan perawatan boya-boya, rambu-rambu navigasi, dan sarana pendukung kapal lainnya, serta pemantauan hubungan radio."
+        },
+        {
+          "id": "seksi-pengawakan",
+          "nama": "Seksi Pengawakan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan dan penyiapan pembinaan atas kesiapan dan kelengkapan awak kapal, pengelolaan olah gerak, pengaturan penempatan kapal dan petugas jaga kapal saat tidak berlayar serta penyiapan dan pengoperasian senjata api."
+        },
+        {
+          "id": "seksi-kelaiklautan",
+          "nama": "Seksi Kelaiklautan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan atas kelengkapan peralatan kapal, peralatan keselamatan, dan kebutuhan pelayaran, serta pengelolaan dan penilikan atas kelaiklautan kapal beserta administrasi dokumen terkait."
+        }
+      ],
+      "subpangkalan": []
+    },
+    {
+      "id": "pso-kupang",
+      "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Kupang",
+      "singkatan": "PSO BC Tipe B Kupang",
+      "level": "eselon-3",
+      "eselon_kepala": "eselon-3b",
+      "jabatan_pimpinan": "Kepala Pangkalan Tipe B",
+      "dasar_hukum": "PMK Nomor 132 Tahun 2024",
+      "kategori_fungsi": "upt-pangkalan",
+      "kategori_strategis": [
+        "community-protector"
+      ],
+      "pembina_teknis": "dit-p2",
+      "pembina_adm": "kanwil-bali-ntb-ntt",
+      "tugas": "Melaksanakan pengelolaan dan pengoperasian sarana operasi bea dan cukai dalam menunjang patroli dan operasi pencegahan dan penindakan pelanggaran ketentuan peraturan perundang-undangan di bidang kepabeanan dan cukai.",
+      "fungsi": [
+        "Pelaksanaan pengelolaan dan penyiapan pembinaan awak kapal dan olah gerak kapal",
+        "Penyiapan, pemeliharaan, perawatan dan pengoperasian sarana operasi, telekomunikasi dan sarana pendukung",
+        "Pelaksanaan, pemantauan, dan pengelolaan hubungan komunikasi kapal",
+        "Pelaksanaan pengelolaan dan penilikan kelaiklautan kapal",
+        "Pemantauan tindak lanjut hasil pemeriksaan, kepatuhan kode etik dan disiplin",
+        "Pelaksanaan urusan tata usaha, SDM, keuangan, kearsipan, rumah tangga, dan pengelolaan kinerja/risiko"
+      ],
+      "children": [
+        {
+          "id": "subbag-umum-ki",
+          "nama": "Subbagian Umum dan Kepatuhan Internal",
+          "level": "eselon-4",
+          "tugas": "Melakukan urusan tata usaha, kearsipan, rumah tangga, sumber daya manusia, keuangan, dan pengelolaan kinerja dan risiko, penyusunan rencana strategis, rencana kerja, laporan akuntabilitas, dan komunikasi publik, pengelolaan barang milik negara, perlengkapan, dan perbekalan, pemeliharaan dan perawatan senjata api, pemantauan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional, pengendalian intern, dan kepatuhan terhadap kode etik dan disiplin."
+        },
+        {
+          "id": "seksi-pengelolaan-kapal-telekomunikasi",
+          "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan, pemeliharaan, perawatan, dan perbaikan atas bangunan kapal, permesinan, propulsi, kelistrikan, urusan dok, peralatan radio kapal, stasiun radio, peralatan navigasi, peralatan radar kapal, sistem telekomunikasi dan penginderaan lainnya berikut komponen penunjangnya, pemasangan dan perawatan boya-boya, rambu-rambu navigasi, dan sarana pendukung kapal lainnya, serta pemantauan hubungan radio."
+        },
+        {
+          "id": "seksi-pengawakan",
+          "nama": "Seksi Pengawakan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan dan penyiapan pembinaan atas kesiapan dan kelengkapan awak kapal, pengelolaan olah gerak, pengaturan penempatan kapal dan petugas jaga kapal saat tidak berlayar serta penyiapan dan pengoperasian senjata api."
+        },
+        {
+          "id": "seksi-kelaiklautan",
+          "nama": "Seksi Kelaiklautan",
+          "level": "eselon-4",
+          "tugas": "Melakukan pemeriksaan atas kelengkapan peralatan kapal, peralatan keselamatan, dan kebutuhan pelayaran, serta pengelolaan dan penilikan atas kelaiklautan kapal beserta administrasi dokumen terkait."
+        }
+      ],
+      "subpangkalan": []
+    }
+  ]
+}

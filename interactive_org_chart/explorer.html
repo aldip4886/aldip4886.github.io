@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJBC Interactive Organization Explorer</title>
+
+    <!-- Core CSS Variables and Resets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    
+    <!-- Layout Styles -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Component CSS files -->
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/sidebar.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/badges.css">
+    <link rel="stylesheet" href="css/components/cards.css">
+    <link rel="stylesheet" href="css/components/tabs.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/breadcrumb.css">
+    <link rel="stylesheet" href="css/components/progress.css">
+    <link rel="stylesheet" href="css/components/did-you-know.css">
+    <link rel="stylesheet" href="css/components/user-profile.css">
+    
+    <!-- View-specific CSS files -->
+    <link rel="stylesheet" href="css/views/org-chart.css">
+    <link rel="stylesheet" href="css/views/map.css">
+    <link rel="stylesheet" href="css/views/detail-kanpus.css">
+    <link rel="stylesheet" href="css/views/detail-kanwil.css">
+    <link rel="stylesheet" href="css/views/detail-upt.css">
+    <link rel="stylesheet" href="css/views/detail-eselon3.css">
+    <link rel="stylesheet" href="css/views/search.css">
+    <link rel="stylesheet" href="css/views/assessment.css">
+    <link rel="stylesheet" href="css/views/connection-map.css">
+    <link rel="stylesheet" href="css/views/alur-proses.css">
+    <link rel="stylesheet" href="css/views/progress-page.css">
+    <link rel="stylesheet" href="css/views/journey-map.css">
+    <link rel="stylesheet" href="css/views/help.css">
+    
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Persistent App Shell -->
+    <div id="app-shell" class="flex h-full w-full">
+        
+        <!-- Left Sidebar Navigation -->
+        <aside id="app-sidebar" class="flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="sidebar-header flex items-center">
+                <svg width="24" height="24" viewBox="0 0 100 100" fill="none" class="sidebar-logo">
+                    <circle cx="50" cy="50" r="45" fill="#0D2137" stroke="#F5A623" stroke-width="4"/>
+                    <path d="M50 15 L80 35 L80 70 L50 90 L20 70 L20 35 Z" fill="#1A4B8C" stroke="#FFC94A" stroke-width="3"/>
+                </svg>
+                <div class="sidebar-header-text">
+                    <div class="sidebar-title">BPPK BEA CUKAI</div>
+                    <div class="sidebar-subtitle">Org Explorer</div>
+                </div>
+            </div>
+            
+            <!-- Sidebar Search -->
+            <div class="sidebar-search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" id="sidebar-search-input" placeholder="Cari unit kerja...">
+                    <button id="sidebar-search-clear" class="search-clear-btn hidden">&times;</button>
+                    <button id="sidebar-search-btn">🔍</button>
+                </div>
+            </div>
+            
+            <!-- Sidebar Navigation Menu -->
+            <nav class="sidebar-nav flex-1">
+                <div class="menu-section">Peta Organisasi</div>
+                <div class="nav-group">
+                    <a href="#/explorer" class="sidebar-nav-item" data-view="explorer">
+                        <span class="nav-icon">📊</span> Peta Hirarki
+                    </a>
+                    <a href="#/peta-sebaran" class="sidebar-nav-item" data-view="peta-sebaran">
+                        <span class="nav-icon">📍</span> Peta Sebaran
+                    </a>
+                </div>
+                
+                <div class="menu-section">Korelasi & Proses</div>
+                <div class="nav-group">
+                    <a href="#/alur-kerja" class="sidebar-nav-item" data-view="alur-kerja">
+                        <span class="nav-icon">🔄</span> Alur Kerja
+                    </a>
+                    <a href="#/keterkaitan" class="sidebar-nav-item" data-view="keterkaitan">
+                        <span class="nav-icon">🌐</span> Peta Keterkaitan
+                    </a>
+                </div>
+                
+                <div class="menu-section">Evaluasi & Progres</div>
+                <div class="nav-group">
+                    <a href="#/tantangan" class="sidebar-nav-item" data-view="assessment">
+                        <span class="nav-icon">📝</span> Tantangan
+                    </a>
+                    <a href="#/progres" class="sidebar-nav-item" data-view="progress">
+                        <span class="nav-icon">🏆</span> Progres & Badges
+                    </a>
+                    <a href="#/perjalanan" class="sidebar-nav-item" data-view="journey">
+                        <span class="nav-icon">🧭</span> Perjalanan Belajar
+                    </a>
+                </div>
+                
+                <div class="menu-section">Sistem</div>
+                <div class="nav-group">
+                    <a href="#/bantuan" class="sidebar-nav-item" data-view="help">
+                        <span class="nav-icon">❓</span> Panduan Belajar
+                    </a>
+                    <a href="index.html" class="sidebar-nav-item">
+                        <span class="nav-icon">🚪</span> Keluar ke Beranda
+                    </a>
+                </div>
+            </nav>
+        </aside>
+        
+        <!-- Main Application Area (Container for Header + Content View + FooterDYK) -->
+        <div id="main-container" class="flex-1 flex flex-col h-full relative">
+            
+            <!-- App Header -->
+            <header id="app-header" class="flex items-center justify-between">
+                <div class="header-left flex items-center">
+                    <h2 id="header-view-title">Eksplorasi Struktur Organisasi</h2>
+                </div>
+                
+                <div class="header-right flex items-center">
+                    <!-- Onboarding Tour Trigger Button -->
+                    <button class="icon-btn-header" id="header-tour-btn" title="Panduan Halaman (Tutorial)">
+                        💡
+                    </button>
+                    <!-- Audio Control Toggle -->
+                    <button class="icon-btn-header" id="header-audio-toggle" title="Suara">
+                        🔊
+                    </button>
+                    <!-- Help link -->
+                    <a href="#/bantuan" class="icon-btn-header" title="Bantuan">
+                        ❓
+                    </a>
+                    <!-- Progress Ring -->
+                    <div class="header-progress-ring flex items-center">
+                        <span id="header-progress-text">0%</span>
+                        <svg class="progress-ring-svg" width="36" height="36">
+                            <circle class="progress-ring-circle-bg" cx="18" cy="18" r="14" fill="transparent" stroke="rgba(255,255,255,0.1)" stroke-width="3"/>
+                            <circle id="header-progress-ring-circle" class="progress-ring-circle" cx="18" cy="18" r="14" fill="transparent" stroke="#F5A623" stroke-width="3" stroke-dasharray="87.96" stroke-dashoffset="87.96"/>
+                        </svg>
+                    </div>
+
+                    <!-- User Profile Avatar & Name Widget -->
+                    <div id="user-profile-widget" class="user-profile-widget">
+                        <div class="user-avatar-wrapper">
+                            <img id="user-avatar-img" class="user-avatar-img" src="https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g" alt="User Avatar">
+                            <div id="user-avatar-placeholder" class="user-avatar-placeholder hidden">
+                                <span id="user-avatar-initials">AP</span>
+                            </div>
+                        </div>
+                        <div class="user-profile-info">
+                            <span id="user-display-name" class="user-display-name">Aldi Pratama</span>
+                            <span id="user-display-role" class="user-display-role">KLC Kemenkeu</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Dynamic Content Area -->
+            <div id="content-view-port" class="flex-1 w-full relative overflow-hidden">
+                
+                <!-- View Screens -->
+                <div id="explorer-screen" class="view-screen h-full w-full hidden">
+                    <!-- SVG Zoomable Canvas -->
+                    <div id="org-chart-canvas-container" class="h-full w-full"></div>
+                </div>
+                
+                <div id="detail-kanpus-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="detail-kanwil-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="detail-upt-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="detail-eselon3-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="detail-kppbc-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="peta-sebaran-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="alur-kerja-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="alur-proses-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="keterkaitan-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="search-results-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="assessment-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="progress-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="journey-screen" class="view-screen h-full w-full hidden"></div>
+                
+                <div id="help-screen" class="view-screen h-full w-full hidden"></div>
+                
+            </div>
+            
+            <!-- Sticky "Did You Know?" Bottom Bar -->
+            <footer id="did-you-know-bar" class="hidden flex items-center justify-between">
+                <div class="dyk-content flex items-center">
+                    <span class="dyk-icon">💡</span>
+                    <span id="dyk-text-content">Tahukah Anda? Klik pada unit pabean di org chart untuk melihat rincian perannya.</span>
+                </div>
+                <button id="dyk-next-btn">Selanjutnya &rarr;</button>
+            </footer>
+        </div>
+        
+        <!-- Knowledge Card Modal Overlay -->
+        <div id="knowledge-card-modal" class="modal-overlay hidden">
+            <!-- Rendered via JS -->
+        </div>
+        
+    </div>
+
+    <!-- Inlined Data Variables to bypass Local File CORS Blocks -->
+    <script src="data/kantor-pusat.js"></script>
+    <script src="data/instansi-vertikal.js"></script>
+    <script src="data/upt.js"></script>
+    <script src="data/kanwil-kppbc-mapping.js"></script>
+    <script src="data/geo-coordinates.js"></script>
+    <script src="data/connections.js"></script>
+    <script src="data/alur-proses.js"></script>
+    <script src="data/did-you-know.js"></script>
+    <script src="data/assessment.js"></script>
+
+    <!-- External Animation Libraries & Local Fallbacks -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+    <script src="js/confetti.js"></script>
+
+    <!-- Core App Engine -->
+    <script src="js/progress-tracker.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/explorer-onboarding.js"></script>
+    <script src="js/user-profile.js"></script>
+    <script src="js/app.js"></script>
+    
+    <!-- View Controllers -->
+    <script src="js/views/org-chart.js"></script>
+    <script src="js/views/detail-panel.js"></script>
+    <script src="js/views/detail-kanwil.js"></script>
+    <script src="js/views/detail-upt.js"></script>
+    <script src="js/views/detail-eselon3.js"></script>
+    <script src="js/views/detail-kppbc.js"></script>
+    <script src="js/views/map.js"></script>
+    <script src="js/views/alur-kerja.js"></script>
+    <script src="js/views/alur-proses.js"></script>
+    <script src="js/views/connection-map.js"></script>
+    <script src="js/views/search.js"></script>
+    <script src="js/views/assessment.js"></script>
+    <script src="js/views/progress-page.js"></script>
+    <script src="js/views/journey-map.js"></script>
+    <script src="js/views/knowledge-card.js"></script>
+    <script src="js/views/help.js"></script>
+</body>
+</html>

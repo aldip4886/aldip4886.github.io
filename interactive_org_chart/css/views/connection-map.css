@@ -1,0 +1,137 @@
+/* Connection Map Specific View Styles */
+
+.keterkaitan-layout {
+    background-color: var(--bg-page);
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    overflow: hidden;
+}
+
+.keterkaitan-header-row {
+    margin-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--djbc-gold);
+    flex-shrink: 0;
+}
+
+.keterkaitan-intro-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.keterkaitan-intro-desc {
+    font-size: var(--text-small);
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+/* Viewport Canvas */
+.graph-viewport {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+#connection-graph-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Link Lines */
+.graph-link-line {
+    transition: all var(--transition-fast);
+}
+
+.graph-link-line:hover {
+    stroke-dasharray: 6;
+    animation: flowLinkLine 1s linear infinite;
+}
+
+@keyframes flowLinkLine {
+    to { stroke-dashoffset: -12; }
+}
+
+/* Node Rings & Anti-Jitter Hover Animation */
+.graph-node-g {
+    cursor: pointer;
+}
+
+.graph-node-g circle.node-main-circle {
+    transition: r 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), stroke 0.25s ease, stroke-width 0.25s ease, filter 0.25s ease !important;
+}
+
+.graph-node-g:hover circle.node-main-circle {
+    r: 26px !important;
+    stroke: #F5A623 !important;
+    stroke-width: 4.5px !important;
+    filter: drop-shadow(0 0 14px rgba(245, 166, 35, 0.95)) !important;
+}
+
+.graph-node-g rect.node-label-bg {
+    transition: stroke 0.25s ease, fill 0.25s ease !important;
+}
+
+.graph-node-g:hover rect.node-label-bg {
+    stroke: #F5A623 !important;
+    stroke-width: 1.5px !important;
+    fill: #0D2137 !important;
+}
+
+.graph-node-g text.node-label-text {
+    transition: fill 0.25s ease !important;
+}
+
+.graph-node-g:hover text.node-label-text {
+    fill: #F5A623 !important;
+}
+
+/* Color rings */
+.node-cat-kanpus circle {
+    stroke: var(--color-kanpus);
+}
+
+.node-cat-kanwil circle {
+    stroke: var(--color-kanwil);
+}
+
+.node-cat-kpu circle {
+    stroke: var(--color-kpu);
+}
+
+.node-cat-kppbc circle {
+    stroke: var(--color-kppbc);
+}
+
+.node-cat-blbc circle {
+    stroke: var(--color-blbc);
+}
+
+.node-cat-pso circle {
+    stroke: var(--color-pso);
+}
+
+/* Relation Floating Panel */
+.relation-detail-panel {
+    position: absolute;
+    background-color: #071527;
+    border: 1px solid var(--djbc-gold);
+    border-left: 5px solid var(--djbc-gold);
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.75);
+    z-index: 50;
+    transition: left 0.15s ease-out, top 0.15s ease-out, opacity 0.2s ease;
+}
+
+.relation-detail-panel.hidden {
+    display: none !important;
+    opacity: 0;
+}
+
+@keyframes popUpPanel {
+    from { opacity: 0; transform: translate(-50%, 15px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}

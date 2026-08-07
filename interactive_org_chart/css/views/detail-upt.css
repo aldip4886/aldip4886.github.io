@@ -1,0 +1,76 @@
+/* UPT detail-panel View Specific Styles */
+
+.upt-detail-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--bg-page);
+    overflow: hidden;
+}
+
+.upt-split {
+    flex: 1;
+    gap: var(--spacing-md);
+    overflow: hidden;
+    margin-top: var(--spacing-sm);
+}
+
+/* Left Mini Tree Panel - Compact Width */
+.upt-mini-tree-panel {
+    width: 360px;
+    flex-shrink: 0;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md);
+    overflow: hidden;
+}
+
+/* Right Detail Information Panel - Expanded Main Panel */
+.upt-info-panel {
+    flex: 1;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Dasar Hukum Plate */
+.dasar-hukum-box {
+    background-color: var(--bg-page);
+    border-left: 3px solid var(--djbc-gold);
+    padding: var(--spacing-sm);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+}
+
+/* Satpel Chip Lists Layout */
+.satpel-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-xs);
+}
+
+.satpel-chip {
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-page);
+    border: 1px solid var(--border);
+    font-size: 0.725rem;
+    font-weight: 600;
+    color: var(--text-body);
+}
+
+.satpel-chip:hover {
+    border-color: var(--djbc-blue-light);
+    color: var(--text-dark);
+}

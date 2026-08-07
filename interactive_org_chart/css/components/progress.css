@@ -1,0 +1,127 @@
+/* General Progress and Journey Path Component Styles */
+
+/* Standard Progress Bar (linear) */
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: var(--djbc-gold);
+    border-radius: var(--radius-full);
+    width: 0%;
+    transition: width var(--transition-slow);
+}
+
+/* Donut Chart Component */
+.donut-chart-container {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.donut-svg {
+    transform: rotate(-90deg);
+}
+
+.donut-circle-bg {
+    stroke: var(--border);
+}
+
+.donut-circle-fill {
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.8s ease-out;
+}
+
+.donut-text-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.donut-percentage {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1;
+}
+
+.donut-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Milestone Journey Path Line */
+.journey-path {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    padding-left: var(--spacing-xl);
+}
+
+.journey-path::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 7px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background-color: var(--border);
+    z-index: 1;
+}
+
+.journey-step {
+    position: relative;
+    display: flex;
+    gap: var(--spacing-md);
+    z-index: 2;
+}
+
+.journey-node {
+    width: 16px;
+    height: 16px;
+    border-radius: var(--radius-full);
+    border: 3px solid var(--border);
+    background-color: var(--bg-white);
+    margin-top: 4px;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.journey-step.completed .journey-node {
+    border-color: var(--success);
+    background-color: var(--success);
+}
+
+.journey-step.active .journey-node {
+    border-color: var(--djbc-blue-light);
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
+}
+
+.journey-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.journey-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.journey-desc {
+    font-size: var(--text-small);
+    color: var(--text-muted);
+}

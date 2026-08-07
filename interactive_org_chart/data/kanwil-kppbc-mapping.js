@@ -1,0 +1,146 @@
+window.data_kanwil_kppbc_mapping = {
+  "kanwil-aceh": [
+    "kppbc-banda-aceh",
+    "kppbc-lhokseumawe",
+    "kppbc-sabang",
+    "kppbc-meulaboh",
+    "kppbc-langsa",
+    "kppbc-kuala-langsa"
+  ],
+  "kanwil-sumut": [
+    "kppbc-belawan",
+    "kppbc-medan",
+    "kppbc-kuala-tanjung",
+    "kppbc-sibolga",
+    "kppbc-teluk-nibung",
+    "kppbc-pematangsiantar"
+  ],
+  "kanwil-riau": [
+    "kppbc-pekanbaru",
+    "kppbc-dumai",
+    "kppbc-tembilahan",
+    "kppbc-bengkalis",
+    "kppbc-siak"
+  ],
+  "kanwil-kepri": [
+    "kppbc-tbk",
+    "kppbc-tanjungpinang",
+    "kppbc-ranai",
+    "kppbc-tarempa",
+    "kppbc-dabosingkep"
+  ],
+  "kanwil-sumbagtim": [
+    "kppbc-palembang",
+    "kppbc-jambi",
+    "kppbc-pangkalpinang",
+    "kppbc-tanjungpandan",
+    "kppbc-bengkulu"
+  ],
+  "kanwil-sumbagbar": [
+    "kppbc-teluk-bayur",
+    "kppbc-bandarlampung",
+    "kppbc-kotabumi"
+  ],
+  "kanwil-banten": [
+    "kppbc-merak",
+    "kppbc-tangerang",
+    "kppbc-cikupa",
+    "kppbc-merak-c"
+  ],
+  "kanwil-jakarta": [
+    "kppbc-marunda",
+    "kppbc-kalibaru",
+    "kppbc-pasarbaru",
+    "kppbc-jakarta-umum"
+  ],
+  "kanwil-jabar": [
+    "kppbc-bandung",
+    "kppbc-bekasi",
+    "kppbc-bogor",
+    "kppbc-cikarang",
+    "kppbc-purwakarta",
+    "kppbc-tasikmalaya"
+  ],
+  "kanwil-jateng-diy": [
+    "kppbc-tanjungemas",
+    "kppbc-semarang",
+    "kppbc-surakarta",
+    "kppbc-yogyakarta",
+    "kppbc-kudus",
+    "kppbc-cilacap"
+  ],
+  "kanwil-jatim-i": [
+    "kppbc-tanjungperak",
+    "kppbc-juanda",
+    "kppbc-sidoarjo",
+    "kppbc-gresik",
+    "kppbc-pasuruan"
+  ],
+  "kanwil-jatim-ii": [
+    "kppbc-malang",
+    "kppbc-kediri",
+    "kppbc-blitar",
+    "kppbc-madiun",
+    "kppbc-jember",
+    "kppbc-banyuwangi",
+    "kppbc-probolinggo",
+    "kppbc-bojonegoro"
+  ],
+  "kanwil-bali-ntb-ntt": [
+    "kppbc-ngurahrai",
+    "kppbc-denpasar",
+    "kppbc-mataram",
+    "kppbc-kupang",
+    "kppbc-maumere"
+  ],
+  "kanwil-kalbar": [
+    "kppbc-pontianak",
+    "kppbc-entikong",
+    "kppbc-nangabadau",
+    "kppbc-jagoibabang",
+    "kppbc-sintete",
+    "kppbc-ketapang"
+  ],
+  "kanwil-kalsel": [
+    "kppbc-banjarmasin",
+    "kppbc-kotabaru",
+    "kppbc-pangkalanbun",
+    "kppbc-sampit"
+  ],
+  "kanwil-kaltim": [
+    "kppbc-balikpapan",
+    "kppbc-samarinda",
+    "kppbc-tarakan",
+    "kppbc-bontang",
+    "kppbc-sangatta",
+    "kppbc-nunukan"
+  ],
+  "kanwil-sulbagsel": [
+    "kppbc-makassar",
+    "kppbc-parepare",
+    "kppbc-pomalaa",
+    "kppbc-kendari"
+  ],
+  "kanwil-sulbagut": [
+    "kppbc-manado",
+    "kppbc-bitung",
+    "kppbc-gorontalo",
+    "kppbc-pantoloan",
+    "kppbc-luwuk"
+  ],
+  "kanwil-maluku": [
+    "kppbc-ambon",
+    "kppbc-ternate",
+    "kppbc-tual",
+    "kppbc-babang"
+  ],
+  "kanwil-papua": [
+    "kppbc-jayapura",
+    "kppbc-merauke",
+    "kppbc-sorong",
+    "kppbc-manokwari",
+    "kppbc-biak",
+    "kppbc-timika",
+    "kppbc-nabire"
+  ]
+};

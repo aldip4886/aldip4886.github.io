@@ -1,0 +1,63 @@
+/* Help View Specific Styles */
+
+.help-page-layout {
+    background-color: var(--bg-page);
+    width: 100%;
+    height: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    overflow: hidden;
+}
+
+.guides-grid-help {
+    padding-bottom: var(--spacing-md);
+}
+
+.guide-card {
+    transition: all var(--transition-normal) !important;
+}
+
+.guide-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: var(--djbc-gold);
+}
+
+.guide-icon-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: var(--radius-full);
+    background-color: rgba(245, 166, 35, 0.1);
+    font-size: 2.25rem;
+    margin-bottom: var(--spacing-sm);
+    box-shadow: var(--shadow-sm);
+}
+
+.guide-card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-xs);
+}
+
+.guide-card-desc {
+    font-size: 0.775rem;
+    color: var(--text-body);
+    line-height: 1.5;
+}
+
+.help-footer {
+    border-top: 1px solid var(--border);
+    background-color: var(--bg-page);
+}
+
+@media (max-width: 900px) {
+    .guides-grid-help {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .guides-grid-help {
+        grid-template-columns: 1fr !important;
+    }
+}

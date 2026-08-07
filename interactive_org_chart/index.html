@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Organization Explorer — Bea Cukai</title>
+    <!-- CSS Variables and Base Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <!-- View-specific stylesheet -->
+    <link rel="stylesheet" href="css/views/landing.css">
+    <link rel="stylesheet" href="css/components/user-profile.css">
+    <!-- Preload Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Fallback Font if Google Fonts is offline */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="landing-screen" class="view-screen h-full w-full flex flex-col justify-between">
+        <!-- Header -->
+        <header class="landing-header flex items-center justify-between">
+            <div class="logo-area flex items-center">
+                <!-- DJBC Eagle Shield Logo Placeholder (SVG Inline) -->
+                <svg class="logo-djbc" width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="#0D2137" stroke="#F5A623" stroke-width="3"/>
+                    <path d="M50 15 L80 35 L80 70 L50 90 L20 70 L20 35 Z" fill="#1A4B8C" stroke="#FFC94A" stroke-width="2"/>
+                    <path d="M50 25 L65 40 H55 V75 H45 V40 H35 Z" fill="#F5A623"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="brand-title">DIREKTORAT JENDERAL BEA DAN CUKAI</span>
+                    <span class="brand-tagline">Bea Cukai Makin Baik</span>
+                </div>
+            </div>
+            <div class="header-controls flex items-center">
+                <button class="icon-btn" title="Panduan" onclick="window.location.href='explorer.html#/bantuan'">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                </button>
+                <button class="icon-btn" title="Audio Efek" id="audio-toggle">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                </button>
+                <!-- User Profile Avatar & Name Widget -->
+                <div id="user-profile-widget" class="user-profile-widget">
+                    <div class="user-avatar-wrapper">
+                        <img id="user-avatar-img" class="user-avatar-img" src="https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g" alt="User Avatar">
+                        <div id="user-avatar-placeholder" class="user-avatar-placeholder hidden">
+                            <span id="user-avatar-initials">AP</span>
+                        </div>
+                    </div>
+                    <div class="user-profile-info">
+                        <span id="user-display-name" class="user-display-name">Aldi Pratama</span>
+                        <span id="user-display-role" class="user-display-role">KLC Kemenkeu</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Hero Section -->
+        <main class="landing-main flex-1 grid">
+            <div class="hero-text-content flex flex-col justify-center">
+                <h1 class="hero-title">Interactive<br>Organization Explorer</h1>
+                <p class="hero-subtitle">Media Pembelajaran E-Learning Tugas dan Fungsi DJBC</p>
+                <p class="hero-desc">Pahami kedudukan, tugas, fungsi, serta korelasi antar unit kerja Kantor Pusat, Instansi Vertikal, dan UPT di lingkungan Bea dan Cukai melalui visualisasi interaktif.</p>
+                <div class="hero-action">
+                    <button class="btn btn-primary" onclick="window.location.href='explorer.html#/explorer'">
+                        Mulai Eksplorasi
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual flex items-center justify-center">
+                <!-- Dynamic Interactive Map Overlay -->
+                <div class="map-glow-container">
+                    <canvas id="glow-map-canvas"></canvas>
+                    <div class="map-pulse-point" style="top: 15%; left: 15%;" title="Kanwil Aceh"></div>
+                    <div class="map-pulse-point" style="top: 25%; left: 22%;" title="KPU Batam"></div>
+                    <div class="map-pulse-point" style="top: 55%; left: 35%;" title="KPU Tanjung Priok"></div>
+                    <div class="map-pulse-point" style="top: 58%; left: 45%;" title="BLBC Surabaya"></div>
+                    <div class="map-pulse-point" style="top: 35%; left: 60%;" title="PSO Pantoloan"></div>
+                    <div class="map-pulse-point" style="top: 75%; left: 55%;" title="PSO Kupang"></div>
+                    <div class="map-pulse-point" style="top: 45%; left: 80%;" title="Kanwil Khusus Papua"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Feature Cards Footer Row -->
+        <footer class="landing-footer">
+            <div class="footer-grid">
+                <div class="feature-card">
+                    <div class="card-icon">🔆</div>
+                    <h3 class="card-title">Eksplorasi Interaktif</h3>
+                    <p class="card-desc">Jelajahi bagan hierarki interaktif untuk mengetahui peran strategis setiap unit kerja.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">👥</div>
+                    <h3 class="card-title">Pahami Keterkaitan</h3>
+                    <p class="card-desc">Lihat hubungan operasional, koordinasi, dan pengawasan antar unit di peta keterkaitan.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">📖</div>
+                    <h3 class="card-title">Alur Proses</h3>
+                    <p class="card-desc">Pelajari langkah kerja Impor, Ekspor, Cukai, dan Penindakan secara step-by-step.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="card-icon">📝</div>
+                    <h3 class="card-title">Uji Pemahaman</h3>
+                    <p class="card-desc">Kerjakan kuis klik organisasi dan studi kasus kasus nyata untuk mendapatkan poin XP.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/user-profile.js"></script>
+    <script src="js/views/landing.js"></script>
+</body>
+</html>

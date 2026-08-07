@@ -1,0 +1,102 @@
+{
+  "connections": [
+    {
+      "from": "dit-p2",
+      "to": "kanwil",
+      "type": "koordinasi",
+      "label": "Koordinasi Operasi & Intelijen",
+      "deskripsi": "Direktorat Penindakan dan Penyidikan mengoordinasikan kegiatan patroli laut, intelijen, dan operasi penindakan di wilayah kerja Kantor Wilayah."
+    },
+    {
+      "from": "dit-p2",
+      "to": "kppbc",
+      "type": "koordinasi",
+      "label": "Pelaksanaan Penindakan di Lapangan",
+      "deskripsi": "Direktorat Penindakan dan Penyidikan memberikan bimbingan teknis dan instruksi penindakan pelanggaran kepabeanan/cukai kepada unit Seksi P2 di KPPBC."
+    },
+    {
+      "from": "dit-p2",
+      "to": "dit-audit",
+      "type": "data",
+      "label": "Audit Investigatif & Dukungan Data",
+      "deskripsi": "Direktorat Penindakan dan Penyidikan saling bertukar data intelijen untuk mendukung perencanaan audit investigatif atas pengguna jasa."
+    },
+    {
+      "from": "dit-p2",
+      "to": "dit-ki",
+      "type": "pengawasan",
+      "label": "Investigasi Kepatuhan & Disiplin",
+      "deskripsi": "Koordinasi penanganan kasus pelanggaran integritas pegawai atau investigasi internal yang melibatkan personil penindakan."
+    },
+    {
+      "from": "dit-p2",
+      "to": "dit-ikc",
+      "type": "data",
+      "label": "Dukungan IT & Data Intelijen",
+      "deskripsi": "Direktorat IKC menyediakan infrastruktur jaringan komunikasi radio, database intelijen, dan integrasi sistem cekal pabean."
+    },
+    {
+      "from": "dit-p2",
+      "to": "dit-ksikc",
+      "type": "koordinasi",
+      "label": "Kerja Sama Penegakan Hukum Internasional",
+      "deskripsi": "Kerja sama intelijen pabean lintas batas (misal: RILO AP, WCO) untuk menangani kejahatan transnasional dan penyelundupan."
+    },
+    {
+      "from": "dit-p2",
+      "to": "dit-kbp",
+      "type": "regulasi",
+      "label": "Bantuan Hukum & Regulasi Penindakan",
+      "deskripsi": "Direktorat KBP memberikan bantuan hukum dan penelaahan regulasi atas kasus penyidikan tindak pidana kepabeanan yang diajukan ke pengadilan."
+    },
+    {
+      "from": "dit-p2",
+      "to": "pso",
+      "type": "pengawasan",
+      "label": "Pembina Teknis Armada & Senpi",
+      "deskripsi": "Direktorat P2 merupakan pembina teknis operasional bagi Pangkalan Sarana Operasi (PSO) dalam pengelolaan kapal patroli dan persenjataan."
+    },
+    {
+      "from": "dit-teknis-kepab",
+      "to": "dit-fasilitas-kepab",
+      "type": "koordinasi",
+      "label": "Harmonisasi Kebijakan Teknis & Fasilitas",
+      "deskripsi": "Koordinasi perumusan ketentuan impor/ekspor umum dengan ketentuan pemberian fasilitas pembebasan atau keringanan pabean."
+    },
+    {
+      "from": "dit-teknis-kepab",
+      "to": "kanwil",
+      "type": "koordinasi",
+      "label": "Pembinaan Teknis Kebijakan Pabean",
+      "deskripsi": "Memberikan bimbingan teknis, surat penegasan, dan pedoman penetapan klasifikasi barang atau tarif bea masuk kepada Kanwil."
+    },
+    {
+      "from": "dit-teknis-kepab",
+      "to": "kppbc",
+      "type": "koordinasi",
+      "label": "Supervisi Penetapan Dokumen Pabean",
+      "deskripsi": "Supervisi dan bimbingan teknis atas penetapan tarif, nilai pabean, dan manifes oleh pejabat fungsional di kantor pelayanan."
+    },
+    {
+      "from": "dit-teknis-kepab",
+      "to": "blbc",
+      "type": "pengawasan",
+      "label": "Pembina Teknis Fungsional Laboratorium",
+      "deskripsi": "Direktorat Teknis Kepabeanan bertindak sebagai pembina teknis utama bagi BLBC dalam standardisasi metode pengujian laboratorium barang."
+    },
+    {
+      "from": "kanwil",
+      "to": "blbc",
+      "type": "pengawasan",
+      "label": "Pembinaan Administratif & SDM",
+      "deskripsi": "Kantor Wilayah membina BLBC di wilayahnya secara administratif (anggaran, kepegawaian, sarana prasarana Bagian Umum)."
+    },
+    {
+      "from": "kanwil",
+      "to": "pso",
+      "type": "pengawasan",
+      "label": "Pembinaan Administratif & Logistik",
+      "deskripsi": "Kantor Wilayah membina PSO secara administratif, koordinasi logistik pangkalan, dan dukungan operasional wilayah."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-size);
+    color: var(--text-body);
+    background-color: var(--bg-page);
+    line-height: 1.6;
+    overflow: hidden; /* App Shell maintains scrollable sub-panels */
+}
+
+/* Typography elements */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-dark);
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--text-h2);
+}
+
+h3 {
+    font-size: var(--text-h3);
+}
+
+a {
+    color: var(--djbc-blue-light);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--djbc-blue);
+    text-decoration: underline;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* Utility Classes */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.h-full {
+    height: 100%;
+}
+
+/* Common Interactive Elements */
+button, select, input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Badge Base */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.625rem;
+    border-radius: var(--radius-full);
+    font-size: var(--text-label);
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Custom icon utility */
+.icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}

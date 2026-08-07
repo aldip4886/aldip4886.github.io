@@ -1,0 +1,114 @@
+/* Button and Action Component Styles */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 1px solid transparent;
+    outline: none;
+    gap: var(--spacing-sm);
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--djbc-blue);
+    color: var(--text-white);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    background-color: var(--djbc-blue-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: var(--bg-white);
+    border-color: var(--border);
+    color: var(--text-dark);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-page);
+    border-color: var(--text-muted);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+}
+
+.btn-gold {
+    background-color: var(--djbc-gold);
+    color: var(--djbc-navy);
+    font-weight: 700;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-gold:hover {
+    background-color: var(--djbc-gold-light);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+}
+
+.btn-ghost {
+    background: transparent;
+    border: none;
+    color: var(--text-body);
+}
+
+.btn-ghost:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+/* Common toolbar panels (used in explorer and map) */
+.toolbar-panel {
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    padding: var(--spacing-xs) var(--spacing-md);
+    box-shadow: var(--shadow-md);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.toolbar-btn {
+    background: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-body);
+    transition: all var(--transition-fast);
+}
+
+.toolbar-btn:hover {
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+}
+
+.toolbar-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.toolbar-divider {
+    width: 1px;
+    height: 18px;
+    background-color: var(--border);
+}

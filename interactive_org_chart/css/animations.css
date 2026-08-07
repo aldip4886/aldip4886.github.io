@@ -1,0 +1,101 @@
+/* Global Premium Animations & Keyframes */
+
+/* Common Fade-ins */
+.fade-in {
+    animation: fadeIn 300ms ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Panel slide-in from right (used in detail panels) */
+.slide-in-right {
+    animation: slideInRight 300ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+/* Node glow pulse (used in Org Chart selected node) */
+.glow-pulse-blue {
+    animation: glowPulseBlue 2s infinite ease-in-out;
+}
+
+@keyframes glowPulseBlue {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(37, 99, 235, 0.4), inset 0 0 5px rgba(37, 99, 235, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 18px rgba(37, 99, 235, 0.8), inset 0 0 10px rgba(37, 99, 235, 0.4);
+    }
+}
+
+.glow-pulse-gold {
+    animation: glowPulseGold 2s infinite ease-in-out;
+}
+
+@keyframes glowPulseGold {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(245, 166, 35, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 18px rgba(245, 166, 35, 0.8);
+    }
+}
+
+/* Header Progress Ring Rotate spin (when loading) */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Map marker pulsing keyframes (already defined inline, but added here for global reuse) */
+.marker-pulse {
+    animation: markerPulse 2s infinite;
+}
+
+@keyframes markerPulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(26, 75, 140, 0.5);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 8px rgba(26, 75, 140, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(26, 75, 140, 0);
+    }
+}
+
+/* Particle burst effect for unlocking badges (CSS hook) */
+.burst-effect {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--djbc-gold);
+    pointer-events: none;
+    z-index: 9999;
+    animation: particleBurst 600ms cubic-bezier(0.25, 1, 0.50, 1) forwards;
+}
+
+@keyframes particleBurst {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--x, 50px), var(--y, 50px)) scale(0);
+        opacity: 0;
+    }
+}
