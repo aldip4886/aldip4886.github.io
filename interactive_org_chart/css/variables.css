@@ -1,75 +1,90 @@
 :root {
-    /* Color Palette */
+    /* Core Corporate Brand Palette: Deep Navy & Orange Gold */
+    --djbc-navy-darker: #071325;
+    --djbc-navy-dark: #0A192F;
     --djbc-navy: #0D2137;
-    --djbc-blue: #1A4B8C;
-    --djbc-blue-light: #2563EB;
+    --djbc-navy-light: #16355B;
+    --djbc-blue-accent: #1E40AF;
+    
+    --djbc-orange: #FF9F1C;
     --djbc-gold: #F5A623;
     --djbc-gold-light: #FFC94A;
-    --bg-page: #F5F7FA;
-    --bg-white: #FFFFFF;
-    --bg-sidebar: #1A2E4A;
-    --bg-sidebar-hover: #243B55;
-    
-    /* Text Colors */
-    --text-dark: #1A2E4A;
-    --text-body: #374151;
-    --text-muted: #6B7280;
-    --text-white: #FFFFFF;
-    
-    /* Semantic Colors */
-    --border: #E5E7EB;
+    --djbc-orange-glow: rgba(245, 166, 35, 0.4);
+
+    /* Default Dark Mode Theme Tokens */
+    --bg-page: #071325;
+    --bg-surface: #0A192F;
+    --bg-card: rgba(13, 33, 55, 0.85);
+    --bg-sidebar: #0A192F;
+    --bg-header: rgba(10, 25, 47, 0.9);
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #94A3B8;
+    --text-muted: #64748B;
+    --text-highlight: #FFC94A;
+
+    --border-color: rgba(255, 255, 255, 0.12);
+    --border-highlight: rgba(245, 166, 35, 0.35);
+
+    /* Semantic Status Colors */
     --success: #10B981;
     --danger: #EF4444;
     --warning: #F59E0B;
-    
-    /* Node Color Coding (Org Chart) */
+    --info: #3B82F6;
+
+    /* Org Chart Node Categorization Colors */
     --color-root: #0D2137;
-    --color-kanpus: #0E7490;
+    --color-kanpus: #0284C7;
     --color-vertikal: #059669;
     --color-upt: #7C3AED;
     --color-kanwil: #10B981;
     --color-kpu: #059669;
-    --color-kppbc: #34D399;
+    --color-kppbc: #10B981;
     --color-blbc: #8B5CF6;
     --color-pso: #6366F1;
 
-    /* Connection Map Line Types */
-    --color-line-koordinasi: #2563EB;
-    --color-line-data: #10B981;
-    --color-line-regulasi: #F59E0B;
-    --color-line-pengawasan: #F5A623;
-    
     /* Typography Scale */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-    --text-hero: clamp(2rem, 5vw, 3rem);
+    --text-hero: clamp(2.25rem, 5vw, 3.5rem);
     --text-h1: 1.75rem;
     --text-h2: 1.375rem;
     --text-h3: 1.125rem;
     --text-body-size: 0.9375rem;
     --text-small: 0.8125rem;
-    --text-label: 0.75rem;
-    
-    /* Spacing & Layout */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
-    
-    /* Elevation / Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    
-    /* Border Radii */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 12px;
+
+    /* Spacing & Radii */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
     --radius-full: 9999px;
     
-    /* Transitions */
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.25);
+    --shadow-gold: 0 4px 20px rgba(245, 166, 35, 0.35);
+
     --transition-fast: 150ms ease;
     --transition-normal: 300ms ease;
-    --transition-slow: 500ms ease;
+}
+
+/* Light Mode Theme Overrides */
+html:not(.dark) {
+    --bg-page: #F8FAFC;
+    --bg-surface: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --bg-sidebar: #0D2137;
+    --bg-header: rgba(255, 255, 255, 0.92);
+
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --text-highlight: #D97706;
+
+    --border-color: rgba(15, 23, 42, 0.1);
+    --border-highlight: rgba(245, 166, 35, 0.5);
+    
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
 }

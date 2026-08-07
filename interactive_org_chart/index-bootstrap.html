@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Organization Explorer — Bea Cukai (Bootstrap 5 Corporate)</title>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS Variables and Component Styles -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/views/landing.css">
+    <link rel="stylesheet" href="css/components/user-profile.css">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bs-body-bg);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        /* Custom Corporate Styling Extensions */
+        .btn-corporate-gold {
+            background: linear-gradient(135deg, #F5A623 0%, #FFC94A 100%);
+            color: #0D2137;
+            font-weight: 700;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            box-shadow: 0 4px 14px rgba(245, 166, 35, 0.3);
+            transition: all 0.2s ease;
+        }
+        .btn-corporate-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 166, 35, 0.4);
+            color: #071527;
+        }
+        .card-corporate {
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        [data-bs-theme="light"] .card-corporate {
+            background-color: #ffffff;
+            border-color: rgba(13, 33, 55, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+        [data-bs-theme="dark"] .card-corporate {
+            background-color: rgba(13, 33, 55, 0.8);
+            border-color: rgba(245, 166, 35, 0.2);
+        }
+        .card-corporate:hover {
+            border-color: #F5A623 !important;
+            transform: translateY(-3px);
+        }
+        .navbar-corporate {
+            border-radius: 1rem;
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(245, 166, 35, 0.25);
+        }
+        [data-bs-theme="dark"] .navbar-corporate {
+            background-color: rgba(13, 33, 55, 0.85);
+        }
+        [data-bs-theme="light"] .navbar-corporate {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-color: rgba(13, 33, 55, 0.15);
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 p-3 p-md-4">
+    <div id="landing-screen" class="container-fluid d-flex flex-column justify-content-between flex-grow-1 gap-4">
+        <!-- Corporate Header Navbar -->
+        <header class="navbar navbar-corporate px-4 py-3 shadow-lg">
+            <div class="container-fluid p-0 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                    <svg class="logo-djbc" width="40" height="40" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="45" fill="#0D2137" stroke="#F5A623" stroke-width="3"/>
+                        <path d="M50 15 L80 35 L80 70 L50 90 L20 70 L20 35 Z" fill="#1A4B8C" stroke="#FFC94A" stroke-width="2"/>
+                        <path d="M50 25 L65 40 H55 V75 H45 V40 H35 Z" fill="#F5A623"/>
+                    </svg>
+                    <div class="d-flex flex-column">
+                        <span class="fw-bold fs-6 text-uppercase text-body">DIREKTORAT JENDERAL BEA DAN CUKAI</span>
+                        <span class="small text-warning fw-semibold">Bea Cukai Makin Baik</span>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-2">
+                    <!-- Bootstrap Theme Switcher Button -->
+                    <button id="bootstrap-theme-toggle" class="btn btn-outline-secondary btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Ganti Mode Tema (Dark/Light)">
+                        <i class="bi bi-moon-stars-fill text-warning fs-5"></i>
+                    </button>
+
+                    <button class="btn btn-outline-secondary btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Panduan" onclick="window.location.href='explorer-bootstrap.html#/bantuan'">
+                        <i class="bi bi-question-circle fs-5"></i>
+                    </button>
+
+                    <button class="btn btn-outline-secondary btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 38px; height: 38px;" title="Audio Efek" id="audio-toggle">
+                        <i class="bi bi-volume-up fs-5"></i>
+                    </button>
+
+                    <!-- User Profile Avatar & Name Widget -->
+                    <div id="user-profile-widget" class="user-profile-widget d-inline-flex align-items-center gap-2 py-1 px-3 rounded-pill border border-warning-subtle cursor-pointer">
+                        <div class="user-avatar-wrapper rounded-circle border border-warning overflow-hidden bg-primary d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                            <img id="user-avatar-img" class="user-avatar-img w-100 h-100 object-fit-cover" src="https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g" alt="User Avatar">
+                            <div id="user-avatar-placeholder" class="user-avatar-placeholder d-none small fw-bold text-warning">
+                                <span id="user-avatar-initials">AP</span>
+                            </div>
+                        </div>
+                        <div class="user-profile-info text-start d-flex flex-column">
+                            <span id="user-display-name" class="user-display-name small fw-bold text-body lh-1">Aldi Pratama</span>
+                            <span id="user-display-role" class="user-display-role text-warning opacity-75 lh-1" style="font-size: 10px;">KLC Kemenkeu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Hero Section -->
+        <main class="row align-items-center my-auto py-4 g-4">
+            <div class="col-lg-6 d-flex flex-column justify-content-center gap-3">
+                <span class="badge bg-warning-subtle text-warning border border-warning-subtle rounded-pill px-3 py-2 align-self-start fw-semibold">
+                    <i class="bi bi-mortarboard-fill me-1"></i> E-Learning Tusi DJBC 2026
+                </span>
+                <h1 class="display-4 fw-bold text-body leading-tight">
+                    Interactive<br>
+                    <span class="text-warning">Organization Explorer</span>
+                </h1>
+                <p class="h5 text-warning opacity-90 fw-semibold">Media Pembelajaran E-Learning Tugas dan Fungsi DJBC</p>
+                <p class="text-body-secondary lead fs-6">Pahami kedudukan, tugas, fungsi, serta korelasi antar unit kerja Kantor Pusat, Instansi Vertikal, dan UPT di lingkungan Bea dan Cukai melalui visualisasi interaktif.</p>
+                <div>
+                    <button class="btn btn-corporate-gold d-inline-flex align-items-center gap-2" onclick="window.location.href='explorer-bootstrap.html#/explorer'">
+                        Mulai Eksplorasi
+                        <i class="bi bi-arrow-right-short fs-4"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="map-glow-container w-100 rounded-4 overflow-hidden border border-secondary-subtle shadow-lg bg-body-tertiary position-relative" style="max-width: 540px; aspect-ratio: 16/9;">
+                    <canvas id="glow-map-canvas" class="w-100 h-100"></canvas>
+                    <div class="map-pulse-point" style="top: 15%; left: 15%;" title="Kanwil Aceh"></div>
+                    <div class="map-pulse-point" style="top: 25%; left: 22%;" title="KPU Batam"></div>
+                    <div class="map-pulse-point" style="top: 55%; left: 35%;" title="KPU Tanjung Priok"></div>
+                    <div class="map-pulse-point" style="top: 58%; left: 45%;" title="BLBC Surabaya"></div>
+                    <div class="map-pulse-point" style="top: 35%; left: 60%;" title="PSO Pantoloan"></div>
+                    <div class="map-pulse-point" style="top: 75%; left: 55%;" title="PSO Kupang"></div>
+                    <div class="map-pulse-point" style="top: 45%; left: 80%;" title="Kanwil Khusus Papua"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Feature Cards Footer Row -->
+        <footer class="pt-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-3">
+                <div class="col">
+                    <div class="card card-corporate h-100 p-4 d-flex flex-column gap-2">
+                        <div class="fs-2">🔆</div>
+                        <h5 class="fw-bold text-body m-0">Eksplorasi Interaktif</h5>
+                        <p class="small text-body-secondary m-0">Jelajahi bagan hierarki interaktif untuk mengetahui peran strategis setiap unit kerja.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-corporate h-100 p-4 d-flex flex-column gap-2">
+                        <div class="fs-2">👥</div>
+                        <h5 class="fw-bold text-body m-0">Pahami Keterkaitan</h5>
+                        <p class="small text-body-secondary m-0">Lihat hubungan operasional, koordinasi, dan pengawasan antar unit di peta keterkaitan.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-corporate h-100 p-4 d-flex flex-column gap-2">
+                        <div class="fs-2">📖</div>
+                        <h5 class="fw-bold text-body m-0">Alur Proses</h5>
+                        <p class="small text-body-secondary m-0">Pelajari langkah kerja Impor, Ekspor, Cukai, dan Penindakan secara step-by-step.</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-corporate h-100 p-4 d-flex flex-column gap-2">
+                        <div class="fs-2">📝</div>
+                        <h5 class="fw-bold text-body m-0">Uji Pemahaman</h5>
+                        <p class="small text-body-secondary m-0">Kerjakan kuis klik organisasi dan studi kasus kasus nyata untuk mendapatkan poin XP.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Bootstrap 5 Theme Switcher Logic
+        const themeToggleBtn = document.getElementById('bootstrap-theme-toggle');
+        const htmlElement = document.documentElement;
+
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('bootstrap_theme', theme);
+            if (theme === 'light') {
+                themeToggleBtn.innerHTML = '<i class="bi bi-sun-fill text-warning fs-5"></i>';
+                themeToggleBtn.title = "Ganti ke Mode Gelap";
+            } else {
+                themeToggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill text-warning fs-5"></i>';
+                themeToggleBtn.title = "Ganti ke Mode Terang";
+            }
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-bs-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        const savedTheme = localStorage.getItem('bootstrap_theme') || 'dark';
+        setTheme(savedTheme);
+    </script>
+    <script src="js/user-profile.js"></script>
+    <script src="js/views/landing.js"></script>
+</body>
+</html>

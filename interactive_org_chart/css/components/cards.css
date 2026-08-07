@@ -1,8 +1,8 @@
-/* Premium Card Component Styles */
+/* Corporate Minimalist Card Component Styles */
 
 .card {
-    background-color: var(--bg-white);
-    border: 1px solid var(--border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);
     padding: var(--spacing-md);
@@ -12,6 +12,7 @@
 }
 
 .card:hover {
+    border-color: var(--border-highlight);
     box-shadow: var(--shadow-md);
     transform: translateY(-2px);
 }
@@ -21,15 +22,15 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: var(--spacing-sm);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: var(--spacing-sm);
 }
 
 .card-body {
-    color: var(--text-body);
+    color: var(--text-primary);
 }
 
-/* Statistics Cards Row (e.g. in dashboards, progress screens) */
+/* Statistics Cards Row */
 .stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -38,21 +39,28 @@
 }
 
 .stat-card {
-    background-color: var(--bg-white);
-    border: 1px solid var(--border);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: var(--spacing-md);
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
     box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.stat-card:hover {
+    border-color: var(--djbc-gold);
+    box-shadow: var(--shadow-gold);
 }
 
 .stat-icon {
     font-size: 2rem;
     width: 48px;
     height: 48px;
-    background-color: var(--bg-page);
+    background: rgba(245, 166, 35, 0.12);
+    border: 1px solid rgba(245, 166, 35, 0.3);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -66,18 +74,18 @@
 
 .stat-label {
     font-size: var(--text-small);
-    color: var(--text-muted);
+    color: var(--text-secondary);
     font-weight: 500;
 }
 
 .stat-value {
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--text-dark);
+    color: var(--text-primary);
     line-height: 1.2;
 }
 
-/* Icon-based small output cards (for F03 output cards) */
+/* Icon-based small output cards */
 .output-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -86,8 +94,8 @@
 }
 
 .output-card {
-    background-color: var(--bg-page);
-    border: 1px solid var(--border);
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
     padding: var(--spacing-sm);
     display: flex;
@@ -97,8 +105,7 @@
 }
 
 .output-card:hover {
-    border-color: var(--djbc-blue-light);
-    background-color: var(--bg-white);
+    border-color: var(--djbc-gold);
     box-shadow: var(--shadow-sm);
 }
 
@@ -109,5 +116,5 @@
 .output-label {
     font-size: 0.8rem;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }

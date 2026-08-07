@@ -1,82 +1,126 @@
 /**
- * KLC2 User Profile Integration & Avatar Loader
- * Endpoint: https://klc2.kemenkeu.go.id/res/user/principal/me/profile
- * Data mapping:
- * - User Name: "name"
- * - Photo: "image_url"
+ * KLC2 User Profile Dynamic Token Obtainer & Profile Fetcher
+ * Alur Kerja:
+ * 1. Default (saat belum login & token tidak ada): Nama "Peserta", Role "Pegawai DJBC", Avatar Inisial "P"
+ * 2. Mengambil authorization token langsung dari https://klc2.kemenkeu.go.id/res/lms/course_category
+ * 3. Menyimpan token ke localStorage ('klc_token')
+ * 4. Menggunakan token untuk fetch profil dari https://klc2.kemenkeu.go.id/res/user/principal/me/profile
  */
 
 window.UserProfile = {
+    tokenCategoryUrl: 'https://klc2.kemenkeu.go.id/res/lms/course_category',
     apiUrl: 'https://klc2.kemenkeu.go.id/res/user/principal/me/profile',
-    
-    defaultProfile: {
-        name: 'Aldi Pratama',
-        role: 'KLC Kemenkeu',
-        avatarUrl: 'https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g',
-        nip: '198608042007101002',
-        email: 'aldi.pratama@kemenkeu.go.id'
+    pollIntervalMs: 30000, // 30 seconds interval
+    pollTimer: null,
+
+    // Default profile saat peserta belum login / authorization token tidak tersedia
+    fallbackProfile: {
+        name: 'Peserta',
+        role: 'Pegawai DJBC',
+        avatarUrl: '', // Kosong agar avatar inisial huruf "P" ditampilkan
+        nip: '-',
+        email: '-'
     },
     isAuthenticated: false,
     currentUser: null,
 
     async init() {
-        // 1. Check URL parameters for direct name/photo
-        const urlParams = new URLSearchParams(window.location.search);
-        const paramName = urlParams.get('name') || urlParams.get('userName');
-        const paramPhoto = urlParams.get('image_url') || urlParams.get('photo') || urlParams.get('avatar');
-
-        if (paramName || paramPhoto) {
-            const customProfile = {
-                name: paramName || 'Aldi Pratama',
-                avatarUrl: paramPhoto || 'https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g',
-                role: 'KLC Kemenkeu'
-            };
-            this.saveProfileToStorage(customProfile);
-            this.render(customProfile);
-            return;
-        }
-
-        // 2. Load saved profile from localStorage if exists
+        // 1. Tampilkan profile tersimpan / fallback "Peserta" - "Pegawai DJBC" - Inisial "P"
         const savedProfile = this.getSavedProfile();
-        if (savedProfile) {
+        if (savedProfile && savedProfile.name && savedProfile.name !== 'Peserta') {
             this.render(savedProfile);
         } else {
-            // Render default profile (Aldi Pratama)
-            this.render(this.defaultProfile);
+            this.render(this.fallbackProfile);
         }
 
-        // 3. Extract token from URL params, postMessage, or Storage
-        let token = this.getStoredToken();
+        // 2. Periksa URL Parameters terlebih dahulu jika token disisipkan langsung
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlToken = urlParams.get('token') || urlParams.get('access_token');
+        if (urlToken) {
+            this.saveToken(urlToken);
+        }
 
+        // 3. Mengambil authorization token langsung dari https://klc2.kemenkeu.go.id/res/lms/course_category
+        const token = await this.obtainTokenFromKLC2();
+
+        // 4. Jika token tersedia, fetch profil dari API KLC2
         if (token) {
-            const jwtProfile = this.parseJwt(token);
-            if (jwtProfile) {
-                this.saveProfileToStorage(jwtProfile);
-                this.render(jwtProfile);
-                return;
+            const success = await this.fetchProfile(token);
+            if (!success && !savedProfile) {
+                this.render(this.fallbackProfile);
             }
+        } else {
+            // Jika token tidak tersedia, tetap gunakan default Peserta, Pegawai DJBC, Inisial "P"
+            this.render(this.fallbackProfile);
         }
 
-        // 4. Fetch live user profile JSON response from API server
-        await this.fetchProfile(token);
+        // 5. Pasang listener navigasi & polling 30 detik
+        this.setupNavigationListeners();
+        this.start30SecPolling();
     },
 
-    saveProfileToStorage(profile) {
+    /**
+     * Langkah 1 & 2: Mengambil authorization token dari https://klc2.kemenkeu.go.id/res/lms/course_category & menyimpannya
+     */
+    async obtainTokenFromKLC2() {
         try {
-            this.isAuthenticated = true;
-            this.currentUser = profile;
-            localStorage.setItem('klc_user_profile', JSON.stringify(profile));
+            console.log('[UserProfile] Fetching authorization token dari https://klc2.kemenkeu.go.id/res/lms/course_category...');
+
+            // Request GET ke https://klc2.kemenkeu.go.id/res/lms/course_category dengan credentials: 'include'
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 4500);
+
+            const res = await fetch(this.tokenCategoryUrl, {
+                method: 'GET',
+                credentials: 'include',
+                headers: { 
+                    'Accept': 'application/json, text/plain, */*',
+                    'X-Requested-With': 'XMLHttpRequest'
+                },
+                signal: controller.signal
+            });
+
+            clearTimeout(timeoutId);
+
+            if (res.ok) {
+                // Ekstrak token dari Authorization Header / X-Auth-Token jika tersedia
+                const authHeader = res.headers.get('Authorization') || res.headers.get('X-Auth-Token') || res.headers.get('token');
+                if (authHeader) {
+                    const cleanToken = authHeader.replace(/^Bearer\s+/i, '').trim();
+                    this.saveToken(cleanToken);
+                    return cleanToken;
+                }
+
+                try {
+                    const json = await res.json();
+                    const token = json.token || json.access_token || json.data?.token || json.data?.access_token || json.payload?.token;
+                    if (token) {
+                        this.saveToken(token);
+                        return token;
+                    }
+                } catch (e) {}
+            }
+
+            // Ekstrak token dari Cookie browser (klc_token / access_token / SESSION)
+            const cookieToken = this.getCookie('klc_token') || this.getCookie('access_token') || this.getCookie('token');
+            if (cookieToken) {
+                this.saveToken(cookieToken);
+                return cookieToken;
+            }
         } catch (e) {
-            console.log('Error saving profile:', e);
+            console.log('[UserProfile] Catatan pengambilan token dari course_category:', e.message);
         }
+
+        return this.getStoredToken();
     },
 
-    getSavedProfile() {
+    saveToken(token) {
+        if (!token) return;
         try {
-            const str = localStorage.getItem('klc_user_profile');
-            if (str) return JSON.parse(str);
+            localStorage.setItem('klc_token', token);
+            sessionStorage.setItem('klc_token', token);
+            console.log('[UserProfile] Authorization token berhasil disimpan ke storage.');
         } catch (e) {}
-        return null;
     },
 
     getStoredToken() {
@@ -84,43 +128,45 @@ window.UserProfile = {
             const urlParams = new URLSearchParams(window.location.search);
             const urlToken = urlParams.get('token') || urlParams.get('access_token');
             if (urlToken) {
-                localStorage.setItem('klc_token', urlToken);
+                this.saveToken(urlToken);
                 return urlToken;
             }
 
             return localStorage.getItem('klc_token') || 
-                   localStorage.getItem('token') || 
                    sessionStorage.getItem('klc_token') || 
-                   sessionStorage.getItem('token') || '';
+                   localStorage.getItem('access_token') || '';
         } catch (e) {
             return '';
         }
     },
 
-    parseJwt(tokenStr) {
+    getCookie(name) {
         try {
-            const cleanToken = tokenStr.replace(/^Bearer\s+/i, '').trim();
-            const parts = cleanToken.split('.');
-            if (parts.length !== 3) return null;
-
-            const payloadStr = atob(parts[1].replace(/-/g, '+').replace(/_/g, '/'));
-            const data = JSON.parse(decodeURIComponent(escape(payloadStr)));
-
-            return this.parseProfileData(data);
-        } catch (e) {
-            console.log('Error parsing JWT token:', e);
-            return null;
-        }
+            const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+            if (match) return decodeURIComponent(match[2]);
+        } catch(e) {}
+        return '';
     },
 
+    /**
+     * Langkah 3: Menggunakan token untuk fetch data profil user dari https://klc2.kemenkeu.go.id/res/user/principal/me/profile
+     */
     async fetchProfile(token = '') {
         try {
+            const activeToken = token || this.getStoredToken();
+            if (!activeToken) {
+                this.render(this.fallbackProfile);
+                return false;
+            }
+
+            console.log('[UserProfile] Fetching profile data menggunakan token...');
+
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 3500);
+            const timeoutId = setTimeout(() => controller.abort(), 4000);
 
             const headers = { 'Accept': 'application/json' };
-            if (token) {
-                headers['Authorization'] = token.startsWith('Bearer') ? token : `Bearer ${token}`;
+            if (activeToken) {
+                headers['Authorization'] = activeToken.startsWith('Bearer') ? activeToken : `Bearer ${activeToken}`;
             }
 
             const response = await fetch(this.apiUrl, {
@@ -135,40 +181,77 @@ window.UserProfile = {
             if (response.ok) {
                 const json = await response.json();
                 const profile = this.parseProfileData(json);
-                this.saveProfileToStorage(profile);
-                this.render(profile);
-                return true;
+                if (profile && profile.name) {
+                    this.saveProfileToStorage(profile);
+                    this.render(profile);
+                    return true;
+                }
             }
         } catch (err) {
-            console.log('KLC Profile fetch fallback note:', err.message);
+            console.log('[UserProfile] Response fetch profile note:', err.message);
         }
         return false;
     },
 
     parseProfileData(json) {
+        if (!json) return null;
         const data = json.data || json.payload || json.principal || json.user || json;
-        
+        if (!data) return null;
+
         // Extract User Name: "name" and Photo: "image_url" from server response JSON
-        let userName = data.name || data.fullName || data.full_name || data.nama || 'Aldi Pratama';
-        let userPhoto = data.image_url || data.avatar || data.avatarUrl || data.avatar_url || data.photo || 'https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g';
-        let role = data.role || data.unit || data.jabatan || (data.nip ? `NIP: ${data.nip}` : 'KLC Kemenkeu');
+        let userName = data.name || data.fullName || data.full_name || data.nama || 'Peserta';
+        let userPhoto = data.image_url || data.avatar || data.avatarUrl || data.avatar_url || data.photo || '';
+        let role = data.role || data.unit || data.jabatan || (data.nip ? `NIP: ${data.nip}` : 'Pegawai DJBC');
 
         return {
             name: userName,
             avatarUrl: userPhoto,
             role: role,
-            email: data.email || 'aldi.pratama@kemenkeu.go.id',
-            nip: data.nip || data.preferred_username || '198608042007101002'
+            email: data.email || '-',
+            nip: data.nip || data.preferred_username || '-'
         };
     },
 
+    saveProfileToStorage(profile) {
+        try {
+            if (!profile) return;
+            this.isAuthenticated = true;
+            this.currentUser = profile;
+            localStorage.setItem('klc_user_profile', JSON.stringify(profile));
+        } catch (e) {}
+    },
+
+    getSavedProfile() {
+        try {
+            const str = localStorage.getItem('klc_user_profile');
+            if (str) return JSON.parse(str);
+        } catch (e) {}
+        return null;
+    },
+
+    setupNavigationListeners() {
+        window.addEventListener('hashchange', () => this.fetchProfile());
+        window.addEventListener('popstate', () => this.fetchProfile());
+        window.addEventListener('pageshow', () => this.fetchProfile());
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') this.fetchProfile();
+        });
+    },
+
+    start30SecPolling() {
+        if (this.pollTimer) clearInterval(this.pollTimer);
+        this.pollTimer = setInterval(() => this.fetchProfile(), this.pollIntervalMs);
+    },
+
     render(profile) {
+        const user = profile || this.fallbackProfile;
+
         const profileWidgets = document.querySelectorAll('#user-profile-widget, .user-profile-widget');
         profileWidgets.forEach(w => {
             w.classList.remove('hidden');
             w.style.display = 'inline-flex';
             w.style.cursor = 'pointer';
-            w.onclick = () => this.showProfileDetailModal(profile);
+            w.onclick = () => this.showProfileDetailModal(user);
         });
 
         const nameEls = document.querySelectorAll('#user-display-name, .user-display-name');
@@ -177,10 +260,10 @@ window.UserProfile = {
         const placeholderEls = document.querySelectorAll('#user-avatar-placeholder, .user-avatar-placeholder');
         const initialsEls = document.querySelectorAll('#user-avatar-initials, .user-avatar-initials');
 
-        // Initials calculation from user name
-        let initials = 'AP';
-        if (profile.name) {
-            const parts = profile.name.trim().split(' ').filter(Boolean);
+        // Initial letter calculation: "Peserta" -> "P"
+        let initials = 'P';
+        if (user.name) {
+            const parts = user.name.trim().split(' ').filter(Boolean);
             if (parts.length >= 2) {
                 initials = (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
             } else if (parts.length === 1 && parts[0].length > 0) {
@@ -188,25 +271,32 @@ window.UserProfile = {
             }
         }
 
-        // Render User Name: "name" to top right header
-        nameEls.forEach(el => { el.textContent = profile.name; });
-        roleEls.forEach(el => { if (profile.role) el.textContent = profile.role; });
+        // Render User Name & Role ("Peserta" & "Pegawai DJBC")
+        nameEls.forEach(el => { el.textContent = user.name || 'Peserta'; });
+        roleEls.forEach(el => { el.textContent = user.role || 'Pegawai DJBC'; });
         initialsEls.forEach(el => { el.textContent = initials; });
 
-        // Render User Photo: "image_url" to avatar image element in top right header
-        if (profile.avatarUrl) {
+        // Render User Photo or Default Avatar Placeholder (Initial P)
+        if (user.avatarUrl) {
             imgEls.forEach(img => {
-                img.src = profile.avatarUrl;
+                img.src = user.avatarUrl;
                 img.classList.remove('hidden');
                 img.onerror = () => {
                     img.classList.add('hidden');
-                    placeholderEls.forEach(p => p.classList.remove('hidden'));
+                    placeholderEls.forEach(p => {
+                        p.classList.remove('hidden');
+                        p.style.display = 'flex';
+                    });
                 };
             });
             placeholderEls.forEach(p => p.classList.add('hidden'));
         } else {
+            // Unauthenticated state: show avatar placeholder with initial "P"
             imgEls.forEach(img => img.classList.add('hidden'));
-            placeholderEls.forEach(p => p.classList.remove('hidden'));
+            placeholderEls.forEach(p => {
+                p.classList.remove('hidden');
+                p.style.display = 'flex';
+            });
         }
     },
 
@@ -219,18 +309,20 @@ window.UserProfile = {
             document.body.appendChild(modal);
         }
 
+        const user = profile || this.fallbackProfile;
+
         modal.innerHTML = `
             <div class="bg-[#0D2137] border border-[#F5A623] rounded-2xl p-6 max-w-sm w-full text-white shadow-2xl relative">
                 <button id="close-user-profile-detail-modal" class="absolute top-3 right-3 text-gray-400 hover:text-white text-xl font-bold p-1">&times;</button>
                 <div class="flex flex-col items-center text-center">
                     <div class="w-20 h-20 rounded-full border-2 border-[#F5A623] overflow-hidden mb-3 shadow-lg bg-[#1A4B8C] flex items-center justify-center">
-                        ${profile.avatarUrl ? `<img src="${profile.avatarUrl}" class="w-full h-full object-cover">` : `<span class="text-2xl font-bold text-[#F5A623]">${profile.name.substring(0, 2).toUpperCase()}</span>`}
+                        ${user.avatarUrl ? `<img src="${user.avatarUrl}" class="w-full h-full object-cover">` : `<span class="text-2xl font-bold text-[#F5A623]">${(user.name || 'P').substring(0, 2).toUpperCase()}</span>`}
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-0.5">${profile.name}</h3>
-                    <p class="text-xs text-[#FFC94A] font-medium mb-3">${profile.role}</p>
+                    <h3 class="text-lg font-bold text-white mb-0.5">${user.name}</h3>
+                    <p class="text-xs text-[#FFC94A] font-medium mb-3">${user.role}</p>
 
-                    ${profile.nip ? `<div class="bg-white/5 w-full py-1.5 px-3 rounded-lg text-xs text-gray-300 mb-2 border border-white/10">NIP: ${profile.nip}</div>` : ''}
-                    ${profile.email ? `<div class="bg-white/5 w-full py-1.5 px-3 rounded-lg text-xs text-gray-300 mb-4 border border-white/10">${profile.email}</div>` : ''}
+                    ${user.nip && user.nip !== '-' ? `<div class="bg-white/5 w-full py-1.5 px-3 rounded-lg text-xs text-gray-300 mb-2 border border-white/10">NIP: ${user.nip}</div>` : ''}
+                    ${user.email && user.email !== '-' ? `<div class="bg-white/5 w-full py-1.5 px-3 rounded-lg text-xs text-gray-300 mb-4 border border-white/10">${user.email}</div>` : ''}
                 </div>
             </div>
         `;
@@ -248,7 +340,7 @@ window.addEventListener('message', (event) => {
     if (event.data && (event.data.token || event.data.type === 'KLC_AUTH_TOKEN')) {
         const token = event.data.token || event.data.payload;
         if (token) {
-            localStorage.setItem('klc_token', token);
+            window.UserProfile.saveToken(token);
             window.UserProfile.init();
         }
     }

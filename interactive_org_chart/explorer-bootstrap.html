@@ -1,34 +1,18 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJBC Interactive Organization Explorer</title>
+    <title>DJBC Interactive Organization Explorer (Bootstrap 5 Corporate)</title>
 
-    <!-- Tailwind CSS v3 CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        obsidian: {
-                            950: '#030712',
-                            900: '#0B0F17',
-                            800: '#0F172A',
-                            700: '#1E293B',
-                        },
-                        amber: {
-                            400: '#FFC94A',
-                            500: '#F5A623',
-                            600: '#FF8A00',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Core CSS Variables and Resets -->
     <link rel="stylesheet" href="css/variables.css">
@@ -65,11 +49,6 @@
     <link rel="stylesheet" href="css/views/progress-page.css">
     <link rel="stylesheet" href="css/views/journey-map.css">
     <link rel="stylesheet" href="css/views/help.css">
-    
-    <!-- Google Fonts Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Persistent App Shell -->
@@ -138,7 +117,7 @@
                     <a href="#/bantuan" class="sidebar-nav-item" data-view="help">
                         <span class="nav-icon">❓</span> Panduan Belajar
                     </a>
-                    <a href="index.html" class="sidebar-nav-item">
+                    <a href="index-bootstrap.html" class="sidebar-nav-item">
                         <span class="nav-icon">🚪</span> Keluar ke Beranda
                     </a>
                 </div>
@@ -154,10 +133,10 @@
                     <h2 id="header-view-title">Eksplorasi Struktur Organisasi</h2>
                 </div>
                 
-                <div class="header-right flex items-center">
-                    <!-- Theme Toggle Button (Dark / Light) -->
-                    <button id="theme-toggle-btn" class="icon-btn-header theme-toggle-btn" title="Ganti Mode Tema">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-yellow-400"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line></svg>
+                <div class="header-right flex items-center gap-2">
+                    <!-- Bootstrap Theme Switcher Button -->
+                    <button id="bootstrap-theme-toggle" class="btn btn-outline-secondary btn-sm rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 36px; height: 36px;" title="Ganti Mode Tema">
+                        <i class="bi bi-moon-stars-fill text-warning fs-6"></i>
                     </button>
                     <!-- Onboarding Tour Trigger Button -->
                     <button class="icon-btn-header" id="header-tour-btn" title="Panduan Halaman (Tutorial)">
@@ -183,14 +162,14 @@
                     <!-- User Profile Avatar & Name Widget -->
                     <div id="user-profile-widget" class="user-profile-widget">
                         <div class="user-avatar-wrapper">
-                            <img id="user-avatar-img" class="user-avatar-img hidden" alt="User Avatar">
-                            <div id="user-avatar-placeholder" class="user-avatar-placeholder">
-                                <span id="user-avatar-initials">P</span>
+                            <img id="user-avatar-img" class="user-avatar-img" src="https://aset-satu.kemenkeu.go.id/api/photo/GetPhotoUrl/PWwA2WwH4r_vWT536TBkHtl616mVjsaz2Nlndt6dR7g" alt="User Avatar">
+                            <div id="user-avatar-placeholder" class="user-avatar-placeholder hidden">
+                                <span id="user-avatar-initials">AP</span>
                             </div>
                         </div>
                         <div class="user-profile-info">
-                            <span id="user-display-name" class="user-display-name">Peserta</span>
-                            <span id="user-display-role" class="user-display-role">Pegawai DJBC</span>
+                            <span id="user-display-name" class="user-display-name">Aldi Pratama</span>
+                            <span id="user-display-role" class="user-display-role">KLC Kemenkeu</span>
                         </div>
                     </div>
                 </div>
@@ -252,6 +231,36 @@
         
     </div>
 
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Bootstrap 5 Theme Switcher Logic
+        const themeToggleBtn = document.getElementById('bootstrap-theme-toggle');
+        const htmlElement = document.documentElement;
+
+        function setTheme(theme) {
+            htmlElement.setAttribute('data-bs-theme', theme);
+            localStorage.setItem('bootstrap_theme', theme);
+            if (theme === 'light') {
+                themeToggleBtn.innerHTML = '<i class="bi bi-sun-fill text-warning fs-6"></i>';
+                themeToggleBtn.title = "Ganti ke Mode Gelap";
+            } else {
+                themeToggleBtn.innerHTML = '<i class="bi bi-moon-stars-fill text-warning fs-6"></i>';
+                themeToggleBtn.title = "Ganti ke Mode Terang";
+            }
+        }
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = htmlElement.getAttribute('data-bs-theme');
+                setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        }
+
+        const savedTheme = localStorage.getItem('bootstrap_theme') || 'dark';
+        setTheme(savedTheme);
+    </script>
+
     <!-- Inlined Data Variables to bypass Local File CORS Blocks -->
     <script src="data/kantor-pusat.js"></script>
     <script src="data/instansi-vertikal.js"></script>
@@ -268,7 +277,6 @@
     <script src="js/confetti.js"></script>
 
     <!-- Core App Engine -->
-    <script src="js/theme-manager.js"></script>
     <script src="js/progress-tracker.js"></script>
     <script src="js/data.js"></script>
     <script src="js/explorer-onboarding.js"></script>
