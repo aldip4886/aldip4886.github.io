@@ -8,7 +8,7 @@
  */
 
 window.UserProfile = {
-    tokenCategoryUrl: 'https://klc2.kemenkeu.go.id/res/lms/course_category',
+    tokenCategoryUrl: 'https://klc2.kemenkeu.go.id/',
     apiUrl: 'https://klc2.kemenkeu.go.id/res/user/principal/me/profile',
     pollIntervalMs: 30000, // 30 seconds interval
     pollTimer: null,
