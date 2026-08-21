@@ -1,0 +1,20 @@
+window.DATA_QUICKFACTS = {
+  "setditjen": "Sekretariat DJBC mengelola urusan kepegawaian, keuangan, dan rumah tangga untuk seluruh unit DJBC yang mencakup lebih dari 15.000 pegawai.",
+  "dit-teknis-kepab": "Direktorat Teknis Kepabeanan mengoordinasikan National Logistics Ecosystem (NLE) untuk mempercepat waktu bongkar muat barang (dwelling time) di pelabuhan utama Indonesia.",
+  "dit-fasilitas-kepab": "Fasilitas Kawasan Berikat dan KITE yang dirumuskan direktorat ini membantu industri manufaktur dalam negeri menghemat biaya modal dengan pembebasan bea masuk.",
+  "dit-tfc": "Penerimaan negara dari Cukai (Hasil Tembakau, MMEA, Etil Alkohol) menyumbang sekitar 10% dari total APBN Indonesia.",
+  "dit-ksikc": "Direktorat KSIKC mewakili Indonesia di World Customs Organization (WCO) dan mengoordinasikan Mutual Recognition Arrangement (MRA) untuk pengakuan AEO secara global.",
+  "dit-kbp": "Direktorat Keberatan Banding dan Peraturan menangani ribuan sengketa penetapan tarif dan nilai pabean yang diajukan oleh pengguna jasa setiap tahunnya.",
+  "dit-ikc": "Sistem CEISA (Customs-Excise Information System and Automation) yang dikelola direktorat ini memproses jutaan dokumen kepabeanan secara otomatis setiap hari.",
+  "dit-ki": "Direktorat Kepatuhan Internal bertindak sebagai 'internal affairs' yang melakukan audit kinerja dan investigasi integritas terhadap seluruh pegawai Bea Cukai.",
+  "dit-audit": "Audit kepabeanan dilakukan pasca-pengeluaran barang (post-clearance) langsung ke pembukuan importir untuk memastikan kesesuaian nilai transaksi selama 2 tahun terakhir.",
+  "dit-p2": "Pusat Komando dan Pengendalian (Puskodal) Patroli Laut di bawah Direktorat P2 memantau ribuan perahu di wilayah pesisir timur Sumatera secara real-time.",
+  "dit-pps": "Direktorat PPS menyusun proyeksi target penerimaan negara Bea Masuk, Bea Keluar, dan Cukai yang menjadi patokan APBN nasional.",
+  "dit-interdiksi": "Unit Anjing Pelacak K-9 DJBC di bawah Direktorat Interdiksi Narkotika merupakan salah satu unit K-9 pelacak narkotika terbaik di Asia Tenggara.",
+  "dit-kombimjas": "Bravo Bea Cukai 1500225 yang dikelola direktorat ini memenangkan penghargaan internasional untuk kategori pusat kontak layanan publik terbaik.",
+  "kanwil": "Kantor Wilayah mengawasi dan membina beberapa KPPBC di bawah wewenangnya, serta bertindak sebagai instansi banding pertama atas keputusan KPPBC.",
+  "kpu": "Kantor Pelayanan Utama (KPU) didirikan khusus pada pelabuhan/bandara dengan volume transaksi kepabeanan yang sangat tinggi untuk mempercepat rantai pasok.",
+  "kppbc": "Terdapat 104 KPPBC di seluruh Indonesia yang dibagi menjadi 5 tipologi berdasarkan volume dokumen, potensi penerimaan, dan kompleksitas risiko daerah.",
+  "blbc": "BLBC memiliki status laboratorium terakreditasi ISO/IEC 17025 internasional untuk pengujian secara kimiawi dan fisik atas komoditi ekspor/impor.",
+  "pso": "Armada kapal patroli PSO (seperti Fast Patrol Boat tipe 28 meter dan 38 meter) dilengkapi dengan persenjataan mesin berat untuk menindak kapal penyelundup."
+};

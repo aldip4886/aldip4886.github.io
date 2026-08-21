@@ -1,156 +1,640 @@
 <!DOCTYPE html>
-<html lang="id" class="h-full">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Organization Explorer — Bea Cukai (Full Screen Proportional Layout)</title>
-    <!-- Tailwind CSS v3 CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        obsidian: {
-                            950: '#030712',
-                            900: '#0B0F17',
-                            800: '#0F172A',
-                            700: '#1E293B',
-                        },
-                        amber: {
-                            400: '#FFC94A',
-                            500: '#F5A623',
-                            600: '#FF8A00',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- CSS Variables and Base Styles -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <!-- View-specific stylesheet -->
-    <link rel="stylesheet" href="css/views/landing.css">
-    <link rel="stylesheet" href="css/components/user-profile.css">
-    <!-- Preload Inter Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        html, body {
-            height: 100%;
-            overflow: hidden;
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        }
-        .stripe-mesh-glow-center {
-            position: absolute;
-            width: 900px;
-            height: 900px;
-            background: radial-gradient(circle, rgba(245, 166, 35, 0.16) 0%, rgba(255, 138, 0, 0.05) 45%, rgba(255, 255, 255, 0) 75%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Organization Explorer DJBC</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/lib/maplibre-gl.css">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+
 </head>
-<body class="h-screen w-screen bg-slate-50 dark:bg-[#030712] text-slate-900 dark:text-slate-100 transition-colors duration-300 antialiased relative overflow-hidden flex flex-col justify-between">
+<body>
+
+  <div id="app-container" class="is-landing">
     
-    <!-- Stripe Ambient Glow Center Spotlight -->
-    <div class="stripe-mesh-glow-center"></div>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header" title="Kembali ke Beranda" data-view="view-landing" style="cursor:pointer;" onclick="if(window.app){window.app.switchView('view-landing');}">
+        <img src="assets/images/logo_kemenkeu.png" alt="Logo Kementerian Keuangan" class="sidebar-logo">
+        <div class="sidebar-brand">
+          ORGANIZATION EXPLORER
+          <span>Direktorat Jenderal Bea dan Cukai</span>
+        </div>
+      </div>
 
-    <div id="landing-screen" class="h-full w-full flex flex-col justify-between p-6 md:p-10 relative z-10 max-w-7xl mx-auto">
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">UTAMA</div>
+        <div class="nav-item active" data-view="view-landing">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          <span>Beranda</span>
+        </div>
+        <div class="nav-item" data-view="view-explorer">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+          <span>Eksplorasi Organisasi</span>
+        </div>
+        <div class="nav-item" data-view="view-map">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+          <span>Peta Unit Kerja</span>
+        </div>
+        <div class="nav-item" data-view="view-search">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          <span>Pencarian</span>
+        </div>
+
+        <div class="nav-section-title">PEMBELAJARAN</div>
+        <div class="nav-item" data-view="view-learning">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <span>Modul Pembelajaran</span>
+        </div>
+        <div class="nav-item" data-view="view-process">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          <span>Alur Kerja & SOP</span>
+        </div>
+        <div class="nav-item" data-view="view-connections">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          <span>Keterkaitan Unit</span>
+        </div>
+
+        <div class="nav-section-title">EVALUASI DAN PENCAPAIAN PEMBELAJARAN</div>
+        <div class="nav-item" data-view="view-quiz">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          <span>Kuis & Evaluasi</span>
+        </div>
+        <div class="nav-item" data-view="view-progress">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          <span>Pencapaian Belajar</span>
+        </div>
+
+        <div class="nav-section-title">INFORMASI</div>
+        <div class="nav-item" data-view="view-help">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Panduan Pengguna</span>
+        </div>
+        <div class="nav-item" data-view="view-about">
+          <svg class="nav-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Tentang Aplikasi</span>
+        </div>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper">
+      
+      <!-- Top Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <h1 class="header-title">E-Learning Tugas dan Fungsi DJBC</h1>
+        </div>
+
+        <div class="header-right">
+          <!-- Search Bar (shown in explorer/map, hidden on landing) -->
+          <div class="search-box">
+            <svg class="search-icon" width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            <input type="text" id="global-search-input" class="search-input" placeholder="Cari unit, direktorat, atau fungsi...">
+            <div id="global-search-dropdown" class="search-dropdown"></div>
+          </div>
+
+          <button class="btn btn-outline btn-header-help" data-view="view-help">Bantuan</button>
+
+          <!-- User Profile: Username and User Avatar -->
+          <div id="user-profile-widget" class="user-profile-header user-profile-widget" title="Lihat Profil Pengguna (KLC2)">
+            <div class="user-avatar user-avatar-wrapper">
+              <img id="user-avatar-img" class="user-avatar-img" alt="User Avatar" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:50%;">
+              <div id="user-avatar-placeholder" class="user-avatar-placeholder" style="display:flex; width:100%; height:100%; align-items:center; justify-content:center;">
+                <span id="user-avatar-initials">BC</span>
+              </div>
+            </div>
+            <div class="user-info user-profile-info">
+              <span id="user-display-name" class="user-name user-display-name">Pegawai DJBC</span>
+              <span id="user-display-role" class="user-role user-display-role">PEGAWAI DJBC</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- View Containers -->
+      <div class="view-container">
         
-        <!-- Stripe Corporate Navigation Bar -->
-        <header class="landing-header flex items-center justify-between px-6 py-4 rounded-2xl bg-white/90 dark:bg-[#0B0F17]/80 backdrop-blur-xl border border-slate-200/80 dark:border-slate-800/80 shadow-md dark:shadow-2xl shrink-0">
-            <div class="logo-area flex items-center gap-3.5">
-                <!-- DJBC Shield Icon -->
-                <svg class="logo-djbc w-10 h-10 shrink-0" width="40" height="40" viewBox="0 0 100 100" fill="none">
-                    <circle cx="50" cy="50" r="45" fill="#0D2137" stroke="#F5A623" stroke-width="3"/>
-                    <path d="M50 15 L80 35 L80 70 L50 90 L20 70 L20 35 Z" fill="#1E293B" stroke="#FFC94A" stroke-width="2"/>
-                    <path d="M50 25 L65 40 H55 V75 H45 V40 H35 Z" fill="#F5A623"/>
+        <!-- Screen 01: Landing / Beranda matching Stitch Screen b11957425b7742dca99f5be8d93c4709 -->
+        <section id="view-landing" class="page-view active">
+          <div class="landing-viewport">
+            <div class="landing-main-card">
+              <!-- Background Map Image -->
+              <div class="landing-map-bg">
+                <img alt="Indonesia Map Connected" class="landing-map-img" src="assets/images/indonesia-map-connected.png" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuB5skX0KkUFm6mryB2r_eJy_a19MAbM9DQTVWUU99amgMluEMVZkuUB4wUor1G6AQaqiGQlyPMp5bYiGDbeLm4OdSYOD71gD7okOpcMA4PdTaQWX4MZlcj50c6siDH0yJExaJarnT-jEUOvJXqaJi0VbvPCkALgNzS-1n4gYn_iYCYOL_PW2ShkhHBzpqx0Bhg2pyxfJ_4ZNT7JshZCduerARWO36APydzS8gQiMUBAH8RZGlX_cHYIjitUaUbfjc2j884'">
+              </div>
+
+              <!-- Header Section inside Landing Card -->
+              <header class="landing-header">
+                <div class="landing-logo-box">
+                  <div class="landing-logo-emblem">
+                    <img src="assets/images/logo_kemenkeu.png" alt="Logo Kementerian Keuangan" class="landing-logo-img">
+                  </div>
+                  <div class="landing-logo-text">
+                    <h1>e-Learning Tugas dan Fungsi DJBC</h1>
+                    <p>Pusdiklat Bea dan Cukai</p>
+                  </div>
+                </div>
+              </header>
+
+              <!-- Hero Content -->
+              <div class="landing-hero-content">
+                <h2 class="landing-hero-title">
+                  Interactive<br>Organization<br>Explorer
+                </h2>
+                <h3 class="landing-hero-subtitle">
+                  Jelajahi Struktur Organisasi<br>Direktorat Jenderal<br>Bea dan Cukai
+                </h3>
+                <p class="landing-hero-desc">
+                  Kenali unit kerja, pahami perannya, dan temukan keterhubungannya dalam satu sistem.
+                </p>
+                <div class="landing-cta-group" style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+                  <button id="btn-start-exploration" class="landing-cta-btn" data-action="start-exploration">
+                    Mulai Eksplorasi
+                    <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M8.25 4.5l7.5 7.5-7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                  </button>
+                  <button id="btn-landing-help" class="landing-secondary-btn" data-view="view-help" onclick="if(window.app){window.app.switchView('view-help');}">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                    Lihat Panduan
+                  </button>
+                </div>
+              </div>
+
+              <!-- Feature Cards at the bottom -->
+              <div class="landing-features-wrapper">
+                <div class="landing-features-grid">
+                  <!-- Card 1 -->
+                  <div class="landing-feature-card" data-view="view-explorer">
+                    <div class="landing-feature-icon-circle">
+                      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-5.424l-1.59-1.59" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="landing-feature-text">
+                      <h4>Eksplorasi Interaktif</h4>
+                      <p>Klik untuk mengetahui tugas dan fungsi unit</p>
+                    </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="landing-feature-card bordered" data-view="view-explorer">
+                    <div class="landing-feature-icon-circle">
+                      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="landing-feature-text">
+                      <h4>Pahami Keterkaitan</h4>
+                      <p>Lihat hubungan antar unit dalam satu sistem</p>
+                    </div>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="landing-feature-card bordered" data-view="view-learning">
+                    <div class="landing-feature-icon-circle">
+                      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="landing-feature-text">
+                      <h4>Belajar Mandiri</h4>
+                      <p>Temukan informasi sesuai kebutuhan Anda</p>
+                    </div>
+                  </div>
+
+                  <!-- Card 4 -->
+                  <div class="landing-feature-card bordered" data-view="view-quiz">
+                    <div class="landing-feature-icon-circle">
+                      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </div>
+                    <div class="landing-feature-text">
+                      <h4>Uji Pemahaman</h4>
+                      <p>Kerjakan tantangan untuk menguatkan pemahaman</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Screen 02 & 03: Organization Explorer & Unit Detail -->
+        <section id="view-explorer" class="page-view">
+          <div style="position:absolute; top:16px; left:24px; z-index:80; background:#ffffff; padding:8px 16px; border-radius:8px; border:1px solid #D9E0E8; box-shadow:0 2px 8px rgba(0,0,0,0.05);">
+            <div id="breadcrumb-container"></div>
+          </div>
+
+          <!-- Floating Transparent Help Button for Explorer -->
+          <button id="explorer-help-toggle-btn" class="floating-help-btn" style="top:16px; right:24px;" title="Buka / Tutup Panduan" type="button">
+            <span class="help-btn-icon">💡</span>
+            <span>Panduan</span>
+          </button>
+
+          <!-- Help Tips Card for Explorer (first-time visitor guide) -->
+          <div id="explorer-help-tips-card" class="floating-help-tips-card" style="display:none;">
+            <div class="floating-help-tips-header">
+              <div class="floating-help-tips-badge">
+                <span class="tip-star-icon">💡</span>
+                <span>Panduan Eksplorasi</span>
+              </div>
+              <button class="floating-help-tips-close" title="Tutup Panduan" aria-label="Tutup" onclick="if(window.app){window.app.dismissHelpTip('explorer');}">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            <div class="floating-help-tips-list">
+              <div class="floating-help-tip-item">
+                <div class="floating-help-tip-icon">👆</div>
+                <div class="floating-help-tip-text">
+                  <strong>Klik Unit Organisasi</strong>
+                  <span>Buka cabang bawahan dan lihat rincian tugas/fungsi di panel samping.</span>
+                </div>
+              </div>
+              <div class="floating-help-tip-item">
+                <div class="floating-help-tip-icon">🖐️</div>
+                <div class="floating-help-tip-text">
+                  <strong>Geser &amp; Perbesar Kanvas</strong>
+                  <span>Drag pada area kosong untuk menggeser, gunakan kontrol zoom (+ / −).</span>
+                </div>
+              </div>
+              <div class="floating-help-tip-item">
+                <div class="floating-help-tip-icon">🔍</div>
+                <div class="floating-help-tip-text">
+                  <strong>Pencarian Cepat</strong>
+                  <span>Ketik nama unit atau kata kunci pada search bar di header.</span>
+                </div>
+              </div>
+            </div>
+            <div class="floating-help-tips-footer">
+              <button class="floating-help-tips-btn" onclick="if(window.app){window.app.dismissHelpTip('explorer');}">
+                Mengerti &amp; Mulai Eksplorasi 🚀
+              </button>
+            </div>
+          </div>
+
+          <!-- SVG Canvas Container (Toolbar is dynamically rendered once by SVGTreeEngine) -->
+          <div id="tree-container" style="width:100%; height:100%;"></div>
+
+          <!-- Mini Map Container -->
+          <div id="minimap-container"></div>
+        </section>
+
+        <!-- Screen 05: Indonesia Map -->
+        <section id="view-map" class="page-view">
+          <!-- Floating Transparent Help Button for Map -->
+          <button id="map-help-toggle-btn" class="floating-help-btn" style="top:76px; right:24px;" title="Buka / Tutup Panduan" type="button">
+            <span class="help-btn-icon">💡</span>
+            <span>Panduan</span>
+          </button>
+
+          <!-- Help Tips Card for Map (first-time visitor guide) -->
+          <div id="map-help-tips-card" class="floating-help-tips-card" style="display:none;">
+            <div class="floating-help-tips-header">
+              <div class="floating-help-tips-badge">
+                <span class="tip-star-icon">🗺️</span>
+                <span>Panduan Peta Unit Kerja</span>
+              </div>
+              <button class="floating-help-tips-close" title="Tutup Panduan" aria-label="Tutup" onclick="if(window.app){window.app.dismissHelpTip('map');}">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              </button>
+            </div>
+            <div class="floating-help-tips-list">
+              <div class="floating-help-tip-item">
+                <div class="floating-help-tip-icon">📍</div>
+                <div class="floating-help-tip-text">
+                  <strong>Sebaran Kantor Vertikal</strong>
+                  <span>Klik titik marker untuk melihat informasi Kanwil, KPPBC, BLBC, dan Balai Diklat.</span>
+                </div>
+              </div>
+              <div class="floating-help-tip-item">
+                <div class="floating-help-tip-icon">🗺️</div>
+                <div class="floating-help-tip-text">
+                  <strong>Navigasi Interaktif</strong>
+                  <span>Geser peta dan gunakan zoom untuk memfokuskan wilayah tertentu.</span>
+                </div>
+              </div>
+              <div class="floating-help-tip-item">
+                <div class="floating-help-tip-icon">📋</div>
+                <div class="floating-help-tip-text">
+                  <strong>Rincian &amp; Profil Unit</strong>
+                  <span>Klik tombol detail pada pop-up marker untuk membuka lembar informasi lengkap.</span>
+                </div>
+              </div>
+            </div>
+            <div class="floating-help-tips-footer">
+              <button class="floating-help-tips-btn" onclick="if(window.app){window.app.dismissHelpTip('map');}">
+                Mengerti &amp; Jelajahi Peta 🚀
+              </button>
+            </div>
+          </div>
+
+          <div id="map-view-container" style="width:100%; height:100%;"></div>
+        </section>
+
+        <!-- Screen 08: Modul Pembelajaran (Stitch: 7950ce7bc9cd4ab3bb2455f22febfcd1) -->
+        <section id="view-learning" class="page-view" style="overflow-y:auto; padding:24px 0; background: #F8FAFC;">
+          <div id="learning-view-container" style="width:100%; height:100%;"></div>
+        </section>
+
+        <!-- Screen 04: Search Results (Stitch Screen 18134903d4b24228ae405c745b430f59) -->
+        <section id="view-search" class="page-view" style="overflow-y:auto; padding: 24px 32px; background: #F7F9FC;">
+          <div id="search-page-container" style="max-width: 1280px; margin: 0 auto; width: 100%;">
+            <!-- Rendered dynamically by SearchEngine -->
+          </div>
+        </section>
+
+        <!-- Screen 10 & 11: Knowledge Check & Quiz (Stitch: a351ea3586244adcb74b45bd070b3ba5 & 23b0dffea61a4c5faea16b2f5497fe4f) -->
+        <section id="view-quiz" class="page-view" style="overflow-y:auto; padding:24px 0; background: #F8FAFC;">
+          <div id="quiz-view-container" style="width:100%; height:100%;"></div>
+        </section>
+
+        <!-- Screen 12: Progress Completion Dashboard (Stitch: 073ccc1704584bcaaf69d56b6c03b3f0) -->
+        <section id="view-progress" class="page-view" style="overflow-y:auto; padding:24px 0; background: #F8FAFC;">
+          <div id="progress-view-container" style="width:100%; height:100%;"></div>
+        </section>
+
+        <!-- Screen 09: Alur Kerja & SOP (Process Flow) -->
+        <section id="view-process" class="page-view" style="overflow-y:auto; padding:24px 0; background: #F8FAFC;">
+          <div id="process-view-container" style="width:100%; height:100%;"></div>
+        </section>
+
+        <!-- Screen 06: Keterkaitan Antar Unit (Relationships Explorer) -->
+        <section id="view-connections" class="page-view" style="overflow-y:auto; padding:24px 0; background: #F8FAFC;">
+          <div id="connections-view-container" style="width:100%; height:100%;"></div>
+        </section>
+
+        <!-- Screen 13: User Guide / Help (Stitch Mockup: 3cbc064fe7904efab0076ff408cfeaba) -->
+        <section id="view-help" class="page-view" style="overflow-y:auto; padding:0; background: var(--color-bg-app, #F8FAFC);">
+          <div class="help-page-container">
+            
+            <!-- Header Section -->
+            <div class="help-header-section">
+              <h1 class="help-header-title">Panduan Pengguna</h1>
+              <p class="help-header-desc">
+                Pelajari cara menggunakan Interactive Organization Explorer DJBC untuk memaksimalkan pengalaman belajar Anda.
+              </p>
+            </div>
+
+            <!-- Main Layout Grid: Steps (Alternating Left & Right) & Support Card -->
+            <div class="help-layout-grid">
+              
+              <!-- Steps Timeline Card with Alternating Left & Right Orientation -->
+              <div class="help-steps-card">
+                <h2 class="help-steps-card-title">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  Langkah-langkah Penggunaan
+                </h2>
+
+                <div class="help-steps-timeline">
+                  
+                  <!-- Step 1 (Left) -->
+                  <div class="help-step-item help-step-left">
+                    <div class="help-step-number-bubble">1</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 1: Eksplorasi Organisasi</h3>
+                      <p class="help-step-desc">Gunakan struktur pohon (<em>tree structure</em>) interaktif untuk menjelajahi unit-unit kerja DJBC dari level pusat hingga daerah.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 2 (Right) -->
+                  <div class="help-step-item help-step-right">
+                    <div class="help-step-number-bubble">2</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 2: Pilih Unit Organisasi</h3>
+                      <p class="help-step-desc">Klik pada salah satu kotak (<em>node</em>) unit organisasi untuk memilih dan memfokuskan pandangan pada unit tersebut.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 3 (Left) -->
+                  <div class="help-step-item help-step-left">
+                    <div class="help-step-number-bubble">3</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 3: Lihat Detail Unit</h3>
+                      <p class="help-step-desc">Buka panel informasi detail (<em>slide-out drawer</em>) untuk melihat nama pimpinan, deskripsi lengkap, fungsi, tugas, dan dasar hukum unit.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 4 (Right) -->
+                  <div class="help-step-item help-step-right">
+                    <div class="help-step-number-bubble">4</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 4: Eksplorasi Hubungan Antar-Unit</h3>
+                      <p class="help-step-desc">Telusuri hubungan hierarkis (atasan-bawahan) maupun koordinasi fungsional dan pertukaran data antar-unit kerja pada diagram jaringan.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 5 (Left) -->
+                  <div class="help-step-item help-step-left">
+                    <div class="help-step-number-bubble">5</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 5: Gunakan Pencarian Cepat</h3>
+                      <p class="help-step-desc">Manfaatkan fitur pencarian berindeks token untuk menemukan unit kerja, nomenklatur jabatan, komoditas, maupun regulasi secara instan.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 6 (Right) -->
+                  <div class="help-step-item help-step-right">
+                    <div class="help-step-number-bubble">6</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 6: Akses Peta Unit Kerja</h3>
+                      <p class="help-step-desc">Buka menu Peta Unit Kerja untuk melihat persebaran spasial 137 kantor pabean (Kanwil, KPU, KPPBC, BLBC, PSO) di seluruh Indonesia.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 7 (Left) -->
+                  <div class="help-step-item help-step-left">
+                    <div class="help-step-number-bubble">7</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 7: Ikuti Modul Pembelajaran &amp; SOP</h3>
+                      <p class="help-step-desc">Pelajari materi kurikulum 5 Modul Pembelajaran (MP 1 s.d. MP 5) dan 8 SOP alur bisnis pelayanan pabean dan cukai secara komprehensif.</p>
+                    </div>
+                  </div>
+
+                  <!-- Step 8 (Right) -->
+                  <div class="help-step-item help-step-right">
+                    <div class="help-step-number-bubble">8</div>
+                    <div class="help-step-body">
+                      <h3 class="help-step-title">Langkah 8: Kerjakan Kuis &amp; Evaluasi</h3>
+                      <p class="help-step-desc">Uji pemahaman Anda melalui evaluasi 2 bagian (Pilihan Ganda &amp; Studi Kasus), raih XP, dan pantau progres pencapaian kompetensi Anda.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Support Card -->
+              <div class="help-support-card">
+                <svg class="help-support-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0z"></path>
                 </svg>
-                <div class="logo-text flex flex-col">
-                    <span class="brand-title font-extrabold text-xs md:text-sm tracking-wider text-slate-900 dark:text-slate-100 uppercase">DIREKTORAT JENDERAL BEA DAN CUKAI</span>
-                    <span class="brand-tagline text-[11px] text-amber-600 dark:text-amber-400 font-semibold tracking-wide">Bea Cukai Makin Baik</span>
+                <h3 class="help-support-title">Pusat Pembelajaran &amp; Bantuan</h3>
+                <p class="help-support-desc">
+                  Pusdiklat Bea dan Cukai siap memfasilitasi kebutuhan peningkatan kompetensi pegawai DJBC.
+                </p>
+                <div class="help-support-btns" style="max-width: 220px; margin: 0 auto;">
+                  <button class="help-btn help-btn-primary" onclick="if(window.app){window.app.switchView('view-about');}">
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Tentang Aplikasi
+                  </button>
                 </div>
+              </div>
+
             </div>
 
-            <!-- Middle Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold text-slate-600 dark:text-slate-300">
-                <a href="explorer.html#/explorer" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Peta Hirarki</a>
-                <a href="explorer.html#/peta-sebaran" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Peta Sebaran</a>
-                <a href="explorer.html#/alur-kerja" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Alur Kerja</a>
-                <a href="explorer.html#/tantangan" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Tantangan Kuis</a>
-                <a href="explorer.html#/bantuan" class="hover:text-amber-600 dark:hover:text-amber-400 transition">Panduan</a>
-            </nav>
+          </div>
+        </section>
 
-            <div class="header-controls flex items-center gap-2.5 md:gap-3.5">
-                <!-- Theme Toggle Button -->
-                <button id="theme-toggle-btn" class="icon-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900/80 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 transition flex items-center justify-center text-slate-700 dark:text-slate-300" title="Ganti Mode Tema">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                </button>
+                <!-- Screen 15: About App (Stitch Mockup: 3458727f996041ca8e4ab4d32f1e828e) -->
+        <section id="view-about" class="page-view" style="overflow-y:auto; padding:0; background: var(--color-bg-app, #F8FAFC);">
+          <div class="about-page-container">
+            
+            <!-- Hero Header Section -->
+            <div class="about-header-hero">
+              <img src="assets/images/logo_kemenkeu.png" alt="Logo Kementerian Keuangan / Bea dan Cukai" class="about-hero-logo">
+              <h1 class="about-hero-title">Interactive Organization Explorer DJBC</h1>
+              <p class="about-hero-desc">
+                Media pembelajaran interaktif untuk membantu pegawai memahami struktur organisasi, tugas, fungsi, proses bisnis, dan hubungan antarunit di lingkungan Direktorat Jenderal Bea dan Cukai.
+              </p>
+            </div>
 
-                <button class="icon-btn p-2.5 rounded-xl bg-slate-100 dark:bg-slate-900/80 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 transition flex items-center justify-center text-slate-700 dark:text-slate-300" title="Audio Efek" id="audio-toggle">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
-                </button>
-
-                <!-- User Profile Avatar & Name Widget -->
-                <div id="user-profile-widget" class="user-profile-widget flex items-center gap-2.5 bg-slate-100 dark:bg-slate-900/80 hover:bg-slate-200 dark:hover:bg-slate-800 py-1.5 px-4 rounded-full border border-amber-500/40 cursor-pointer transition shadow-sm">
-                    <div class="user-avatar-wrapper w-8 h-8 rounded-full border border-amber-500 overflow-hidden bg-slate-800 flex items-center justify-center shrink-0">
-                        <img id="user-avatar-img" class="user-avatar-img w-full h-full object-cover hidden" alt="User Avatar">
-                        <div id="user-avatar-placeholder" class="user-avatar-placeholder flex text-xs font-bold text-amber-400">
-                            <span id="user-avatar-initials">P</span>
-                        </div>
-                    </div>
-                    <div class="user-profile-info flex flex-col text-left">
-                        <span id="user-display-name" class="user-display-name text-xs font-bold text-slate-900 dark:text-slate-100 leading-tight">Peserta</span>
-                        <span id="user-display-role" class="user-display-role text-[10px] text-amber-600 dark:text-amber-400 font-semibold leading-tight">Pegawai DJBC</span>
-                    </div>
+            <!-- Bento Grid Layout for Info Cards -->
+            <div class="about-bento-grid">
+              
+              <!-- Card 1: Version Information & Regulatory Basis -->
+              <div class="about-card">
+                <div>
+                  <div class="about-card-header">
+                    <svg class="about-card-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <h2 class="about-card-title">Version Information</h2>
+                  </div>
+                  <ul class="about-info-list">
+                    <li class="about-info-item">
+                      <span class="about-info-label">Application Version</span>
+                      <span class="about-info-badge">v3.0.0 (Production)</span>
+                    </li>
+                    <li class="about-info-item">
+                      <span class="about-info-label">Content Version</span>
+                      <span class="about-info-badge">2026.1</span>
+                    </li>
+                    <li class="about-info-item">
+                      <span class="about-info-label">Organization Data</span>
+                      <span class="about-info-badge">PMK 124/2024 & PMK 132/2024</span>
+                    </li>
+                    <li class="about-info-item">
+                      <span class="about-info-label">Format Distribusi</span>
+                      <span class="about-info-badge">100% Offline / SCORM 1.2</span>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+
+              <!-- Card 2: Developer Institution & Copyright -->
+              <div class="about-card">
+                <div>
+                  <div class="about-card-header">
+                    <svg class="about-card-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                      <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                      <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    <h2 class="about-card-title">Institution</h2>
+                  </div>
+                  <div class="about-institution-content">
+                    <div class="about-inst-primary">Kementerian Keuangan Republik Indonesia</div>
+                    <div class="about-inst-secondary">Badan Pendidikan dan Pelatihan Keuangan (BPPK)</div>
+                    <div class="about-inst-tertiary">Pusat Pendidikan dan Pelatihan Bea dan Cukai (Pusdiklat BC)</div>
+                    <div class="about-inst-desc">
+                      Dikembangkan sebagai media pembelajaran mandiri (<em>self-paced microlearning</em>) dalam rangka akselerasi pemahaman tata kelola organisasi bagi seluruh jajaran pegawai DJBC.
+                    </div>
+                  </div>
+                </div>
+                <div class="about-card-footer">
+                  <p class="about-copyright-text">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"></circle><path d="M15 9.354a4 4 0 1 0 0 5.292"></path></svg>
+                    Hak Cipta &copy; 2026 Pusdiklat Bea dan Cukai &mdash; Kementerian Keuangan Republik Indonesia.
+                  </p>
+                </div>
+              </div>
+
             </div>
-        </header>
 
-        <!-- Centered Proportional Full Screen Main Content -->
-        <main class="landing-main flex-1 flex flex-col items-center justify-center text-center gap-6 md:gap-8 my-auto py-6">
-            
-            <!-- Top Stripe Pill Badge -->
-            <div class="inline-flex items-center gap-2.5 py-2 px-5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-700 dark:text-amber-400 text-xs sm:text-sm font-extrabold tracking-wider uppercase shadow-sm backdrop-blur-md">
-                <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
-                ✨ BPPK KEMENKEU &bull; MEDIA PEMBELAJARAN E-LEARNING TUSI DJBC 2026
+            <!-- Action Area Buttons -->
+            <div class="about-actions-area">
+              <button class="about-action-btn about-action-btn-primary" onclick="if(window.app){window.app.switchView('view-help');}">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Panduan Pengguna
+              </button>
+              <button class="about-action-btn about-action-btn-secondary" onclick="if(window.app){window.app.switchView('view-explorer');}">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                Mulai Eksplorasi Organisasi
+              </button>
             </div>
 
-            <!-- Massive Proportional Stripe Headline -->
-            <h1 class="hero-title text-5xl sm:text-7xl lg:text-8xl font-black text-slate-900 dark:text-slate-100 leading-[1.05] tracking-tight max-w-5xl">
-                Interactive<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600">Organization Explorer</span>
-            </h1>
-            
-            <p class="hero-desc text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-normal leading-relaxed max-w-3xl">
-                Pahami kedudukan, tugas, fungsi, serta korelasi interdependensi antar unit kerja Kantor Pusat, Instansi Vertikal, dan UPT Bea Cukai secara visual dan interaktif.
-            </p>
+          </div>
+        </section>
 
-            <!-- Main Focus CTA Action Button -->
-            <div class="hero-action flex items-center justify-center pt-2">
-                <button class="btn btn-primary inline-flex items-center gap-3.5 py-4 px-10 rounded-2xl bg-gradient-to-r from-[#F5A623] via-[#FF9F1C] to-[#FF8A00] text-slate-950 font-black text-base sm:text-lg hover:brightness-110 transition-all shadow-2xl shadow-amber-500/30 transform hover:-translate-y-1 active:translate-y-0" onclick="window.location.href='explorer.html#/explorer'">
-                    Mulai Eksplorasi Sekarang
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                </button>
-            </div>
-        </main>
+        <!-- Shared Contextual Slide-out Unit Detail Drawer (Available across all views: Explorer, Map, Search) -->
+        <div id="unit-detail-drawer"></div>
 
-        <!-- Executive Footer Watermark -->
-        <footer class="landing-footer text-center text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide pb-2 shrink-0">
-            Hak Cipta &copy; 2026 &bull; Badan Pendidikan dan Pelatihan Keuangan (BPPK) — Kementerian Keuangan RI
-        </footer>
-    </div>
+      </div>
 
-    <!-- Scripts -->
-    <script src="js/theme-manager.js"></script>
-    <script src="js/user-profile.js"></script>
-    <script src="js/views/landing.js"></script>
+      <!-- Global Quick Facts (Tahukah Anda?) Footer Bar with Navigation Buttons (Back on Left, Next on Right) -->
+      <footer id="global-quickfacts-bar" class="global-quickfacts-footer">
+        <div class="quickfacts-inner">
+          <!-- Left Navigation Control (Back Button) -->
+          <div class="quickfacts-nav-left">
+            <button id="quickfact-btn-prev" class="quickfacts-nav-btn" data-tooltip="Fakta Sebelumnya (Back)" title="Fakta Sebelumnya (Back)" aria-label="Sebelumnya">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+
+          <!-- Main Content: Badge & Fact Text -->
+          <div class="quickfacts-badge">
+            <span class="quickfacts-icon">💡</span>
+            <span class="quickfacts-title">TAHUKAH ANDA?</span>
+          </div>
+          <div class="quickfacts-content-wrapper">
+            <p id="global-quickfact-text" class="quickfacts-text">Memuat fakta menarik DJBC...</p>
+          </div>
+
+          <!-- Right Navigation Control (Next Button) -->
+          <div class="quickfacts-nav-right">
+            <button id="quickfact-btn-next" class="quickfacts-nav-btn" data-tooltip="Fakta Selanjutnya (Next)" title="Fakta Selanjutnya (Next)" aria-label="Selanjutnya">
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+
+  </div>
+
+  <!-- Static Data Scripts (bypasses browser CORS blocking on direct file:// local access) -->
+  <script src="data/organization.js"></script>
+  <script src="data/units.js"></script>
+  <script src="data/relationships.js"></script>
+  <script src="data/assessments.js"></script>
+  <script src="data/geo_units.js"></script>
+  <script src="data/kanwil_mapping.js"></script>
+  <script src="data/alur_proses.js"></script>
+  <script src="data/quickfacts.js"></script>
+  <script src="data/learning_paths.js"></script>
+  <script src="data/search_index.js"></script>
+  <script src="data/province_geo.js"></script>
+  <script src="data/customs_offices_geo.js"></script>
+
+  <!-- MapLibre GL JS — Must load BEFORE bundle.js (provides global maplibregl) -->
+  <script src="assets/lib/maplibre-gl.js"></script>
+
+  <!-- Main Standalone Bundle Script (runs 100% natively on file:// without CORS module blocks) -->
+  <script src="js/bundle.js"></script>
 </body>
 </html>
+

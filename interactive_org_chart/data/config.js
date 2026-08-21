@@ -1,0 +1,12 @@
+window.DATA_CONFIG = {
+  "appName": "Interactive Organization Explorer DJBC",
+  "appVersion": "1.0.0",
+  "contentVersion": "2026.1",
+  "orgDataVersion": "PMK 124/2024 & PMK 188/2016",
+  "theme": {
+    "primaryNavy": "#0B3A6F",
+    "deepNavy": "#062B52",
+    "gold": "#C9A34E",
+    "accentBlue": "#2F80ED"
+  }
+};

@@ -1,0 +1,1106 @@
+window.DATA_ALUR_PROSES = {
+  "proses": [
+    {
+      "id": "impor",
+      "nama": "Pelayanan & Pengawasan Impor Barang untuk Dipakai (PIB)",
+      "kategori": "Kepabeanan & Fasilitas",
+      "deskripsi_singkat": "Alur penyelesaian barang impor mulai dari penyerahan manifes, pengajuan PIB, analisis risiko jalur, pemeriksaan barang/dokumen, hingga pengeluaran barang dan post-clearance audit.",
+      "dasar_hukum_utama": "PMK No. 190/PMK.04/2022 & UU No. 17 Tahun 2006",
+      "sla_total": "1 - 3 Hari Kerja (Tergantung Jalur Pelayanan)",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Registrasi Kepabeanan & Izin Lartas",
+          "deskripsi": "Importir melakukan registrasi kepabeanan untuk memperoleh Nomor Induk Berusaha (NIB) sebagai akses kepabeanan, mempersiapkan dokumen izin impor, dan memvalidasi ketentuan larangan/pembatasan (lartas) melalui portal INSW.",
+          "dasar_hukum": "PER-02/BC/2021 & PMK 190/2022",
+          "sla": "1 Hari Kerja (Otomasi Sistem)",
+          "output": [
+            "Akses Kepabeanan Aktif",
+            "Validasi Izin Lartas INSW"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-teknis-kepab",
+              "nama": "Dit. Teknis Kepabeanan",
+              "peran": "Perumusan kebijakan registrasi kepabeanan, standardisasi HS Code, dan ketentuan impor umum.",
+              "level": "Kebijakan Kantor Pusat",
+              "warna": "#0B3A6F"
+            },
+            {
+              "unit_id": "insw",
+              "nama": "INSW (Lembaga Single Window)",
+              "peran": "Validasi perizinan ekspor/impor terintegrasi lintas K/L secara otomatis (paperless).",
+              "level": "Mitra Strategis Eksternal",
+              "warna": "#7C3AED"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Kedatangan Sarana Pengangkut (Manifes)",
+          "deskripsi": "Pengangkut menyerahkan Rencana Kedatangan Sarana Pengangkut (RKSP) dan Inward Manifest secara elektronik ke sistem CEISA sebelum sarana pengangkut tiba di kawasan pabean.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 7A & PMK 158/2017",
+          "sla": "Maksimal 24 Jam Sebelum Kedatangan",
+          "output": [
+            "Nomor Pokok Manifes (BC 1.1)",
+            "Persetujuan Bongkar Barang"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC / KPU Pelabuhan Bongkar",
+              "peran": "Penerimaan, penatausahaan, rekonsiliasi, dan penutupan pos manifes kedatangan sarana pengangkut.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "pso",
+              "nama": "PSO BC (UPT Patroli Laut)",
+              "peran": "Pemantauan radar radio pantai dan pemanduan pengawasan sarana pengangkut di perairan pabean.",
+              "level": "Dukungan Taktis UPT",
+              "warna": "#B45309"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Pengajuan PIB & Analisis Profil Risiko",
+          "deskripsi": "Importir mengajukan Pemberitahuan Impor Barang (PIB) dan membayar bea masuk serta PDRI ke kas negara. Sistem SKP CEISA 4.0 melakukan analisis risiko penentuan jalur pelayanan.",
+          "dasar_hukum": "PMK 190/PMK.04/2022 Pasal 12-18",
+          "sla": "Real-Time (< 5 Menit Sistem Otomasi)",
+          "output": [
+            "Billing Setoran Pajak",
+            "Respon Penjaluran (Hijau/Kuning/Merah/MITA)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-ikc",
+              "nama": "Dit. Informasi Kepabeanan & Cukai",
+              "peran": "Pengelolaan infrastruktur CEISA 4.0 dan mesin analitik profil risiko importir/komoditi.",
+              "level": "Penunjang Sistem TIK",
+              "warna": "#4F46E5"
+            },
+            {
+              "unit_id": "kpu",
+              "nama": "KPU Bea Cukai / KPPBC",
+              "peran": "Pemrosesan penerimaan dokumen PIB dan validasi pembayaran pungutan negara.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Pemeriksaan Fisik & Pengujian Laboratorium",
+          "deskripsi": "Untuk PIB Jalur Merah, dilakukan pemeriksaan fisik barang menggunakan container scanner (X-Ray) atau pembongkaran fisik. Jika identitas kimiawi diragukan, sampel dikirim ke BLBC.",
+          "dasar_hukum": "PMK 190/2022 & PMK 190/2022 tentang Tata Cara Pemeriksaan Fisik",
+          "sla": "1 - 2 Hari Kerja",
+          "output": [
+            "Laporan Hasil Pemeriksaan (LHP)",
+            "LHPIB BLBC (Jika Diuji Lab)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Pejabat Pemeriksa Fisik KPPBC",
+              "peran": "Pemeriksaan visual, pembukaan kemasan kontainer, dan pencocokan jumlah/jenis barang.",
+              "level": "Pelayanan Lapangan",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "blbc",
+              "nama": "BLBC (UPT Laboratorium)",
+              "peran": "Pengujian ilmiah kimia/fisika atas sampel barang untuk identifikasi pos tarif HS Code.",
+              "level": "Layanan Ilmiah UPT",
+              "warna": "#059669"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Penetapan Tarif & Penerbitan SPPB",
+          "deskripsi": "Pejabat Bea Cukai meneliti kebenaran tarif dan nilai pabean. Jika sesuai, diterbitkan Surat Persetujuan Pengeluaran Barang (SPPB). Jika terdapat selisih, diterbitkan SPTNP tagihan kekurangan.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 16 & PMK 190/2022",
+          "sla": "Maksimal 4 Jam Kerja sejak LHP Selesai",
+          "output": [
+            "Surat Persetujuan Pengeluaran Barang (SPPB)",
+            "SPTNP (Jika Ada Selisih)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Pejabat Pemeriksa Dokumen KPPBC",
+              "peran": "Penetapan tarif dan nilai pabean serta penerbitan respon SPPB secara elektronik.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 6,
+          "judul": "Pengeluaran Barang dari Tempat Penimbunan",
+          "deskripsi": "Importir menunjukkan dokumen SPPB elektronik ke gate out Tempat Penimbunan Sementara (TPS) pelabuhan untuk mengeluarkan kontainer dari kawasan pabean.",
+          "dasar_hukum": "PMK 108/PMK.04/2020 tentang Tempat Penimbunan Sementara",
+          "sla": "Real-Time pada Gate Out Pelabuhan",
+          "output": [
+            "Surat Jalan Pengeluaran TPS",
+            "Gate Pass Out Clearance"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Petugas Pengawasan Gate KPPBC",
+              "peran": "Pengawasan autogate barrier TPS dan validasi keabsahan fisik peti kemas yang keluar.",
+              "level": "Pengawasan Lapangan",
+              "warna": "#DC2626"
+            }
+          ]
+        },
+        {
+          "no": 7,
+          "judul": "Post-Clearance Audit (PCA) & Monitoring",
+          "deskripsi": "Direktorat Audit atau Bidang Audit Kanwil melakukan audit kepabeanan pasca-pengeluaran barang terhadap pembukuan importir untuk menguji kepatuhan jangka panjang.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 86 & PMK Audit Kepabeanan",
+          "sla": "Periode Audit 30 - 60 Hari Kerja",
+          "output": [
+            "Laporan Hasil Audit (LHA)",
+            "Penetapan Kembali SPKTNP"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-audit",
+              "nama": "Dit. Audit Kepabeanan dan Cukai",
+              "peran": "Penyusunan target audit berbasis risiko dan pelaksanaan audit komprehensif importir.",
+              "level": "Pengawasan Pasca Clearance",
+              "warna": "#0369A1"
+            },
+            {
+              "unit_id": "kanwil",
+              "nama": "Bidang Audit Kantor Wilayah",
+              "peran": "Pelaksanaan audit lapangan terhadap perusahaan importir di wilayah kerja regional.",
+              "level": "Pengawasan Regional",
+              "warna": "#0B3A6F"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ekspor",
+      "nama": "Pelayanan & Pengawasan Ekspor Barang Umum (PEB)",
+      "kategori": "Kepabeanan & Fasilitas",
+      "deskripsi_singkat": "Mekanisme pelayanan ekspor barang mulai dari pendaftaran PEB, pemenuhan lartas ekspor, pemeriksaan fisik, hingga penerbitan Nota Pelayanan Ekspor (NPE) dan pemuatan ke kapal.",
+      "dasar_hukum_utama": "PMK No. 155/PMK.04/2022 tentang Ketentuan Ekspor",
+      "sla_total": "1 Hari Kerja (Jalur Hijau Otomasi)",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Pendaftaran Eksportir & Validasi Lartas",
+          "deskripsi": "Eksportir mempersiapkan dokumen invoice, packing list, bukti pemenuhan Lartas ekspor (contoh: Laporan Surveyor tambang/CPO, CITES, atau PE) melalui sistem INSW.",
+          "dasar_hukum": "PMK 155/2022 & Permendag No. 6/2026",
+          "sla": "Otomatis Real-Time di INSW",
+          "output": [
+            "Persetujuan Ekspor (PE)",
+            "Laporan Surveyor (LS) Terintegrasi"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-teknis-kepab",
+              "nama": "Dit. Teknis Kepabeanan",
+              "peran": "Perumusan ketentuan teknis tata laksana kepabeanan di bidang ekspor barang.",
+              "level": "Kebijakan Kantor Pusat",
+              "warna": "#0B3A6F"
+            },
+            {
+              "unit_id": "insw",
+              "nama": "INSW (National Single Window)",
+              "peran": "Sistem validasi otomatis dokumen persyaratan lartas ekspor kementerian teknis.",
+              "level": "Mitra Strategis Eksternal",
+              "warna": "#7C3AED"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Pengajuan Dokumen PEB & Pembayaran BK",
+          "deskripsi": "Eksportir mengajukan Pemberitahuan Ekspor Barang (PEB) ke sistem CEISA 4.0 dan melunasi pembayaran Bea Keluar (jika komoditas ekspor terkena pungutan ekspor seperti sawit/mineral).",
+          "dasar_hukum": "PMK 155/PMK.04/2022 Pasal 4-9",
+          "sla": "< 15 Menit Analisis Sistem",
+          "output": [
+            "Nomor Pendaftaran PEB",
+            "Bukti Penerimaan Negara Bea Keluar"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC / KPU Pelabuhan Muat",
+              "peran": "Penerimaan dokumen PEB dan rekonsiliasi data setoran kas negara perbendaharaan.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Pemasukan Barang ke Kawasan Pabean (Gate In)",
+          "deskripsi": "Barang ekspor dimasukkan ke Tempat Penimbunan Sementara (TPS) di pelabuhan muat dengan membawa dokumen PEB untuk diverifikasi kesesuaian nomor peti kemas dan segel.",
+          "dasar_hukum": "PMK 155/2022 Pasal 14",
+          "sla": "Real-Time saat Gate In",
+          "output": [
+            "Respon Masuk Kawasan Pabean",
+            "Tanda Terima Pemasukan TPS"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Petugas Hanggar / Gate KPPBC",
+              "peran": "Pengawasan fisik pemasukan barang ekspor ke pelabuhan dan verifikasi segel pengaman.",
+              "level": "Pelayanan Lapangan",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Pemeriksaan Fisik & Verifikasi Ekspor",
+          "deskripsi": "Khusus barang ekspor yang terkena Nota Hasil Intelijen (NHI) atau komoditi ekspor tertentu yang diwajibkan, dilakukan pemeriksaan fisik barang oleh pemeriksa bea cukai.",
+          "dasar_hukum": "PMK 155/2022 & UU Kepabeanan Pasal 82",
+          "sla": "Maksimal 1 Hari Kerja",
+          "output": [
+            "Laporan Hasil Pemeriksaan Ekspor",
+            "Berita Acara Pelekatan Segel Ekspor"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Pemeriksa Fisik & P2 KPPBC",
+              "peran": "Pemeriksaan fisik peti kemas barang ekspor dan pengawasan pemuatan.",
+              "level": "Pelayanan & Pengawasan",
+              "warna": "#DC2626"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Penerbitan NPE & Pemuatan ke Kapal",
+          "deskripsi": "Diterbitkan Nota Pelayanan Ekspor (NPE) sebagai izin muat barang ke sarana pengangkut. Pengangkut mendaftarkan Outward Manifest sebelum kapal berangkat ke luar negeri.",
+          "dasar_hukum": "PMK 155/2022 & PMK 158/2017",
+          "sla": "< 30 Menit sejak Dokumen Lengkap",
+          "output": [
+            "Nota Pelayanan Ekspor (NPE)",
+            "Outward Manifest Terdaftar"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC Pelabuhan Muat",
+              "peran": "Penerbitan respon NPE dan penatausahaan Outward Manifest kapal ekspor.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "pso",
+              "nama": "PSO BC (Armada Kapal Patroli)",
+              "peran": "Pengawasan keberangkatan kapal ekspor melintasi batas laut teritorial Indonesia.",
+              "level": "Pengawasan Maritim",
+              "warna": "#B45309"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tpb-fasilitas",
+      "nama": "Pelayanan Fasilitas Kawasan Berikat & KEK (TPB)",
+      "kategori": "Kepabeanan & Fasilitas",
+      "deskripsi_singkat": "Proses pemberian izin fasilitas Tempat Penimbunan Berikat (Kawasan Berikat, PLB, KEK), pemasukan bahan baku (BC 2.3), pengawasan IT Inventory, dan pengeluaran barang jadi (BC 2.5).",
+      "dasar_hukum_utama": "PMK No. 131/PMK.04/2018 jo PMK 65/2021 & PMK 124/2024",
+      "sla_total": "1 - 3 Hari Kerja (Pemasukan/Pengeluaran Harian)",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Pengajuan Izin Penyelenggara/Pengusaha TPB",
+          "deskripsi": "Perusahaan mengajukan permohonan izin Kawasan Berikat/PLB/KEK secara elektronik, dilanjutkan dengan pemaparan proses bisnis dan peninjauan lokasi pabrik oleh tim bea cukai.",
+          "dasar_hukum": "PMK 131/2018 & Perdirjen Fasilitas Kepabeanan",
+          "sla": "Maksimal 3 Hari Kerja setelah Pemaparan",
+          "output": [
+            "Keputusan Menteri Keuangan (KMK) Izin Kawasan Berikat",
+            "Nomor Registrasi TPB"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-fasilitas-kepab",
+              "nama": "Dit. Fasilitas Kepabeanan",
+              "peran": "Perumusan regulasi fasilitas fiskal industri, standardisasi kriteria TPB, dan asistensi KEK.",
+              "level": "Kebijakan Kantor Pusat",
+              "warna": "#059669"
+            },
+            {
+              "unit_id": "kanwil",
+              "nama": "Kantor Wilayah Pembina",
+              "peran": "Penerbitan Surat Keputusan izin Kawasan Berikat atas pelimpahan wewenang Menteri.",
+              "level": "Pelayanan Perizinan Regional",
+              "warna": "#0B3A6F"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Pemasukan Bahan Baku Impor (BC 2.3)",
+          "deskripsi": "Pemasukan bahan baku/penolong dari luar negeri ke Kawasan Berikat menggunakan dokumen BC 2.3 dengan fasilitas Penangguhan Bea Masuk dan tidak dipungut PPN/PPh Impor.",
+          "dasar_hukum": "PMK 131/2018 Pasal 10-15",
+          "sla": "< 1 Jam Kerja (Otomasi Sistem)",
+          "output": [
+            "Persetujuan Pemasukan BC 2.3",
+            "Data Penangguhan Bea Masuk"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC Pengawas TPB",
+              "peran": "Penatausahaan dokumen BC 2.3 dan pengawasan pelepasan segel pengaman di pabrik.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Proses Produksi, Subkontrak & IT Inventory",
+          "deskripsi": "Perusahaan mengolah bahan baku menjadi barang jadi. Seluruh mutasi barang wajib tercatat dalam sistem IT Inventory yang terhubung secara real-time ke sistem DJBC dan CCTV 24 jam.",
+          "dasar_hukum": "PER-02/BC/2019 tentang IT Inventory TPB",
+          "sla": "Monitoring Kontinu 24/7",
+          "output": [
+            "Log IT Inventory Terhubung",
+            "Izin Subkontrak Antar TPB"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Seksi Pelayanan Kepabeanan & Cukai KPPBC",
+              "peran": "Monitoring keterhubungan IT Inventory, stock opname berkala, dan izin subkontrak.",
+              "level": "Pengawasan Operasional",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "dit-ki",
+              "nama": "Dit. Kepatuhan Internal",
+              "peran": "Audit kepatuhan pelayanan petugas hanggar dan integritas pengawasan fasilitas berikat.",
+              "level": "Kepatuhan & Integritas",
+              "warna": "#DC2626"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Pengeluaran Hasil Produksi ke Lokal (BC 2.5)",
+          "deskripsi": "Pengeluaran barang jadi olahan ke Tempat Lain Dalam Daerah Pabean (TLDDP) menggunakan dokumen BC 2.5 disertai pelunasan Bea Masuk dan PPN/PPh atas bahan baku yang terkandung.",
+          "dasar_hukum": "PMK 131/2018 Pasal 22-26",
+          "sla": "< 2 Jam Kerja",
+          "output": [
+            "SPPB Dokumen BC 2.5",
+            "Bukti Pembayaran Bea Masuk & PPN"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC Pengawas TPB",
+              "peran": "Penetapan nilai pabean konversi bahan baku dan penerbitan izin pengeluaran lokal.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Monev Tahunan & Audit Fasilitas Berikat",
+          "deskripsi": "Evaluasi kinerja kepatuhan pengusaha Kawasan Berikat, verifikasi rasio konversi bahan baku (konversi formula), dan audit kepabeanan untuk perpanjangan sertifikasi fasilitas.",
+          "dasar_hukum": "PER-07/BC/2021 tentang Monitoring Evaluasi TPB",
+          "sla": "Tahunan / Periodik",
+          "output": [
+            "Laporan Hasil Monev (LHM)",
+            "Rekomendasi Penyesuaian Fasilitas TPB"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kanwil",
+              "nama": "Bidang Fasilitas Kepabeanan Kanwil",
+              "peran": "Pelaksanaan monitoring evaluasi terpadu dan uji petik fisik pabrik berikat regional.",
+              "level": "Supervisi Regional",
+              "warna": "#0B3A6F"
+            },
+            {
+              "unit_id": "dit-audit",
+              "nama": "Dit. Audit Kepabeanan & Cukai",
+              "peran": "Pelaksanaan audit investigasi fasilitas TPB jika ditemukan kebocoran bahan baku.",
+              "level": "Audit Khusus",
+              "warna": "#0369A1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cukai",
+      "nama": "Pelayanan Cukai & Pemesanan Pita Cukai (CK-1)",
+      "kategori": "Cukai & Perbendaharaan",
+      "deskripsi_singkat": "Alur pengadministrasian barang kena cukai (BKC), penetapan tarif Harga Jual Eceran (HJE), pengajuan permohonan penyediaan pita cukai (P3C), hingga pemesanan dokumen CK-1.",
+      "dasar_hukum_utama": "UU No. 39 Tahun 2007 tentang Cukai & PMK No. 161/2022",
+      "sla_total": "1 - 2 Hari Kerja",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Penerbitan Izin NPPBKC & Tarif Cukai (HJE)",
+          "deskripsi": "Pengusaha pabrik hasil tembakau atau MMEA mengajukan permohonan Nomor Pokok Pengusaha Barang Kena Cukai (NPPBKC) dan penetapan tarif cukai berbasis Harga Jual Eceran (HJE).",
+          "dasar_hukum": "UU No. 39 Tahun 2007 Pasal 14 & PMK 161/2022",
+          "sla": "Maksimal 3 Hari Kerja",
+          "output": [
+            "Keputusan NPPBKC",
+            "Surat Keputusan Penetapan Tarif HJE"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC Pengawas Pabrik",
+              "peran": "Pemeriksaan lokasi pabrik/tempat penyimpanan BKC dan penerbitan izin NPPBKC.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "dit-tfc",
+              "nama": "Dit. Teknis & Fasilitas Cukai",
+              "peran": "Penetapan struktur tarif cukai nasional dan standarisasi kuota produksi per golongan pabrik.",
+              "level": "Kebijakan Kantor Pusat",
+              "warna": "#D97706"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Permohonan Penyediaan Pita Cukai (P3C)",
+          "deskripsi": "Pabrik mengajukan estimasi kebutuhan cetak pita cukai tahunan/bulanan melalui formulir P3C di portal Exis CEISA Cukai untuk divalidasi ketersediaan alokasi kuota nasional.",
+          "dasar_hukum": "PER-14/BC/2021 tentang Tata Cara Penyediaan Pita Cukai",
+          "sla": "< 4 Jam Kerja Sistem",
+          "output": [
+            "Nomor Respon Persetujuan P3C",
+            "Alokasi Kuota Pita Cukai Terkunci"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Seksi Perbendaharaan KPPBC",
+              "peran": "Verifikasi kepatuhan pembayaran cukai sebelumnya dan validasi permohonan P3C.",
+              "level": "Pelayanan Administrasi",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "dit-tfc",
+              "nama": "Dit. Teknis & Fasilitas Cukai",
+              "peran": "Pemesanan order pencetakan pita cukai berhologram pengaman ke Percetakan Perum Peruri.",
+              "level": "Penyediaan Logistik Cukai",
+              "warna": "#D97706"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Pemesanan Pita Cukai Dokumen CK-1",
+          "deskripsi": "Pengusaha mengajukan dokumen pemesanan pita cukai CK-1 secara elektronik dan melunasi pembayaran pungutan cukai (atau menyerahkan jaminan bank jika fasilitas penundaan).",
+          "dasar_hukum": "PMK No. 161/PMK.04/2022 Pasal 8-12",
+          "sla": "1 Hari Kerja",
+          "output": [
+            "Dokumen CK-1 Disetujui",
+            "Bukti Setor Penerimaan Cukai Kas Negara"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Seksi Perbendaharaan & Kasir KPPBC",
+              "peran": "Validasi pembayaran billing cukai ke rekening kas negara dan penerbitan respon CK-1.",
+              "level": "Perbendaharaan Negara",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Serah Terima & Pelekatan Pita Cukai",
+          "deskripsi": "Pita cukai diserahkan di loket KPPBC dan dilekatkan pada kemasan penjualan eceran produk rokok/MMEA di pabrik di bawah pengawasan petugas Bea Cukai.",
+          "dasar_hukum": "UU No. 39 Tahun 2007 Pasal 7",
+          "sla": "Hari yang Sama saat Pengambilan",
+          "output": [
+            "Berita Acara Serah Terima Pita Cukai",
+            "BKC Siap Dipasarkan dengan Pita Cukai"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Petugas Hanggar Pabrik KPPBC",
+              "peran": "Pengawasan pelekatan pita cukai, pencatatan nomor seri, dan pemusnahan pita rusak.",
+              "level": "Pengawasan Lapangan",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Pencacahan Sediaan & Audit Buku Cukai",
+          "deskripsi": "Petugas melakukan pencacahan fisik periodik terhadap sediaan tembakau iris, pita cukai sisa, dan barang kena cukai jadi serta merekonsiliasi dengan buku rekening BKC.",
+          "dasar_hukum": "UU No. 39 Tahun 2007 Pasal 35 & PER-15/BC/2020",
+          "sla": "Periodik (Bulanan / Triwulanan)",
+          "output": [
+            "Berita Acara Pencacahan BKC",
+            "Laporan Rekonsiliasi Rekening Cukai"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Seksi Pelayanan & KI KPPBC",
+              "peran": "Pencacahan sediaan barang kena cukai dan validasi kepatuhan pembukuan pabrik.",
+              "level": "Pengawasan & Kepatuhan",
+              "warna": "#0284C7"
+            },
+            {
+              "unit_id": "dit-p2",
+              "nama": "Dit. Penindakan & Penyidikan",
+              "peran": "Operasi Gempur Rokok Ilegal di jalur distribusi untuk menekan peredaran pita cukai palsu.",
+              "level": "Operasi Penindakan",
+              "warna": "#DC2626"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "patroli-p2",
+      "nama": "Pengawasan Maritim, Intelijen & Penindakan P2",
+      "kategori": "Pengawasan & Penegakan Hukum",
+      "deskripsi_singkat": "Alur pengumpulan intelijen pabean/cukai, perencanaan patroli laut terpadu, pengejaran kapal penyelundup oleh armada PSO, penindakan lapangan, hingga penyidikan tindak pidana oleh PPNS.",
+      "dasar_hukum_utama": "UU No. 17 Tahun 2006 (Pasal 74-113) & PMK No. 124/2024",
+      "sla_total": "Respons Taktis 24/7 (Penyidikan Maks 60 Hari)",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Pengumpulan Informasi & Penerbitan NHI",
+          "deskripsi": "Unit intelijen pabean mengumpulkan data pergerakan kapal, analisis manifest anomali, dan informasi informan untuk menerbitkan Nota Hasil Intelijen (NHI) target sasaran.",
+          "dasar_hukum": "Perdirjen tentang Manajemen Intelijen Kepabeanan",
+          "sla": "Real-Time Intelijen 24/7",
+          "output": [
+            "Nota Hasil Intelijen (NHI)",
+            "Lembar Penugasan Operasi Intelijen (LPOI)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-p2",
+              "nama": "Dit. Penindakan dan Penyidikan",
+              "peran": "Analisis intelijen strategis nasional dan perumusan target sasaran operasi gabungan.",
+              "level": "Komando Intelijen Pusat",
+              "warna": "#991B1B"
+            },
+            {
+              "unit_id": "kanwil",
+              "nama": "Bidang Penindakan & Penyidikan Kanwil",
+              "peran": "Pengolahan intelijen taktis wilayah dan koordinasi jaringan informan lokal.",
+              "level": "Intelijen Regional",
+              "warna": "#0B3A6F"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Perencanaan Operasi Patroli Maritim",
+          "deskripsi": "Penyusunan Rencana Operasi Laut Terpadu (Operasi Jaring Sriwijaya / Gerhana), penentuan sektor patroli rawan penyelundupan, dan penyiapan bahan bakar serta logistik kapal.",
+          "dasar_hukum": "SOP Patroli Laut DJBC & PMK 188/2016",
+          "sla": "1 - 2 Hari Sebelum Pengerahan",
+          "output": [
+            "Surat Perintah Operasi Laut (SPOL)",
+            "Surat Perintah Berlayar (SPB) Dinas"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-p2",
+              "nama": "Dit. P2 (Subdit Patroli Laut)",
+              "peran": "Komando pengendali taktis operasi laut terpadu lintas perairan kepulauan.",
+              "level": "Komando Pusat",
+              "warna": "#991B1B"
+            },
+            {
+              "unit_id": "pso",
+              "nama": "PSO BC (Pangkalan Sarana Operasi)",
+              "peran": "Kesiapan teknis kapal patroli Fast Patrol Boat (FPB), kesiapan ABK, dan persenjataan.",
+              "level": "Pangkalan Armada Laut",
+              "warna": "#B45309"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Manuver Pengejaran & Penghentian Kapal",
+          "deskripsi": "Radar kapal patroli mendeteksi target penyelundup. Kapal patroli melakukan manuver pengejaran (hot pursuit), peringatan radio/sirene, tembakan peringatan, dan penghentian kapal di laut.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 75-77",
+          "sla": "Respons Lapangan Seketika",
+          "output": [
+            "Berita Acara Penghentian Kapal",
+            "Pemeriksaan Ruang Muat / Palka"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "pso",
+              "nama": "Satgas Patroli Kapal Laut PSO",
+              "peran": "Manuver taktis kapal cepat, boarding party bersenjata, dan pengamanan awak kapal.",
+              "level": "Taktis Maritim",
+              "warna": "#B45309"
+            },
+            {
+              "unit_id": "tni-polri-bakamla",
+              "nama": "TNI AL / Polairud / Bakamla",
+              "peran": "Dukungan kekuatan perbantuan pertahanan maritim sesuai amanat Pasal 76 UU Kepabeanan.",
+              "level": "Perbantuan Hankam Eksternal",
+              "warna": "#991B1B"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Penindakan, Penegahan & Segel Pabean",
+          "deskripsi": "Ditemukan muatan ilegal tanpa dokumen resmi (narkotika, rokok ilegal, pasir timah, pakaian bekas). Petugas menerbitkan Surat Bukti Penindakan (SBP) dan menyegel kapal serta muatan.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 82 & PMK Tata Cara Penindakan",
+          "sla": "Seketika pada Hari Operasi",
+          "output": [
+            "Surat Bukti Penindakan (SBP)",
+            "Berita Acara Penegahan & Pelekatan Segel Pabean"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Seksi Penindakan & Penyidikan KPPBC",
+              "peran": "Penerbitan SBP resmi, pengawalan barang bukti ke dermaga pabean, dan pencacahan muatan.",
+              "level": "Penindakan Lapangan",
+              "warna": "#DC2626"
+            },
+            {
+              "unit_id": "dit-interdiksi",
+              "nama": "Dit. Interdiksi Narkotika",
+              "peran": "Penanganan khusus pengamanan dan uji lab portabel barang bukti narkotika/psikotropika.",
+              "level": "Interdiksi Khusus",
+              "warna": "#7F1D1D"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Penyidikan PPNS & Pelimpahan Berkas (P-21)",
+          "deskripsi": "Penyidik Pegawai Negeri Sipil (PPNS) Bea Cukai memeriksa tersangka dan saksi, menyita barang bukti, berkoordinasi dengan Korwas Polri, dan menyerahkan berkas perkara ke Kejaksaan Negeri.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 112 & KUHAP",
+          "sla": "Maksimal 60 Hari Kerja (Pelimpahan Tahap II)",
+          "output": [
+            "Surat Pemberitahuan Dimulainya Penyidikan (SPDP)",
+            "Berkas Perkara Lengkap (P-21)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "Penyidik PPNS KPPBC / Kanwil",
+              "peran": "Pemeriksaan pro-justitia, penahanan tersangka, dan penyusunan berkas resume perkara pidana.",
+              "level": "Penyidikan Pidana",
+              "warna": "#DC2626"
+            },
+            {
+              "unit_id": "dit-kbp",
+              "nama": "Dit. Keberatan Banding & Peraturan",
+              "peran": "Bantuan hukum dan pertimbangan legalitas perkara pidana kepabeanan.",
+              "level": "Bantuan Hukum Pusat",
+              "warna": "#334155"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blbc-lab",
+      "nama": "Pelayanan Pengujian Laboratoris di Balai Laboratorium (BLBC)",
+      "kategori": "Laboratorium & Pengujian Ilmiah",
+      "deskripsi_singkat": "Mekanisme pengujian ilmiah kimia, fisika, dan identifikasi spesifikasi barang impor/ekspor yang diragukan untuk penetapan pos tarif HS Code dan nilai pabean yang mengikat.",
+      "dasar_hukum_utama": "PMK No. 190/PMK.04/2022 & PMK Organisasi UPT Balai Lab Bea Cukai",
+      "sla_total": "3 - 5 Hari Kerja (Uji Standar)",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Penerbitan Surat Permintaan Uji (SPPL)",
+          "deskripsi": "Pejabat pemeriksa dokumen/fisik di KPPBC atau KPU menerbitkan Surat Permintaan Pengujian Laboratoris (SPPL) karena identitas kimiawi atau spesifikasi teknis barang diragukan.",
+          "dasar_hukum": "PMK 190/2022 & SOP Pengujian Laboratorium Bea Cukai",
+          "sla": "< 4 Jam Kerja",
+          "output": [
+            "Surat Permintaan Pengujian Laboratoris (SPPL)",
+            "Berita Acara Pengambilan Contoh Tersegel"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC / KPU Pengirim Sampel",
+              "peran": "Pengambilan sampel barang bersegel pabean sesuai kaidah representasi sampling ilmiah.",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Penerimaan Sampel & Registrasi Lab BLBC",
+          "deskripsi": "Petugas administrasi laboratorium BLBC memeriksa keutuhan segel pabean, mencocokkan dokumen SPPL, dan meregistrasikan sampel ke dalam Sistem Informasi Laboratorium Bea Cukai.",
+          "dasar_hukum": "Standard Operating Procedure Penerimaan Sampel BLBC",
+          "sla": "< 2 Jam Kerja sejak Sampel Tiba",
+          "output": [
+            "Tanda Terima Sampel Lab Terdaftar",
+            "Barcode Sampel Analisis Ilmiah"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "blbc",
+              "nama": "Seksi Pelayanan & Pengujian BLBC",
+              "peran": "Pemeriksaan integritas fisik segel sampel dan penentuan jadwal instrumen pengujian.",
+              "level": "UPT Laboratorium",
+              "warna": "#059669"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Pengujian Instrumen Ilmiah (GC-MS / FTIR / XRF)",
+          "deskripsi": "Pranata Laboratorium Kimia menguji komposisi kimiawi, spektrum molekuler, dan kemurnian zat menggunakan instrumen canggih (Gas Chromatography, FTIR, X-Ray Fluorescence Spectrometer).",
+          "dasar_hukum": "Metode Standar Uji ASTM / ISO / SNI Laboratorium Pabean",
+          "sla": "2 - 3 Hari Kerja",
+          "output": [
+            "Kromatogram / Spektogram Hasil Uji",
+            "Catatan Analisis Laboratorium (CAL)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "blbc",
+              "nama": "Tim Fungsional Pranata Lab Kimia BLBC",
+              "peran": "Pelaksanaan pengujian ilmiah, kalibrasi instrumen, dan penentuan karakteristik senyawa.",
+              "level": "Pelaksana Pengujian Ilmiah",
+              "warna": "#059669"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Validasi Hasil Uji & Penelaahan Pos Tarif",
+          "deskripsi": "Kepala Seksi Pengujian dan Identifikasi Barang memvalidasi hasil uji laboratorium dan mencocokkan komposisi senyawa dengan Catatan Bab/Subpos pada Buku Tarif Kepabeanan Indonesia (BTKI).",
+          "dasar_hukum": "PMK 124/2024 & Buku Tarif Kepabeanan Indonesia (BTKI)",
+          "sla": "1 Hari Kerja",
+          "output": [
+            "Draft Laporan Hasil Pengujian & Identifikasi",
+            "Kajian Klasifikasi Pos Tarif BTKI"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "blbc",
+              "nama": "Pejabat Validasi Ilmiah BLBC",
+              "peran": "Telaah kesesuaian formula kimia dengan nomenklatur tarif WCO dan verifikasi akurasi data.",
+              "level": "Validasi Teknis",
+              "warna": "#059669"
+            },
+            {
+              "unit_id": "dit-teknis-kepab",
+              "nama": "Dit. Teknis Kepabeanan",
+              "peran": "Supervisi keselarasan metode klasifikasi barang kimia rumit dengan pedoman WCO.",
+              "level": "Pembina Teknis",
+              "warna": "#0B3A6F"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Penerbitan & Distribusi Dokumen LHPIB",
+          "deskripsi": "BLBC menerbitkan Laporan Hasil Pengujian dan Identifikasi Barang (LHPIB) resmi bertandatangan digital dan mengirimkannya secara sistem ke KPPBC untuk dasar penetapan tarif final.",
+          "dasar_hukum": "PMK Organisasi UPT Balai Lab Bea Cukai",
+          "sla": "< 2 Jam Kerja",
+          "output": [
+            "Laporan Hasil Pengujian & Identifikasi Barang (LHPIB)",
+            "Penetapan Tarif Mengikat KPPBC"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "blbc",
+              "nama": "Kepala Balai Laboratorium Bea Cukai (BLBC)",
+              "peran": "Penerbitan dan pengesahan dokumen LHPIB yang memiliki kekuatan hukum pembuktian.",
+              "level": "Kepala UPT",
+              "warna": "#059669"
+            },
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC / KPU Pemohon Uji",
+              "peran": "Penggunaan data LHPIB untuk menerbitkan Surat Penetapan Tarif dan Nilai Pabean (SPTNP).",
+              "level": "Pelayanan Operasional",
+              "warna": "#0284C7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "audit-pca",
+      "nama": "Pelaksanaan Post-Clearance Audit (PCA) Kepabeanan & Cukai",
+      "kategori": "Audit & Kepatuhan Pasca Clearance",
+      "deskripsi_singkat": "Pemeriksaan pembukuan, catatan, dan dokumen perusahaan importir/eksportir/cukai untuk menguji kepatuhan kepabeanan pasca pengeluaran barang dan menyelamatkan penerimaan negara.",
+      "dasar_hukum_utama": "UU No. 17 Tahun 2006 (Pasal 86) & PMK Audit Kepabeanan dan Cukai",
+      "sla_total": "30 - 60 Hari Kerja per Penugasan Audit",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Penyusunan DSAT Berbasis Analitik Risiko",
+          "deskripsi": "Direktorat Audit menganalisis data impor, transaksi perbankan, dan intelijen untuk menyusun Daftar Sasaran Audit Terpilih (DSAT) berkategori risiko tinggi.",
+          "dasar_hukum": "PMK Audit Kepabeanan & Cukai",
+          "sla": "Periodik Rencana Kerja Tahunan",
+          "output": [
+            "Daftar Sasaran Audit Terpilih (DSAT)",
+            "Surat Perintah Audit (SPA)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-audit",
+              "nama": "Dit. Audit Kepabeanan dan Cukai",
+              "peran": "Penyusunan profil auditee, penetapan kuota audit tahunan, dan penerbitan SPA nasional.",
+              "level": "Perencanaan Audit Pusat",
+              "warna": "#0369A1"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Entry Meeting & Permintaan Dokumen Pembukuan",
+          "deskripsi": "Tim Auditor mendatangi kantor auditee untuk melaksanakan pertemuan pembukaan (Entry Meeting) dan meminta dokumen laporan keuangan, rekening koran, GL, invoice, dan kontrak dagang.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 86 ayat (2)",
+          "sla": "Hari Pertama Pelaksanaan Audit",
+          "output": [
+            "Berita Acara Entry Meeting",
+            "Surat Permintaan Peminjaman Buku & Catatan (SPPBC)"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-audit",
+              "nama": "Tim Auditor Dit. Audit / Kanwil",
+              "peran": "Penyampaian ruang lingkup audit, hak dan kewajiban auditee, serta penyerahan surat tugas.",
+              "level": "Pelaksana Audit Lapangan",
+              "warna": "#0369A1"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Pengujian Kepatuhan Pembukuan Lapangan",
+          "deskripsi": "Auditor menguji kesesuaian nilai transaksi, biaya asuransi/freight (Incoterms), royalti/assist, fisik sediaan stok, dan kebenaran klasifikasi tarif atas dokumen PIB yang diaudit.",
+          "dasar_hukum": "Standar Audit Kepabeanan dan Cukai Kemenkeu",
+          "sla": "20 - 40 Hari Kerja",
+          "output": [
+            "Kertas Kerja Audit (KKA)",
+            "Temuan Sementara Hasil Pengujian Pembukuan"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-audit",
+              "nama": "Auditor Terampil & Ahli Pertama",
+              "peran": "Pengujian substantif akuntansi, rekonsiliasi data SPT Pajak vs PIB, dan analitik transfer pricing.",
+              "level": "Auditor Fungsional",
+              "warna": "#0369A1"
+            },
+            {
+              "unit_id": "kanwil",
+              "nama": "Pengendali Teknis Kanwil",
+              "peran": "Supervisi kertas kerja audit dan bimbingan telaah akuntansi kepabeanan regional.",
+              "level": "Supervisi Audit",
+              "warna": "#0B3A6F"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Penyampaian SPHA & Closing Conference",
+          "deskripsi": "Auditor menyampaikan Surat Pemberitahuan Hasil Audit (SPHA) kepada auditee dan menggelar pembahasan akhir (Closing Conference) atas tanggapan dan bukti sanggahan yang diajukan auditee.",
+          "dasar_hukum": "PMK Audit Kepabeanan Pasal 24-28",
+          "sla": "Maksimal 7 Hari Kerja sejak SPHA",
+          "output": [
+            "Surat Pemberitahuan Hasil Audit (SPHA)",
+            "Risalah Pembahasan Akhir Hasil Audit"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-audit",
+              "nama": "Tim Auditor & Pejabat Pengendali Mutu",
+              "peran": "Pembahasan materi temuan audit dan penilaian bukti kontra dari pihak auditee.",
+              "level": "Pembahasan Temuan",
+              "warna": "#0369A1"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Penerbitan LHA & Penetapan Tagihan SPKTNP",
+          "deskripsi": "Penerbitan Laporan Hasil Audit (LHA) final dan penerbitan Surat Penetapan Kembali Tarif dan/atau Nilai Pabean (SPKTNP) untuk menagih kekurangan bea masuk, denda, dan PDRI ke kas negara.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 17 & PMK Audit",
+          "sla": "Maksimal 3 Hari Kerja setelah Closing",
+          "output": [
+            "Laporan Hasil Audit (LHA)",
+            "SPKTNP Tagihan Piutang Negara"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-audit",
+              "nama": "Direktur Audit Kepabeanan & Cukai",
+              "peran": "Pengesahan LHA dan rekomendasi perbaikan sistem tata kelola kepabeanan auditee.",
+              "level": "Pimpinan Auditor",
+              "warna": "#0369A1"
+            },
+            {
+              "unit_id": "kpu",
+              "nama": "KPU / KPPBC Tempat Pendaftaran PIB",
+              "peran": "Penerbitan surat tagihan perbendaharaan dan penagihan piutang pajak kas negara.",
+              "level": "Penagihan Perbendaharaan",
+              "warna": "#0284C7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keberatan-banding",
+      "nama": "Penyelesaian Keberatan & Banding Pengadilan Pajak",
+      "kategori": "Hukum & Keberatan",
+      "deskripsi_singkat": "Mekanisme pengajuan dan penyelesaian keberatan importir atas penetapan pejabat Bea Cukai (SPTNP/SPKTNP) hingga proses sengketa banding di Pengadilan Pajak dan Peninjauan Kembali di Mahkamah Agung.",
+      "dasar_hukum_utama": "UU No. 17 Tahun 2006 (Pasal 93-95) & PMK No. 136/PMK.04/2022",
+      "sla_total": "Maksimal 60 Hari Kalender (Keberatan)",
+      "tahapan": [
+        {
+          "no": 1,
+          "judul": "Pengajuan Surat Keberatan oleh Importir",
+          "deskripsi": "Importir yang tidak menyetujui penetapan tarif/nilai pabean (SPTNP) mengajukan surat keberatan secara elektronik dalam jangka waktu maksimal 60 hari sejak tanggal penetapan disertai jaminan.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 93 ayat (1) & PMK 136/2022",
+          "sla": "Maksimal 60 Hari sejak SPTNP Diterbitkan",
+          "output": [
+            "Tanda Terima Pengajuan Keberatan Elektronik",
+            "Bukti Penyerahan Jaminan Keberatan"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC / KPU Penerbit Penetapan",
+              "peran": "Penerimaan berkas keberatan, penerbitan tanda terima, dan penatausahaan bukti jaminan.",
+              "level": "Pelayanan Administrasi",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 2,
+          "judul": "Penelitian Dokumen & Permintaan Bukti Tambahan",
+          "deskripsi": "Pejabat penelaah keberatan meneliti kelengkapan formal dan material, memeriksa bukti transaksi harga beli (PO, LC, TT Transfer, Sales Contract), dan meminta dokumen tambahan jika diperlukan.",
+          "dasar_hukum": "PMK 136/PMK.04/2022 Pasal 8-14",
+          "sla": "Maksimal 14 Hari Kerja",
+          "output": [
+            "Surat Permintaan Data Tambahan (SPDT)",
+            "Matriks Uji Bukti Transaksi Nilai Pabean"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kanwil",
+              "nama": "Bidang Keberatan dan Banding Kanwil",
+              "peran": "Penelitian bukti substantif dan penelaahan kepatuhan prosedur penetapan kantor pelayanan.",
+              "level": "Penelaahan Keberatan Regional",
+              "warna": "#0B3A6F"
+            },
+            {
+              "unit_id": "dit-kbp",
+              "nama": "Dit. Keberatan, Banding, dan Peraturan",
+              "peran": "Penelaahan keberatan tingkat kantor pusat untuk penetapan yang diterbitkan oleh Direktur.",
+              "level": "Penelaahan Keberatan Pusat",
+              "warna": "#334155"
+            }
+          ]
+        },
+        {
+          "no": 3,
+          "judul": "Sidang Pembahasan & Telaah Yuridis",
+          "deskripsi": "Pelaksanaan sidang pembahasan bersama pihak pemohon keberatan untuk mendengarkan penjelasan teknis, mencocokkan data invoice/spesifikasi barang, dan menyusun risalah telaah hukum.",
+          "dasar_hukum": "PMK 136/2022 Pasal 18",
+          "sla": "1 Hari Pelaksanaan Sidang",
+          "output": [
+            "Risalah Sidang Pembahasan Keberatan",
+            "Lembar Telaah Hukum Keberatan"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kanwil",
+              "nama": "Tim Penelaah Keberatan Kanwil",
+              "peran": "Pengujian argumen pemohon dan penyusunan rekomendasi putusan keberatan.",
+              "level": "Kajian Yuridis Regional",
+              "warna": "#0B3A6F"
+            },
+            {
+              "unit_id": "dit-teknis-kepab",
+              "nama": "Dit. Teknis Kepabeanan",
+              "peran": "Pemberian surat pertimbangan teknis klasifikasi pos tarif barang rumit yang disengketakan.",
+              "level": "Pertimbangan Teknis",
+              "warna": "#0B3A6F"
+            }
+          ]
+        },
+        {
+          "no": 4,
+          "judul": "Penerbitan Surat Keputusan Keberatan (SKK)",
+          "deskripsi": "Direktur Jenderal atau Kepala Kantor Wilayah menerbitkan Keputusan Keberatan yang memutuskan menerima seluruhnya, menerima sebagian, atau menolak keberatan importir dalam batas waktu 60 hari.",
+          "dasar_hukum": "UU No. 17 Tahun 2006 Pasal 93 ayat (5)",
+          "sla": "Maksimal 60 Hari sejak Berkas Lengkap",
+          "output": [
+            "Surat Keputusan Direktur Jenderal tentang Keberatan",
+            "Pencairan atau Pengembalian Jaminan"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "kanwil",
+              "nama": "Kepala Kantor Wilayah DJBC",
+              "peran": "Penerbitan dan penandatanganan Keputusan Keberatan tingkat wilayah.",
+              "level": "Pejabat Pemutus Keberatan",
+              "warna": "#0B3A6F"
+            },
+            {
+              "unit_id": "kppbc",
+              "nama": "KPPBC Terkait",
+              "peran": "Pelaksanaan tindak lanjut putusan keberatan (pencairan jaminan ke kas negara atau pengembalian).",
+              "level": "Pelaksana Putusan",
+              "warna": "#0284C7"
+            }
+          ]
+        },
+        {
+          "no": 5,
+          "judul": "Advokasi Sengketa di Pengadilan Pajak & MA",
+          "deskripsi": "Jika importir menolak keputusan keberatan dan mengajukan banding ke Pengadilan Pajak, Tim Advokasi DJBC menyusun Surat Uraian Banding (SUB), menghadiri persidangan, hingga Peninjauan Kembali ke MA.",
+          "dasar_hukum": "UU No. 14 Tahun 2002 tentang Pengadilan Pajak",
+          "sla": "Sesuai Jadwal Persidangan Pengadilan Pajak",
+          "output": [
+            "Surat Uraian Banding (SUB)",
+            "Putusan Pengadilan Pajak / Mahkamah Agung"
+          ],
+          "unit_terlibat": [
+            {
+              "unit_id": "dit-kbp",
+              "nama": "Dit. Keberatan, Banding, dan Peraturan",
+              "peran": "Penyusunan kontra-memori banding, pendampingan sidang peradilan pajak, dan upaya hukum PK.",
+              "level": "Advokasi Hukum Nasional",
+              "warna": "#334155"
+            },
+            {
+              "unit_id": "kanwil",
+              "nama": "Seksi Bantuan Hukum Kanwil",
+              "peran": "Penyusunan data kronologis sengketa dan koordinasi penanganan perkara lokal.",
+              "level": "Bantuan Hukum Wilayah",
+              "warna": "#0B3A6F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+};

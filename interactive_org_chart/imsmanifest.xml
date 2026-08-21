@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest identifier="com.djbc.org.explorer.v5" version="1.2"
+          xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+          xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                              http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+  </metadata>
+  <organizations default="org_djbc_explorer">
+    <organization identifier="org_djbc_explorer">
+      <title>Interactive Organization Explorer DJBC</title>
+      <item identifier="item_djbc_explorer" identifierref="res_djbc_explorer">
+        <title>Interactive Organization Explorer DJBC</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="res_djbc_explorer" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html"/>
+      <file href="css/variables.css"/>
+      <file href="css/base.css"/>
+      <file href="css/components.css"/>
+      <file href="css/layout.css"/>
+      <file href="js/app.js"/>
+    </resource>
+  </resources>
+</manifest>
