@@ -93,9 +93,9 @@ export class AssessmentEngine {
             </p>
           </div>
 
-          <!-- Instruction Details (Bento Grid) -->
+          <!-- Instruction Details (Bento Grid 2x2) -->
           <div style="padding: 32px 36px;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 28px;">
+            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 28px;">
               
               <!-- Point 1 -->
               <div style="background: #F8FAFC; border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;">
@@ -151,17 +151,17 @@ export class AssessmentEngine {
 
             </div>
 
-            <!-- Confirmation Action Box -->
-            <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
-              <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- Confirmation Action Box (Centered) -->
+            <div style="background: #EFF6FF; border: 1px solid #BFDBFE; border-radius: 14px; padding: 24px 32px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 16px; max-width: 720px; margin: 0 auto;">
+              <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
                 <span style="font-size: 22px;">💡</span>
-                <span style="font-size: 13.5px; color: #1E3A8A; font-weight: 600;">
+                <span style="font-size: 14px; color: #1E3A8A; font-weight: 600;">
                   Pastikan Anda memiliki waktu luang yang cukup sebelum memulai sesi kuis.
                 </span>
               </div>
-              <button id="btn-confirm-start-quiz" class="btn btn-primary" style="font-size: 14px; font-weight: 700; padding: 11px 26px; background: #0B3A6F; color: #FFFFFF; border-radius: 8px; border: none; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; box-shadow: 0 3px 10px rgba(11, 58, 111, 0.25); transition: all 0.2s;">
+              <button id="btn-confirm-start-quiz" class="btn btn-primary" style="font-size: 14.5px; font-weight: 700; padding: 13px 32px; background: #0B3A6F; color: #FFFFFF; border-radius: 10px; border: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; box-shadow: 0 4px 14px rgba(11, 58, 111, 0.25); transition: all 0.2s;">
                 <span>Saya Mengerti Mekanisme &amp; Mulai Evaluasi</span>
-                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
               </button>
             </div>
 
