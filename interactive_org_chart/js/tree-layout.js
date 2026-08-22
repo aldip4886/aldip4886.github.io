@@ -271,10 +271,8 @@ export class TreeLayout {
               // Special Case: UPT Pillar (where child is already an Eselon-3 satker like BLBC / PSO)
               if (pillar.id === 'upt-djbc' || child.level === 'eselon-3') {
                 let level4Children = (child.children || []).map(sub4 => {
-                  if (typeof sub4 === 'string') {
-                    return unitsDict[sub4] || { id: sub4, nama: sub4, level: 'eselon-4' };
-                  }
-                  return sub4;
+                  const subId = typeof sub4 === 'string' ? sub4 : (sub4.id || sub4);
+                  return unitsDict[subId] || (typeof sub4 === 'object' ? sub4 : { id: subId, nama: subId, level: 'eselon-4' });
                 });
 
                 const count4 = level4Children.length;

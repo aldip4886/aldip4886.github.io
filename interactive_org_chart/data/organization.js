@@ -1,4 +1,4 @@
-window.DATA_ORGANIZATION = {
+window.ORGANIZATION_DATA = {
   "id": "djbc",
   "nama": "Direktorat Jenderal Bea dan Cukai",
   "singkatan": "DJBC",
@@ -53,7 +53,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan pembinaan dan penataan organisasi, pengembangan kinerja organisasi, pengembangan jabatan fungsional, standardisasi tata laksana, standardisasi dan koordinasi analisis beban kerja, serta pengembangan pelayanan publik di lingkungan Direktorat Jenderal",
               "fungsi": "Pelaksanaan koordinasi, pembinaan dan penataan organisasi, analisis dan evaluasi jabatan, serta monitoring dan evaluasi organisasi; pelaksanaan dan koordinasi pengembangan kinerja organisasi; perumusan pedoman petunjuk teknis, standardisasi, monitoring dan evaluasi pelaksanaan jabatan fungsional bea dan cukai, konsultansi teknis kepakaran, serta harmonisasi jabatan fungsional lainnya di lingkungan Direktorat Jenderal; pelaksanaan penyusunan, monitoring, dan evaluasi prosedur kerja; pelaksanaan dan koordinasi perumusan standardisasi tata naskah dinas, pakaian dinas seragam, dan tata laksana lainnya; pelaksanaan standardisasi, koordinasi, monitoring, dan evaluasi analisis beban kerja dan pengembangan pelayanan public",
-              "jabatan_pimpinan": "Kepala Bagian Organisasi dan Tata Laksana"
+              "jabatan_pimpinan": "Kepala Bagian Organisasi dan Tata Laksana",
+              "singkatan": "Bagian Organisasi dan Tata Laksana"
             },
             {
               "id": "bagian-administrasi-kepegawaian",
@@ -61,7 +62,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan urusan administrasi kepegawaian Direktorat Jenderal",
               "fungsi": "Penyiapan bahan analisis, pemantauan, dan evaluasi perencanaan, formasi, dan pengadaan pegawai, serta pengelolaan data dan informasi kepegawaian; penyusunan bahan kebijakan dan pengelolaan pola karir dan pola mutasi, pengaturan dan pelaksanaan urusan pengangkatan, penempatan, kepangkatan, data penggajian, pemindahan, dan mutasi kepegawaian lainnya; pelaksanaan urusan pemberhentian dan pemensiunan pegawai, pemberian penghargaan, dan administrasi penjatuhan hukuman disiplin",
-              "jabatan_pimpinan": "Kepala Bagian Administrasi Kepegawaian"
+              "jabatan_pimpinan": "Kepala Bagian Administrasi Kepegawaian",
+              "singkatan": "Bagian Administrasi Kepegawaian"
             },
             {
               "id": "bagian-pengembangan-kepegawaian",
@@ -69,7 +71,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan perencanaan dan analisis kebutuhan, penyaringan, pengusulan, pendataan, dan evaluasi pengembangan kompetensi pegawai dalam rangka pendidikan dan pembelajaran, uji kompetensi, dan pengelolaan jabatan fungsional",
               "fungsi": "Penyusunan perencanaan dan analisis kebutuhan, penyaringan, pengusulan, pendataan, pemetaan, dan evaluasi pengembangan kompetensi pegawai melalui pendidikan dan pembelajaran; perumusan kompetensi, penyusunan perencanaan dan analisis kebutuhan, penyaringan, pengusulan, pendataan, pemetaan, dan evaluasi uji kompetensi; penilaian kinerja, fasilitasi pembentukan etika dan organisasi profesi jabatan fungsional di bidang keuangan negara, fasilitasi dan pembinaan administratif, serta pemantauan dan evaluasi atas implementasi jabatan fungsional di lingkungan Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Bagian Pengembangan Kepegawaian"
+              "jabatan_pimpinan": "Kepala Bagian Pengembangan Kepegawaian",
+              "singkatan": "Bagian Pengembangan Kepegawaian"
             },
             {
               "id": "bagian-keuangan",
@@ -77,7 +80,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan urusan keuangan di lingkungan Direktorat Jenderal",
               "fungsi": "Penyiapan bahan pelaksanaan penyusunan alokasi anggaran; penyusunan kerangka pendanaan sesuai sasaran strategis; penyiapan bahan dan pemrosesan usulan revisi anggaran; pelaksanaan urusan perbendaharaan kantor pusat Direktorat Jenderal; pembinaan pelaksanaan anggaran, pemantauan dan evaluasi pelaksanaan kegiatan dan kinerja; pelaksanaan urusan akuntansi pelaksanaan anggaran; penyusunan laporan keuangan; pengoordinasian dan pengelolaan urusan pemeriksaan laporan keuangan; pelaksanaan urusan belanja pegawai",
-              "jabatan_pimpinan": "Kepala Bagian Keuangan"
+              "jabatan_pimpinan": "Kepala Bagian Keuangan",
+              "singkatan": "Bagian Keuangan"
             },
             {
               "id": "bagian-pengelolaan-barang-milik-negara",
@@ -85,7 +89,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Mengoordinasikan dan melaksanakan pengelolaan barang milik negara, pendampingan dan asistensi pelaksanaan pengadaan barang/jasa, serta pembinaan administrasi pengelolaan barang milik negara dan pengadaan barang/jasa di lingkungan Direktorat Jenderal",
               "fungsi": "Penyiapan pembinaan dan bimbingan teknis, penelaahan, analisis, koordinasi, penyusunan perencanaan dan evaluasi atas perencanaan barang milik negara di lingkungan Direktorat Jenderal; penyiapan pembinaan dan bimbingan teknis, pendampingan, asistensi, pemantauan dan evaluasi atas pelaksanaan pengadaan di lingkungan Direktorat Jenderal; penyiapan pembinaan dan bimbingan teknis, koordinasi dan penelaahan penatausahaan Daftar Barang Milik Negara dan konsolidasi penyusunan Laporan Barang Milik Negara tingkat Unit Akuntansi Pembantu Pengguna Barang Eselon 1 (UAPPBE 1) Direktorat Jenderal; penyimpanan dan distribusi barang milik negara hasil pengadaan dan barang lain yang diperoleh secara sah sebagai barang milik negara bagi satuan kerja di lingkungan Direktorat Jenderal; penyiapan pembinaan dan bimbingan teknis, penelaahan, analisis, koordinasi, dan evaluasi penggunaan, pengamanan, penilaian pemindahtanganan, penghapusan, serta pengawasan dan pengendalian barang milik negara di lingkungan Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Bagian Pengelolaan Barang Milik Negara"
+              "jabatan_pimpinan": "Kepala Bagian Pengelolaan Barang Milik Negara",
+              "singkatan": "Bagian Pengelolaan Barang Milik Negara"
             },
             {
               "id": "bagian-umum",
@@ -93,7 +98,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan urusan tata usaha, kearsipan, rumah tangga, kesejahteraan, dan pengelolaan Barang Milik Negara di lingkungan kantor pusat Direktorat Jenderal",
               "fungsi": "Pelaksanaan urusan persuratan, distribusi, dan pengelolaan naskah dinas elektronik dan non elektronik, kearsipan kantor pusat Direktorat Jenderal, serta pembinaan kearsipan di lingkungan Direktorat Jenderal; penyiapan bahan laporan kegiatan dan laporan akuntabilitas Sekretariat Direktorat Jenderal; pelaksanaan urusan rumah tangga, pengamanan kantor, pemeliharaan sarana dan prasarana, dan pengelolaan barang milik negara kantor pusat Direktorat Jenderal; pelaksanaan urusan kesejahteraan, fasilitas kesehatan pegawai, dan rumah negara kantor pusat Direktorat Jenderal; pelaksanaan urusan tata usaha dan kearsipan, administrasi agenda, manajemen rapat pimpinan, penyajian bahan kegiatan, protokol dan akomodasi, dan pengaturan penerima tamu Direktur Jenderal; pelaksanaan urusan tata usaha dan kearsipan Tenaga Pengkaji",
-              "jabatan_pimpinan": "Kepala Bagian Umum"
+              "jabatan_pimpinan": "Kepala Bagian Umum",
+              "singkatan": "Bagian Umum"
             }
           ]
         },
@@ -132,7 +138,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan pembongkaran, penimbunan, pengangkutan, angkut lanjut dan angkut terus, kawasan pabean, tempat penimbunan sementara, dan tempat penimbunan pabean, impor untuk dipakai, impor sementara, re-impor, pemberitahuan pabean pengangkutan, pemberitahuan pabean impor, carnet, rush handling, barang kiriman, perdagangan secara elektronik (e-commerce), barang digital, barang bawaan penumpang dan awak sarana pengangkut, barang pelintas batas, barang pindahan, impor barang larangan dan pembatasan, impor barang berkaitan dengan Indonesia National Single Window, barang yang dinyatakan tidak dikuasai, barang yang dikuasai negara, dan barang yang menjadi milik negara, serta tugas lain di bidang impor seperti National Logistic Ecosystem (NLE), Ease of Doing Business (EoDB), dan pelaksanaan monitoring standar efisiensi waktu dan biaya pengeluaran barang seperti Dwelling Time dan Time Release Study (TRS)",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang pembongkaran, penimbunan, pengangkutan, angkut lanjut dan angkut terus, kawasan pabean, tempat penimbunan sementara, dan pemberitahuan pengangkutan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang impor untuk dipakai, pemberitahuan pabean impor, dokumen pelengkap pabean impor, dan pemeriksaan pabean; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang impor sementara, re-impor, Carnet, Rush Handling, barang kiriman, perdagangan secara elektronik (e-commerce), barang digital, barang bawaan penumpang dan awak sarana pengangkut, barang pelintas batas, dan barang pindahan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang impor barang larangan dan pembatasan, impor barang berkaitan dengan Indonesia National Single Window, tempat penimbunan pabean, barang tidak dikuasai, barang dikuasai negara, dan barang milik negara; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang impor lainnya seperti National Logistic Ecosystem (NLE), Ease of Doing Business (EoDB), dan pelaksanaan monitoring standar efisiensi waktu dan biaya pengeluaran barang seperti Dwelling Time dan Time Release Study (TRS)",
-              "jabatan_pimpinan": "Kepala Subdirektorat Impor"
+              "jabatan_pimpinan": "Kepala Subdirektorat Impor",
+              "singkatan": "Subdirektorat Impor"
             },
             {
               "id": "subdirektorat-ekspor",
@@ -140,7 +147,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan ketentuan ekspor umum, ekspor yang mendapat fasilitas kepabeanan, ekspor barang penumpang dan awak sarana pengangkut, ekspor barang pelintas batas, ekspor barang kiriman dan perdagangan secara elektronik (e-commerce), ekspor untuk diimpor kembali, ekspor barang larangan dan pembatasan, ekspor komoditas yang dikenakan bea keluar dan/atau pungutan di bidang ekspor lainnya, ekspor dengan mekanisme curah, re-ekspor, angkut lanjut ekspor, pemberitahuan pabean ekspor, pemuatan, manajemen risiko dan pemeriksaan pabean, konsolidasi, pertukaran data dan peningkatan validitas data ekspor, monitoring standar efisiensi dan biaya ekspor melalui pengembangan National Logistic Ecosystem (NLE) dan pemantauan Ease of Doing Business (EoDB), dan pelaksanaan monitoring standar efisiensi waktu dan biaya pengeluaran barang seperti Time Release Study (TRS), serta tugas lain di bidang ekspor",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang pemberitahuan pabean ekspor, ekspor barang larangan dan pembatasan, ekspor barang penumpang dan awak sarana pengangkut, ekspor yang mendapat fasilitas kepabeanan, konsolidasi barang ekspor dan peningkatan validitas data ekspor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang ekspor komoditas yang dikenakan bea keluar dan/atau pungutan di bidang ekspor lainnya, ekspor dengan mekanisme curah, manajemen risiko dan pemeriksaan pabean ekspor, angkut lanjut ekspor, dan pelaksanaan monitoring standar efisiensi dan biaya ekspor melalui pengembangan National Logistic Ecosystem (NLE), pemantauan Ease of Doing Business (EoDB), dan pelaksanaan monitoring standar efisiensi waktu dan biaya pengeluaran barang seperti Time Release Study (TRS); penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang ekspor barang kiriman dan perdagangan secara elektronik (e-commerce), ekspor barang pelintas batas, ekspor untuk diimpor kembali, re-ekspor, pemuatan, dan pertukaran data ekspor",
-              "jabatan_pimpinan": "Kepala Subdirektorat Ekspor"
+              "jabatan_pimpinan": "Kepala Subdirektorat Ekspor",
+              "singkatan": "Subdirektorat Ekspor"
             },
             {
               "id": "subdirektorat-nilai-pabean",
@@ -148,7 +156,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang nilai pabean dan pemutakhiran data harga barang impor",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang nilai pabean; penyiapan bahan penyusunan dan pemutakhiran data harga barang impor",
-              "jabatan_pimpinan": "Kepala Subdirektorat Nilai Pabean"
+              "jabatan_pimpinan": "Kepala Subdirektorat Nilai Pabean",
+              "singkatan": "Subdirektorat Nilai Pabean"
             },
             {
               "id": "subdirektorat-klasifikasi-barang",
@@ -156,7 +165,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan identifikasi dan klasifikasi barang, pemutakhiran dan penyusunan database sistem klasifikasi barang serta melakukan koordinasi dengan internal dan eksternal Direktorat Jenderal termasuk dalam forum terkait klasifikasi barang lainnya di tingkat internasional",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan identifikasi dan klasifikasi barang, pemutakhiran database komoditi atas tarif bea masuk, tarif bea masuk anti dumping, tarif bea masuk imbalan, tarif bea masuk tindakan pengamanan, tarif bea masuk pembalasan, dan tarif bea keluar; penyiapan bahan pelaksanaan penetapan klasifikasi barang, tarif bea masuk, tarif bea masuk anti dumping, tarif bea masuk imbalan, tarif bea masuk tindakan pengamanan, tarif bea masuk pembalasan, dan tarif bea keluar; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama teknis dalam forum Technical Sub-Working Group on Classification, Harmonized System Committee, Harmonized System Review Sub-Committee, Scientific Sub- Committee, dan forum internasional lainnya terkait klasifikasi barang",
-              "jabatan_pimpinan": "Kepala Subdirektorat Klasifikasi Barang"
+              "jabatan_pimpinan": "Kepala Subdirektorat Klasifikasi Barang",
+              "singkatan": "Subdirektorat Klasifikasi Barang"
             },
             {
               "id": "subdirektorat-registrasi-kepabeanan-program-prioritas-dan-authorized-economic-operator-(aeo)",
@@ -164,7 +174,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan proses pengajuan aplikasi Authorized Economic Operator (AEO) dan pengguna jasa kepabeanan prioritas, proses penelitian aplikasi, proses validasi, onsite visit, validasi report, dan proses sertifikasi Authorized Economic Operator (AEO), monitoring dan evaluasi atas implementasi dan operasionalisasi program Authorized Economic Operator (AEO), kegiatan sosialisasi, komunikasi, capacity building, koordinasi dengan internal dan eksternal Direktorat Jenderal dalam rangka implementasi dan operasionalisasi program Authorized Economic Operator (AEO) Indonesia dan pengguna jasa kepabeanan prioritas, Mutual Recognition Arrangement (MRA) antara Direktorat Jenderal Bea dan Cukai dengan administrasi kepabeanan negara lain, riset dan pengembangan program Authorized Economic Operator (AEO) dan pengguna jasa kepabeanan prioritas, serta registrasi kepabeanan",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang Authorized Economic Operator (AEO) dan pengguna jasa kepabeanan prioritas; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang Mutual Recognition Arrangement (MRA) dengan administrasi kepabeanan negara lain; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi dan pelaksanaan di bidang sosialisasi, komunikasi dalam rangka pengembangan program Authorized Economic Operator (AEO) dan pengguna jasa kepabeanan prioritas; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang registrasi kepabeanan",
-              "jabatan_pimpinan": "Kepala Subdirektorat Registrasi Kepabeanan, Program Prioritas dan Authorized Economic Operator (AEO)"
+              "jabatan_pimpinan": "Kepala Subdirektorat Registrasi Kepabeanan, Program Prioritas dan Authorized Economic Operator (AEO)",
+              "singkatan": "Subdirektorat Registrasi Kepabeanan, Program Prioritas dan Authorized Economic Operator (AEO)"
             }
           ]
         },
@@ -197,7 +208,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, monitoring dan evaluasi pelaksanaan, dan harmonisasi kebijakan di bidang fasilitas pembebasan atau keringanan bea masuk dan fasilitas pembebasan bea masuk lainnya",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan di bidang pembebasan bea masuk barang perwakilan negara asing, barang untuk keperluan badan internasional, buku ilmu pengetahuan, barang kiriman hadiah atau hibah untuk keperluan ibadah untuk umum, amal, sosial, kebudayaan atau untuk kepentingan penanggulangan bencana alam, dan barang contoh; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan di bidang pembebasan bea masuk barang keperluan museum, kebun binatang dan tempat lain yang terbuka untuk umum serta barang untuk konservasi alam, barang keperluan penelitian dan pengembangan ilmu pengetahuan, barang keperluan khusus kaum tuna netra dan penyandang cacat, barang keperluan pertahanan dan keamanan negara, barang dan bahan yang digunakan untuk menghasilkan barang bagi keperluan pertahanan dan keamanan negara, obat-obatan yang menggunakan anggaran pemerintah yang diperuntukan bagi masyarakat, bahan terapi manusia, pengelompokan darah dan penjenisan jaringan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan di bidang pembebasan atau keringanan bea masuk barang dan bahan untuk pembangunan dan pengembangan industri, barang yang mengalami kerusakan, penurunan mutu, barang oleh pemerintah pusat atau pemerintah daerah yang ditujukan untuk kepentingan umum, barang keperluan olahraga, serta barang keperluan proyek pemerintah; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan di bidang pembebasan atau keringanan bea masuk barang dan bahan dalam rangka penanaman modal, mesin untuk pembangunan dan pengembangan industri, peralatan pencegahan pencemaran lingkungan, bibit dan benih untuk pembangunan dan pengembangan industri pertanian, peternakan atau perikanan, hasil laut yang ditangkap dengan sarana penangkap yang berizin, dan fasilitas pembebasan atau keringanan bea masuk lainnya serta fasilitas bea masuk lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, monitoring dan evaluasi pelaksanaan dan harmonisasi kebijakan di bidang fasilitas pembebasan atau keringanan bea masuk dan fasilitas bea masuk lainnya",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pembebasan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pembebasan",
+              "singkatan": "Subdirektorat Pembebasan"
             },
             {
               "id": "subdirektorat-fasilitas-pertambangan",
@@ -205,7 +217,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, serta evaluasi dan harmonisasi kebijakan di bidang fasilitas pertambangan dan energi",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang fasilitas pertambangan minyak dan gas bumi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang fasilitas pertambangan dan energi selain minyak dan gas bumi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan dan harmonisasi kebijakan fasilitas pertambangan dan energi",
-              "jabatan_pimpinan": "Kepala Subdirektorat Fasilitas Pertambangan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Fasilitas Pertambangan",
+              "singkatan": "Subdirektorat Fasilitas Pertambangan"
             },
             {
               "id": "subdirektorat-fasilitas-impor-tujuan-ekspor",
@@ -213,7 +226,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, serta evaluasi dan harmonisasi kebijakan di bidang fasilitas impor tujuan ekspor",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang pembebasan bea masuk barang dan bahan untuk diolah, dirakit, atau dipasang pada barang lain dengan tujuan untuk diekspor, serta pembebasan bea masuk atas barang dan/atau bahan, dan/atau mesin yang dilakukan oleh Industri Kecil dan Menengah tujuan untuk dieskpor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang pengembalian bea masuk dan barang dan bahan untuk diolah, dirakit, atau dipasang pada barang lain dengan tujuan untuk dieskpor, serta di bidang Fasilitas Impor Tujuan Ekspor Lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan dan harmonisasi kebijakan fasilitas impor tujuan ekspor dan fasilitas impor tujuan ekspor lainnya",
-              "jabatan_pimpinan": "Kepala Subdirektorat Fasilitas Impor Tujuan Ekspor"
+              "jabatan_pimpinan": "Kepala Subdirektorat Fasilitas Impor Tujuan Ekspor",
+              "singkatan": "Subdirektorat Fasilitas Impor Tujuan Ekspor"
             },
             {
               "id": "subdirektorat-tempat-penimbunan-berikat",
@@ -221,7 +235,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan pemberian perizinan dan fasilitas, serta evaluasi dan harmonisasi kebijakan di bidang fasilitas Tempat Penimbunan Berikat",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan pemberian perizinan dan fasilitas di bidang kawasan berikat; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang pusat logistik berikat; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang tempat penimbunan berikat lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, serta pelaksanaan evaluasi dan harmonisasi kebijakan fasilitas tempat penimbunan berikat",
-              "jabatan_pimpinan": "Kepala Subdirektorat Tempat Penimbunan Berikat"
+              "jabatan_pimpinan": "Kepala Subdirektorat Tempat Penimbunan Berikat",
+              "singkatan": "Subdirektorat Tempat Penimbunan Berikat"
             },
             {
               "id": "subdirektorat-fasilitas-kawasan-khusus",
@@ -229,7 +244,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan dan harmonisasi kebijakan di bidang kawasan perdagangan bebas, pelabuhan bebas, kawasan ekonomi khusus, dan kawasan khusus lainnya",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang kawasan perdagangan bebas dan pelabuhan bebas; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis di bidang kawasan ekonomi khusus dan kawasan khusus lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan dan harmonisasi kebijakan fasilitas kawasan khusus",
-              "jabatan_pimpinan": "Kepala Subdirektorat Fasilitas Kawasan Khusus"
+              "jabatan_pimpinan": "Kepala Subdirektorat Fasilitas Kawasan Khusus",
+              "singkatan": "Subdirektorat Fasilitas Kawasan Khusus"
             }
           ]
         },
@@ -261,7 +277,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi, bimbingan teknis, dan evaluasi pelaksanaan di bidang tarif dan harga dasar, penatausahaan buku rekening barang kena cukai, pencatatan, pencacahan, perdagangan barang kena cukai, monitoring perkembangan harga pasar dan produksi barang kena cukai, alokasi earmarking cukai dalam kaitan tugas fungsi bea dan cukai, serta validasi rencana impor minuman",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan di bidang tarif dan harga dasar, serta pemantauan perkembangan harga pasar atas barang kena cukai hasil tembakau; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan di bidang tarif dan harga dasar serta pemantauan perkembangan harga pasar atas etil alkohol, minuman mengandung etil alkohol, dan barang kena cukai lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi pelaksanaan di bidang penatausahaan buku rekening barang kena cukai, pencatatan, pencacahan, dan perdagangan barang kena cukai serta pemantauan produksi atas barang kena cukai; penyiapan bahan bimbingan teknis dalam pelaksanaan alokasi dana bagi hasil cukai untuk sosialisasi dan pemberantasan barang kena cukai ilegal dan penyiapan bahan untuk alokasi pajak rokok, dan earmarking barang kena cukai lainnya dalam kaitan tugas fungsi bea dan cukai; pelaksanaan validasi rencana impor minuman",
-              "jabatan_pimpinan": "Kepala Subdirektorat Tarif Cukai dan Harga Dasar"
+              "jabatan_pimpinan": "Kepala Subdirektorat Tarif Cukai dan Harga Dasar",
+              "singkatan": "Subdirektorat Tarif Cukai dan Harga Dasar"
             },
             {
               "id": "subdirektorat-perizinan-dan-fasilitas-cukai",
@@ -269,7 +286,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan rumusan kebijakan, standardisasi, bimbingan teknis, dan evaluasi pelaksanaan di bidang perizinan, fasilitas, kemudahan pembayaran cukai, penimbunan, pemasukan, pengeluaran, dan pengangkutan barang kena cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi, bimbingan teknis, dan evaluasi pelaksanaan di bidang perizinan cukai; penyiapan bahan perumusan kebijakan, standardisasi, bimbingan teknis, dan evaluasi pelaksanaan di bidang fasilitas dan kemudahan pembayaran cukai; penyiapan bahan perumusan kebijakan, standardisasi, bimbingan teknis, dan evaluasi pelaksanaan di bidang penimbunan, pemasukan, pengeluaran, dan pengangkutan barang kena cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Perizinan dan Fasilitas Cukai"
+              "jabatan_pimpinan": "Kepala Subdirektorat Perizinan dan Fasilitas Cukai",
+              "singkatan": "Subdirektorat Perizinan dan Fasilitas Cukai"
             },
             {
               "id": "subdirektorat-pelunasan-dan-pengembalian-cukai",
@@ -277,7 +295,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pelunasan dan pengembalian cukai, penyediaan pita cukai dan tanda pelunasan cukai lainnya, pengujian identifikasi keaslian pita cukai dan tanda pelunasan cukai lainnya, penatausahaan, pendistribusian, penyerahan pita cukai dan tanda pelunasan cukai lainnya, proses pengembalian pita cukai dan tanda pelunasan cukai lainnya, serta penatausahaan pita cukai dan tanda pelunasan cukai lainnya yang tidak terpakai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pelunasan cukai, penyediaan, dan pengujian identifikasi keaslian pita cukai dan tanda pelunasan cukai lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pelunasan cukai, penatausahaan, penyerahan, dan pendistribusian pita cukai dan tanda pelunasan cukai lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pengembalian cukai, proses pengembalian pita cukai dan tanda pelunasan cukai lainnya, serta penatausahaan pita cukai dan tanda pelunasan cukai lainnya yang tidak terpakai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pelunasan dan Pengembalian Cukai"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pelunasan dan Pengembalian Cukai",
+              "singkatan": "Subdirektorat Pelunasan dan Pengembalian Cukai"
             },
             {
               "id": "subdirektorat-potensi-cukai-dan-kepatuhan-pengusaha-barang-kena-cukai",
@@ -285,7 +304,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang penggalian potensi jenis barang kena cukai dan kepatuhan pengusaha barang kena cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang penggalian potensi jenis barang kena cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang kepatuhan pengusaha barang kena cukai hasil tembakau dan barang kena cukai lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang kepatuhan pengusaha barang kena cukai etil alkohol dan minuman mengandung etil alkohol",
-              "jabatan_pimpinan": "Kepala Subdirektorat Potensi Cukai dan Kepatuhan Pengusaha Barang Kena Cukai"
+              "jabatan_pimpinan": "Kepala Subdirektorat Potensi Cukai dan Kepatuhan Pengusaha Barang Kena Cukai",
+              "singkatan": "Subdirektorat Potensi Cukai dan Kepatuhan Pengusaha Barang Kena Cukai"
             }
           ]
         },
@@ -318,7 +338,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi, pelaksanaan, dan harmonisasi kerja sama dan kerja sama teknis di bidang kepabeanan dan cukai dalam lingkup kerja sama bilateral dan regional",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama bilateral, pelaksanaan kerja sama teknis di bidang kepabeanan dan cukai, harmonisasi sehubungan dengan inisiatif kerja sama bilateral, studi kelayakan tawaran kerja sama bilateral, termasuk instrumen dan praktik- praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama bilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama bilateral dengan negara-negara di kawasan Asia; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama bilateral, pelaksanaan kerja sama teknis di bidang kepabeanan dan cukai, harmonisasi sehubungan dengan inisiatif kerja sama bilateral, studi kelayakan tawaran kerja sama bilateral, termasuk instrumen dan praktik- praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama bilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama bilateral dengan negara-negara di kawasan Amerika, Eropa, dan Afrika; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama bilateral, pelaksanaan kerja sama teknis di bidang kepabeanan dan cukai, harmonisasi sehubungan dengan inisiatif kerja sama bilateral, studi kelayakan tawaran kerja sama bilateral, termasuk instrumen dan praktik- praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama bilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama bilateral dengan negara-negara di kawasan Australia dan Pasifik; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama regional dan sub-regional, pelaksanaan kerja sama teknis di bidang kepabeanan dan cukai, harmonisasi sehubungan dengan inisiatif kerja sama regional dan sub- regional, studi kelayakan tawaran kerja sama regional dan sub-regional, termasuk instrumen dan praktik-praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama regional dan sub- regional, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama teknis kepabeanan dan cukai dalam lingkup regional dan sub-regional",
-              "jabatan_pimpinan": "Kepala Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai I"
+              "jabatan_pimpinan": "Kepala Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai I",
+              "singkatan": "Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai I"
             },
             {
               "id": "subdirektorat-kerja-sama-internasional-kepabeanan-dan-cukai-ii",
@@ -326,7 +347,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi, pelaksanaan, dan harmonisasi kerja sama dan kerja sama teknis di bidang kepabeanan dan cukai dalam lingkup kerja sama multilateral dan organisasi internasional, serta pembinaan teknis dan koordinasi di bidang kepabeanan dan cukai terhadap Pejabat yang ditugaskan pada perwakilan Republik Indonesia di luar negeri, organisasi internasional, atau negara lain",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama multilateral, kerja sama teknis, harmonisasi sehubungan dengan inisiatif kerja sama internasional, studi kelayakan tawaran kerja sama multilateral, termasuk instrumen dan praktik-praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama multilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama multilateral dalam lingkup World Customs Organization di bidang tarif dan hubungan perdagangan, dan pengembangan kapasitas, serta mendukung pembinaan teknis dan koordinasi di bidang kepabeanan dan cukai terhadap Pejabat yang ditugaskan pada perwakilan Republik Indonesia di luar negeri, organisasi internasional, atau negara lain; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama multilateral, kerja sama teknis, harmonisasi sehubungan dengan inisiatif kerja sama multilateral, studi kelayakan tawaran kerja sama multilateral, termasuk instrumen dan praktik-praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama multilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama multilateral dalam lingkup World Customs Organization di bidang pengawasan kepabeanan dan cukai dan kepatuhan, dan prosedur dan fasilitasi perdagangan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama multilateral, kerja sama teknis, harmonisasi sehubungan dengan inisiatif kerja sama multilateral, studi kelayakan tawaran kerja sama multilateral, termasuk instrumen dan praktik-praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama multilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama multilateral dalam lingkup World Trade Organization, Asia-Pacific Economic Cooperation, dan Asia-Europe Meeting; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kerja sama multilateral, kerja sama teknis, harmonisasi sehubungan dengan inisiatif kerja sama multilateral, studi kelayakan tawaran kerja sama multilateral, termasuk instrumen dan praktik-praktik kepabeanan dan cukai terbaik internasional, penyiapan rekomendasi rencana aksi kerja sama multilateral, penyiapan bahan penyusunan evaluasi pelaksanaan kerja sama multilateral dalam lingkup United Nations Office on Drugs and Crime, Developing 8 Countries, Organization of the Islamic Cooperation, International Atomic Energy Agency, World Intellectual Property Organization, dan organisasi internasional lainnya",
-              "jabatan_pimpinan": "Kepala Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai II"
+              "jabatan_pimpinan": "Kepala Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai II",
+              "singkatan": "Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai II"
             },
             {
               "id": "subdirektorat-kerja-sama-internasional-kepabeanan-dan-cukai-iii",
@@ -334,7 +356,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi, pelaksanaan, dan harmonisasi kerja sama ekonomi internasional, serta pelaksanaan kerja sama perdagangan, sebagaimana diatur di dalam Persetujuan Pembentukan Perdagangan Bebas, termasuk ketentuan asal barang (Rules of Origin) dalam lingkup kerja sama bilateral, regional, dan multilateral",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan persetujuan kerja sama perdagangan, termasuk teknis ketentuan asal barang (Rules of Origin), sebagaimana diatur dalam persetujuan perdagangan bebas serta pelaksanaan kerja sama teknis terkait persetujuan perdagangan bebas di bidang kepabeanan, dalam lingkup bilateral; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan persetujuan kerja sama perdagangan, termasuk teknis ketentuan asal barang (Rules of Origin), sebagaimana diatur dalam persetujuan perdagangan bebas serta pelaksanaan kerja sama teknis terkait persetujuan perdagangan bebas di bidang kepabeanan, dalam lingkup bilateral dengan negara kawasan di luar Association of Southeast Asian Nations (ASEAN); penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan persetujuan kerja sama perdagangan, termasuk teknis ketentuan asal barang (Rules of Origin), sebagaimana diatur dalam persetujuan perdagangan bebas serta pelaksanaan kerja sama teknis terkait persetujuan perdagangan bebas di bidang kepabeanan, dalam lingkup Association of Southeast Asian Nations (ASEAN), Association of Southeast Asian Nations (ASEAN) dengan Mitra Wicara Asia, dan Association of Southeast Asian Nations (ASEAN) dengan Mitra Wicara non-Asia; penyiapan penyusunan rumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan persetujuan kerja sama perdagangan, termasuk teknis ketentuan asal barang (Rules of Origin), sebagaimana diatur dalam persetujuan perdagangan bebas serta pelaksanaan kerja sama teknis terkait persetujuan perdagangan bebas di bidang kepabeanan, dalam lingkup Association of Southeast Asian Nations (ASEAN) dengan mitra wicara intra kawasan dan regional lainnya",
-              "jabatan_pimpinan": "Kepala Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai III"
+              "jabatan_pimpinan": "Kepala Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai III",
+              "singkatan": "Subdirektorat Kerja Sama Internasional Kepabeanan dan Cukai III"
             }
           ]
         },
@@ -366,7 +389,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelitian atas keberatan terhadap penetapan di bidang kepabeanan, cukai, dan penetapan lain yang kewenangan penanganan keberatannya diberikan kepada Direktorat Jenderal sesuai peraturan perundang-undangan",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelitian atas keberatan terhadap penetapan di bidang kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelitian atas keberatan terhadap penetapan di bidang cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelitian atas keberatan terhadap penetapan lain yang kewenangan penanganan keberatannya diberikan kepada Direktorat Jenderal sesuai peraturan perundang-undangan",
-              "jabatan_pimpinan": "Kepala Subdirektorat Keberatan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Keberatan",
+              "singkatan": "Subdirektorat Keberatan"
             },
             {
               "id": "subdirektorat-banding",
@@ -374,7 +398,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis operasional banding dan gugatan di Pengadilan Pajak, penyelesaian sengketa banding dan gugatan di Pengadilan Pajak di bidang kepabeanan dan cukai, penyelesaian peninjauan kembali atas putusan Pengadilan Pajak, serta pelaksanaan evaluasi putusan Pengadilan Pajak dan putusan Mahkamah Agung terkait putusan Pengadilan Pajak",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis operasional banding dan gugatan di Pengadilan Pajak di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis dan penyelesaian sengketa banding dan gugatan di Pengadilan Pajak di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan penyelesaian peninjauan kembali atas putusan Pengadilan Pajak; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan evaluasi putusan Pengadilan Pajak dan putusan Mahkamah Agung terkait putusan Pengadilan Pajak",
-              "jabatan_pimpinan": "Kepala Subdirektorat Banding"
+              "jabatan_pimpinan": "Kepala Subdirektorat Banding",
+              "singkatan": "Subdirektorat Banding"
             },
             {
               "id": "subdirektorat-advokasi",
@@ -382,7 +407,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pemberian pendapat hukum, upaya dan bantuan hukum terhadap masalah hukum di bidang kepabeanan dan cukai dan di bidang hukum lainnya yang timbul akibat tugas dan fungsi Direktorat Jenderal dalam persidangan di lembaga peradilan dan penyelesaian sengketa di luar pengadilan, serta upaya peninjauan kembali atas putusan Pengadilan Pajak",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pemberian pendapat hukum, upaya, dan bantuan hukum terhadap masalah hukum di bidang Tata Usaha Negara, uji materi atas peraturan perundang-undangan (Judicial Review) dan bidang lainnya dalam persidangan di lembaga peradilan dan penyelesaian sengketa di luar pengadilan yang timbul akibat pelaksanaan tugas dan fungsi Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pemberian pendapat hukum, upaya, dan bantuan hukum terhadap masalah hukum dalam bidang perdata dalam persidangan di lembaga peradilan dan penyelesaian sengketa di luar pengadilan yang timbul akibat pelaksanaan tugas dan fungsi Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pemberian pendapat hukum, upaya, dan bantuan hukum terhadap masalah hukum dalam bidang pidana, sengketa praperadilan, pendampingan saksi dan/atau ahli dalam penegakan hukum pidana yang timbul akibat pelaksanaan tugas dan fungsi Direktorat Jenderal, dan upaya peninjauan kembali atas sengketa Pengadilan Pajak yang penanganan bandingnya tidak dilakukan oleh Subdirektorat Banding",
-              "jabatan_pimpinan": "Kepala Subdirektorat Advokasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Advokasi",
+              "singkatan": "Subdirektorat Advokasi"
             },
             {
               "id": "subdirektorat-peraturan",
@@ -390,7 +416,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelaahan, dan penyusunan rancangan peraturan, petunjuk pelaksanaan, penegasan, teknis operasional, pengelolaan peraturan perundang-undangan, dan pemberian pendapat hukum dan/atau penjelasan hukum terkait penyempurnaan rancangan dan/atau pelaksanaan kebijakan dan peraturan perundang-undangan di bidang kepabeanan, cukai, dan peraturan lain yang terkait dengan tugas dan fungsi Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelaahan, dan penyusunan rancangan peraturan, petunjuk pelaksanaan, penegasan, teknis operasional, pengelolaan peraturan perundang-undangan, pemberian pendapat hukum dan/atau penjelasan hukum, serta evaluasi dan rekomendasi terkait penyempurnaan rancangan dan/atau pelaksanaan kebijakan dan peraturan perundang- undangan di bidang kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelaahan, dan penyusunan rancangan peraturan, petunjuk pelaksanaan, penegasan, teknis operasional, pengelolaan peraturan perundang-undangan, pemberian pendapat hukum dan/atau penjelasan hukum, serta evaluasi dan rekomendasi terkait penyempurnaan rancangan dan/atau pelaksanaan kebijakan dan peraturan perundang- undangan di bidang cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelaahan, dan penyusunan rancangan peraturan, petunjuk pelaksanaan, penegasan, teknis operasional, pengelolaan peraturan perundang-undangan, pemberian pendapat hukum dan/atau penjelasan hukum, serta evaluasi dan rekomendasi terkait penyempurnaan rancangan dan/atau pelaksanaan kebijakan dan peraturan perundang- undangan lain yang terkait dengan tugas dan fungsi Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Peraturan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Peraturan",
+              "singkatan": "Subdirektorat Peraturan"
             }
           ]
         },
@@ -421,7 +448,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan di bidang strategi, perencanaan sistem informasi dan transformasi digital",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan perencanaan tata kelola dan kebijakan teknologi informasi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan transformasi digital; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan arsitektur dan analisis kapasitas teknologi informasi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan manajemen program teknologi informasi",
-              "jabatan_pimpinan": "Kepala Subdirektorat Strategi dan Perencanaan Sistem Informasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Strategi dan Perencanaan Sistem Informasi",
+              "singkatan": "Subdirektorat Strategi dan Perencanaan Sistem Informasi"
             },
             {
               "id": "subdirektorat-pengembangan-sistem-informasi",
@@ -429,7 +457,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan di bidang perancangan dan pengembangan sistem informasi, serta pengendalian mutu dan manajemen perubahan",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan perancangan sistem informasi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengembangan sistem informasi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengendalian mutu dan manajemen perubahan",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pengembangan Sistem Informasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pengembangan Sistem Informasi",
+              "singkatan": "Subdirektorat Pengembangan Sistem Informasi"
             },
             {
               "id": "subdirektorat-pengendalian-keamanan-informasi-manajemen-layanan-dan-evaluasi",
@@ -437,7 +466,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan di bidang pengelolaan aset dan konfigurasi teknologi informasi, pengendalian keamanan informasi, manajemen layanan pengguna, manajemen gangguan dan masalah teknologi informasi, serta pemantauan, evaluasi dan manajemen kelangsungan layanan teknologi informasi",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengendalian keamanan informasi, pengelolaan aset dan konfigurasi teknologi informasi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan manajemen layanan, gangguan, dan masalah teknologi informasi; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pemantauan dan manajemen kelangsungan layanan teknologi informasi",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pengendalian Keamanan Informasi, Manajemen Layanan, dan Evaluasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pengendalian Keamanan Informasi, Manajemen Layanan, dan Evaluasi",
+              "singkatan": "Subdirektorat Pengendalian Keamanan Informasi, Manajemen Layanan, dan Evaluasi"
             },
             {
               "id": "subdirektorat-pengelolaan-dan-layanan-data",
@@ -445,7 +475,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan di bidang pengelolaan basis data, manajemen kualitas data, serta analisis dan layanan data",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengelolaan basis data; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan manajemen kualitas data; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan analisis dan layanan data",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pengelolaan dan Layanan Data"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pengelolaan dan Layanan Data",
+              "singkatan": "Subdirektorat Pengelolaan dan Layanan Data"
             }
           ]
         },
@@ -475,7 +506,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pencegahan pelanggaran kode etik dan perilaku, dan disiplin pegawai, serta pembinaan mental pegawai Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pembinaan mental pegawai Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang edukasi pencegahan korupsi, edukasi pencegahan pelanggaran kode etik dan perilaku, dan disiplin pegawai Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pengendalian gratifikasi, pemantauan atas perilaku, gaya hidup pegawai, dan pemantauan pemenuhan kewajiban pegawai dalam pelaporan harta kekayaan dan perpajakan, serta pemantauan zona integritas Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pengolahan dan analisis, penyajian, dan pelaporan data dan informasi pegawai Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang survei kinerja organisasi Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang penerimaan dan verifikasi, tindak lanjut, pemantauan dan administrasi pengaduan masyarakat",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pencegahan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pencegahan",
+              "singkatan": "Subdirektorat Pencegahan"
             },
             {
               "id": "subdirektorat-pengawasan-kepatuhan-dan-investigasi-internal",
@@ -483,7 +515,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pengawasan kepatuhan pelaksanaan tugas dan investigasi internal seluruh unsur Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pengawasan kepatuhan pelaksanaan tugas pelayanan dan pengawasan kepabeanan dan cukai, administrasi, dan fungsi lain Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang investigasi internal terkait dugaan pelanggaran kode etik dan perilaku, dan/atau disiplin pegawai Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pendampingan pegawai Direktorat Jenderal dalam pelaksanaan tugas, pemeriksaan mendadak/ sewaktu-waktu, surveillance, dan pemantauan tindak lanjut hasil pemeriksaan Inspektorat Jenderal atas pelanggaran kode etik dan perilaku, dan/atau disiplin pegawai Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pengawasan Kepatuhan dan Investigasi Internal"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pengawasan Kepatuhan dan Investigasi Internal",
+              "singkatan": "Subdirektorat Pengawasan Kepatuhan dan Investigasi Internal"
             },
             {
               "id": "subdirektorat-penjaminan-kualitas",
@@ -491,7 +524,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang penerapan pengendalian intern dan pemantauan pengendalian intern Direktorat Jenderal, dan pengelolaan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang penerapan pengendalian intern dan pemantauan pengendalian intern Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang penilaian dan reviu pengendalian intern atas pelaporan keuangan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pengelolaan tindak lanjut hasil pemeriksaan aparat pengawasan fungsional; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang reviu implementasi manajemen risiko Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Penjaminan Kualitas"
+              "jabatan_pimpinan": "Kepala Subdirektorat Penjaminan Kualitas",
+              "singkatan": "Subdirektorat Penjaminan Kualitas"
             },
             {
               "id": "subdirektorat-pengelolaan-kinerja",
@@ -499,7 +533,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang manajemen kinerja Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi manajemen kinerja di bidang pelayanan kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi manajemen kinerja di bidang pengawasan kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi manajemen kinerja di bidang administrasi dan fungsi lain Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, pelaksanaan, dan evaluasi di bidang pemantauan tindak lanjut arahan pimpinan atas pelaksanaan tugas dan fungsi Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pengelolaan Kinerja"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pengelolaan Kinerja",
+              "singkatan": "Subdirektorat Pengelolaan Kinerja"
             }
           ]
         },
@@ -529,7 +564,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang perencanaan audit kepabeanan dan cukai, perencanaan penelitian ulang serta analisis tujuan tertentu",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penyusunan dan pengelolaan data, serta perencanaan audit, perencanaan penelitian ulang serta analisis tujuan tertentu di bidang impor dan ekspor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penyusunan dan pengelolaan data, serta perencanaan audit, perencanaan penelitian ulang serta analisis tujuan tertentu di bidang fasilitas kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penyusunan dan pengelolaan data, perencanaan audit, serta analisis tujuan tertentu di bidang cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Perencanaan Audit"
+              "jabatan_pimpinan": "Kepala Subdirektorat Perencanaan Audit",
+              "singkatan": "Subdirektorat Perencanaan Audit"
             },
             {
               "id": "subdirektorat-pelaksanaan-audit-i",
@@ -537,7 +573,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pelaksanaan audit kepabeanan dan cukai, penelitian ulang serta pemeriksaan tujuan tertentu",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan audit, penelitian ulang serta pemeriksaan tujuan tertentu di bidang impor dan ekspor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan audit, penelitian ulang serta pemeriksaan tujuan tertentu di bidang fasilitas kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan audit serta pemeriksaan tujuan tertentu di bidang cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pelaksanaan Audit I"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pelaksanaan Audit I",
+              "singkatan": "Subdirektorat Pelaksanaan Audit I"
             },
             {
               "id": "subdirektorat-pelaksanaan-audit-ii",
@@ -545,7 +582,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pelaksanaan audit kepabeanan dan cukai, penelitian ulang serta pemeriksaan tujuan tertentu",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan audit, penelitian ulang serta pemeriksaan tujuan tertentu di bidang impor dan ekspor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan audit, penelitian ulang serta pemeriksaan tujuan tertentu di bidang fasilitas kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan audit serta pemeriksaan tujuan tertentu di bidang cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Pelaksanaan Audit II"
+              "jabatan_pimpinan": "Kepala Subdirektorat Pelaksanaan Audit II",
+              "singkatan": "Subdirektorat Pelaksanaan Audit II"
             },
             {
               "id": "subdirektorat-monitoring-evaluasi-dan-penjaminan-kualitas-audit",
@@ -553,7 +591,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi hasil pelaksanaan dan monitoring audit kepabeanan dan cukai, penelitian ulang dan pemeriksaan tujuan tertentu serta hasil pelaksanaan penjaminan kualitas audit kepabeanan dan cukai, penelitian ulang dan pemeriksaan tujuan tertentu",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi hasil pelaksanaan audit, penelitian ulang, dan pemeriksaan tujuan tertentu di bidang impor dan ekspor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi hasil pelaksanaan audit dan pemeriksaan tujuan tertentu di bidang cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi hasil pelaksanaan audit, penelitian ulang, dan pemeriksaan tujuan tertentu di bidang fasilitas kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi hasil pelaksanaan monitoring audit kepabeanan dan cukai, penelitian ulang, dan pemeriksaan tujuan tertentu; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi hasil pelaksanaan penjaminan kualitas perencanaan, pelaksanaan, serta monitoring dan evaluasi hasil audit kepabeanan dan cukai, penelitian ulang, dan pemeriksaan tujuan tertentu",
-              "jabatan_pimpinan": "Kepala Subdirektorat Monitoring, Evaluasi, dan Penjaminan Kualitas Audit"
+              "jabatan_pimpinan": "Kepala Subdirektorat Monitoring, Evaluasi, dan Penjaminan Kualitas Audit",
+              "singkatan": "Subdirektorat Monitoring, Evaluasi, dan Penjaminan Kualitas Audit"
             }
           ]
         },
@@ -584,7 +623,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan intelijen dalam rangka pencegahan pelanggaran peraturan perundang-undangan kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan intelijen dalam rangka pencegahan pelanggaran peraturan perundang-undangan kepabeanan di bidang impor dan ekspor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan intelijen dalam rangka pencegahan pelanggaran peraturan peraturan perundang-undangan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan intelijen dalam rangka pencegahan pelanggaran peraturan perundang-undangan kepabeanan di bidang fasilitas kepabeanan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan informasi, dukungan cyber, peralatan, teknologi, sarana operasi intelijen, dan pengelolaan profil dalam rangka pencegahan pelanggaran peraturan perundang-undangan kepabeanan dan cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Intelijen"
+              "jabatan_pimpinan": "Kepala Subdirektorat Intelijen",
+              "singkatan": "Subdirektorat Intelijen"
             },
             {
               "id": "subdirektorat-penindakan",
@@ -592,7 +632,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang patroli dan operasi dalam rangka pencegahan dan penindakan pelanggaran peraturan perundang-undangan kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang patroli dan operasi dalam rangka pencegahan dan penindakan pelanggaran peraturan perundang-undangan kepabeanan di bidang impor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang patroli dan operasi dalam rangka pencegahan dan penindakan pelanggaran peraturan perundang-undangan kepabeanan di bidang ekspor, fasilitas kepabeanan, barang larangan dan pembatasan, dan barang terkait kejahatan lintas negara; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang patroli dan operasi dalam rangka pencegahan dan penindakan pelanggaran peraturan perundang-undangan cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Penindakan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Penindakan",
+              "singkatan": "Subdirektorat Penindakan"
             },
             {
               "id": "subdirektorat-penyidikan",
@@ -600,7 +641,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang penyidikan tindak pidana kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang pengenaan sanksi administrasi dan penyidikan tindak pidana kepabeanan, serta pelaksanaan penyidikan tindak pidana kepabeanan, tindak pidana pencucian uang, dan tindak pidana lainnya yang menjadi kewenangan penyidik Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan di bidang pengenaan sanksi administrasi dan penyidikan tindak pidana di bidang cukai, serta pelaksanaan penyidikan tindak pidana di bidang cukai, dan tindak pidana pencucian uang; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang urusan barang hasil penindakan, barang bukti, premi, digital forensic serta penatausahaan data pelanggaran dan data penyelesaian pelanggaran peraturan perundang- undangan kepabeanan dan cukai; penyiapan bahan penyusunan rumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang urusan tempat tahanan",
-              "jabatan_pimpinan": "Kepala Subdirektorat Penyidikan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Penyidikan",
+              "singkatan": "Subdirektorat Penyidikan"
             },
             {
               "id": "subdirektorat-sarana-operasi",
@@ -608,7 +650,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, perencanaan, penyiapan pelaksanaan pengadaan, pemeliharaan, standardisasi dan bimbingan teknis, monitoring dan evaluasi sarana operasi",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan di bidang pengusulan rencana kebutuhan, perencanaan pengadaan, dan perencanaan pemeliharaan sarana operasi bagi seluruh satuan organisasi di lingkungan Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan penyiapan pelaksanaan di bidang pengadaan dan pemeliharaan sarana operasi yang meliputi perkapalan, penerbangan, telekomunikasi, navigasi, penginderaan dan elektronika; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan penyiapan pelaksanaan di bidang pengadaan dan pemeliharaan sarana operasi yang meliputi persenjataan, pemindai dan sarana operasi lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan monitoring dan evaluasi hasil pelaksanaan pengadaan, pemeliharaan dan penyusunan tindak lanjut dalam pemanfaatan, pengamanan, penilaian, pemindahtanganan, pemusnahan dan penghapusan sarana operasi bagi seluruh satuan organisasi di lingkungan Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Sarana Operasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Sarana Operasi",
+              "singkatan": "Subdirektorat Sarana Operasi"
             },
             {
               "id": "subdirektorat-patroli-laut",
@@ -616,7 +659,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, perencanaan, pelaksanaan dan evaluasi patroli dan operasi di laut dalam rangka pencegahan dan penindakan pelanggaran peraturan perundang-undangan kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, perencanaan, pelaksanaan dan evaluasi patroli dan operasi di laut dalam rangka pencegahan dan penindakan pelanggaran peraturan perundang-undangan kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, perencanaan, pelaksanaan dan evaluasi penyelenggaraan pusat komando dan pengendalian patroli laut yang mencakup integrasi dan analisis data dan informasi, dukungan dan pelaksanaan fungsi komando, kendali dan komunikasi serta penyediaan data dan informasi untuk perencanaan, pelaksanaan dan evaluasi patroli dan operasi di laut",
-              "jabatan_pimpinan": "Kepala Subdirektorat Patroli Laut"
+              "jabatan_pimpinan": "Kepala Subdirektorat Patroli Laut",
+              "singkatan": "Subdirektorat Patroli Laut"
             },
             {
               "id": "subdirektorat-kejahatan-lintas-negara",
@@ -624,7 +668,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengawasan di bidang kejahatan lintas negara",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengelolaan data atau informasi terkait pembawaan uang tunai dan/atau instrumen pembayaran lain lintas negara dan pencucian uang berbasis perdagangan atas dugaan tindak pidana/kejahatan pencucian uang; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengelolaan data atau informasi atas barang hasil pelanggaran hak atas kekayaan intelektual; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengelolaan data atau informasi atas barang yang diduga terkait terorisme dan/atau kejahatan lintas negara lainnya serta pendanaan terorisme; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan data atau informasi di bidang kejahatan lintas negara",
-              "jabatan_pimpinan": "Kepala Subdirektorat Kejahatan Lintas Negara"
+              "jabatan_pimpinan": "Kepala Subdirektorat Kejahatan Lintas Negara",
+              "singkatan": "Subdirektorat Kejahatan Lintas Negara"
             }
           ]
         },
@@ -656,7 +701,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan penerimaan, uji coba rancang bangun pengelolaan penerimaan, analisis basis penerimaan, penyusunan target penerimaan, penagihan, dan pengembalian atas pungutan bea masuk, bea keluar, cukai, dan pungutan negara lainnya yang dipungut Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan evaluasi administrasi pelaporan penerimaan bea masuk, bea keluar, cukai, dan pungutan negara lainnya yang dipungut Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pemantauan penerimaan bea masuk, bea keluar, cukai, dan pungutan negara lainnya yang dipungut Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penelaahan, analisis basis penerimaan, dan pemberian rekomendasi hasil pemantauan penerimaan bea masuk, bea keluar, cukai, dan pungutan negara lainnya yang dipungut Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan penatausahaan piutang, pengembalian, pelaksanaan penagihan aktif, pemberian penundaan dan pengangsuran, penyusunan petunjuk teknis jaminan dan pengembalian, serta pemantauan penagihan dan pengembalian; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penyusunan proyeksi, potensi, pendistribusian dan evaluasi target, serta pemberian rekomendasi penerimaan",
-              "jabatan_pimpinan": "Kepala Subdirektorat Penerimaan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Penerimaan",
+              "singkatan": "Subdirektorat Penerimaan"
             },
             {
               "id": "subdirektorat-perencanaan-strategis-dan-manajemen-transformasi",
@@ -664,7 +710,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan penyusunan rencana strategis jangka panjang dan jangka menengah, rencana kerja, dan pelaksanaan uji coba rancang bangun serta evaluasi implementasi pengembangan di bidang organisasi, sumber daya manusia, proses bisnis, dan manajemen transformasi",
               "fungsi": "Penyiapan bahan penyusunan rencana strategis jangka panjang dan jangka menengah, dan rencana kerja; penyiapan bahan perancangan, pelaksanaan uji coba rancang bangun, dan evaluasi implementasi pengembangan konsep desain kelembagaan dan prosedur kerja; penyiapan bahan perancangan, pelaksanaan uji coba rancang bangun, dan evaluasi implementasi pengembangan konsep manajemen sumber daya manusia, sistem perencanaan, pengembangan, kompensasi, mutasi, dan promosi pegawai, sistem klasifikasi jabatan, kompetensi, kapasitas, pemanfaatan dan pengukuran kinerja pegawai, pembinaan mental, budaya, dan perilaku pegawai; penyiapan bahan perumusan kebijakan, evaluasi dan pelaksanaan penyusunan dan uji coba rancang bangun pengembangan konsep administrasi, pelayanan, pengawasan, penegakan hukum kepabeanan dan cukai, pengelolaan transformasi kelembagaan, koordinasi manajemen perubahan, dan koordinasi penjaminan kualitas pengembangan di bidang kepabeanan dan cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Perencanaan Strategis dan Manajemen Transformasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Perencanaan Strategis dan Manajemen Transformasi",
+              "singkatan": "Subdirektorat Perencanaan Strategis dan Manajemen Transformasi"
             },
             {
               "id": "subdirektorat-manajemen-risiko",
@@ -672,7 +719,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan manajemen risiko kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan evaluasi pelaksanaan penerapan manajemen risiko di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi, dan pelaksanaan pengumpulan dan pengolahan data dalam rangka penentuan konteks dan identifikasi risiko di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi, dan pelaksanaan pengumpulan, pengolahan, dan analisis data dalam rangka pengendalian risiko di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan monitoring dan evaluasi dalam rangka tindak lanjut manajemen risiko di bidang kepabeanan dan cukai; pengoordinasian penyusunan laporan akuntabilitas Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Manajemen Risiko"
+              "jabatan_pimpinan": "Kepala Subdirektorat Manajemen Risiko",
+              "singkatan": "Subdirektorat Manajemen Risiko"
             }
           ]
         },
@@ -705,7 +753,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan intelijen di bidang Narkotika, Psikotropika, dan Prekursor berdasarkan peraturan perundangan-undangan",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan, distribusi, dan pemantauan pemanfaatan data dan/atau informasi intelijen dalam rangka pencegahan dan pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor berdasarkan peraturan perundangan-undangan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengamatan, penggambaran, dan pendalaman target dalam rangka pengumpulan dan pendalaman data dan/atau informasi di bidang Narkotika, Psikotropika, dan Prekursor berdasarkan peraturan perundangan-undangan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pembentukan dan pembinaan jaringan informasi di lapangan dalam rangka penguatan kegiatan intelijen di bidang Narkotika, Psikotropika, dan Prekursor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penilaian data dan/atau informasi di bidang Narkotika, Psikotropika, dan Prekursor dan penelaahan kegiatan intelijen berdasarkan peraturan perundangan-undangan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengembangan dan pengelolaan pangkalan data dan informasi intelijen di bidang Narkotika, Psikotropika, dan Prekursor",
-              "jabatan_pimpinan": "Kepala Subdirektorat Analisis dan Target Narkotika"
+              "jabatan_pimpinan": "Kepala Subdirektorat Analisis dan Target Narkotika",
+              "singkatan": "Subdirektorat Analisis dan Target Narkotika"
             },
             {
               "id": "subdirektorat-operasi-dan-pengungkapan-jaringan-narkotika",
@@ -713,7 +762,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan patroli pengawasan, operasi penindakan, penanganan pasca penindakan, dan/atau penanganan perkara, serta pengelolaan kegiatan patroli dan operasi dengan instansi atau unit terkait dalam rangka pencegahan dan pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor berdasarkan berdasarkan peraturan perundangan- undangan",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan patroli pengawasan dan operasi penindakan dalam rangka pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penanganan pasca penindakan dan/atau penanganan perkara dalam rangka pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan kegiatan patroli dan operasi dengan instansi atau unit terkait dalam rangka pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor",
-              "jabatan_pimpinan": "Kepala Subdirektorat Operasi dan Pengungkapan Jaringan Narkotika"
+              "jabatan_pimpinan": "Kepala Subdirektorat Operasi dan Pengungkapan Jaringan Narkotika",
+              "singkatan": "Subdirektorat Operasi dan Pengungkapan Jaringan Narkotika"
             },
             {
               "id": "subdirektorat-unit-anjing-pelacak-(k-9)",
@@ -721,7 +771,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan, pengembangan, dan pelatihan unit Anjing Pelacak (K-9) Direktorat Jenderal serta pengelolaan sarana fasilitas unit Anjing Pelacak (K-9) dan operasional pengawasan dengan menggunakan Anjing Pelacak (K-9) Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengelolaan, pengembangan, dan pelatihan unit Anjing Pelacak (K-9); penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan pengendalian mutu dan pemantauan evaluasi kompetensi dan kecakapan unit Anjing Pelacak (K-9); penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan perencanaan dan pengelolaan operasional unit Anjing Pelacak (K-9) dalam rangka patroli dan operasi pengawasan Direktorat Jenderal berdasarkan peraturan perundangan-undangan; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan perencanaan, pengembangan dan pengelolaan, serta pemantauan pemanfaatan sarana prasarana fasilitas unit Anjing Pelacak (K-9)",
-              "jabatan_pimpinan": "Kepala Subdirektorat Unit Anjing Pelacak (K-9)"
+              "jabatan_pimpinan": "Kepala Subdirektorat Unit Anjing Pelacak (K-9)",
+              "singkatan": "Subdirektorat Unit Anjing Pelacak (K-9)"
             },
             {
               "id": "dukungan-operasi-narkotika",
@@ -729,7 +780,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan penyediaan dan pengelolaan sarana operasi Narkotika, Psikotropika, dan Prekursor di lingkungan Direktorat Jenderal, penjaminan mutu kompetensi pengawasan Narkotika, Psikotropika, dan Prekursor, pengoordinasian kerja sama dengan instansi atau unit terkait, serta penjaminan kualitas dan pengendalian mutu kegiatan intelijen dan penanganan pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi, evaluasi dan pelaksanaan perencanaan, penyediaan dan pengelolaan sarana operasi Narkotika, Psikotropika, dan Prekursor meliputi alat identifikasi dan deteksi dalam rangka penguatan kegiatan pengawasan di bidang Narkotika, Psikotropika, dan Prekursor, serta penyediaan anjing pelacak (K-9) Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi, evaluasi dan pelaksanaan penjaminan mutu kompetensi pengawasan di bidang Narkotika, Psikotropika, dan Prekursor; penyiapan bahan perumusan kebijakan, standardisasi, evaluasi dan pelaksanaan pengoordinasian dan penelaahan kerja sama dan utilisasi sumber daya di bidang Narkotika, Psikotropika, dan Prekursor dengan instansi atau unit terkait; penyiapan bahan perumusan kebijakan, standardisasi, evaluasi dan pelaksanaan penjaminan kualitas dan pengendalian mutu kegiatan intelijen dan penanganan pengungkapan jaringan kejahatan Narkotika, Psikotropika, dan Prekursor",
-              "jabatan_pimpinan": "Kepala Dukungan Operasi Narkotika"
+              "jabatan_pimpinan": "Kepala Dukungan Operasi Narkotika",
+              "singkatan": "Dukungan Operasi Narkotika"
             }
           ]
         },
@@ -762,7 +814,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan perencanaan strategi dan riset komunikasi publik, pengelolaan data dan analisis komunikasi publik, serta monitoring dan evaluasi kegiatan komunikasi publik dan bimbingan kepatuhan pengguna jasa di bidang kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan perencanaan strategi dan riset komunikasi publik di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan monitoring opini publik, pengelolaan data dan analisis komunikasi publik di bidang kepabeanan dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, dan pelaksanaan monitoring dan evaluasi kegiatan komunikasi publik dan kegiatan bimbingan kepatuhan pengguna jasa, serta manajemen dan penjaminan kualitas penyelenggaraan operasional desk informasi dan saluran kontak layanan di bidang kepabeanan dan cukai",
-              "jabatan_pimpinan": "Kepala Subdirektorat Strategi Komunikasi, Monitoring dan Evaluasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Strategi Komunikasi, Monitoring dan Evaluasi",
+              "singkatan": "Subdirektorat Strategi Komunikasi, Monitoring dan Evaluasi"
             },
             {
               "id": "subdirektorat-hubungan-masyarakat-dan-penyuluhan",
@@ -770,7 +823,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan komunikasi dan penyuluhan di bidang kepabeanan dan cukai kepada pemangku kepentingan internal, masyarakat, kementerian atau lembaga negara, dan media, serta pembinaan dan pengelolaan penyelenggaraan event di bidang komunikasi publik dan layanan informasi",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan komunikasi di bidang kepabeanan dan cukai yang berhubungan dengan masyarakat dan media massa; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan komunikasi di bidang kepabeanan dan cukai yang berhubungan dengan kementerian atau lembaga negara, lembaga swadaya masyarakat, dan pemangku kepentingan eksternal lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan komunikasi di bidang kepabeanan dan cukai yang berhubungan dengan pemangku kepentingan internal di lingkungan Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan penyuluhan di bidang kepabeanan dan cukai; penyiapan bahan pembinaan dan pengelolaan penyelenggaraan event di bidang komunikasi publik dan layanan informasi",
-              "jabatan_pimpinan": "Kepala Subdirektorat Hubungan Masyarakat dan Penyuluhan"
+              "jabatan_pimpinan": "Kepala Subdirektorat Hubungan Masyarakat dan Penyuluhan",
+              "singkatan": "Subdirektorat Hubungan Masyarakat dan Penyuluhan"
             },
             {
               "id": "subdirektorat-publikasi",
@@ -778,7 +832,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan penyiapan materi penyuluhan dan publikasi, serta penayangan dan pengelolaan saluran publikasi terkait tugas dan fungsi, dan kinerja Direktorat Jenderal",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan penyiapan materi untuk keperluan penyuluhan dan publikasi terkait tugas dan fungsi, dan kinerja Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan penayangan dan pengelolaan saluran publikasi terkait tugas dan fungsi, dan kinerja Direktorat Jenderal; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pengelolaan perpustakaan, museum, saluran publikasi swakelola lainnya, dan satuan musik Direktorat Jenderal",
-              "jabatan_pimpinan": "Kepala Subdirektorat Publikasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Publikasi",
+              "singkatan": "Subdirektorat Publikasi"
             },
             {
               "id": "subdirektorat-bimbingan-pengguna-jasa-dan-manajemen-layanan-informasi",
@@ -786,7 +841,8 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-3",
               "tugas": "Melaksanakan penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan operasional pusat kontak layanan, pemutakhiran basis pengetahuan, pengelolaan layanan informasi, dan bimbingan kepatuhan pengguna jasa di bidang kepabeanan dan cukai",
               "fungsi": "Penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan operasional pusat kontak layanan melalui saluran telepon; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan operasional pusat kontak layanan melalui surat elektronik, media sosial, atau media layanan informasi lainnya; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan pemutakhiran basis pengetahuan bea dan cukai; penyiapan bahan perumusan kebijakan, standardisasi dan bimbingan teknis, evaluasi dan pelaksanaan kegiatan layanan informasi dan kegiatan bimbingan kepatuhan pengguna jasa, serta penyiapan data dan informasi publik terkait Direktorat Jenderal dalam rangka keterbukaan informasi publik",
-              "jabatan_pimpinan": "Kepala Subdirektorat Bimbingan Pengguna Jasa dan Manajemen Layanan Informasi"
+              "jabatan_pimpinan": "Kepala Subdirektorat Bimbingan Pengguna Jasa dan Manajemen Layanan Informasi",
+              "singkatan": "Subdirektorat Bimbingan Pengguna Jasa dan Manajemen Layanan Informasi"
             }
           ]
         },
@@ -908,35 +964,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-banda-aceh-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-banda-aceh-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-banda-aceh-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-banda-aceh-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -971,35 +1032,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-lhokseumawe-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-lhokseumawe-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-lhokseumawe-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-lhokseumawe-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1034,35 +1100,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sabang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sabang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sabang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sabang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1097,35 +1168,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-meulaboh-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-meulaboh-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-meulaboh-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-meulaboh-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1160,35 +1236,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-langsa-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-langsa-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-langsa-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-langsa-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1223,49 +1304,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kuala-langsa-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kuala-langsa-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-kuala-langsa-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kuala-langsa-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kuala-langsa-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-kuala-langsa-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             }
@@ -1359,56 +1447,64 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-belawan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, dan fasilitas di bidang kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-belawan-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, dan publikasi peraturan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-belawan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli laut/darat, operasi pencegahan dan penindakan pelanggaran, penyidikan, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-belawan-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, investigasi internal, pengelolaan risiko dan kinerja.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-belawan-subbag-manifes",
                   "nama": "Subbagian Administrasi Manifes",
                   "level": "eselon-4",
                   "tugas": "Melakukan penerimaan, penelitian, penatausahaan manifes kedatangan/keberangkatan sarana pengangkut, dan denda manifes.",
-                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes"
+                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes",
+                  "singkatan": "Subbagian Administrasi Manifes"
                 },
                 {
                   "id": "kppbc-belawan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi bea masuk, bea keluar, cukai, pungutan negara, penagihan aktif, jaminan dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-belawan-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengoperasian PDE, pengolahan data pabean/cukai, pelayanan dukungan teknis komputer, verifikasi kelengkapan dokumen, dan penyajian data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -1443,49 +1539,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-medan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-medan-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-medan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-medan-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-medan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-medan-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -1520,35 +1623,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kuala-tanjung-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kuala-tanjung-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kuala-tanjung-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kuala-tanjung-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1583,35 +1691,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sibolga-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sibolga-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sibolga-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sibolga-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1646,35 +1759,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-teluk-nibung-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-teluk-nibung-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-teluk-nibung-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-teluk-nibung-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -1709,35 +1827,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pematangsiantar-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pematangsiantar-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pematangsiantar-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pematangsiantar-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -1831,49 +1954,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pekanbaru-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pekanbaru-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-pekanbaru-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pekanbaru-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pekanbaru-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-pekanbaru-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -1908,56 +2038,64 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-dumai-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, dan fasilitas di bidang kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-dumai-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, dan publikasi peraturan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-dumai-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli laut/darat, operasi pencegahan dan penindakan pelanggaran, penyidikan, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-dumai-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, investigasi internal, pengelolaan risiko dan kinerja.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-dumai-subbag-manifes",
                   "nama": "Subbagian Administrasi Manifes",
                   "level": "eselon-4",
                   "tugas": "Melakukan penerimaan, penelitian, penatausahaan manifes kedatangan/keberangkatan sarana pengangkut, dan denda manifes.",
-                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes"
+                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes",
+                  "singkatan": "Subbagian Administrasi Manifes"
                 },
                 {
                   "id": "kppbc-dumai-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi bea masuk, bea keluar, cukai, pungutan negara, penagihan aktif, jaminan dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-dumai-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengoperasian PDE, pengolahan data pabean/cukai, pelayanan dukungan teknis komputer, verifikasi kelengkapan dokumen, dan penyajian data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -1992,35 +2130,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tembilahan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tembilahan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tembilahan-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tembilahan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -2055,35 +2198,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bengkalis-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-bengkalis-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bengkalis-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bengkalis-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -2118,35 +2266,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-siak-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-siak-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-siak-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-siak-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -2240,49 +2393,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tbk-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tbk-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-tbk-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tbk-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tbk-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-tbk-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -2317,49 +2477,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tanjungpinang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tanjungpinang-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-tanjungpinang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tanjungpinang-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tanjungpinang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-tanjungpinang-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -2394,35 +2561,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-ranai-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-ranai-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-ranai-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-ranai-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -2457,35 +2629,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tarempa-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tarempa-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tarempa-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tarempa-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -2520,35 +2697,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-dabosingkep-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-dabosingkep-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-dabosingkep-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-dabosingkep-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -2642,49 +2824,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-palembang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-palembang-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-palembang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-palembang-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-palembang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-palembang-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -2719,49 +2908,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-jambi-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-jambi-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-jambi-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-jambi-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-jambi-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-jambi-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -2796,35 +2992,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pangkalpinang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pangkalpinang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pangkalpinang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pangkalpinang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -2859,35 +3060,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tanjungpandan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tanjungpandan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tanjungpandan-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tanjungpandan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -2922,35 +3128,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bengkulu-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-bengkulu-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bengkulu-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bengkulu-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -3044,49 +3255,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-teluk-bayur-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-teluk-bayur-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-teluk-bayur-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-teluk-bayur-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-teluk-bayur-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-teluk-bayur-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -3121,49 +3339,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bandarlampung-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-bandarlampung-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-bandarlampung-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bandarlampung-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bandarlampung-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-bandarlampung-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -3198,35 +3423,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kotabumi-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kotabumi-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kotabumi-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kotabumi-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -3320,56 +3550,64 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-merak-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, dan fasilitas di bidang kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-merak-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, dan publikasi peraturan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-merak-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli laut/darat, operasi pencegahan dan penindakan pelanggaran, penyidikan, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-merak-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, investigasi internal, pengelolaan risiko dan kinerja.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-merak-subbag-manifes",
                   "nama": "Subbagian Administrasi Manifes",
                   "level": "eselon-4",
                   "tugas": "Melakukan penerimaan, penelitian, penatausahaan manifes kedatangan/keberangkatan sarana pengangkut, dan denda manifes.",
-                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes"
+                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes",
+                  "singkatan": "Subbagian Administrasi Manifes"
                 },
                 {
                   "id": "kppbc-merak-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi bea masuk, bea keluar, cukai, pungutan negara, penagihan aktif, jaminan dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-merak-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengoperasian PDE, pengolahan data pabean/cukai, pelayanan dukungan teknis komputer, verifikasi kelengkapan dokumen, dan penyajian data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -3404,49 +3642,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tangerang-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-tangerang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tangerang-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tangerang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-tangerang-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-tangerang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -3481,49 +3726,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-cikupa-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-cikupa-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-cikupa-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-cikupa-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-cikupa-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-cikupa-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -3558,35 +3810,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-merak-c-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-merak-c-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-merak-c-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-merak-c-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -3680,49 +3937,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-marunda-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-marunda-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-marunda-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-marunda-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-marunda-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-marunda-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -3757,49 +4021,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kalibaru-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-kalibaru-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kalibaru-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kalibaru-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-kalibaru-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-kalibaru-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -3834,35 +4105,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pasarbaru-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pasarbaru-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pasarbaru-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pasarbaru-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -3897,35 +4173,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-jakarta-umum-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-jakarta-umum-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-jakarta-umum-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-jakarta-umum-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -4019,49 +4300,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bandung-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-bandung-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bandung-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bandung-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-bandung-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-bandung-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -4096,49 +4384,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bekasi-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-bekasi-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bekasi-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bekasi-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-bekasi-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-bekasi-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -4173,49 +4468,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bogor-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-bogor-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bogor-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bogor-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-bogor-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-bogor-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -4250,49 +4552,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-cikarang-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-cikarang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-cikarang-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-cikarang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-cikarang-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-cikarang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -4327,49 +4636,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-purwakarta-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-purwakarta-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-purwakarta-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-purwakarta-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-purwakarta-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-purwakarta-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -4404,35 +4720,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tasikmalaya-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tasikmalaya-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tasikmalaya-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tasikmalaya-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -4526,56 +4847,64 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tanjungemas-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, dan fasilitas di bidang kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tanjungemas-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, dan publikasi peraturan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-tanjungemas-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli laut/darat, operasi pencegahan dan penindakan pelanggaran, penyidikan, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tanjungemas-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, investigasi internal, pengelolaan risiko dan kinerja.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tanjungemas-subbag-manifes",
                   "nama": "Subbagian Administrasi Manifes",
                   "level": "eselon-4",
                   "tugas": "Melakukan penerimaan, penelitian, penatausahaan manifes kedatangan/keberangkatan sarana pengangkut, dan denda manifes.",
-                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes"
+                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes",
+                  "singkatan": "Subbagian Administrasi Manifes"
                 },
                 {
                   "id": "kppbc-tanjungemas-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi bea masuk, bea keluar, cukai, pungutan negara, penagihan aktif, jaminan dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-tanjungemas-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengoperasian PDE, pengolahan data pabean/cukai, pelayanan dukungan teknis komputer, verifikasi kelengkapan dokumen, dan penyajian data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -4610,49 +4939,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-semarang-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-semarang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-semarang-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-semarang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-semarang-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-semarang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -4687,49 +5023,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-surakarta-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-surakarta-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-surakarta-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-surakarta-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-surakarta-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-surakarta-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -4764,49 +5107,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-yogyakarta-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-yogyakarta-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-yogyakarta-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-yogyakarta-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-yogyakarta-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-yogyakarta-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -4841,49 +5191,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan, pengoperasian komputer dan pertukaran data.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kudus-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, penerimaan, verifikasi, dan pendistribusian dokumen.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kudus-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-kudus-seksi-intelijen-penindakan",
                   "nama": "Seksi Intelijen dan Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen cukai/pabean, patroli darat, pencegahan pelanggaran cukai (rokok/miras ilegal), penindakan, dan pengelolaan sarana pengawasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Intelijen dan Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Intelijen dan Penindakan",
+                  "singkatan": "Seksi Intelijen dan Penindakan"
                 },
                 {
                   "id": "kppbc-kudus-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kudus-seksi-penyidikan-bhp",
                   "nama": "Seksi Penyidikan dan Barang Hasil Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan penyidikan tindak pidana kepabeanan dan cukai, penatausahaan barang hasil penindakan, barang bukti, dan penyelesaian perkara hukum.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan",
+                  "singkatan": "Seksi Penyidikan dan Barang Hasil Penindakan"
                 },
                 {
                   "id": "kppbc-kudus-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi cukai, pungutan negara, jaminan, dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -4918,35 +5275,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-cilacap-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-cilacap-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-cilacap-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-cilacap-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -5040,56 +5402,64 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tanjungperak-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, dan fasilitas di bidang kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tanjungperak-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, dan publikasi peraturan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-tanjungperak-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli laut/darat, operasi pencegahan dan penindakan pelanggaran, penyidikan, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tanjungperak-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, investigasi internal, pengelolaan risiko dan kinerja.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tanjungperak-subbag-manifes",
                   "nama": "Subbagian Administrasi Manifes",
                   "level": "eselon-4",
                   "tugas": "Melakukan penerimaan, penelitian, penatausahaan manifes kedatangan/keberangkatan sarana pengangkut, dan denda manifes.",
-                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes"
+                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes",
+                  "singkatan": "Subbagian Administrasi Manifes"
                 },
                 {
                   "id": "kppbc-tanjungperak-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi bea masuk, bea keluar, cukai, pungutan negara, penagihan aktif, jaminan dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-tanjungperak-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengoperasian PDE, pengolahan data pabean/cukai, pelayanan dukungan teknis komputer, verifikasi kelengkapan dokumen, dan penyajian data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -5124,56 +5494,64 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-juanda-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, dan fasilitas di bidang kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-juanda-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, dan publikasi peraturan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-juanda-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli laut/darat, operasi pencegahan dan penindakan pelanggaran, penyidikan, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-juanda-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, investigasi internal, pengelolaan risiko dan kinerja.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-juanda-subbag-manifes",
                   "nama": "Subbagian Administrasi Manifes",
                   "level": "eselon-4",
                   "tugas": "Melakukan penerimaan, penelitian, penatausahaan manifes kedatangan/keberangkatan sarana pengangkut, dan denda manifes.",
-                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes"
+                  "jabatan_pimpinan": "Kepala Subbagian Administrasi Manifes",
+                  "singkatan": "Subbagian Administrasi Manifes"
                 },
                 {
                   "id": "kppbc-juanda-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi bea masuk, bea keluar, cukai, pungutan negara, penagihan aktif, jaminan dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-juanda-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengoperasian PDE, pengolahan data pabean/cukai, pelayanan dukungan teknis komputer, verifikasi kelengkapan dokumen, dan penyajian data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -5208,49 +5586,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sidoarjo-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sidoarjo-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-sidoarjo-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sidoarjo-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sidoarjo-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-sidoarjo-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -5285,49 +5670,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-gresik-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-gresik-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-gresik-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-gresik-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-gresik-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-gresik-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -5362,49 +5754,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pasuruan-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-pasuruan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pasuruan-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pasuruan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-pasuruan-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-pasuruan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             }
@@ -5498,49 +5897,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan, pengoperasian komputer dan pertukaran data.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-malang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, penerimaan, verifikasi, dan pendistribusian dokumen.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-malang-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-malang-seksi-intelijen-penindakan",
                   "nama": "Seksi Intelijen dan Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen cukai/pabean, patroli darat, pencegahan pelanggaran cukai (rokok/miras ilegal), penindakan, dan pengelolaan sarana pengawasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Intelijen dan Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Intelijen dan Penindakan",
+                  "singkatan": "Seksi Intelijen dan Penindakan"
                 },
                 {
                   "id": "kppbc-malang-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-malang-seksi-penyidikan-bhp",
                   "nama": "Seksi Penyidikan dan Barang Hasil Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan penyidikan tindak pidana kepabeanan dan cukai, penatausahaan barang hasil penindakan, barang bukti, dan penyelesaian perkara hukum.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan",
+                  "singkatan": "Seksi Penyidikan dan Barang Hasil Penindakan"
                 },
                 {
                   "id": "kppbc-malang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi cukai, pungutan negara, jaminan, dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5575,49 +5981,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan, pengoperasian komputer dan pertukaran data.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kediri-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, penerimaan, verifikasi, dan pendistribusian dokumen.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kediri-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-kediri-seksi-intelijen-penindakan",
                   "nama": "Seksi Intelijen dan Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen cukai/pabean, patroli darat, pencegahan pelanggaran cukai (rokok/miras ilegal), penindakan, dan pengelolaan sarana pengawasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Intelijen dan Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Intelijen dan Penindakan",
+                  "singkatan": "Seksi Intelijen dan Penindakan"
                 },
                 {
                   "id": "kppbc-kediri-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kediri-seksi-penyidikan-bhp",
                   "nama": "Seksi Penyidikan dan Barang Hasil Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan penyidikan tindak pidana kepabeanan dan cukai, penatausahaan barang hasil penindakan, barang bukti, dan penyelesaian perkara hukum.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan",
+                  "singkatan": "Seksi Penyidikan dan Barang Hasil Penindakan"
                 },
                 {
                   "id": "kppbc-kediri-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan, administrasi cukai, pungutan negara, jaminan, dan pengembalian.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5652,35 +6065,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-blitar-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-blitar-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-blitar-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-blitar-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5715,35 +6133,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-madiun-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-madiun-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-madiun-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-madiun-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5778,35 +6201,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-jember-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-jember-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-jember-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-jember-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5841,35 +6269,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-banyuwangi-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-banyuwangi-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-banyuwangi-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-banyuwangi-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5904,35 +6337,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-probolinggo-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-probolinggo-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-probolinggo-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-probolinggo-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -5967,35 +6405,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bojonegoro-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-bojonegoro-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bojonegoro-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bojonegoro-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -6089,49 +6532,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-ngurahrai-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-ngurahrai-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-ngurahrai-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-ngurahrai-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-ngurahrai-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-ngurahrai-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -6166,49 +6616,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-denpasar-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-denpasar-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli pencegahan, operasi penindakan pelanggaran pabean/cukai, penyidikan, pengurusan barang bukti, dan senjata api.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-denpasar-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko dan kinerja satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-denpasar-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-denpasar-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 },
                 {
                   "id": "kppbc-denpasar-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean/cukai, pemeriksaan dokumen impor/ekspor, fasilitas kepabeanan, perizinan, dan pelayanan fisik lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 }
               ]
             },
@@ -6243,35 +6700,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-mataram-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-mataram-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-mataram-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-mataram-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -6306,35 +6768,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kupang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kupang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kupang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kupang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -6369,35 +6836,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-maumere-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-maumere-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-maumere-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-maumere-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -6491,49 +6963,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pontianak-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pontianak-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-pontianak-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pontianak-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pontianak-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-pontianak-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -6568,35 +7047,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-entikong-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-entikong-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-entikong-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-entikong-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -6631,35 +7115,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-nangabadau-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-nangabadau-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-nangabadau-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-nangabadau-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -6694,35 +7183,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-jagoibabang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-jagoibabang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-jagoibabang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-jagoibabang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -6757,35 +7251,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sintete-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sintete-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sintete-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sintete-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -6820,35 +7319,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-ketapang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-ketapang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-ketapang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-ketapang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -6942,49 +7446,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-banjarmasin-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-banjarmasin-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-banjarmasin-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-banjarmasin-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-banjarmasin-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-banjarmasin-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -7019,35 +7530,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kotabaru-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kotabaru-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kotabaru-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kotabaru-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -7082,35 +7598,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pangkalanbun-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pangkalanbun-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pangkalanbun-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pangkalanbun-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -7145,35 +7666,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sampit-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sampit-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sampit-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sampit-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -7267,49 +7793,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-balikpapan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-balikpapan-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-balikpapan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-balikpapan-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-balikpapan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-balikpapan-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -7344,49 +7877,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-samarinda-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-samarinda-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-samarinda-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-samarinda-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-samarinda-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-samarinda-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -7421,49 +7961,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tarakan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tarakan-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-tarakan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tarakan-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tarakan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-tarakan-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -7498,35 +8045,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bontang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-bontang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bontang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bontang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -7561,35 +8113,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sangatta-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sangatta-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sangatta-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sangatta-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -7624,35 +8181,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-nunukan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-nunukan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-nunukan-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-nunukan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -7746,49 +8308,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-makassar-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-makassar-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-makassar-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-makassar-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-makassar-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-makassar-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -7823,35 +8392,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-parepare-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-parepare-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-parepare-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-parepare-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -7886,35 +8460,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pomalaa-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pomalaa-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pomalaa-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pomalaa-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -7949,35 +8528,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-kendari-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-kendari-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-kendari-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-kendari-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -8071,49 +8655,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-manado-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-manado-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-manado-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-manado-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-manado-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-manado-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -8148,49 +8739,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-bitung-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-bitung-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-bitung-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-bitung-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-bitung-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-bitung-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -8225,35 +8823,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-gorontalo-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-gorontalo-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-gorontalo-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-gorontalo-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8288,35 +8891,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-pantoloan-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-pantoloan-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-pantoloan-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-pantoloan-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8351,35 +8959,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-luwuk-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-luwuk-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-luwuk-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-luwuk-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -8473,35 +9086,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-ambon-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-ambon-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-ambon-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-ambon-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8536,35 +9154,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-ternate-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-ternate-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-ternate-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-ternate-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8599,35 +9222,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-tual-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-tual-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-tual-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-tual-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8662,35 +9290,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-babang-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-babang-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-babang-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-babang-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -8784,49 +9417,56 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-jayapura-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, pemeriksaan dokumen pabean, fasilitas pabean/cukai, perizinan, dan pelayanan pemeriksaan fisik.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-jayapura-seksi-pli",
                   "nama": "Seksi Penyuluhan dan Layanan Informasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, konsultasi, layanan informasi, penyuluhan, publikasi peraturan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penyuluhan dan Layanan Informasi",
+                  "singkatan": "Seksi Penyuluhan dan Layanan Informasi"
                 },
                 {
                   "id": "kppbc-jayapura-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli darat/laut, operasi pencegahan penyelundupan, penindakan, penyidikan tindak pidana, barang bukti, dan sarana operasi.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-jayapura-seksi-ki",
-                  "nama": "Seksi Kepatuhan Internal",
+                  "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran disiplin, pengawasan pelaksanaan tugas, pengelolaan risiko, pemantauan kinerja, dan tindak lanjut hasil audit fungsional.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-jayapura-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan aktif, jaminan, pengembalian, dan manifes kedatangan/keberangkatan sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 },
                 {
                   "id": "kppbc-jayapura-seksi-pdad",
                   "nama": "Seksi Pengolahan Data dan Administrasi Dokumen",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasional komputer, PDE, pertukaran data, pengelolaan berkas pabean, verifikasi kelengkapan dokumen, dan layanan data.",
-                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen"
+                  "jabatan_pimpinan": "Kepala Seksi Pengolahan Data dan Administrasi Dokumen",
+                  "singkatan": "Seksi Pengolahan Data dan Administrasi Dokumen"
                 }
               ]
             },
@@ -8861,35 +9501,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-merauke-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-merauke-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-merauke-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-merauke-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8924,35 +9569,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-sorong-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-sorong-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-sorong-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-sorong-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -8987,35 +9637,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-manokwari-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-manokwari-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-manokwari-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-manokwari-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -9050,35 +9705,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-biak-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-biak-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-biak-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-biak-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -9113,35 +9773,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-timika-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-timika-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-timika-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-timika-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             },
@@ -9176,35 +9841,40 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Umum",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan keuangan, SDM, ketatausahaan, rumah tangga, pengelolaan BMN dan kearsipan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Umum"
+                  "jabatan_pimpinan": "Kepala Subbagian Umum",
+                  "singkatan": "Subbagian Umum"
                 },
                 {
                   "id": "kppbc-nabire-seksi-pelayanan",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis, perizinan, fasilitas pabean/cukai, operasional komputer/PDE, verifikasi dokumen, dan pemeriksaan lapangan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai"
                 },
                 {
                   "id": "kppbc-nabire-seksi-p2",
                   "nama": "Seksi Penindakan dan Penyidikan",
                   "level": "eselon-4",
                   "tugas": "Melakukan kegiatan intelijen, patroli wewenang, pencegahan penyelundupan/pelanggaran, operasi penindakan, penyidikan tindak pidana pabean/cukai, dan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Penyidikan",
+                  "singkatan": "Seksi Penindakan dan Penyidikan"
                 },
                 {
                   "id": "kppbc-nabire-seksi-ki-penyuluhan",
                   "nama": "Seksi Kepatuhan Internal dan Penyuluhan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pencegahan pelanggaran kode etik, pengawasan pelaksanaan tugas, pengelolaan risiko/kinerja satker, bimbingan kepatuhan pengguna jasa, layanan informasi, penyuluhan, dan kehumasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Internal dan Penyuluhan",
+                  "singkatan": "Seksi Kepatuhan Internal dan Penyuluhan"
                 },
                 {
                   "id": "kppbc-nabire-seksi-perbendaharaan",
                   "nama": "Seksi Perbendaharaan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemungutan, penatausahaan bea masuk, bea keluar, cukai, penagihan, jaminan, pengembalian, manifes sarana pengangkut, dan denda.",
-                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan"
+                  "jabatan_pimpinan": "Kepala Seksi Perbendaharaan",
+                  "singkatan": "Seksi Perbendaharaan"
                 }
               ]
             }
@@ -9283,31 +9953,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Keuangan",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan perbendaharaan dan pengelolaan keuangan satker.",
-                  "jabatan_pimpinan": "Kepala Subbagian Keuangan"
+                  "jabatan_pimpinan": "Kepala Subbagian Keuangan",
+                  "singkatan": "Subbagian Keuangan"
                 },
                 {
                   "id": "kpu-tanjung-priok-bag-umum-subbag-kepegawaian",
                   "nama": "Subbagian Kepegawaian",
                   "level": "eselon-4",
                   "tugas": "Melakukan administrasi kepegawaian, formasi, mutasi, dan pengembangan SDM.",
-                  "jabatan_pimpinan": "Kepala Subbagian Kepegawaian"
+                  "jabatan_pimpinan": "Kepala Subbagian Kepegawaian",
+                  "singkatan": "Subbagian Kepegawaian"
                 },
                 {
                   "id": "kpu-tanjung-priok-bag-umum-subbag-tata-usaha",
                   "nama": "Subbagian Tata Usaha dan Rumah Tangga",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan persuratan, kearsipan, rumah tangga, dan perlengkapan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Tata Usaha dan Rumah Tangga"
+                  "jabatan_pimpinan": "Kepala Subbagian Tata Usaha dan Rumah Tangga",
+                  "singkatan": "Subbagian Tata Usaha dan Rumah Tangga"
                 },
                 {
                   "id": "kpu-tanjung-priok-bag-umum-subbag-bmn",
                   "nama": "Subbagian Pengelolaan Barang Milik Negara",
                   "level": "eselon-4",
                   "tugas": "Melakukan penatausahaan, pemeliharaan, dan pelaporan Barang Milik Negara.",
-                  "jabatan_pimpinan": "Kepala Subbagian Pengelolaan Barang Milik Negara"
+                  "jabatan_pimpinan": "Kepala Subbagian Pengelolaan Barang Milik Negara",
+                  "singkatan": "Subbagian Pengelolaan Barang Milik Negara"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bagian Umum"
+              "jabatan_pimpinan": "Kepala Bagian Umum",
+              "singkatan": "Bagian Umum"
             },
             {
               "id": "kpu-tanjung-priok-bid-pelayanan-i",
@@ -9321,31 +9996,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai I",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan dokumen pemberitahuan pabean impor jalur utama.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai I"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai I",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai I"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-pelayanan-i-seksi-pelayanan-2",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai II",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan dokumen pabean ekspor dan manifes pabean.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai II"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai II",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai II"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-pelayanan-i-seksi-pelayanan-3",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai III",
                   "level": "eselon-4",
                   "tugas": "Melakukan penelitian tarif dan nilai pabean dokumen impor/ekspor.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai III"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai III",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai III"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-pelayanan-i-seksi-fasilitas-1",
                   "nama": "Seksi Pelayanan Fasilitas I",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan perizinan dan fasilitas kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Fasilitas I"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Fasilitas I",
+                  "singkatan": "Seksi Pelayanan Fasilitas I"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai I"
+              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai I",
+              "singkatan": "Bidang Pelayanan dan Fasilitas Pabean dan Cukai I"
             },
             {
               "id": "kpu-tanjung-priok-bid-pelayanan-ii",
@@ -9359,31 +10039,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai IV",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemeriksaan fisik barang impor di dermaga dan lapangan penimbunan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai IV"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai IV",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai IV"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-pelayanan-ii-seksi-pelayanan-5",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai V",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemeriksaan fisik barang ekspor dan pengawasan sarana pemindai (X-Ray).",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai V"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai V",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai V"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-pelayanan-ii-seksi-pelayanan-6",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai VI",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan teknis pabean khusus dan barang penumpang/kiriman.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai VI"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai VI",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai VI"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-pelayanan-ii-seksi-fasilitas-2",
                   "nama": "Seksi Pelayanan Fasilitas II",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengawasan fasilitas kepabeanan di tempat penimbunan berikat.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Fasilitas II"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Fasilitas II",
+                  "singkatan": "Seksi Pelayanan Fasilitas II"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai II"
+              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai II",
+              "singkatan": "Bidang Pelayanan dan Fasilitas Pabean dan Cukai II"
             },
             {
               "id": "kpu-tanjung-priok-bid-p2",
@@ -9397,31 +10082,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Intelijen",
                   "level": "eselon-4",
                   "tugas": "Melakukan analisis informasi, profiling risiko, dan penyediaan data intelijen penindakan.",
-                  "jabatan_pimpinan": "Kepala Seksi Intelijen"
+                  "jabatan_pimpinan": "Kepala Seksi Intelijen",
+                  "singkatan": "Seksi Intelijen"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-p2-seksi-penindakan-1",
                   "nama": "Seksi Penindakan I",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasi penindakan penyelundupan dan pelanggaran kepabeanan di laut/darat.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan I"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan I",
+                  "singkatan": "Seksi Penindakan I"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-p2-seksi-penindakan-2",
                   "nama": "Seksi Penindakan II",
                   "level": "eselon-4",
                   "tugas": "Melakukan patroli pengawasan dan penindakan pelanggaran di wilayah pelabuhan/kawasan pabean.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan II"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan II",
+                  "singkatan": "Seksi Penindakan II"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-p2-seksi-penyidikan-bhp",
                   "nama": "Seksi Penyidikan dan Barang Hasil Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan penyidikan tindak pidana kepabeanan/cukai dan penatausahaan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan",
+                  "singkatan": "Seksi Penyidikan dan Barang Hasil Penindakan"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pengawasan dan Penindakan"
+              "jabatan_pimpinan": "Kepala Bidang Pengawasan dan Penindakan",
+              "singkatan": "Bidang Pengawasan dan Penindakan"
             },
             {
               "id": "kpu-tanjung-priok-bid-ki",
@@ -9435,24 +10125,28 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Kepatuhan Pelaksanaan Tugas Pelayanan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemantauan dan pengujian kepatuhan pelaksanaan tugas pelayanan pabean.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pelayanan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pelayanan",
+                  "singkatan": "Seksi Kepatuhan Pelaksanaan Tugas Pelayanan"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-ki-seksi-kepatuhan-pengawasan",
                   "nama": "Seksi Kepatuhan Pelaksanaan Tugas Pengawasan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemantauan dan pengujian kepatuhan pelaksanaan tugas pengawasan dan penindakan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pengawasan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pengawasan",
+                  "singkatan": "Seksi Kepatuhan Pelaksanaan Tugas Pengawasan"
                 },
                 {
                   "id": "kpu-tanjung-priok-bid-ki-seksi-manajemen-risiko",
-                  "nama": "Seksi Manajemen Risiko dan Penanganan Perkara",
+                  "nama": "Seksi Manajemen Risiko",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengelolaan risiko organisasi dan penanganan perkara/bantuan hukum satker.",
-                  "jabatan_pimpinan": "Kepala Seksi Manajemen Risiko dan Penanganan Perkara"
+                  "jabatan_pimpinan": "Kepala Seksi Manajemen Risiko dan Penanganan Perkara",
+                  "singkatan": "Seksi Manajemen Risiko"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Kepatuhan Internal"
+              "jabatan_pimpinan": "Kepala Bidang Kepatuhan Internal",
+              "singkatan": "Bidang Kepatuhan Internal"
             }
           ]
         },
@@ -9492,24 +10186,28 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Keuangan",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan perbendaharaan dan pengelolaan keuangan satker.",
-                  "jabatan_pimpinan": "Kepala Subbagian Keuangan"
+                  "jabatan_pimpinan": "Kepala Subbagian Keuangan",
+                  "singkatan": "Subbagian Keuangan"
                 },
                 {
                   "id": "kpu-batam-bag-umum-subbag-kepegawaian-bmn",
                   "nama": "Subbagian Kepegawaian dan Pengelolaan BMN",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan kepegawaian dan penatausahaan Barang Milik Negara.",
-                  "jabatan_pimpinan": "Kepala Subbagian Kepegawaian dan Pengelolaan BMN"
+                  "jabatan_pimpinan": "Kepala Subbagian Kepegawaian dan Pengelolaan BMN",
+                  "singkatan": "Subbagian Kepegawaian dan Pengelolaan BMN"
                 },
                 {
                   "id": "kpu-batam-bag-umum-subbag-tu-rt",
                   "nama": "Subbagian Tata Usaha dan Rumah Tangga",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan persuratan, kearsipan, rumah tangga, dan perlengkapan.",
-                  "jabatan_pimpinan": "Kepala Subbagian Tata Usaha dan Rumah Tangga"
+                  "jabatan_pimpinan": "Kepala Subbagian Tata Usaha dan Rumah Tangga",
+                  "singkatan": "Subbagian Tata Usaha dan Rumah Tangga"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bagian Umum"
+              "jabatan_pimpinan": "Kepala Bagian Umum",
+              "singkatan": "Bagian Umum"
             },
             {
               "id": "kpu-batam-bid-pelayanan",
@@ -9523,31 +10221,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai I",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan dokumen pemberitahuan pabean impor/ekspor.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai I"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai I",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai I"
                 },
                 {
                   "id": "kpu-batam-bid-pelayanan-seksi-pelayanan-2",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai II",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemeriksaan fisik dan pelayanan perbendaharaan pabean.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai II"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai II",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai II"
                 },
                 {
                   "id": "kpu-batam-bid-pelayanan-seksi-pelayanan-3",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai III",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan kepabeanan di kawasan bebas Batam dan pelabuhan.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai III"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai III",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai III"
                 },
                 {
                   "id": "kpu-batam-bid-pelayanan-seksi-fasilitas",
-                  "nama": "Seksi Fasilitas Pabean dan Cukai",
+                  "nama": "Seksi Fasilitas Kepabeanan dan Cukai",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan fasilitas kepabeanan dan perizinan kawasan bebas.",
-                  "jabatan_pimpinan": "Kepala Seksi Fasilitas Pabean dan Cukai"
+                  "jabatan_pimpinan": "Kepala Seksi Fasilitas Pabean dan Cukai",
+                  "singkatan": "Seksi Fasilitas Kepabeanan dan Cukai"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai"
+              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai",
+              "singkatan": "Bidang Pelayanan dan Fasilitas Pabean dan Cukai"
             },
             {
               "id": "kpu-batam-bid-p2",
@@ -9561,31 +10264,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Intelijen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengumpulan dan analisis informasi intelijen kepabeanan dan cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Intelijen"
+                  "jabatan_pimpinan": "Kepala Seksi Intelijen",
+                  "singkatan": "Seksi Intelijen"
                 },
                 {
                   "id": "kpu-batam-bid-p2-seksi-penindakan",
                   "nama": "Seksi Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan patroli dan operasi penindakan penyelundupan di laut dan darat.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan",
+                  "singkatan": "Seksi Penindakan"
                 },
                 {
                   "id": "kpu-batam-bid-p2-seksi-penyidikan-bhp",
                   "nama": "Seksi Penyidikan dan Barang Hasil Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan penyidikan tindak pidana dan penatausahaan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan",
+                  "singkatan": "Seksi Penyidikan dan Barang Hasil Penindakan"
                 },
                 {
                   "id": "kpu-batam-bid-p2-seksi-sarana-operasi",
                   "nama": "Seksi Sarana Operasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengelolaan dan pemeliharaan sarana operasi kapal patroli dan senjata.",
-                  "jabatan_pimpinan": "Kepala Seksi Sarana Operasi"
+                  "jabatan_pimpinan": "Kepala Seksi Sarana Operasi",
+                  "singkatan": "Seksi Sarana Operasi"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pengawasan dan Penegakan Hukum"
+              "jabatan_pimpinan": "Kepala Bidang Pengawasan dan Penegakan Hukum",
+              "singkatan": "Bidang Pengawasan dan Penegakan Hukum"
             },
             {
               "id": "kpu-batam-bid-ki",
@@ -9599,24 +10307,28 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Kepatuhan Pelaksanaan Tugas Pelayanan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemantauan kepatuhan pelaksanaan tugas pelayanan pabean/cukai.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pelayanan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pelayanan",
+                  "singkatan": "Seksi Kepatuhan Pelaksanaan Tugas Pelayanan"
                 },
                 {
                   "id": "kpu-batam-bid-ki-seksi-kepatuhan-pengawasan",
                   "nama": "Seksi Kepatuhan Pelaksanaan Tugas Pengawasan",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemantauan kepatuhan pelaksanaan tugas pengawasan dan penindakan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pengawasan"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas Pengawasan",
+                  "singkatan": "Seksi Kepatuhan Pelaksanaan Tugas Pengawasan"
                 },
                 {
                   "id": "kpu-batam-bid-ki-seksi-manajemen-risiko",
                   "nama": "Seksi Manajemen Risiko",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengelolaan risiko satker, kepatuhan kode etik, dan penjaminan kualitas.",
-                  "jabatan_pimpinan": "Kepala Seksi Manajemen Risiko"
+                  "jabatan_pimpinan": "Kepala Seksi Manajemen Risiko",
+                  "singkatan": "Seksi Manajemen Risiko"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Kepatuhan Internal"
+              "jabatan_pimpinan": "Kepala Bidang Kepatuhan Internal",
+              "singkatan": "Bidang Kepatuhan Internal"
             }
           ]
         },
@@ -9656,24 +10368,28 @@ window.DATA_ORGANIZATION = {
                   "nama": "Subbagian Keuangan",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan perbendaharaan dan pengelolaan keuangan satker.",
-                  "jabatan_pimpinan": "Kepala Subbagian Keuangan"
+                  "jabatan_pimpinan": "Kepala Subbagian Keuangan",
+                  "singkatan": "Subbagian Keuangan"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bag-umum-subbag-kepegawaian-kinerja",
                   "nama": "Subbagian Kepegawaian dan Kinerja",
                   "level": "eselon-4",
                   "tugas": "Melakukan administrasi kepegawaian, penilaian kinerja, dan pengembangan SDM.",
-                  "jabatan_pimpinan": "Kepala Subbagian Kepegawaian dan Kinerja"
+                  "jabatan_pimpinan": "Kepala Subbagian Kepegawaian dan Kinerja",
+                  "singkatan": "Subbagian Kepegawaian dan Kinerja"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bag-umum-subbag-tu-rt-bmn",
                   "nama": "Subbagian Tata Usaha, Rumah Tangga dan BMN",
                   "level": "eselon-4",
                   "tugas": "Melakukan urusan persuratan, kearsipan, rumah tangga, dan pengelolaan BMN.",
-                  "jabatan_pimpinan": "Kepala Subbagian Tata Usaha, Rumah Tangga dan BMN"
+                  "jabatan_pimpinan": "Kepala Subbagian Tata Usaha, Rumah Tangga dan BMN",
+                  "singkatan": "Subbagian Tata Usaha, Rumah Tangga dan BMN"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bagian Umum"
+              "jabatan_pimpinan": "Kepala Bagian Umum",
+              "singkatan": "Bagian Umum"
             },
             {
               "id": "kpu-soekarno-hatta-bid-pelayanan",
@@ -9687,31 +10403,36 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai I",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan dokumen pabean impor dan ekspor kargo udara.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai I"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai I",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai I"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bid-pelayanan-seksi-pelayanan-2",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai II",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan pabean barang penumpang internasional dan awak sarana pengangkut.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai II"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai II",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai II"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bid-pelayanan-seksi-pelayanan-3",
                   "nama": "Seksi Pelayanan Kepabeanan dan Cukai III",
                   "level": "eselon-4",
                   "tugas": "Melakukan pelayanan pabean barang kiriman pos/PJT dan e-commerce.",
-                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai III"
+                  "jabatan_pimpinan": "Kepala Seksi Pelayanan Kepabeanan dan Cukai III",
+                  "singkatan": "Seksi Pelayanan Kepabeanan dan Cukai III"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bid-pelayanan-seksi-layanan-informasi",
                   "nama": "Seksi Layanan Informasi dan Fasilitas",
                   "level": "eselon-4",
                   "tugas": "Melakukan bimbingan kepatuhan, kehumasan, informasi pabean, dan fasilitas.",
-                  "jabatan_pimpinan": "Kepala Seksi Layanan Informasi dan Fasilitas"
+                  "jabatan_pimpinan": "Kepala Seksi Layanan Informasi dan Fasilitas",
+                  "singkatan": "Seksi Layanan Informasi dan Fasilitas"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai"
+              "jabatan_pimpinan": "Kepala Bidang Pelayanan dan Fasilitas Pabean dan Cukai",
+              "singkatan": "Bidang Pelayanan dan Fasilitas Pabean dan Cukai"
             },
             {
               "id": "kpu-soekarno-hatta-bid-p2",
@@ -9725,24 +10446,28 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Intelijen",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengumpulan dan analisis informasi intelijen penumpang dan kargo bandara.",
-                  "jabatan_pimpinan": "Kepala Seksi Intelijen"
+                  "jabatan_pimpinan": "Kepala Seksi Intelijen",
+                  "singkatan": "Seksi Intelijen"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bid-p2-seksi-penindakan-operasi",
                   "nama": "Seksi Penindakan dan Operasi",
                   "level": "eselon-4",
                   "tugas": "Melakukan operasi penindakan pencegahan penyelundupan di terminal bandara dan kargo.",
-                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Operasi"
+                  "jabatan_pimpinan": "Kepala Seksi Penindakan dan Operasi",
+                  "singkatan": "Seksi Penindakan dan Operasi"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bid-p2-seksi-penyidikan-bhp",
                   "nama": "Seksi Penyidikan dan Barang Hasil Penindakan",
                   "level": "eselon-4",
                   "tugas": "Melakukan penyidikan tindak pidana kepabeanan/cukai dan penatausahaan barang bukti.",
-                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan"
+                  "jabatan_pimpinan": "Kepala Seksi Penyidikan dan Barang Hasil Penindakan",
+                  "singkatan": "Seksi Penyidikan dan Barang Hasil Penindakan"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Pengawasan dan Penegakan Hukum"
+              "jabatan_pimpinan": "Kepala Bidang Pengawasan dan Penegakan Hukum",
+              "singkatan": "Bidang Pengawasan dan Penegakan Hukum"
             },
             {
               "id": "kpu-soekarno-hatta-bid-ki",
@@ -9756,17 +10481,20 @@ window.DATA_ORGANIZATION = {
                   "nama": "Seksi Kepatuhan Pelaksanaan Tugas",
                   "level": "eselon-4",
                   "tugas": "Melakukan pemantauan dan pengujian kepatuhan pelaksanaan tugas pelayanan dan pengawasan.",
-                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas"
+                  "jabatan_pimpinan": "Kepala Seksi Kepatuhan Pelaksanaan Tugas",
+                  "singkatan": "Seksi Kepatuhan Pelaksanaan Tugas"
                 },
                 {
                   "id": "kpu-soekarno-hatta-bid-ki-seksi-manajemen-risiko",
-                  "nama": "Seksi Manajemen Risiko dan Pengendalian Mutu",
+                  "nama": "Seksi Manajemen Risiko",
                   "level": "eselon-4",
                   "tugas": "Melakukan pengelolaan risiko satker, pengendalian mutu layanan, dan kode etik.",
-                  "jabatan_pimpinan": "Kepala Seksi Manajemen Risiko dan Pengendalian Mutu"
+                  "jabatan_pimpinan": "Kepala Seksi Manajemen Risiko dan Pengendalian Mutu",
+                  "singkatan": "Seksi Manajemen Risiko"
                 }
               ],
-              "jabatan_pimpinan": "Kepala Bidang Kepatuhan Internal"
+              "jabatan_pimpinan": "Kepala Bidang Kepatuhan Internal",
+              "singkatan": "Bidang Kepatuhan Internal"
             }
           ]
         }
@@ -9792,7 +10520,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbag Umum & KI"
             },
             {
               "id": "blbc-jakarta-seksi-pengujian-1",
@@ -9800,7 +10530,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Layanan Informasi dan Pengujian Laboratorium I",
+              "singkatan": "Seksi Pengujian I"
             },
             {
               "id": "blbc-jakarta-seksi-pengujian-2",
@@ -9808,7 +10540,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Layanan Informasi dan Pengujian Laboratorium II",
+              "singkatan": "Seksi Pengujian II"
             },
             {
               "id": "blbc-jakarta-seksi-manajemen-mutu",
@@ -9816,9 +10550,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Manajemen Mutu dan Pengembangan Laboratorium",
+              "singkatan": "Seksi Manajemen Mutu"
             }
-          ]
+          ],
+          "nama": "Balai Laboratorium Bea dan Cukai Kelas I Jakarta",
+          "singkatan": "BLBC Kelas I Jakarta"
         },
         {
           "id": "blbc-medan",
@@ -9833,7 +10571,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbag Umum & KI"
             },
             {
               "id": "blbc-medan-seksi-pengujian",
@@ -9841,7 +10581,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Layanan Informasi dan Pengujian Laboratorium",
+              "singkatan": "Seksi Pengujian"
             },
             {
               "id": "blbc-medan-seksi-manajemen-mutu",
@@ -9849,9 +10591,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Manajemen Mutu",
+              "singkatan": "Seksi Manajemen Mutu"
             }
-          ]
+          ],
+          "nama": "Balai Laboratorium Bea dan Cukai Kelas I Medan",
+          "singkatan": "BLBC Kelas I Medan"
         },
         {
           "id": "blbc-surabaya",
@@ -9866,7 +10612,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbag Umum & KI"
             },
             {
               "id": "blbc-surabaya-seksi-pengujian",
@@ -9874,7 +10622,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Layanan Informasi dan Pengujian Laboratorium",
+              "singkatan": "Seksi Pengujian"
             },
             {
               "id": "blbc-surabaya-seksi-manajemen-mutu",
@@ -9882,9 +10632,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Manajemen Mutu",
+              "singkatan": "Seksi Manajemen Mutu"
             }
-          ]
+          ],
+          "nama": "Balai Laboratorium Bea dan Cukai Kelas I Surabaya",
+          "singkatan": "BLBC Kelas I Surabaya"
         },
         {
           "id": "pso-karimun",
@@ -9899,7 +10653,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbagian Umum dan Kepatuhan Internal"
             },
             {
               "id": "pso-karimun-seksi-pengelolaan-kapal",
@@ -9907,7 +10663,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal dan Sarana Pendukung"
             },
             {
               "id": "pso-karimun-seksi-telekomunikasi-penginderaan",
@@ -9915,7 +10673,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Telekomunikasi dan Penginderaan",
+              "singkatan": "Seksi Telekomunikasi dan Penginderaan"
             },
             {
               "id": "pso-karimun-seksi-pengawakan",
@@ -9923,7 +10683,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-karimun-seksi-kelaiklautan",
@@ -9931,9 +10693,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe A Tanjung Balai Karimun",
+          "singkatan": "PSO BC Tipe A TBK"
         },
         {
           "id": "pso-batam",
@@ -9948,7 +10714,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbag Umum & KI"
             },
             {
               "id": "pso-batam-seksi-pengelolaan-kapal-telekomunikasi",
@@ -9956,7 +10724,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal & Telko"
             },
             {
               "id": "pso-batam-seksi-pengawakan",
@@ -9964,7 +10734,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-batam-seksi-kelaiklautan",
@@ -9972,9 +10744,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Batam",
+          "singkatan": "PSO BC Batam"
         },
         {
           "id": "pso-tanjungpriok",
@@ -9989,7 +10765,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbagian Umum dan Kepatuhan Internal"
             },
             {
               "id": "pso-tanjungpriok-seksi-pengelolaan-kapal-telekomunikasi",
@@ -9997,7 +10775,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung"
             },
             {
               "id": "pso-tanjungpriok-seksi-pengawakan",
@@ -10005,7 +10785,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-tanjungpriok-seksi-kelaiklautan",
@@ -10013,9 +10795,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Tanjung Priok",
+          "singkatan": "PSO BC Tipe B Tanjung Priok"
         },
         {
           "id": "pso-pantoloan",
@@ -10030,7 +10816,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbagian Umum dan Kepatuhan Internal"
             },
             {
               "id": "pso-pantoloan-seksi-pengelolaan-kapal-telekomunikasi",
@@ -10038,7 +10826,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung"
             },
             {
               "id": "pso-pantoloan-seksi-pengawakan",
@@ -10046,7 +10836,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-pantoloan-seksi-kelaiklautan",
@@ -10054,9 +10846,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Pantoloan",
+          "singkatan": "PSO BC Tipe B Pantoloan"
         },
         {
           "id": "pso-sorong",
@@ -10071,7 +10867,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbagian Umum dan Kepatuhan Internal"
             },
             {
               "id": "pso-sorong-seksi-pengelolaan-kapal-telekomunikasi",
@@ -10079,7 +10877,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung"
             },
             {
               "id": "pso-sorong-seksi-pengawakan",
@@ -10087,7 +10887,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-sorong-seksi-kelaiklautan",
@@ -10095,9 +10897,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Sorong",
+          "singkatan": "PSO BC Tipe B Sorong"
         },
         {
           "id": "pso-kupang",
@@ -10112,7 +10918,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbagian Umum dan Kepatuhan Internal"
             },
             {
               "id": "pso-kupang-seksi-pengelolaan-kapal-telekomunikasi",
@@ -10120,7 +10928,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung"
             },
             {
               "id": "pso-kupang-seksi-pengawakan",
@@ -10128,7 +10938,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-kupang-seksi-kelaiklautan",
@@ -10136,9 +10948,13 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Kupang",
+          "singkatan": "PSO BC Tipe B Kupang"
         },
         {
           "id": "pso-lhokseumawe",
@@ -10153,7 +10969,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Subbagian Umum dan Kepatuhan Internal",
+              "singkatan": "Subbagian Umum dan Kepatuhan Internal"
             },
             {
               "id": "pso-lhokseumawe-seksi-pengelolaan-kapal-telekomunikasi",
@@ -10161,7 +10979,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung",
+              "singkatan": "Seksi Pengelolaan Kapal, Telekomunikasi dan Sarana Pendukung"
             },
             {
               "id": "pso-lhokseumawe-seksi-pengawakan",
@@ -10169,7 +10989,9 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Pengawakan",
+              "singkatan": "Seksi Pengawakan"
             },
             {
               "id": "pso-lhokseumawe-seksi-kelaiklautan",
@@ -10177,12 +10999,17 @@ window.DATA_ORGANIZATION = {
               "level": "eselon-4",
               "type": "sub-unit",
               "category": "upt",
-              "children": []
+              "children": [],
+              "nama": "Seksi Kelaiklautan",
+              "singkatan": "Seksi Kelaiklautan"
             }
-          ]
+          ],
+          "nama": "Pangkalan Sarana Operasi Bea dan Cukai Tipe B Lhokseumawe",
+          "singkatan": "PSO BC Tipe B Lhokseumawe"
         }
       ],
       "jabatan_pimpinan": "Direktur Jenderal Bea dan Cukai"
     }
   ]
 };
+if (typeof module !== 'undefined' && module.exports) { module.exports = window.ORGANIZATION_DATA; }

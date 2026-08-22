@@ -953,10 +953,8 @@ class TreeLayout {
               // Special Case: UPT Pillar (where child is already an Eselon-3 satker like BLBC / PSO)
               if (pillar.id === 'upt-djbc' || child.level === 'eselon-3') {
                 let level4Children = (child.children || []).map(sub4 => {
-                  if (typeof sub4 === 'string') {
-                    return unitsDict[sub4] || { id: sub4, nama: sub4, level: 'eselon-4' };
-                  }
-                  return sub4;
+                  const subId = typeof sub4 === 'string' ? sub4 : (sub4.id || sub4);
+                  return unitsDict[subId] || (typeof sub4 === 'object' ? sub4 : { id: subId, nama: subId, level: 'eselon-4' });
                 });
 
                 const count4 = level4Children.length;
@@ -1590,9 +1588,10 @@ class SVGTreeEngine {
       `;
     } else if (node.type === 'subunit') {
       // Sub-unit Eselon III Card (Horizontal or Selected)
-      const title = node.data.singkatan || node.data.nama || node.id;
-      const subtitle = node.data.level || 'Eselon III';
-      const icon = getUnitIcon(node.data || node.id);
+      const uDict = (this.unitsDict && this.unitsDict[node.id]) || {};
+      const title = uDict.nama || node.data.nama || node.data.name || uDict.singkatan || node.data.singkatan || node.id;
+      const subtitle = uDict.level || node.data.level || 'Eselon III';
+      const icon = getUnitIcon(uDict.id ? uDict : (node.data || node.id));
 
       div.style.cssText = `
         width: 100%;
@@ -1616,13 +1615,14 @@ class SVGTreeEngine {
           <span style="font-size:10px; font-weight:700; padding:2px 8px; background:${isSelected ? '#FDE68A' : '#F1F5F9'}; color:#334155; border-radius:9999px; text-transform:uppercase;">${escapeHtml(subtitle)}</span>
           ${isSelected ? '<span style="font-size:10px; color:#B45309; font-weight:700;">● Aktif</span>' : ''}
         </div>
-        <div style="font-size:12.5px; font-weight:700; color:#062B52; line-height:1.35; margin-top:4px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word;" title="${escapeHtml(node.data.nama || title)}"><span style="margin-right:4px;">${icon}</span>${escapeHtml(title)}</div>
+        <div style="font-size:12.5px; font-weight:700; color:#062B52; line-height:1.35; margin-top:4px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word;" title="${escapeHtml(title)}"><span style="margin-right:4px;">${icon}</span>${escapeHtml(title)}</div>
       `;
     } else if (node.type === 'subunit4') {
       // Eselon IV Sub-unit Card (horizontal)
-      const title = node.data.nama || node.data.singkatan || node.id;
-      const subtitle = node.data.level || 'Eselon IV';
-      const icon = getUnitIcon(node.data || node.id);
+      const uDict = (this.unitsDict && this.unitsDict[node.id]) || {};
+      const title = uDict.nama || node.data.nama || node.data.name || uDict.singkatan || node.data.singkatan || node.id;
+      const subtitle = uDict.level || node.data.level || 'Eselon IV';
+      const icon = getUnitIcon(uDict.id ? uDict : (node.data || node.id));
 
       div.style.cssText = `
         width: 100%;
@@ -1646,13 +1646,14 @@ class SVGTreeEngine {
           <span style="font-size:9.5px; font-weight:700; padding:2px 7px; background:${isSelected ? '#BBF7D0' : '#DCFCE7'}; color:#166534; border-radius:9999px; text-transform:uppercase;">${escapeHtml(subtitle)}</span>
           ${isSelected ? '<span style="font-size:10px; color:#059669; font-weight:700;">● Aktif</span>' : ''}
         </div>
-        <div style="font-size:12px; font-weight:700; color:#065F46; line-height:1.35; margin-top:4px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word;" title="${escapeHtml(node.data.nama || title)}"><span style="margin-right:4px;">${icon}</span>${escapeHtml(title)}</div>
+        <div style="font-size:12px; font-weight:700; color:#065F46; line-height:1.35; margin-top:4px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word;" title="${escapeHtml(title)}"><span style="margin-right:4px;">${icon}</span>${escapeHtml(title)}</div>
       `;
     } else {
-      // Regular Eselon II Unit Card
-      const title = node.data.singkatan || node.data.nama || node.id;
-      const subtitle = node.data.level || node.data.kategori_fungsi || 'Eselon II';
-      const icon = getUnitIcon(node.data || node.id);
+      // Regular Eselon II / UPT Satker Unit Card
+      const uDict = (this.unitsDict && this.unitsDict[node.id]) || {};
+      const title = uDict.nama || node.data.nama || node.data.name || uDict.singkatan || node.data.singkatan || node.id;
+      const subtitle = uDict.level || node.data.level || node.data.kategori_fungsi || 'Eselon II';
+      const icon = getUnitIcon(uDict.id ? uDict : (node.data || node.id));
 
       div.style.cssText = `
         width: 100%;
@@ -1676,7 +1677,7 @@ class SVGTreeEngine {
           <span style="font-size:10.5px; font-weight:700; padding:2px 8px; background:${isSelected ? '#DBEAFE' : '#F2F4F7'}; color:#1E40AF; border-radius:9999px;">${escapeHtml(subtitle)}</span>
           ${isSelected ? '<span style="font-size:10px; color:#0284C7; font-weight:700;">● Aktif</span>' : ''}
         </div>
-        <div style="font-size:13px; font-weight:700; color:#062B52; line-height:1.35; margin-top:4px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word;" title="${escapeHtml(node.data.nama || title)}"><span style="margin-right:4px;">${icon}</span>${escapeHtml(title)}</div>
+        <div style="font-size:13px; font-weight:700; color:#062B52; line-height:1.35; margin-top:4px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; word-break:break-word;" title="${escapeHtml(title)}"><span style="margin-right:4px;">${icon}</span>${escapeHtml(title)}</div>
       `;
     }
 
