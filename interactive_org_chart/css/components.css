@@ -1939,7 +1939,29 @@
     justify-content: flex-start !important;
   }
 }
-/* Floating & Transparent Help Button for Explorer & Map Views */
+/* Floating & Transparent Help Button for Explorer & Map Views with Pulse Effect */
+@keyframes helpBtnPulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(6, 43, 82, 0.08), 0 0 0 0 rgba(217, 180, 91, 0.55);
+    border-color: rgba(217, 180, 91, 0.5);
+  }
+  50% {
+    box-shadow: 0 6px 18px rgba(6, 43, 82, 0.14), 0 0 0 8px rgba(217, 180, 91, 0);
+    border-color: rgba(217, 180, 91, 0.9);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(6, 43, 82, 0.08), 0 0 0 0 rgba(217, 180, 91, 0);
+    border-color: rgba(217, 180, 91, 0.5);
+  }
+}
+
+@keyframes iconWiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  10%, 30% { transform: rotate(-10deg) scale(1.12); }
+  20%, 40% { transform: rotate(10deg) scale(1.12); }
+  50% { transform: rotate(0deg) scale(1); }
+}
+
 .floating-help-btn {
   position: absolute;
   z-index: 90;
@@ -1947,26 +1969,28 @@
   align-items: center;
   gap: 7px;
   padding: 7px 15px;
-  background: rgba(255, 255, 255, 0.78);
+  background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(11, 58, 111, 0.16);
+  border: 1.5px solid rgba(217, 180, 91, 0.6);
   border-radius: 9999px;
   color: #062B52;
   font-size: 12.5px;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(6, 43, 82, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 12px rgba(6, 43, 82, 0.08);
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   font-family: 'Poppins', sans-serif;
   user-select: none;
+  animation: helpBtnPulse 2.5s infinite ease-in-out;
 }
 
 .floating-help-btn:hover {
-  background: rgba(255, 255, 255, 0.95);
+  animation: none;
+  background: rgba(255, 255, 255, 0.98);
   border-color: #D9B45B;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(6, 43, 82, 0.14), 0 0 0 2px rgba(217, 180, 91, 0.25);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 22px rgba(6, 43, 82, 0.16), 0 0 0 3px rgba(217, 180, 91, 0.35);
   color: #0B3A6F;
 }
 
@@ -1980,6 +2004,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: iconWiggle 3.5s infinite ease-in-out;
 }
 
 /* Floating Contextual Help Tips Card for Explorer & Map */
