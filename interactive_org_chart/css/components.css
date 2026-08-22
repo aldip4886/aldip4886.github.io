@@ -976,15 +976,62 @@
   background: #F8FAFC;
 }
 
+@keyframes filterPillPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(11, 58, 111, 0.45), 0 2px 6px rgba(0, 22, 49, 0.25);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(11, 58, 111, 0), 0 2px 6px rgba(0, 22, 49, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(11, 58, 111, 0), 0 2px 6px rgba(0, 22, 49, 0.25);
+  }
+}
+
+@keyframes dotPulseAnim {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.35);
+    opacity: 0.85;
+  }
+}
+
+@keyframes islandFilterPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.5), 0 2px 6px rgba(2, 132, 199, 0.2);
+    border-color: #0284C7;
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(2, 132, 199, 0), 0 2px 6px rgba(2, 132, 199, 0.2);
+    border-color: #0284C7;
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(2, 132, 199, 0), 0 2px 6px rgba(2, 132, 199, 0.2);
+    border-color: #0284C7;
+  }
+}
+
 .map-filter-pill.active {
   background: #001631;
   border-color: #001631;
   color: #FFFFFF;
-  box-shadow: 0 2px 6px rgba(0, 22, 49, 0.25);
+  animation: filterPillPulse 2.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .map-filter-pill.active .map-pill-dot {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+  animation: dotPulseAnim 1.6s infinite ease-in-out;
+}
+
+#map-filter-island.is-filtered {
+  border-color: #0284C7 !important;
+  background: #EFF6FF !important;
+  color: #0284C7 !important;
+  font-weight: 600 !important;
+  animation: islandFilterPulse 2.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* MapLibre GL popup custom styling */
@@ -2053,11 +2100,24 @@
   color: #062B52;
 }
 
+@keyframes legendItemPulse {
+  0% {
+    box-shadow: inset 3px 0 0 #0284C7, 0 0 0 0 rgba(2, 132, 199, 0.4);
+  }
+  70% {
+    box-shadow: inset 3px 0 0 #0284C7, 0 0 0 5px rgba(2, 132, 199, 0);
+  }
+  100% {
+    box-shadow: inset 3px 0 0 #0284C7, 0 0 0 0 rgba(2, 132, 199, 0);
+  }
+}
+
 .map-legend-item.active {
   background: #EFF6FF !important;
   color: #0284C7 !important;
   font-weight: 700 !important;
   box-shadow: inset 3px 0 0 #0284C7;
+  animation: legendItemPulse 2.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .map-legend-item.active .legend-badge-count {

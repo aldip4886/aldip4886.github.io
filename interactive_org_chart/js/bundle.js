@@ -4363,6 +4363,12 @@ class IndonesiaMapEngine {
       if (legBadge('kppbc')) legBadge('kppbc').textContent = countKppbc;
       if (legBadge('blbc')) legBadge('blbc').textContent = countBlbc;
       if (legBadge('pso')) legBadge('pso').textContent = countPso;
+
+      // Update Island Selector active state
+      const islSelect = this.container.querySelector('#map-filter-island');
+      if (islSelect) {
+        islSelect.classList.toggle('is-filtered', selectedIsland !== 'all');
+      }
     }
   }
 
