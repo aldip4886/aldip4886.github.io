@@ -6163,18 +6163,27 @@ class LearningModuleEngine {
 
     this.container.innerHTML = `
       <div style="padding: 24px 32px; max-width: 1240px; margin: 0 auto; width: 100%;">
-        <!-- Breadcrumb Bar -->
-        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#64748B; margin-bottom: 20px;">
-          <span style="display:flex; align-items:center; gap:4px; font-weight:600; color:#0B3A6F;">
-            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-            ${activeModule.title.split(':')[0]}
-          </span>
-          <span>›</span>
-          <span style="font-weight:700; color:#001631;">${activeTopic.title}</span>
+        <!-- Header Bar with Breadcrumb and Tour Button -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+          <!-- Breadcrumb Bar -->
+          <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#64748B;">
+            <span style="display:flex; align-items:center; gap:4px; font-weight:600; color:#0B3A6F;">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              ${activeModule.title.split(':')[0]}
+            </span>
+            <span>›</span>
+            <span style="font-weight:700; color:#001631;">${activeTopic.title}</span>
+          </div>
+
+          <!-- Tutorial Beacon Trigger Button -->
+          <button id="learning-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:5px 12px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startLearningTour(true);}" title="Buka Panduan Interaktif Modul">
+            <span>💡</span>
+            <span>Panduan Modul</span>
+          </button>
         </div>
 
         <!-- Module Selector Tabs (MP 1 s.d. MP 5) -->
-        <div style="display:flex; gap:10px; margin-bottom: 24px; border-bottom:1px solid #E2E8F0; padding-bottom:14px; overflow-x:auto;">
+        <div id="learning-module-tabs" style="display:flex; gap:10px; margin-bottom: 24px; border-bottom:1px solid #E2E8F0; padding-bottom:14px; overflow-x:auto;">
           ${this.modules.map((mod, idx) => `
             <button class="btn ${idx === this.currentModuleIndex ? 'btn-primary' : 'btn-outline'}" data-mod-idx="${idx}" style="font-size:13px; font-weight:600; white-space:nowrap; padding:8px 16px;">
               ${mod.title.split(':')[0]} (${mod.jp})
@@ -6185,7 +6194,7 @@ class LearningModuleEngine {
         <!-- Grid Layout: Sub-Topic Stepper (Left) & Lesson Content (Right) -->
         <div style="display:grid; grid-template-columns: 290px 1fr; gap: 28px; align-items:flex-start;">
           <!-- Left Column: Vertical Sub-Topic Stepper -->
-          <div class="card" style="padding: 20px; position:sticky; top: 20px;">
+          <div id="learning-stepper-sidebar" class="card" style="padding: 20px; position:sticky; top: 20px;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #E2E8F0;">
               <span style="font-size: 14px; font-weight: 700; color: #001631;">Sub-Topik Modul</span>
               <span class="badge badge-org" style="font-size:11px;">${activeModule.jp}</span>
@@ -6217,7 +6226,7 @@ class LearningModuleEngine {
           </div>
 
           <!-- Right Column: Main Lesson Content Area -->
-          <div class="card" style="padding: 32px;">
+          <div id="learning-lesson-content" class="card" style="padding: 32px;">
             <!-- Lesson Header -->
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 20px; border-bottom:1px solid #E2E8F0; padding-bottom: 16px;">
               <div>
@@ -7507,9 +7516,10 @@ class WalkthroughBeacons {
     this.popover = null;
     this.beacon = null;
     this.currentTarget = null;
+    this.activeTourType = 'explorer';
     this.storageKey = 'djbc_explorer_onboarding_completed';
 
-    this.steps = [
+    this.explorerSteps = [
       {
         targetSelector: '#tree-container',
         preferredSelector: '.tree-svg-canvas, #tree-container',
@@ -7549,6 +7559,40 @@ class WalkthroughBeacons {
       }
     ];
 
+    this.learningSteps = [
+      {
+        targetSelector: '#learning-module-tabs',
+        preferredSelector: '#learning-module-tabs',
+        title: 'Pilihan Modul Pembelajaran (MP 1 s.d. MP 5)',
+        description: 'Pilih modul pembelajaran kurikulum Pusdiklat Bea Cukai mulai dari Kedudukan DJBC, Struktur Kantor Pusat, Instansi Vertikal, UPT, hingga Keterkaitan Antar Unit.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '#learning-stepper-sidebar',
+        preferredSelector: '#learning-stepper-sidebar',
+        title: 'Daftar Sub-Topik & Status Belajar',
+        description: 'Ikuti alur materi secara bertahap melalui daftar sub-topik terstruktur. Anda dapat mengklik sub-topik untuk berpindah materi pembelajaran.',
+        placement: 'right'
+      },
+      {
+        targetSelector: '#learning-lesson-content',
+        preferredSelector: '#learning-lesson-content',
+        title: 'Materi Pelajaran & Dasar Regulasi PMK',
+        description: 'Pelajari uraian tugas pokok, fungsi eselon, dan regulasi PMK 124/2024 serta PMK 132/2024 yang disusun ringkas, padat, dan mudah dipahami.',
+        placement: 'left'
+      },
+      {
+        targetSelector: '.unit-interactive-card',
+        preferredSelector: '#view-learning .unit-interactive-card, .unit-interactive-card',
+        fallbackSelector: '#learning-lesson-content',
+        title: 'Kartu Unit Interaktif (Drawer Side Panel)',
+        description: 'Klik pada kartu unit kerja di dalam materi untuk langsung membuka Drawer Profil Detail Unit (pimpinan, tugas, fungsi, dan eselonisasi).',
+        placement: 'top'
+      }
+    ];
+
+    this.steps = this.explorerSteps;
+
     this.init();
   }
 
@@ -7558,10 +7602,11 @@ class WalkthroughBeacons {
     }
   }
 
-  isCompleted() {
+  isCompleted(tourType = this.activeTourType) {
     try {
+      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
       if (typeof localStorage !== 'undefined' && localStorage) {
-        return localStorage.getItem(this.storageKey) === 'true';
+        return localStorage.getItem(key) === 'true';
       }
       return false;
     } catch (e) {
@@ -7569,16 +7614,39 @@ class WalkthroughBeacons {
     }
   }
 
-  markCompleted() {
+  markCompleted(tourType = this.activeTourType) {
     try {
+      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
       if (typeof localStorage !== 'undefined' && localStorage) {
-        localStorage.setItem(this.storageKey, 'true');
+        localStorage.setItem(key, 'true');
       }
     } catch (e) {}
   }
 
   start(force = false) {
-    if (!force && this.isCompleted()) {
+    this.startExplorerTour(force);
+  }
+
+  startExplorerTour(force = false) {
+    this.activeTourType = 'explorer';
+    this.storageKey = 'djbc_explorer_onboarding_completed';
+    this.steps = this.explorerSteps;
+
+    if (!force && this.isCompleted('explorer')) {
+      return;
+    }
+
+    this.currentStep = 0;
+    this.createOverlay();
+    this.renderStep(0);
+  }
+
+  startLearningTour(force = false) {
+    this.activeTourType = 'learning';
+    this.storageKey = 'djbc_learning_onboarding_completed';
+    this.steps = this.learningSteps;
+
+    if (!force && this.isCompleted('learning')) {
       return;
     }
 
@@ -8829,6 +8897,11 @@ class DJBCExplorerApp {
       this.initProgressView();
     } else if (viewId === 'view-learning' && this.learningEngine) {
       this.learningEngine.render();
+      setTimeout(() => {
+        if (this.walkthrough) {
+          this.walkthrough.startLearningTour();
+        }
+      }, 350);
     } else if (viewId === 'view-process' && this.processEngine) {
       this.processEngine.render();
     } else if (viewId === 'view-connections' && this.relationshipsEngine) {

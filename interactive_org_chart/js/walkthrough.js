@@ -8,9 +8,10 @@ export class WalkthroughBeacons {
     this.popover = null;
     this.beacon = null;
     this.currentTarget = null;
+    this.activeTourType = 'explorer';
     this.storageKey = 'djbc_explorer_onboarding_completed';
 
-    this.steps = [
+    this.explorerSteps = [
       {
         targetSelector: '#tree-container',
         preferredSelector: '.tree-svg-canvas, #tree-container',
@@ -50,6 +51,40 @@ export class WalkthroughBeacons {
       }
     ];
 
+    this.learningSteps = [
+      {
+        targetSelector: '#learning-module-tabs',
+        preferredSelector: '#learning-module-tabs',
+        title: 'Pilihan Modul Pembelajaran (MP 1 s.d. MP 5)',
+        description: 'Pilih modul pembelajaran kurikulum Pusdiklat Bea Cukai mulai dari Kedudukan DJBC, Struktur Kantor Pusat, Instansi Vertikal, UPT, hingga Keterkaitan Antar Unit.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '#learning-stepper-sidebar',
+        preferredSelector: '#learning-stepper-sidebar',
+        title: 'Daftar Sub-Topik & Status Belajar',
+        description: 'Ikuti alur materi secara bertahap melalui daftar sub-topik terstruktur. Anda dapat mengklik sub-topik untuk berpindah materi pembelajaran.',
+        placement: 'right'
+      },
+      {
+        targetSelector: '#learning-lesson-content',
+        preferredSelector: '#learning-lesson-content',
+        title: 'Materi Pelajaran & Dasar Regulasi PMK',
+        description: 'Pelajari uraian tugas pokok, fungsi eselon, dan regulasi PMK 124/2024 serta PMK 132/2024 yang disusun ringkas, padat, dan mudah dipahami.',
+        placement: 'left'
+      },
+      {
+        targetSelector: '.unit-interactive-card',
+        preferredSelector: '#view-learning .unit-interactive-card, .unit-interactive-card',
+        fallbackSelector: '#learning-lesson-content',
+        title: 'Kartu Unit Interaktif (Drawer Side Panel)',
+        description: 'Klik pada kartu unit kerja di dalam materi untuk langsung membuka Drawer Profil Detail Unit (pimpinan, tugas, fungsi, dan eselonisasi).',
+        placement: 'top'
+      }
+    ];
+
+    this.steps = this.explorerSteps;
+
     this.init();
   }
 
@@ -59,10 +94,11 @@ export class WalkthroughBeacons {
     }
   }
 
-  isCompleted() {
+  isCompleted(tourType = this.activeTourType) {
     try {
+      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
       if (typeof localStorage !== 'undefined' && localStorage) {
-        return localStorage.getItem(this.storageKey) === 'true';
+        return localStorage.getItem(key) === 'true';
       }
       return false;
     } catch (e) {
@@ -70,16 +106,39 @@ export class WalkthroughBeacons {
     }
   }
 
-  markCompleted() {
+  markCompleted(tourType = this.activeTourType) {
     try {
+      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
       if (typeof localStorage !== 'undefined' && localStorage) {
-        localStorage.setItem(this.storageKey, 'true');
+        localStorage.setItem(key, 'true');
       }
     } catch (e) {}
   }
 
   start(force = false) {
-    if (!force && this.isCompleted()) {
+    this.startExplorerTour(force);
+  }
+
+  startExplorerTour(force = false) {
+    this.activeTourType = 'explorer';
+    this.storageKey = 'djbc_explorer_onboarding_completed';
+    this.steps = this.explorerSteps;
+
+    if (!force && this.isCompleted('explorer')) {
+      return;
+    }
+
+    this.currentStep = 0;
+    this.createOverlay();
+    this.renderStep(0);
+  }
+
+  startLearningTour(force = false) {
+    this.activeTourType = 'learning';
+    this.storageKey = 'djbc_learning_onboarding_completed';
+    this.steps = this.learningSteps;
+
+    if (!force && this.isCompleted('learning')) {
       return;
     }
 

@@ -396,6 +396,11 @@ export class DJBCExplorerApp {
       this.initProgressView();
     } else if (viewId === 'view-learning' && this.learningEngine) {
       this.learningEngine.render();
+      setTimeout(() => {
+        if (this.walkthrough) {
+          this.walkthrough.startLearningTour();
+        }
+      }, 350);
     } else if (viewId === 'view-process' && this.processEngine) {
       this.processEngine.render();
     } else if (viewId === 'view-connections' && this.relationshipsEngine) {
