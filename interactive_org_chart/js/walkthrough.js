@@ -110,7 +110,7 @@ export class WalkthroughBeacons {
         preferredSelector: '.sop-card-item:first-child .btn-open-sop, .sop-card-item:first-child, .btn-open-sop',
         title: 'Dialog Tahapan & Jembatan Unit Kerja',
         description: 'Di dalam detail alur kerja, Anda dapat mempelajari urutan langkah, melihat output dokumen resmi, dan mengklik chip unit pelaksana untuk membuka Side Panel.',
-        placement: 'top'
+        placement: 'bottom'
       }
     ];
 
@@ -266,17 +266,17 @@ export class WalkthroughBeacons {
     this.overlay = doc.createElement('div');
     this.overlay.className = 'walkthrough-overlay is-active';
     this.overlay.id = 'walkthrough-overlay';
-    this.overlay.style.cssText = 'position:fixed !important; inset:0 !important; z-index:1000000 !important; pointer-events:auto !important; display:block !important;';
+    this.overlay.style.cssText = 'position:fixed !important; inset:0 !important; z-index:2147483640 !important; pointer-events:auto !important; display:block !important;';
 
     this.popover = doc.createElement('div');
     this.popover.className = 'walkthrough-popover';
-    this.popover.style.cssText = 'position:fixed !important; z-index:1000020 !important; pointer-events:auto !important;';
+    this.popover.style.cssText = 'position:fixed !important; z-index:2147483647 !important; pointer-events:auto !important;';
     this.popover.addEventListener('click', (e) => e.stopPropagation());
     this.overlay.appendChild(this.popover);
 
     this.beacon = doc.createElement('div');
     this.beacon.className = 'walkthrough-beacon';
-    this.beacon.style.cssText = 'position:fixed !important; z-index:1000015 !important; pointer-events:none !important;';
+    this.beacon.style.cssText = 'position:fixed !important; z-index:2147483646 !important; pointer-events:none !important;';
     this.overlay.appendChild(this.beacon);
 
     const container = doc.body || doc.getElementById('app-container') || doc.documentElement;

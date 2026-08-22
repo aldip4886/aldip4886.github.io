@@ -2506,7 +2506,7 @@
   background: rgba(11, 26, 44, 0.45);
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
-  z-index: 10000;
+  z-index: 2147483640 !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2529,7 +2529,7 @@
   background: rgba(217, 180, 91, 0.95);
   box-shadow: 0 0 0 0 rgba(217, 180, 91, 0.8);
   animation: beaconPulse 1.8s infinite;
-  z-index: 1000000 !important;
+  z-index: 2147483646 !important;
   pointer-events: none !important;
   transform: translate(-50%, -50%);
   display: flex;
@@ -2568,7 +2568,7 @@
   border-radius: 16px;
   border: 1px solid #D9E0E8;
   box-shadow: 0 20px 48px rgba(11, 58, 111, 0.35), 0 4px 16px rgba(0, 0, 0, 0.12);
-  z-index: 1000001 !important;
+  z-index: 2147483647 !important;
   padding: 22px 24px;
   display: flex;
   flex-direction: column;
@@ -2742,7 +2742,7 @@
 /* Highlighted Target Element - Crisp and Sharp without Blur */
 .walkthrough-highlight-target {
   position: relative !important;
-  z-index: 1000002 !important;
+  z-index: 2147483642 !important;
   outline: 3px solid #D9B45B !important;
   outline-offset: 4px !important;
   border-radius: 8px;
