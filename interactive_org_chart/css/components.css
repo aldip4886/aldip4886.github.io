@@ -1227,7 +1227,7 @@
 }
 
 /* ==========================================================================
-   4. Modul Pembelajaran Stepper (Stitch: 7950ce7bc9cd4ab3bb2455f22febfcd1)
+   4. Modul Pembelajaran Stepper & Content Cards (Interactive Hover Effects)
    ========================================================================== */
 .learning-stepper-item {
   position: relative;
@@ -1237,16 +1237,27 @@
   padding: 10px 12px;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
+  border: 1px solid transparent;
+  user-select: none;
 }
 
 .learning-stepper-item:hover {
   background: #F1F5F9;
+  border-color: #E2E8F0;
+  transform: translateX(4px);
+  box-shadow: 0 2px 8px rgba(11, 58, 111, 0.05);
+}
+
+.learning-stepper-item:hover .learning-stepper-dot {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 3px rgba(11, 58, 111, 0.15);
 }
 
 .learning-stepper-item.active {
   background: #E0F2FE;
+  border-color: #BAE6FD;
 }
 
 .learning-stepper-dot {
@@ -1261,6 +1272,7 @@
   flex-shrink: 0;
   border: 2px solid #FFFFFF;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .learning-stepper-item.completed .learning-stepper-dot {
@@ -1277,6 +1289,82 @@
 .learning-stepper-item.locked .learning-stepper-dot {
   background: #E2E8F0;
   color: #94A3B8;
+}
+
+/* Module Selector Tabs Hover */
+[data-mod-idx] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+[data-mod-idx]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 58, 111, 0.15) !important;
+}
+
+[data-mod-idx]:active {
+  transform: translateY(0);
+}
+
+/* Interactive Unit Link Cards inside Learning Module */
+.unit-interactive-card {
+  transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  cursor: pointer !important;
+  user-select: none;
+}
+
+.unit-interactive-card:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(11, 58, 111, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+  border-color: #0284C7 !important;
+}
+
+.unit-interactive-card:hover button {
+  background: #0284C7 !important;
+  color: #FFFFFF !important;
+  border-color: #0284C7 !important;
+}
+
+.unit-interactive-card:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* Generic Point Cards, Bento Items, and Callout Boxes inside Learning View */
+#view-learning div[style*="background:#FFFFFF"],
+#view-learning div[style*="background: #FFFFFF"],
+#view-learning div[style*="background:#F8FAFC"],
+#view-learning div[style*="background: #F8FAFC"],
+#view-learning div[style*="border:1px solid #D9E0E8"],
+#view-learning div[style*="border: 1px solid #D9E0E8"],
+#view-learning div[style*="border:1px solid #E2E8F0"],
+#view-learning div[style*="border: 1px solid #E2E8F0"],
+#view-learning div[style*="border:1.5px solid"] {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#view-learning div[style*="border:1px solid #D9E0E8"]:hover,
+#view-learning div[style*="border: 1px solid #D9E0E8"]:hover,
+#view-learning div[style*="border:1px solid #E2E8F0"]:hover,
+#view-learning div[style*="border: 1px solid #E2E8F0"]:hover {
+  border-color: #0284C7 !important;
+  box-shadow: 0 4px 14px rgba(11, 58, 111, 0.08);
+  transform: translateY(-2px);
+}
+
+/* List point rows with numbered circles (Misi, Tugas, Alur) */
+#view-learning div[style*="display:flex; gap:12px; align-items:flex-start"]:hover,
+#view-learning div[style*="display: flex; gap: 12px; align-items: flex-start"]:hover,
+#view-learning div[style*="display:flex; gap:12px; align-items:center"]:hover,
+#view-learning div[style*="display: flex; gap: 12px; align-items: center"]:hover {
+  background: #EFF6FF !important;
+  border-color: #93C5FD !important;
+  transform: translateX(4px);
+  box-shadow: 0 3px 10px rgba(2, 132, 199, 0.08);
+}
+
+#view-learning div[style*="display:flex; gap:12px"]:hover div[style*="border-radius:50%"],
+#view-learning div[style*="display: flex; gap: 12px"]:hover div[style*="border-radius:50%"] {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 3px rgba(11, 58, 111, 0.2);
 }
 
 /* ==========================================================================
