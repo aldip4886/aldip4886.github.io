@@ -3675,3 +3675,86 @@ body.theme-dark .quiz-question-pagination-btn.active {
   border-color: #38BDF8 !important;
   color: #FFFFFF !important;
 }
+
+/* 5. Enhanced High-Contrast Overrides for Learning & Relationships */
+[data-theme="dark"] #view-learning strong,
+[data-theme="dark"] #view-learning div[style*="color:#001631"],
+[data-theme="dark"] #view-learning div[style*="color: #001631"],
+[data-theme="dark"] #view-learning span[style*="color:#001631"],
+[data-theme="dark"] #view-learning span[style*="color: #001631"],
+body.theme-dark #view-learning strong {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] #view-learning div[style*="color:#64748B"],
+[data-theme="dark"] #view-learning div[style*="color: #64748B"],
+[data-theme="dark"] #view-learning p[style*="color:#64748B"],
+[data-theme="dark"] #view-learning p[style*="color: #64748B"],
+body.theme-dark #view-learning p {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] #view-learning .unit-interactive-card,
+body.theme-dark #view-learning .unit-interactive-card {
+  background: #1E293B !important;
+  border: 1px solid #334155 !important;
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] #view-learning .unit-interactive-card:hover,
+body.theme-dark #view-learning .unit-interactive-card:hover {
+  background: #233154 !important;
+  border-color: #60A5FA !important;
+  color: #FFFFFF !important;
+}
+
+[data-theme="dark"] #view-learning div[style*="border-left:4px solid"],
+body.theme-dark #view-learning div[style*="border-left:4px solid"] {
+  background: #1E293B !important;
+  border-color: #38BDF8 !important;
+  color: #CBD5E1 !important;
+}
+
+/* Relationships / Network Diagram High-Contrast */
+[data-theme="dark"] #view-connections h2,
+body.theme-dark #view-connections h2 {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] #view-connections p,
+body.theme-dark #view-connections p {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] #view-connections div[style*="background:#FFFFFF"],
+[data-theme="dark"] #view-connections div[style*="background: #FFFFFF"],
+[data-theme="dark"] #view-connections div[style*="background:#F8FAFC"],
+[data-theme="dark"] #view-connections div[style*="background: #F8FAFC"],
+body.theme-dark #view-connections div[style*="background:#FFFFFF"] {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] #view-connections div[style*="color:#0B3A6F"],
+[data-theme="dark"] #view-connections div[style*="color: #0B3A6F"],
+body.theme-dark #view-connections div[style*="color:#0B3A6F"] {
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .network-node-group rect,
+body.theme-dark .network-node-group rect {
+  fill: #1C2541 !important;
+}
+
+[data-theme="dark"] .network-node-group text[fill="#001631"],
+body.theme-dark .network-node-group text[fill="#001631"] {
+  fill: #F8FAFC !important;
+}
+
+[data-theme="dark"] #network-edge-tooltip,
+body.theme-dark #network-edge-tooltip {
+  background: #0F172A !important;
+  color: #F8FAFC !important;
+  border: 1.5px solid #38BDF8 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important;
+}

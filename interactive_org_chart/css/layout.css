@@ -115,34 +115,48 @@
 }
 
 .top-header {
-  height: var(--header-height);
+  height: var(--header-height, 60px);
   background-color: var(--color-surface, #ffffff);
   border-bottom: 1px solid var(--color-border);
   padding: 0 24px;
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   z-index: 90;
   flex-shrink: 0;
+  white-space: nowrap;
   transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
 
 .header-left {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  flex-shrink: 1;
+  min-width: 0;
+  white-space: nowrap;
 }
 
 .header-title {
-  font-size: 18px;
+  font-size: 16.5px;
   font-weight: 700;
   color: var(--color-primary-navy);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-right {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* User Profile in Top Header */
@@ -155,6 +169,8 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .user-avatar {
@@ -184,16 +200,22 @@
   font-weight: 700;
   color: var(--color-primary-navy);
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .user-role {
   font-size: 10px;
   color: var(--color-text-muted);
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* Landing Page (Beranda) Specific Visibility Rules */
 #app-container.is-landing .sidebar {
+  display: none !important;
+}
+
+#app-container.is-landing .top-header {
   display: none !important;
 }
 
