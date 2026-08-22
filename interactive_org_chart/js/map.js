@@ -848,14 +848,56 @@ export class IndonesiaMapEngine {
     overlay.style.display = 'flex';
   }
 
-  // ─── Stats ────────────────────────────────────────────────────────────────
+  // ─── Dynamic Office Stats per Island ──────────────────────────────────────
 
   updateStats() {
-    const el = (id) => this.container.querySelector('#' + id);
-    if (el('stat-count-kanwil')) el('stat-count-kanwil').textContent = '20';
-    if (el('stat-count-kpu')) el('stat-count-kpu').textContent = '3';
-    if (el('stat-count-kppbc')) el('stat-count-kppbc').textContent = '104';
-    if (el('stat-count-upt')) el('stat-count-upt').textContent = '9';
+    const ogd = this.officesGeoData || (typeof window !== 'undefined' ? (window.DATA_OFFICES_GEO || window.__DJBC_OFFICES_GEO__) : null);
+    const features = (ogd && ogd.features) ? ogd.features : [];
+
+    const selectedIsland = this.currentIslandFilter || 'all';
+    const filteredFeatures = selectedIsland === 'all'
+      ? features
+      : features.filter(f => f.properties && f.properties.pulau === selectedIsland);
+
+    let countKanwil = 0;
+    let countKpu = 0;
+    let countKppbc = 0;
+    let countUpt = 0;
+
+    filteredFeatures.forEach(f => {
+      const cat = f.properties ? f.properties.unitCategory : '';
+      if (cat === 'kanwil' || cat === 'kantor-pusat') countKanwil++;
+      else if (cat === 'kpu') countKpu++;
+      else if (cat === 'kppbc') countKppbc++;
+      else if (cat === 'blbc' || cat === 'pso') countUpt++;
+    });
+
+    const totalCount = filteredFeatures.length;
+
+    // Update Footer Stats Bar
+    const el = (id) => this.container ? this.container.querySelector('#' + id) : null;
+    if (el('stat-count-kanwil')) el('stat-count-kanwil').textContent = countKanwil;
+    if (el('stat-count-kpu')) el('stat-count-kpu').textContent = countKpu;
+    if (el('stat-count-kppbc')) el('stat-count-kppbc').textContent = countKppbc;
+    if (el('stat-count-upt')) el('stat-count-upt').textContent = countUpt;
+
+    // Update Header Pill Filters with dynamic badges
+    if (this.container) {
+      const pillAll = this.container.querySelector('.map-filter-pill[data-type="all"]');
+      if (pillAll) pillAll.innerHTML = `<span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#38BDF8;"></span>Semua (${totalCount})`;
+
+      const pillKanwil = this.container.querySelector('.map-filter-pill[data-type="kanwil"]');
+      if (pillKanwil) pillKanwil.innerHTML = `<span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0284C7;"></span>Kanwil (${countKanwil})`;
+
+      const pillKpu = this.container.querySelector('.map-filter-pill[data-type="kpu"]');
+      if (pillKpu) pillKpu.innerHTML = `<span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#D97706;"></span>KPU (${countKpu})`;
+
+      const pillKppbc = this.container.querySelector('.map-filter-pill[data-type="kppbc"]');
+      if (pillKppbc) pillKppbc.innerHTML = `<span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0B3A6F;"></span>KPPBC (${countKppbc})`;
+
+      const pillUpt = this.container.querySelector('.map-filter-pill[data-type="upt"]');
+      if (pillUpt) pillUpt.innerHTML = `<span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#059669;"></span>UPT (${countUpt})`;
+    }
   }
 
   render() {
