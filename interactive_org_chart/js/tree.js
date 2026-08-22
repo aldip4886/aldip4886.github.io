@@ -422,13 +422,13 @@ export class SVGTreeEngine {
 
     // Centralized Click & Toggle Handler (Requirement 3: Toggle Click Behavior)
     const clickHandler = (e) => {
-      if (e) {
-        if (typeof e.stopPropagation === 'function') e.stopPropagation();
-      }
-      this.handleNodeClick(node);
+      this.handleNodeClick(node, e);
     };
 
-    div.addEventListener('click', clickHandler);
+    div.onclick = clickHandler;
+    div.ontouchend = clickHandler;
+    foreignObject.onclick = clickHandler;
+    g.onclick = clickHandler;
 
     foreignObject.appendChild(div);
     g.appendChild(foreignObject);
@@ -439,13 +439,16 @@ export class SVGTreeEngine {
    * Handle Click with Toggle Behavior:
    * Clicking an already active/expanded node toggles it off (collapses it) and returns to parent level.
    */
-  handleNodeClick(node) {
+  handleNodeClick(node, event) {
+    if (event) {
+      if (typeof event.stopPropagation === 'function') event.stopPropagation();
+    }
     const clickedId = node.id || (node.data ? node.data.id : null);
     if (!clickedId) return;
 
     // Debounce to prevent duplicate synthetic/bubbled events
     const now = Date.now();
-    if (this._lastClickId === clickedId && (now - (this._lastClickTime || 0)) < 300) {
+    if (this._lastClickId === clickedId && (now - (this._lastClickTime || 0)) < 350) {
       return;
     }
     this._lastClickId = clickedId;
@@ -471,8 +474,20 @@ export class SVGTreeEngine {
     if (!this.svg) return;
 
     this.svg.addEventListener('mousedown', (e) => {
-      if (e.target.closest('.node-card') || e.target.closest('.node-group') || e.target.closest('foreignObject') || e.target.closest('.nodes-layer') || e.target.closest('.node-subunit') || e.target.closest('.node-subunit4')) {
-        return;
+      let el = e.target;
+      while (el && el !== this.svg) {
+        if (el.classList && (el.classList.contains('node-card') || el.classList.contains('node-group') || el.classList.contains('nodes-layer') || el.classList.contains('node-subunit') || el.classList.contains('node-subunit4'))) {
+          return;
+        }
+        if (el.tagName) {
+          const tag = el.tagName.toLowerCase();
+          if (tag === 'foreignobject' || tag === 'div' || tag === 'span' || tag === 'p' || tag === 'h3' || tag === 'svg' || tag === 'path') {
+            if (el.closest && (el.closest('.nodes-layer') || el.closest('.node-group') || el.closest('foreignObject') || el.closest('.node-card'))) {
+              return;
+            }
+          }
+        }
+        el = el.parentElement || el.parentNode;
       }
       this.isDragging = true;
       if (this.gZoom) this.gZoom.style.transition = 'none';
