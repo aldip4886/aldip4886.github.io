@@ -248,10 +248,27 @@ export class SVGTreeEngine {
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
     g.setAttribute('transform', `translate(${node.x}, ${node.y})`);
     g.setAttribute('class', 'node-group');
+    g.setAttribute('data-id', node.id);
     g.style.cursor = 'pointer';
     g.style.pointerEvents = 'all';
 
     const isSelected = node.id === this.selectedNodeId || node.isActive;
+
+    // 1. Native SVG Hit-Test Rectangle (Ensures 100% reliable mouse/touch capture across all browsers)
+    const hitRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    hitRect.setAttribute('x', '0');
+    hitRect.setAttribute('y', '0');
+    hitRect.setAttribute('width', node.width);
+    hitRect.setAttribute('height', node.height + (node.type === 'pillar' ? 30 : 0));
+    hitRect.setAttribute('rx', '12');
+    hitRect.setAttribute('ry', '12');
+    hitRect.setAttribute('fill', isSelected ? (node.type === 'subunit4' ? '#DCFCE7' : (node.type === 'subunit' ? '#FEF3C7' : '#EFF6FF')) : '#FFFFFF');
+    hitRect.setAttribute('stroke', isSelected ? (node.type === 'subunit4' ? '#059669' : '#D9B45B') : '#CBD5E1');
+    hitRect.setAttribute('stroke-width', isSelected ? '2.5' : '1.5');
+    hitRect.style.cursor = 'pointer';
+    g.appendChild(hitRect);
+
+    // 2. HTML ForeignObject Layer
     const foreignObject = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
     foreignObject.setAttribute('x', '0');
     foreignObject.setAttribute('y', '0');
@@ -427,6 +444,8 @@ export class SVGTreeEngine {
 
     div.onclick = clickHandler;
     div.ontouchend = clickHandler;
+    hitRect.onclick = clickHandler;
+    hitRect.ontouchend = clickHandler;
     foreignObject.onclick = clickHandler;
     g.onclick = clickHandler;
 
