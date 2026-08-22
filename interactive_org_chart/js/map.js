@@ -192,10 +192,11 @@ export class IndonesiaMapEngine {
         btn.classList.add('active');
         this.currentTypeFilter = btn.getAttribute('data-type');
         this._applyLayersFilter();
+        this.updateStats();
       });
     });
 
-    // Island dropdown → fitBounds on MapLibre map
+    // Island dropdown → fitBounds on MapLibre map & dynamic stats update
     this.container.querySelector('#map-filter-island').addEventListener('change', (e) => {
       this.currentIslandFilter = e.target.value;
       if (this.map) {
@@ -206,6 +207,7 @@ export class IndonesiaMapEngine {
         }
       }
       this._applyLayersFilter();
+      this.updateStats();
     });
 
     // Zoom controls
@@ -223,6 +225,7 @@ export class IndonesiaMapEngine {
       if (isl) isl.value = 'all';
       this.fitIndonesia(800);
       this._applyLayersFilter();
+      this.updateStats();
     });
 
     // Modal close handlers
@@ -232,6 +235,7 @@ export class IndonesiaMapEngine {
     this.container.querySelector('#map-modal-cancel-btn').addEventListener('click', closeModal);
     overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
 
+    this.updateStats();
     this._initMapLibre();
   }
 
@@ -521,6 +525,8 @@ export class IndonesiaMapEngine {
   // ─── GPU-Accelerated Dynamic Filter ───────────────────────────────────────
 
   _applyLayersFilter() {
+    this.updateStats();
+
     if (!this.map || !this.map.getLayer('office-circle')) return;
 
     const filters = ['all'];
@@ -904,4 +910,8 @@ export class IndonesiaMapEngine {
     this._applyLayersFilter();
     this.updateStats();
   }
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { IndonesiaMapEngine };
 }
