@@ -2765,19 +2765,20 @@
 .theme-toggle-btn {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 6px 14px;
+  gap: 8px;
+  padding: 5px 13px;
   border-radius: var(--radius-full, 9999px);
   background: var(--color-surface-hover, #F8FAFC);
   border: 1px solid var(--color-border, #D9E0E8);
   color: var(--color-text-primary, #1F2937);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-fast, 0.2s);
   user-select: none;
   font-family: 'Poppins', sans-serif;
   z-index: 10;
+  white-space: nowrap;
 }
 
 .theme-toggle-btn:hover {
@@ -2793,14 +2794,40 @@
 
 .theme-toggle-icon-sun {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: #D97706;
-  transition: transform 0.25s ease;
+  background: #FEF3C7;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  padding: 2px;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .theme-toggle-icon-moon {
   display: none;
+  align-items: center;
+  justify-content: center;
   color: #38BDF8;
-  transition: transform 0.25s ease;
+  background: #0C4A6E;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  padding: 2px;
+  box-sizing: border-box;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon-sun {
+  transform: rotate(20deg);
+  background: #FDE68A;
+}
+
+.theme-toggle-btn:hover .theme-toggle-icon-moon {
+  transform: rotate(-15deg);
+  background: #0369A1;
 }
 
 .landing-theme-toggle {

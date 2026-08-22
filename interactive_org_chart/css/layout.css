@@ -119,11 +119,9 @@
   background-color: var(--color-surface, #ffffff);
   border-bottom: 1px solid var(--color-border);
   padding: 0 24px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
   z-index: 90;
   flex-shrink: 0;
@@ -135,18 +133,29 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  flex-shrink: 1;
+  flex-shrink: 0;
   min-width: 0;
   white-space: nowrap;
+  justify-self: start;
 }
 
 .header-title {
-  font-size: 16.5px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--color-primary-navy);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
+  justify-self: center;
 }
 
 .header-right {
@@ -157,6 +166,7 @@
   gap: 12px;
   flex-shrink: 0;
   white-space: nowrap;
+  justify-self: end;
 }
 
 /* User Profile in Top Header */
