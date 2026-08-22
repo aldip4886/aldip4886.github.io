@@ -1683,12 +1683,13 @@ class SVGTreeEngine {
 
     // Centralized Click & Toggle Handler (Requirement 3: Toggle Click Behavior)
     const clickHandler = (e) => {
-      if (e && e.stopPropagation) e.stopPropagation();
+      if (e) {
+        if (typeof e.stopPropagation === 'function') e.stopPropagation();
+      }
       this.handleNodeClick(node);
     };
 
     div.addEventListener('click', clickHandler);
-    g.addEventListener('click', clickHandler);
 
     foreignObject.appendChild(div);
     g.appendChild(foreignObject);
@@ -1703,31 +1704,35 @@ class SVGTreeEngine {
     const clickedId = node.id || (node.data ? node.data.id : null);
     if (!clickedId) return;
 
+    // Debounce to prevent duplicate synthetic/bubbled events
+    const now = Date.now();
+    if (this._lastClickId === clickedId && (now - (this._lastClickTime || 0)) < 300) {
+      return;
+    }
+    this._lastClickId = clickedId;
+    this._lastClickTime = now;
+
     if (node.type === 'pillar') {
       this.toggleGroup(clickedId);
       if (this.onNodeSelect) this.onNodeSelect(clickedId);
       return;
     }
 
-    // If the active node is clicked again, keep it selected and reopen its detail drawer.
-    if (this.selectedNodeId === clickedId) {
-      if (this.onNodeSelect) this.onNodeSelect(clickedId);
-      return;
+    if (this.onNodeSelect) {
+      this.onNodeSelect(clickedId);
+    } else {
+      this.selectedNodeId = clickedId;
+      this.expandAncestors(clickedId);
+      this.renderTree();
+      this.centerOnNode(clickedId);
     }
-
-    // Inactive node clicked -> Select and expand it
-    this.selectedNodeId = clickedId;
-    this.expandAncestors(clickedId);
-    this.renderTree();
-    this.centerOnNode(clickedId);
-    if (this.onNodeSelect) this.onNodeSelect(clickedId);
   }
 
   setupInteractions() {
     if (!this.svg) return;
 
     this.svg.addEventListener('mousedown', (e) => {
-      if (e.target.closest('.node-card') || e.target.closest('.node-group') || e.target.closest('foreignObject') || (e.target.closest && e.target.closest('.nodes-layer'))) {
+      if (e.target.closest('.node-card') || e.target.closest('.node-group') || e.target.closest('foreignObject') || e.target.closest('.nodes-layer') || e.target.closest('.node-subunit') || e.target.closest('.node-subunit4')) {
         return;
       }
       this.isDragging = true;
