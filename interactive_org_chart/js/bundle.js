@@ -3456,7 +3456,7 @@ class IndonesiaMapEngine {
             <span style="font-size:13.5px;font-weight:600;color:#475569;letter-spacing:0.01em;">Filter Tipe Kantor:</span>
             <div id="map-pill-filters" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
               <button class="map-filter-pill active" data-type="all"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#38BDF8;"></span>Semua (137)</button>
-              <button class="map-filter-pill" data-type="kanwil"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0284C7;"></span>Kanwil (20)</button>
+              <button class="map-filter-pill" data-type="kanwil"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0284C7;"></span>Kanwil (21)</button>
               <button class="map-filter-pill" data-type="kpu"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#D97706;"></span>KPU (3)</button>
               <button class="map-filter-pill" data-type="kppbc"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0B3A6F;"></span>KPPBC (104)</button>
               <button class="map-filter-pill" data-type="upt"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#059669;"></span>UPT (9)</button>
@@ -3473,43 +3473,87 @@ class IndonesiaMapEngine {
               <option value="Papua">Papua</option>
             </select>
           </div>
-          <div style="display:flex;align-items:center;gap:6px;background:#FFF;border:1px solid #D9E0E8;border-radius:8px;padding:4px;box-shadow:0 1px 3px rgba(0,0,0,0.04);">
-            <button id="map-btn-zoom-in" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;" title="Perbesar (Zoom In)">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
-            </button>
-            <div style="width:1px;height:16px;background:#E2E8F0;"></div>
-            <button id="map-btn-zoom-out" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;" title="Perkecil (Zoom Out)">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 12H4"/></svg>
-            </button>
-            <div style="width:1px;height:16px;background:#E2E8F0;"></div>
-            <button id="map-btn-zoom-reset" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;" title="Reset ke Indonesia">
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8m-4-4h8"/></svg>
-            </button>
-            <span id="map-zoom-label" style="font-size:11.5px;font-weight:700;color:#64748B;padding:0 6px;min-width:40px;text-align:center;">z5</span>
-          </div>
         </header>
 
         <div id="map-canvas-viewport" style="flex:1;position:relative;overflow:hidden;">
           <div id="maplibre-container" style="width:100%;height:100%;"></div>
-          <div class="map-legend-card" style="position:absolute;bottom:20px;right:24px;background:#FFF;border:1px solid #D9E0E8;border-radius:12px;padding:14px 18px;box-shadow:0 4px 20px rgba(0,0,0,0.08);z-index:25;">
-            <div style="font-size:12.5px;font-weight:700;color:#062B52;margin-bottom:10px;display:flex;align-items:center;gap:6px;">
-              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
-              Legenda Peta
+
+          <!-- Floating Zoom Controls Widget (Bottom Left on Map Canvas above maplibregl-ctrl-bottom-left) -->
+          <div class="map-floating-zoom-ctrl" style="position:absolute;bottom:28px;left:20px;display:flex;flex-direction:column;align-items:center;gap:3px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:10px;padding:4px;box-shadow:0 4px 18px rgba(6,43,82,0.12);z-index:25;">
+            <button id="map-btn-zoom-in" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;transition:all 0.15s;" title="Perbesar (Zoom In)">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
+            </button>
+            <div style="width:18px;height:1px;background:#E2E8F0;"></div>
+            <button id="map-btn-zoom-out" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;transition:all 0.15s;" title="Perkecil (Zoom Out)">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M20 12H4"/></svg>
+            </button>
+            <div style="width:18px;height:1px;background:#E2E8F0;"></div>
+            <button id="map-btn-zoom-reset" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;transition:all 0.15s;" title="Reset ke Seluruh Indonesia">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8m-4-4h8"/></svg>
+            </button>
+            <div style="width:18px;height:1px;background:#E2E8F0;"></div>
+            <span id="map-zoom-label" style="font-size:10.5px;font-weight:700;color:#64748B;padding:2px 4px;min-width:32px;text-align:center;">z5</span>
+          </div>
+
+          <!-- Interactive Clickable Map Legend (Two-Way Synchronized Filter) -->
+          <div class="map-legend-card" style="position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:12px;padding:12px 14px;box-shadow:0 4px 20px rgba(6,43,82,0.1);z-index:25;min-width:215px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #F1F5F9;">
+              <div style="font-size:12px;font-weight:700;color:#062B52;display:flex;align-items:center;gap:6px;">
+                <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+                Legenda Peta
+              </div>
+              <span style="font-size:10px;color:#94A3B8;font-weight:500;">Filter Interaktif</span>
             </div>
-            <div style="display:flex;flex-direction:column;gap:8px;font-size:11.5px;color:#475569;font-weight:500;">
-              <div style="display:flex;align-items:center;gap:8px;"><span style="width:12px;height:12px;border-radius:50%;background:#062B52;border:2px solid #D9B45B;display:inline-block;flex-shrink:0;"></span>Kantor Pusat DJBC</div>
-              <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#0284C7;border:2px solid #FFF;box-shadow:0 0 0 1px #0284C7;display:inline-block;flex-shrink:0;"></span>Kantor Wilayah (Kanwil)</div>
-              <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#D97706;border:2px solid #FFF;box-shadow:0 0 0 1px #D97706;display:inline-block;flex-shrink:0;"></span>Kantor Pelayanan Utama (KPU)</div>
-              <div style="display:flex;align-items:center;gap:8px;"><span style="width:9px;height:9px;border-radius:50%;background:#0B3A6F;border:2px solid #FFF;box-shadow:0 0 0 1px #0B3A6F;display:inline-block;flex-shrink:0;"></span>Kantor Pengawasan (KPPBC)</div>
-              <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#10B981;border:2px solid #FFF;box-shadow:0 0 0 1px #10B981;display:inline-block;flex-shrink:0;"></span>Balai Lab Bea Cukai (BLBC)</div>
-              <div style="display:flex;align-items:center;gap:8px;"><span style="width:10px;height:10px;border-radius:50%;background:#EF4444;border:2px solid #FFF;box-shadow:0 0 0 1px #EF4444;display:inline-block;flex-shrink:0;"></span>Pangkalan Sarana Operasi (PSO)</div>
-              <div style="margin-top:6px;padding-top:6px;border-top:1px solid #E2E8F0;font-size:10.5px;color:#94A3B8;">Klik area provinsi untuk info Kanwil</div>
+            <div class="map-legend-items-list" style="display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:#475569;font-weight:500;">
+              <div class="map-legend-item active" data-type="all" title="Tampilkan Seluruh Tipe Kantor">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#38BDF8;display:inline-block;flex-shrink:0;"></span>
+                  <span>Semua Tipe</span>
+                </div>
+                <span class="legend-badge-count" data-count="all" style="font-size:10.5px;font-weight:700;color:#64748B;">137</span>
+              </div>
+              <div class="map-legend-item" data-type="kanwil" title="Filter Kantor Wilayah &amp; Kantor Pusat">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#0284C7;border:2px solid #FFF;box-shadow:0 0 0 1px #0284C7;display:inline-block;flex-shrink:0;"></span>
+                  <span>Kantor Wilayah &amp; Pusat</span>
+                </div>
+                <span class="legend-badge-count" data-count="kanwil" style="font-size:10.5px;font-weight:700;color:#64748B;">21</span>
+              </div>
+              <div class="map-legend-item" data-type="kpu" title="Filter Kantor Pelayanan Utama">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#D97706;border:2px solid #FFF;box-shadow:0 0 0 1px #D97706;display:inline-block;flex-shrink:0;"></span>
+                  <span>Kantor Pelayanan Utama</span>
+                </div>
+                <span class="legend-badge-count" data-count="kpu" style="font-size:10.5px;font-weight:700;color:#64748B;">3</span>
+              </div>
+              <div class="map-legend-item" data-type="kppbc" title="Filter KPPBC Pelayanan &amp; Pengawasan">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="width:9px;height:9px;border-radius:50%;background:#0B3A6F;border:2px solid #FFF;box-shadow:0 0 0 1px #0B3A6F;display:inline-block;flex-shrink:0;"></span>
+                  <span>Kantor Pengawasan (KPPBC)</span>
+                </div>
+                <span class="legend-badge-count" data-count="kppbc" style="font-size:10.5px;font-weight:700;color:#64748B;">104</span>
+              </div>
+              <div class="map-legend-item" data-type="blbc" title="Filter Balai Laboratorium Bea Cukai">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#10B981;border:2px solid #FFF;box-shadow:0 0 0 1px #10B981;display:inline-block;flex-shrink:0;"></span>
+                  <span>Balai Lab Bea Cukai (BLBC)</span>
+                </div>
+                <span class="legend-badge-count" data-count="blbc" style="font-size:10.5px;font-weight:700;color:#64748B;">3</span>
+              </div>
+              <div class="map-legend-item" data-type="pso" title="Filter Pangkalan Sarana Operasi">
+                <div style="display:flex;align-items:center;gap:7px;">
+                  <span style="width:10px;height:10px;border-radius:50%;background:#EF4444;border:2px solid #FFF;box-shadow:0 0 0 1px #EF4444;display:inline-block;flex-shrink:0;"></span>
+                  <span>Pangkalan Sarana Operasi (PSO)</span>
+                </div>
+                <span class="legend-badge-count" data-count="pso" style="font-size:10.5px;font-weight:700;color:#64748B;">6</span>
+              </div>
             </div>
+            <div style="margin-top:6px;padding-top:6px;border-top:1px solid #F1F5F9;font-size:10px;color:#94A3B8;text-align:center;">Klik item legenda untuk memfilter peta</div>
           </div>
         </div>
 
         <footer class="map-stats-bar" style="height:76px;background:#FFF;border-top:1px solid #D9E0E8;display:flex;align-items:center;justify-content:space-around;padding:0 32px;box-shadow:0 -2px 10px rgba(0,0,0,0.02);z-index:30;flex-shrink:0;">
-          <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-kanwil" style="font-size:22px;font-weight:700;color:#062B52;line-height:1.2;">20</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Kantor Wilayah</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-kanwil" style="font-size:22px;font-weight:700;color:#062B52;line-height:1.2;">21</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Kantor Wilayah &amp; Pusat</span></div>
           <div style="width:1px;height:36px;background:#E2E8F0;"></div>
           <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-kpu" style="font-size:22px;font-weight:700;color:#D97706;line-height:1.2;">3</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">KPU Bea Cukai</span></div>
           <div style="width:1px;height:36px;background:#E2E8F0;"></div>
@@ -3548,14 +3592,20 @@ class IndonesiaMapEngine {
       </div>
     `;
 
-    // Filter pills
+    // Filter pills (Header)
     this.container.querySelectorAll('.map-filter-pill').forEach(btn => {
       btn.addEventListener('click', () => {
-        this.container.querySelectorAll('.map-filter-pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        this.currentTypeFilter = btn.getAttribute('data-type');
-        this._applyLayersFilter();
-        this.updateStats();
+        const type = btn.getAttribute('data-type');
+        this.setTypeFilter(type);
+      });
+    });
+
+    // Map Legend Items (Clickable Interactive Filter with Two-Way Synchronization)
+    this.container.querySelectorAll('.map-legend-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const type = item.getAttribute('data-type');
+        const newType = (this.currentTypeFilter === type && type !== 'all') ? 'all' : type;
+        this.setTypeFilter(newType);
       });
     });
 
@@ -3573,7 +3623,7 @@ class IndonesiaMapEngine {
       this.updateStats();
     });
 
-    // Zoom controls
+    // Floating Zoom controls
     this.container.querySelector('#map-btn-zoom-in').addEventListener('click', () => {
       this._hasInteracted = true;
       if (this.map) this.map.zoomIn();
@@ -3600,6 +3650,37 @@ class IndonesiaMapEngine {
 
     this.updateStats();
     this._initMapLibre();
+  }
+
+  /**
+   * Centralized filter setter that guarantees two-way synchronization between Header Pills & Map Legend.
+   */
+  setTypeFilter(type) {
+    this.currentTypeFilter = type || 'all';
+
+    // 1. Synchronize Header Pills
+    this.container.querySelectorAll('.map-filter-pill').forEach(b => {
+      const bType = b.getAttribute('data-type');
+      if (this.currentTypeFilter === 'blbc' || this.currentTypeFilter === 'pso') {
+        b.classList.toggle('active', bType === 'upt');
+      } else {
+        b.classList.toggle('active', bType === this.currentTypeFilter);
+      }
+    });
+
+    // 2. Synchronize Map Legend Items
+    this.container.querySelectorAll('.map-legend-item').forEach(item => {
+      const itemType = item.getAttribute('data-type');
+      if (this.currentTypeFilter === 'upt') {
+        item.classList.toggle('active', itemType === 'upt' || itemType === 'blbc' || itemType === 'pso');
+      } else {
+        item.classList.toggle('active', itemType === this.currentTypeFilter);
+      }
+    });
+
+    // 3. Apply GPU Layer Filter & Dynamic Stats
+    this._applyLayersFilter();
+    this.updateStats();
   }
 
   // ─── MapLibre Init ────────────────────────────────────────────────────────
@@ -3896,7 +3977,7 @@ class IndonesiaMapEngine {
 
     // Category filter
     const f = this.currentTypeFilter;
-    if (f === 'kanwil') {
+    if (f === 'kanwil' || f === 'kantor-pusat') {
       filters.push(['in', ['get', 'unitCategory'], ['literal', ['kantor-pusat', 'kanwil']]]);
     } else if (f === 'kpu') {
       filters.push(['==', ['get', 'unitCategory'], 'kpu']);
@@ -3904,6 +3985,10 @@ class IndonesiaMapEngine {
       filters.push(['==', ['get', 'unitCategory'], 'kppbc']);
     } else if (f === 'upt') {
       filters.push(['in', ['get', 'unitCategory'], ['literal', ['blbc', 'pso']]]);
+    } else if (f === 'blbc') {
+      filters.push(['==', ['get', 'unitCategory'], 'blbc']);
+    } else if (f === 'pso') {
+      filters.push(['==', ['get', 'unitCategory'], 'pso']);
     }
 
     // Island filter
@@ -4232,13 +4317,16 @@ class IndonesiaMapEngine {
     let countKpu = 0;
     let countKppbc = 0;
     let countUpt = 0;
+    let countBlbc = 0;
+    let countPso = 0;
 
     filteredFeatures.forEach(f => {
       const cat = f.properties ? f.properties.unitCategory : '';
       if (cat === 'kanwil' || cat === 'kantor-pusat') countKanwil++;
       else if (cat === 'kpu') countKpu++;
       else if (cat === 'kppbc') countKppbc++;
-      else if (cat === 'blbc' || cat === 'pso') countUpt++;
+      else if (cat === 'blbc') { countUpt++; countBlbc++; }
+      else if (cat === 'pso') { countUpt++; countPso++; }
     });
 
     const totalCount = filteredFeatures.length;
@@ -4266,6 +4354,15 @@ class IndonesiaMapEngine {
 
       const pillUpt = this.container.querySelector('.map-filter-pill[data-type="upt"]');
       if (pillUpt) pillUpt.innerHTML = `<span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#059669;"></span>UPT (${countUpt})`;
+
+      // Update Map Legend Badges
+      const legBadge = (type) => this.container.querySelector(`.legend-badge-count[data-count="${type}"]`);
+      if (legBadge('all')) legBadge('all').textContent = totalCount;
+      if (legBadge('kanwil')) legBadge('kanwil').textContent = countKanwil;
+      if (legBadge('kpu')) legBadge('kpu').textContent = countKpu;
+      if (legBadge('kppbc')) legBadge('kppbc').textContent = countKppbc;
+      if (legBadge('blbc')) legBadge('blbc').textContent = countBlbc;
+      if (legBadge('pso')) legBadge('pso').textContent = countPso;
     }
   }
 
