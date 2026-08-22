@@ -2503,8 +2503,9 @@
 .walkthrough-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(11, 26, 44, 0.65);
-  backdrop-filter: blur(2px);
+  background: rgba(11, 26, 44, 0.45);
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -2738,12 +2739,17 @@
   box-shadow: 0 4px 12px rgba(11, 58, 111, 0.3);
 }
 
-/* Highlighted Target Element */
+/* Highlighted Target Element - Crisp and Sharp without Blur */
 .walkthrough-highlight-target {
+  position: relative !important;
+  z-index: 1000002 !important;
   outline: 3px solid #D9B45B !important;
   outline-offset: 4px !important;
   border-radius: 8px;
   box-shadow: 0 0 24px rgba(217, 180, 91, 0.6) !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   transition: outline 0.2s ease, box-shadow 0.2s ease;
 }
 
