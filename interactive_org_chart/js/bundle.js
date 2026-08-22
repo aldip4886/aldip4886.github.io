@@ -8491,6 +8491,7 @@ class DJBCExplorerApp {
     }
 
     this.loadData();
+    this.initTheme();
     this.initNavigation();
     this.initExplorer();
     this.initSearch();
@@ -8532,8 +8533,71 @@ class DJBCExplorerApp {
     window.__DJBC_LEARNING_PATHS__ = this.learningPaths;
   }
 
+  initTheme() {
+    let savedTheme = 'light';
+    try {
+      savedTheme = localStorage.getItem('djbc_theme_mode') || 'light';
+    } catch (e) {}
+
+    this.setTheme(savedTheme);
+
+    // Attach listeners to all theme toggle buttons across the app (Header & Beranda)
+    const themeToggleBtns = document.querySelectorAll('.theme-toggle-btn, #theme-toggle-btn, #landing-theme-toggle-btn');
+    themeToggleBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        this.setTheme(nextTheme);
+      });
+    });
+  }
+
+  setTheme(theme) {
+    const isDark = theme === 'dark';
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    if (document.body) {
+      document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
+      document.body.classList.toggle('theme-dark', isDark);
+    }
+    document.documentElement.classList.toggle('theme-dark', isDark);
+
+    try {
+      localStorage.setItem('djbc_theme_mode', isDark ? 'dark' : 'light');
+    } catch (e) {}
+
+    // Update label text if present on any toggle buttons
+    document.querySelectorAll('.theme-toggle-label').forEach(label => {
+      label.textContent = isDark ? 'Mode Gelap' : 'Mode Terang';
+    });
+
+    // Notify engines if needed
+    if (this.treeEngine && typeof this.treeEngine.onThemeChange === 'function') {
+      this.treeEngine.onThemeChange(isDark ? 'dark' : 'light');
+    }
+  }
+
+  requestFullscreen() {
+    try {
+      const docEl = document.documentElement;
+      if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+        if (docEl.requestFullscreen) {
+          docEl.requestFullscreen().catch(() => {});
+        } else if (docEl.webkitRequestFullscreen) {
+          docEl.webkitRequestFullscreen();
+        } else if (docEl.mozRequestFullScreen) {
+          docEl.mozRequestFullScreen();
+        } else if (docEl.msRequestFullscreen) {
+          docEl.msRequestFullscreen();
+        }
+      }
+    } catch (err) {
+      console.warn("Fullscreen request was prevented or not supported:", err);
+    }
+  }
+
   initNavigation() {
-        // Sidebar Header click to Beranda
+    // Sidebar Header click to Beranda
     const sidebarHeader = document.querySelector('.sidebar-header');
     if (sidebarHeader && typeof sidebarHeader.addEventListener === 'function') {
       sidebarHeader.addEventListener('click', () => {
@@ -8552,20 +8616,22 @@ class DJBCExplorerApp {
       });
     });
 
-    // Landing Page CTA and Cards
+    // Landing Page CTA and Cards (Activates Fullscreen & Switches View)
     const landingExplorationBtns = document.querySelectorAll('[data-action="start-exploration"], #btn-start-exploration, .landing-cta-btn');
     landingExplorationBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        this.requestFullscreen();
         this.switchView('view-explorer');
       });
     });
 
-    // Landing Page Help Button (Lihat Panduan)
+    // Landing Page Help Button (Lihat Panduan - Activates Fullscreen & Switches View)
     const landingHelpBtns = document.querySelectorAll('#btn-landing-help, [data-action="view-help"], #landing-btn-help');
     landingHelpBtns.forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
+        this.requestFullscreen();
         this.switchView('view-help');
       });
     });

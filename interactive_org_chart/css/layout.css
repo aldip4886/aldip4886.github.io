@@ -116,7 +116,7 @@
 
 .top-header {
   height: var(--header-height);
-  background-color: #ffffff;
+  background-color: var(--color-surface, #ffffff);
   border-bottom: 1px solid var(--color-border);
   padding: 0 24px;
   display: flex;
@@ -124,6 +124,7 @@
   justify-content: space-between;
   z-index: 90;
   flex-shrink: 0;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
 }
 
 .header-left {
@@ -141,7 +142,7 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
 }
 
 /* User Profile in Top Header */
@@ -150,9 +151,10 @@
   align-items: center;
   gap: 10px;
   padding: 4px 12px 4px 6px;
-  background: #F8FAFC;
+  background: var(--color-surface-hover, #F8FAFC);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
 }
 
 .user-avatar {

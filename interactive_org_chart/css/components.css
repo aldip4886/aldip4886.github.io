@@ -2759,6 +2759,546 @@
   transform: translateX(2px);
 }
 
+/* ==========================================================================
+   Theme Toggle Switcher Component (Available on All Pages & Beranda)
+   ========================================================================== */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--color-surface-hover, #F8FAFC);
+  border: 1px solid var(--color-border, #D9E0E8);
+  color: var(--color-text-primary, #1F2937);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast, 0.2s);
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  z-index: 10;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--color-border-light, #E2E8F0);
+  border-color: var(--color-accent-blue, #2F80ED);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm, 0 2px 6px rgba(0,0,0,0.08));
+}
+
+.theme-toggle-btn:active {
+  transform: translateY(0);
+}
+
+.theme-toggle-icon-sun {
+  display: inline-flex;
+  color: #D97706;
+  transition: transform 0.25s ease;
+}
+
+.theme-toggle-icon-moon {
+  display: none;
+  color: #38BDF8;
+  transition: transform 0.25s ease;
+}
+
+.landing-theme-toggle {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark Mode Theme Indicator Controls */
+[data-theme="dark"] .theme-toggle-icon-sun,
+body.theme-dark .theme-toggle-icon-sun {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle-icon-moon,
+body.theme-dark .theme-toggle-icon-moon {
+  display: inline-flex;
+}
+
+[data-theme="dark"] .theme-toggle-btn,
+body.theme-dark .theme-toggle-btn {
+  background: #1E293B;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover,
+body.theme-dark .theme-toggle-btn:hover {
+  background: #334155;
+  border-color: #60A5FA;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .landing-theme-toggle,
+body.theme-dark .landing-theme-toggle {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: #334155;
+}
+
+/* ==========================================================================
+   Dark Mode Component Styles (High-Contrast & High Legibility)
+   ========================================================================== */
+
+/* 1. Global Shell & Navigation */
+[data-theme="dark"] .sidebar,
+body.theme-dark .sidebar {
+  background-color: #070D1F;
+  border-right: 1px solid #1E293B;
+}
+
+[data-theme="dark"] .top-header,
+body.theme-dark .top-header {
+  background-color: #111B33 !important;
+  border-bottom: 1px solid #1E293B !important;
+}
+
+[data-theme="dark"] .header-title,
+body.theme-dark .header-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .search-input,
+body.theme-dark .search-input {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .search-input::placeholder,
+body.theme-dark .search-input::placeholder {
+  color: #64748B !important;
+}
+
+[data-theme="dark"] .search-dropdown,
+body.theme-dark .search-dropdown {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .search-result-item:hover,
+body.theme-dark .search-result-item:hover {
+  background: #233154 !important;
+}
+
+[data-theme="dark"] .user-profile-header,
+body.theme-dark .user-profile-header {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .user-name,
+body.theme-dark .user-name {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .user-role,
+body.theme-dark .user-role {
+  color: #94A3B8 !important;
+}
+
+/* 2. Beranda / Landing Page */
+[data-theme="dark"] .landing-viewport,
+body.theme-dark .landing-viewport {
+  background: #060B18 !important;
+}
+
+[data-theme="dark"] .landing-main-card,
+body.theme-dark .landing-main-card {
+  background: #0F172A !important;
+  border-color: #1E293B !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .landing-logo-text h1,
+body.theme-dark .landing-logo-text h1 {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .landing-hero-title,
+body.theme-dark .landing-hero-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .landing-hero-subtitle,
+body.theme-dark .landing-hero-subtitle {
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .landing-hero-desc,
+body.theme-dark .landing-hero-desc {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .landing-feature-card,
+body.theme-dark .landing-feature-card {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .landing-feature-card:hover,
+body.theme-dark .landing-feature-card:hover {
+  background: #233154 !important;
+  border-color: #38BDF8 !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .landing-feature-title,
+body.theme-dark .landing-feature-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .landing-feature-desc,
+body.theme-dark .landing-feature-desc {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .landing-feature-icon-circle,
+body.theme-dark .landing-feature-icon-circle {
+  background: #0F172A !important;
+  border-color: #334155 !important;
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .landing-secondary-btn,
+body.theme-dark .landing-secondary-btn {
+  background: #1E293B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .landing-secondary-btn:hover,
+body.theme-dark .landing-secondary-btn:hover {
+  background: #334155 !important;
+  border-color: #38BDF8 !important;
+}
+
+/* 3. Tree Explorer Canvas & Nodes */
+[data-theme="dark"] #tree-container,
+body.theme-dark #tree-container {
+  background-color: #0B132B !important;
+}
+
+[data-theme="dark"] .tree-controls-floating,
+[data-theme="dark"] .tree-breadcrumb-floating,
+body.theme-dark .tree-controls-floating,
+body.theme-dark .tree-breadcrumb-floating {
+  background: rgba(28, 37, 65, 0.95) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .tree-ctrl-btn,
+body.theme-dark .tree-ctrl-btn {
+  background: #16203B !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .tree-ctrl-btn:hover,
+body.theme-dark .tree-ctrl-btn:hover {
+  background: #233154 !important;
+  border-color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .tree-node-rect,
+body.theme-dark .tree-node-rect {
+  fill: #1C2541 !important;
+  stroke: #334155 !important;
+}
+
+[data-theme="dark"] .tree-node-title,
+body.theme-dark .tree-node-title {
+  fill: #F8FAFC !important;
+}
+
+[data-theme="dark"] .tree-node-subtitle,
+body.theme-dark .tree-node-subtitle {
+  fill: #94A3B8 !important;
+}
+
+[data-theme="dark"] .minimap-container,
+body.theme-dark .minimap-container {
+  background: rgba(28, 37, 65, 0.95) !important;
+  border-color: #334155 !important;
+}
+
+/* 4. Slide-out Detail Drawer Panel */
+[data-theme="dark"] .detail-drawer,
+body.theme-dark .detail-drawer {
+  background-color: #141E38 !important;
+  border-left: 1px solid #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: -4px 0 30px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .drawer-header,
+body.theme-dark .drawer-header {
+  background: linear-gradient(135deg, #070D1F 0%, #111B33 100%) !important;
+  border-bottom: 1px solid #334155 !important;
+}
+
+[data-theme="dark"] .detail-tab-btn,
+body.theme-dark .detail-tab-btn {
+  color: #94A3B8 !important;
+}
+
+[data-theme="dark"] .detail-tab-btn.active,
+body.theme-dark .detail-tab-btn.active {
+  color: #38BDF8 !important;
+  border-bottom-color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .drawer-content .card,
+[data-theme="dark"] .drawer-content div[style*="background:#F8FAFC"],
+[data-theme="dark"] .drawer-content div[style*="background: #F8FAFC"],
+body.theme-dark .drawer-content .card,
+body.theme-dark .drawer-content div[style*="background:#F8FAFC"] {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .drawer-content h3,
+[data-theme="dark"] .drawer-content h4,
+[data-theme="dark"] .drawer-content strong,
+body.theme-dark .drawer-content h3,
+body.theme-dark .drawer-content h4,
+body.theme-dark .drawer-content strong {
+  color: #F8FAFC !important;
+}
+
+/* 5. Modul Pembelajaran */
+[data-theme="dark"] #view-learning .card,
+body.theme-dark #view-learning .card {
+  background: #141E38 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .learning-stepper-item,
+body.theme-dark .learning-stepper-item {
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .learning-stepper-item:hover,
+body.theme-dark .learning-stepper-item:hover {
+  background: #233154 !important;
+  border-color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .learning-stepper-item.active,
+body.theme-dark .learning-stepper-item.active {
+  background: #1E293B !important;
+  border-color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .unit-interactive-card,
+body.theme-dark .unit-interactive-card {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] #view-learning div[style*="background:#F8FAFC"],
+[data-theme="dark"] #view-learning div[style*="background: #F8FAFC"],
+[data-theme="dark"] #view-learning div[style*="background:#FFFFFF"],
+[data-theme="dark"] #view-learning div[style*="background: #FFFFFF"],
+body.theme-dark #view-learning div[style*="background:#F8FAFC"] {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] #view-learning h2,
+[data-theme="dark"] #view-learning h3,
+[data-theme="dark"] #view-learning h4,
+[data-theme="dark"] #view-learning div[style*="color:#001631"],
+[data-theme="dark"] #view-learning div[style*="color:#0B3A6F"],
+body.theme-dark #view-learning h2,
+body.theme-dark #view-learning h3,
+body.theme-dark #view-learning h4 {
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] #view-learning p,
+[data-theme="dark"] #view-learning div[style*="color:#475569"],
+[data-theme="dark"] #view-learning div[style*="color:#334155"],
+body.theme-dark #view-learning p {
+  color: #CBD5E1 !important;
+}
+
+/* 6. Alur Kerja & SOP Explorer */
+[data-theme="dark"] .sop-card-item,
+body.theme-dark .sop-card-item {
+  background: #141E38 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .sop-modal-container,
+body.theme-dark .sop-modal-container {
+  background: #141E38 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .process-step-card,
+body.theme-dark .process-step-card {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+/* 7. Peta Unit Kerja */
+[data-theme="dark"] .map-legend-card,
+[data-theme="dark"] .map-stats-footer,
+[data-theme="dark"] .map-floating-zoom-ctrl,
+body.theme-dark .map-legend-card,
+body.theme-dark .map-stats-footer,
+body.theme-dark .map-floating-zoom-ctrl {
+  background: rgba(20, 30, 56, 0.95) !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] #map-filter-island,
+body.theme-dark #map-filter-island {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .map-stat-num,
+body.theme-dark .map-stat-num {
+  color: #38BDF8 !important;
+}
+
+/* 8. Keterkaitan Antar Unit */
+[data-theme="dark"] #network-canvas-container,
+body.theme-dark #network-canvas-container {
+  background: #0B132B !important;
+}
+
+[data-theme="dark"] .relationship-card,
+body.theme-dark .relationship-card {
+  background: #141E38 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+/* 9. Kuis & Evaluasi & Hasil */
+[data-theme="dark"] #view-quiz .card,
+[data-theme="dark"] .quiz-option-card,
+[data-theme="dark"] .quiz-bento-box,
+body.theme-dark #view-quiz .card,
+body.theme-dark .quiz-option-card,
+body.theme-dark .quiz-bento-box {
+  background: #141E38 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .quiz-option-card:hover,
+body.theme-dark .quiz-option-card:hover {
+  background: #233154 !important;
+  border-color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .quiz-option-card.selected,
+body.theme-dark .quiz-option-card.selected {
+  background: #1E3A8A !important;
+  border-color: #38BDF8 !important;
+  color: #FFFFFF !important;
+}
+
+/* 10. Panduan & Tentang Aplikasi */
+[data-theme="dark"] .help-steps-card,
+[data-theme="dark"] .help-support-card,
+[data-theme="dark"] .about-card,
+body.theme-dark .help-steps-card,
+body.theme-dark .help-support-card,
+body.theme-dark .about-card {
+  background: #141E38 !important;
+  border-color: #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .help-step-body,
+body.theme-dark .help-step-body {
+  background: #1C2541 !important;
+  border-color: #334155 !important;
+  color: #CBD5E1 !important;
+}
+
+[data-theme="dark"] .help-step-title,
+body.theme-dark .help-step-title {
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .about-hero-title,
+[data-theme="dark"] .help-hero-title,
+body.theme-dark .about-hero-title,
+body.theme-dark .help-hero-title {
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .about-hero-desc,
+[data-theme="dark"] .help-hero-desc,
+body.theme-dark .about-hero-desc,
+body.theme-dark .help-hero-desc {
+  color: #94A3B8 !important;
+}
+
+/* 11. Quick Facts Bar */
+[data-theme="dark"] .global-quickfacts-footer,
+body.theme-dark .global-quickfacts-footer {
+  background: #0F172A !important;
+  border-top: 1px solid #334155 !important;
+  color: #F8FAFC !important;
+}
+
+[data-theme="dark"] .quickfacts-badge,
+body.theme-dark .quickfacts-badge {
+  background: #78350F !important;
+  color: #FDE68A !important;
+}
+
+[data-theme="dark"] .quickfacts-text,
+body.theme-dark .quickfacts-text {
+  color: #E2E8F0 !important;
+}
+
+/* 12. General Cards & Buttons in Dark Mode */
+[data-theme="dark"] .card,
+body.theme-dark .card {
+  background-color: #141E38;
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .btn-outline,
+body.theme-dark .btn-outline {
+  border-color: #334155;
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .btn-outline:hover,
+body.theme-dark .btn-outline:hover {
+  background-color: #233154;
+  border-color: #38BDF8;
+  color: #38BDF8;
+}
+
+
 .sop-filter-btn:hover {
   border-color: #0B3A6F !important;
   color: #0B3A6F !important;
