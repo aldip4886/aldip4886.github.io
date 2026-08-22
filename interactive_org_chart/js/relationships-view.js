@@ -116,17 +116,23 @@ export class RelationshipsViewEngine {
             </p>
           </div>
 
-          <!-- Instruction Badge -->
-          <div style="display:flex; align-items:center; gap:8px; background:#F8FAFC; border:1px solid #CBD5E1; padding:8px 14px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-            <span style="font-size:18px;">💡</span>
-            <div style="font-size:12px; color:#0B3A6F; font-weight:600; line-height:1.3;">
-              Klik <strong>Garis Relasi</strong> atau <strong>Node Unit</strong><br>untuk membuka detail di <strong>Side Panel</strong>
+          <!-- Instruction Badge & Tour Button -->
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="display:flex; align-items:center; gap:8px; background:#F8FAFC; border:1px solid #CBD5E1; padding:8px 14px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
+              <span style="font-size:18px;">💡</span>
+              <div style="font-size:12px; color:#0B3A6F; font-weight:600; line-height:1.3;">
+                Klik <strong>Garis Relasi</strong> atau <strong>Node Unit</strong><br>untuk membuka detail di <strong>Side Panel</strong>
+              </div>
             </div>
+            <button id="relationships-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:8px 14px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startRelationshipsTour(true);}" title="Buka Panduan Interaktif Diagram Jaringan">
+              <span>💡</span>
+              <span>Panduan Jaringan</span>
+            </button>
           </div>
         </div>
 
         <!-- Filter Toolbar & Action Controls -->
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 18px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px 18px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
+        <div id="relationships-filter-bar" class="relationships-filter-bar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 18px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px 18px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
           
           <!-- Category Filter Pills -->
           <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">

@@ -83,6 +83,69 @@ export class WalkthroughBeacons {
       }
     ];
 
+    this.processSteps = [
+      {
+        targetSelector: '#sop-search-input',
+        preferredSelector: '#sop-search-input',
+        title: 'Pencarian SOP & Regulasi',
+        description: 'Cari alur bisnis pabean dan cukai berdasarkan kata kunci nama proses, dokumen PIB/PEB/CK-1, komoditas, atau nomor PMK terkait secara instan.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '#sop-categories-container',
+        preferredSelector: '#sop-categories-container, .sop-filter-btn',
+        title: 'Kategori Proses Bisnis Utama',
+        description: 'Saring katalog 8 SOP berdasarkan klaster layanan: Pelayanan & Fasilitas, Pengawasan & P2, Keberatan & Banding, atau UPT Laboratorium & Operasi.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '.sop-card-item',
+        preferredSelector: '.sop-card-item:first-child, .sop-card-item',
+        title: 'Kartu Alur Kerja & Standar Layanan (SLA)',
+        description: 'Setiap kartu menyajikan rangkuman tahapan kerja, alokasi waktu SLA layanan, dan dasar hukum utama. Klik kartu untuk membuka linimasa proses.',
+        placement: 'right'
+      },
+      {
+        targetSelector: '.btn-open-sop',
+        preferredSelector: '.sop-card-item:first-child .btn-open-sop, .btn-open-sop',
+        title: 'Dialog Tahapan & Jembatan Unit Kerja',
+        description: 'Di dalam detail alur kerja, Anda dapat mempelajari urutan langkah, melihat output dokumen resmi, dan mengklik chip unit pelaksana untuk membuka Side Panel.',
+        placement: 'top'
+      }
+    ];
+
+    this.relationshipsSteps = [
+      {
+        targetSelector: '#network-canvas-container',
+        preferredSelector: '#relationships-svg-network, #network-canvas-container',
+        title: 'Diagram Jaringan Interdependensi DJBC',
+        description: 'Visualisasi peta hubungan koordinasi operasional, pertukaran data intelijen, dan sinergi antar seluruh satuan kerja DJBC serta instansi mitra.',
+        placement: 'center'
+      },
+      {
+        targetSelector: '#relationships-filter-bar',
+        preferredSelector: '#relationships-filter-bar, button[data-rel-filter]',
+        title: 'Filter Klaster Hubungan Kerja',
+        description: 'Saring diagram interaktif menurut jenis interaksi: Pengawasan & P2, Pelayanan & Fasilitas, Pengujian Lab BLBC, Integrasi Sistem CEISA, Sinergi CIQ, atau Pembinaan SDM.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '.network-node',
+        preferredSelector: '[data-node-id="setditjen"], .network-node',
+        title: 'Node Unit Kerja (5 Tingkatan Organisasi)',
+        description: 'Node dikelompokkan dalam 5 tingkatan: Kantor Pusat, Unit Vertikal Daerah, UPT Teknis, dan Mitra Eksternal. Klik kartu node untuk melihat seluruh keterkaitannya di Side Panel.',
+        placement: 'right'
+      },
+      {
+        targetSelector: '.network-edge',
+        preferredSelector: '.network-edge:first-of-type, .network-edge',
+        fallbackSelector: '#network-canvas-container',
+        title: 'Garis Interaksi & Detail Side Panel',
+        description: 'Arahkan kursor (*hover*) pada garis penghubung untuk melihat intisari interaksi, atau klik garis relasi untuk membaca dasar hukum dan pola koordinasi lengkap di Side Panel.',
+        placement: 'top'
+      }
+    ];
+
     this.steps = this.explorerSteps;
 
     this.init();
@@ -96,7 +159,11 @@ export class WalkthroughBeacons {
 
   isCompleted(tourType = this.activeTourType) {
     try {
-      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
+      let key = 'djbc_explorer_onboarding_completed';
+      if (tourType === 'learning') key = 'djbc_learning_onboarding_completed';
+      else if (tourType === 'process') key = 'djbc_process_onboarding_completed';
+      else if (tourType === 'relationships') key = 'djbc_relationships_onboarding_completed';
+
       if (typeof localStorage !== 'undefined' && localStorage) {
         return localStorage.getItem(key) === 'true';
       }
@@ -108,7 +175,11 @@ export class WalkthroughBeacons {
 
   markCompleted(tourType = this.activeTourType) {
     try {
-      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
+      let key = 'djbc_explorer_onboarding_completed';
+      if (tourType === 'learning') key = 'djbc_learning_onboarding_completed';
+      else if (tourType === 'process') key = 'djbc_process_onboarding_completed';
+      else if (tourType === 'relationships') key = 'djbc_relationships_onboarding_completed';
+
       if (typeof localStorage !== 'undefined' && localStorage) {
         localStorage.setItem(key, 'true');
       }
@@ -139,6 +210,34 @@ export class WalkthroughBeacons {
     this.steps = this.learningSteps;
 
     if (!force && this.isCompleted('learning')) {
+      return;
+    }
+
+    this.currentStep = 0;
+    this.createOverlay();
+    this.renderStep(0);
+  }
+
+  startProcessTour(force = false) {
+    this.activeTourType = 'process';
+    this.storageKey = 'djbc_process_onboarding_completed';
+    this.steps = this.processSteps;
+
+    if (!force && this.isCompleted('process')) {
+      return;
+    }
+
+    this.currentStep = 0;
+    this.createOverlay();
+    this.renderStep(0);
+  }
+
+  startRelationshipsTour(force = false) {
+    this.activeTourType = 'relationships';
+    this.storageKey = 'djbc_relationships_onboarding_completed';
+    this.steps = this.relationshipsSteps;
+
+    if (!force && this.isCompleted('relationships')) {
       return;
     }
 

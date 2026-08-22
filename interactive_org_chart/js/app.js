@@ -403,8 +403,18 @@ export class DJBCExplorerApp {
       }, 350);
     } else if (viewId === 'view-process' && this.processEngine) {
       this.processEngine.render();
+      setTimeout(() => {
+        if (this.walkthrough) {
+          this.walkthrough.startProcessTour();
+        }
+      }, 350);
     } else if (viewId === 'view-connections' && this.relationshipsEngine) {
       this.relationshipsEngine.render();
+      setTimeout(() => {
+        if (this.walkthrough) {
+          this.walkthrough.startRelationshipsTour();
+        }
+      }, 350);
     } else if (viewId === 'view-search' && this.searchEngine) {
       this.searchEngine.renderSearchPage(this.searchEngine.currentQuery || '');
     } else if (viewId === 'view-quiz' && this.quizEngine) {

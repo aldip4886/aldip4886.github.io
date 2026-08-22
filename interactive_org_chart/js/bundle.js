@@ -6522,11 +6522,17 @@ class ProcessFlowEngine {
               <input type="text" id="sop-search-input" placeholder="Cari nama SOP, regulasi, kata kunci..." value="${this.searchQuery}" style="width: 100%; padding: 8px 12px 8px 34px; font-size: 12.5px; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; font-family: inherit;">
               <span style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 14px;">🔍</span>
             </div>
+
+            <!-- Tutorial Beacon Trigger Button -->
+            <button id="process-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:6px 14px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startProcessTour(true);}" title="Buka Panduan Interaktif Alur Kerja">
+              <span>💡</span>
+              <span>Panduan SOP</span>
+            </button>
           </div>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div style="display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;">
+        <div id="sop-categories-container" style="display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;">
           ${categories.map(cat => {
             const isSelected = this.selectedCategory === cat;
             const count = cat === 'ALL' ? this.processData.length : this.processData.filter(p => p.kategori === cat).length;
@@ -6540,7 +6546,7 @@ class ProcessFlowEngine {
         </div>
 
         <!-- SOP Cards Grid List -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px;">
+        <div id="sop-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px;">
           ${filtered.map((proc) => {
             const originalIndex = this.processData.indexOf(proc);
             const stepCount = proc.tahapan ? proc.tahapan.length : 0;
@@ -7073,17 +7079,23 @@ class RelationshipsViewEngine {
             </p>
           </div>
 
-          <!-- Instruction Badge -->
-          <div style="display:flex; align-items:center; gap:8px; background:#F8FAFC; border:1px solid #CBD5E1; padding:8px 14px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
-            <span style="font-size:18px;">💡</span>
-            <div style="font-size:12px; color:#0B3A6F; font-weight:600; line-height:1.3;">
-              Klik <strong>Garis Relasi</strong> atau <strong>Node Unit</strong><br>untuk membuka detail di <strong>Side Panel</strong>
+          <!-- Instruction Badge & Tour Button -->
+          <div style="display:flex; align-items:center; gap:10px;">
+            <div style="display:flex; align-items:center; gap:8px; background:#F8FAFC; border:1px solid #CBD5E1; padding:8px 14px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
+              <span style="font-size:18px;">💡</span>
+              <div style="font-size:12px; color:#0B3A6F; font-weight:600; line-height:1.3;">
+                Klik <strong>Garis Relasi</strong> atau <strong>Node Unit</strong><br>untuk membuka detail di <strong>Side Panel</strong>
+              </div>
             </div>
+            <button id="relationships-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:8px 14px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startRelationshipsTour(true);}" title="Buka Panduan Interaktif Diagram Jaringan">
+              <span>💡</span>
+              <span>Panduan Jaringan</span>
+            </button>
           </div>
         </div>
 
         <!-- Filter Toolbar & Action Controls -->
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 18px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px 18px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
+        <div id="relationships-filter-bar" class="relationships-filter-bar" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom: 18px; background:#FFFFFF; border:1px solid #E2E8F0; border-radius:12px; padding:12px 18px; box-shadow:0 2px 6px rgba(0,0,0,0.02);">
           
           <!-- Category Filter Pills -->
           <div style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
@@ -7591,6 +7603,69 @@ class WalkthroughBeacons {
       }
     ];
 
+    this.processSteps = [
+      {
+        targetSelector: '#sop-search-input',
+        preferredSelector: '#sop-search-input',
+        title: 'Pencarian SOP & Regulasi',
+        description: 'Cari alur bisnis pabean dan cukai berdasarkan kata kunci nama proses, dokumen PIB/PEB/CK-1, komoditas, atau nomor PMK terkait secara instan.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '#sop-categories-container',
+        preferredSelector: '#sop-categories-container, .sop-filter-btn',
+        title: 'Kategori Proses Bisnis Utama',
+        description: 'Saring katalog 8 SOP berdasarkan klaster layanan: Pelayanan & Fasilitas, Pengawasan & P2, Keberatan & Banding, atau UPT Laboratorium & Operasi.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '.sop-card-item',
+        preferredSelector: '.sop-card-item:first-child, .sop-card-item',
+        title: 'Kartu Alur Kerja & Standar Layanan (SLA)',
+        description: 'Setiap kartu menyajikan rangkuman tahapan kerja, alokasi waktu SLA layanan, dan dasar hukum utama. Klik kartu untuk membuka linimasa proses.',
+        placement: 'right'
+      },
+      {
+        targetSelector: '.btn-open-sop',
+        preferredSelector: '.sop-card-item:first-child .btn-open-sop, .btn-open-sop',
+        title: 'Dialog Tahapan & Jembatan Unit Kerja',
+        description: 'Di dalam detail alur kerja, Anda dapat mempelajari urutan langkah, melihat output dokumen resmi, dan mengklik chip unit pelaksana untuk membuka Side Panel.',
+        placement: 'top'
+      }
+    ];
+
+    this.relationshipsSteps = [
+      {
+        targetSelector: '#network-canvas-container',
+        preferredSelector: '#relationships-svg-network, #network-canvas-container',
+        title: 'Diagram Jaringan Interdependensi DJBC',
+        description: 'Visualisasi peta hubungan koordinasi operasional, pertukaran data intelijen, dan sinergi antar seluruh satuan kerja DJBC serta instansi mitra.',
+        placement: 'center'
+      },
+      {
+        targetSelector: '#relationships-filter-bar',
+        preferredSelector: '#relationships-filter-bar, button[data-rel-filter]',
+        title: 'Filter Klaster Hubungan Kerja',
+        description: 'Saring diagram interaktif menurut jenis interaksi: Pengawasan & P2, Pelayanan & Fasilitas, Pengujian Lab BLBC, Integrasi Sistem CEISA, Sinergi CIQ, atau Pembinaan SDM.',
+        placement: 'bottom'
+      },
+      {
+        targetSelector: '.network-node',
+        preferredSelector: '[data-node-id="setditjen"], .network-node',
+        title: 'Node Unit Kerja (5 Tingkatan Organisasi)',
+        description: 'Node dikelompokkan dalam 5 tingkatan: Kantor Pusat, Unit Vertikal Daerah, UPT Teknis, dan Mitra Eksternal. Klik kartu node untuk melihat seluruh keterkaitannya di Side Panel.',
+        placement: 'right'
+      },
+      {
+        targetSelector: '.network-edge',
+        preferredSelector: '.network-edge:first-of-type, .network-edge',
+        fallbackSelector: '#network-canvas-container',
+        title: 'Garis Interaksi & Detail Side Panel',
+        description: 'Arahkan kursor (*hover*) pada garis penghubung untuk melihat intisari interaksi, atau klik garis relasi untuk membaca dasar hukum dan pola koordinasi lengkap di Side Panel.',
+        placement: 'top'
+      }
+    ];
+
     this.steps = this.explorerSteps;
 
     this.init();
@@ -7604,7 +7679,11 @@ class WalkthroughBeacons {
 
   isCompleted(tourType = this.activeTourType) {
     try {
-      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
+      let key = 'djbc_explorer_onboarding_completed';
+      if (tourType === 'learning') key = 'djbc_learning_onboarding_completed';
+      else if (tourType === 'process') key = 'djbc_process_onboarding_completed';
+      else if (tourType === 'relationships') key = 'djbc_relationships_onboarding_completed';
+
       if (typeof localStorage !== 'undefined' && localStorage) {
         return localStorage.getItem(key) === 'true';
       }
@@ -7616,7 +7695,11 @@ class WalkthroughBeacons {
 
   markCompleted(tourType = this.activeTourType) {
     try {
-      const key = tourType === 'learning' ? 'djbc_learning_onboarding_completed' : 'djbc_explorer_onboarding_completed';
+      let key = 'djbc_explorer_onboarding_completed';
+      if (tourType === 'learning') key = 'djbc_learning_onboarding_completed';
+      else if (tourType === 'process') key = 'djbc_process_onboarding_completed';
+      else if (tourType === 'relationships') key = 'djbc_relationships_onboarding_completed';
+
       if (typeof localStorage !== 'undefined' && localStorage) {
         localStorage.setItem(key, 'true');
       }
@@ -7647,6 +7730,34 @@ class WalkthroughBeacons {
     this.steps = this.learningSteps;
 
     if (!force && this.isCompleted('learning')) {
+      return;
+    }
+
+    this.currentStep = 0;
+    this.createOverlay();
+    this.renderStep(0);
+  }
+
+  startProcessTour(force = false) {
+    this.activeTourType = 'process';
+    this.storageKey = 'djbc_process_onboarding_completed';
+    this.steps = this.processSteps;
+
+    if (!force && this.isCompleted('process')) {
+      return;
+    }
+
+    this.currentStep = 0;
+    this.createOverlay();
+    this.renderStep(0);
+  }
+
+  startRelationshipsTour(force = false) {
+    this.activeTourType = 'relationships';
+    this.storageKey = 'djbc_relationships_onboarding_completed';
+    this.steps = this.relationshipsSteps;
+
+    if (!force && this.isCompleted('relationships')) {
       return;
     }
 
@@ -8904,8 +9015,18 @@ class DJBCExplorerApp {
       }, 350);
     } else if (viewId === 'view-process' && this.processEngine) {
       this.processEngine.render();
+      setTimeout(() => {
+        if (this.walkthrough) {
+          this.walkthrough.startProcessTour();
+        }
+      }, 350);
     } else if (viewId === 'view-connections' && this.relationshipsEngine) {
       this.relationshipsEngine.render();
+      setTimeout(() => {
+        if (this.walkthrough) {
+          this.walkthrough.startRelationshipsTour();
+        }
+      }, 350);
     } else if (viewId === 'view-search' && this.searchEngine) {
       this.searchEngine.renderSearchPage(this.searchEngine.currentQuery || '');
     } else if (viewId === 'view-quiz' && this.quizEngine) {

@@ -169,11 +169,17 @@ export class ProcessFlowEngine {
               <input type="text" id="sop-search-input" placeholder="Cari nama SOP, regulasi, kata kunci..." value="${this.searchQuery}" style="width: 100%; padding: 8px 12px 8px 34px; font-size: 12.5px; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; font-family: inherit;">
               <span style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 14px;">🔍</span>
             </div>
+
+            <!-- Tutorial Beacon Trigger Button -->
+            <button id="process-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:6px 14px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startProcessTour(true);}" title="Buka Panduan Interaktif Alur Kerja">
+              <span>💡</span>
+              <span>Panduan SOP</span>
+            </button>
           </div>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div style="display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;">
+        <div id="sop-categories-container" style="display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;">
           ${categories.map(cat => {
             const isSelected = this.selectedCategory === cat;
             const count = cat === 'ALL' ? this.processData.length : this.processData.filter(p => p.kategori === cat).length;
@@ -187,7 +193,7 @@ export class ProcessFlowEngine {
         </div>
 
         <!-- SOP Cards Grid List -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px;">
+        <div id="sop-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px;">
           ${filtered.map((proc) => {
             const originalIndex = this.processData.indexOf(proc);
             const stepCount = proc.tahapan ? proc.tahapan.length : 0;
