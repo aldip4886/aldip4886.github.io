@@ -107,7 +107,7 @@ export class WalkthroughBeacons {
       },
       {
         targetSelector: '.btn-open-sop',
-        preferredSelector: '.sop-card-item:first-child .btn-open-sop, .btn-open-sop',
+        preferredSelector: '.sop-card-item:first-child .btn-open-sop, .sop-card-item:first-child, .btn-open-sop',
         title: 'Dialog Tahapan & Jembatan Unit Kerja',
         description: 'Di dalam detail alur kerja, Anda dapat mempelajari urutan langkah, melihat output dokumen resmi, dan mengklik chip unit pelaksana untuk membuka Side Panel.',
         placement: 'top'
@@ -116,8 +116,8 @@ export class WalkthroughBeacons {
 
     this.relationshipsSteps = [
       {
-        targetSelector: '#network-canvas-container',
-        preferredSelector: '#relationships-svg-network, #network-canvas-container',
+        targetSelector: '#network-diagram-svg',
+        preferredSelector: '#network-diagram-svg, svg#network-diagram-svg, #network-canvas-container',
         title: 'Diagram Jaringan Interdependensi DJBC',
         description: 'Visualisasi peta hubungan koordinasi operasional, pertukaran data intelijen, dan sinergi antar seluruh satuan kerja DJBC serta instansi mitra.',
         placement: 'center'
@@ -130,16 +130,16 @@ export class WalkthroughBeacons {
         placement: 'bottom'
       },
       {
-        targetSelector: '.network-node',
-        preferredSelector: '[data-node-id="setditjen"], .network-node',
+        targetSelector: '.network-node-group',
+        preferredSelector: 'g.network-node-group[data-node-id="setditjen"], g.network-node-group, .network-node',
         title: 'Node Unit Kerja (5 Tingkatan Organisasi)',
         description: 'Node dikelompokkan dalam 5 tingkatan: Kantor Pusat, Unit Vertikal Daerah, UPT Teknis, dan Mitra Eksternal. Klik kartu node untuk melihat seluruh keterkaitannya di Side Panel.',
         placement: 'right'
       },
       {
-        targetSelector: '.network-edge',
-        preferredSelector: '.network-edge:first-of-type, .network-edge',
-        fallbackSelector: '#network-canvas-container',
+        targetSelector: '.network-edge-group',
+        preferredSelector: 'g.network-edge-group:first-of-type .edge-visible-path, g.network-edge-group:first-of-type, .network-edge-group, .edge-visible-path',
+        fallbackSelector: '#network-diagram-svg',
         title: 'Garis Interaksi & Detail Side Panel',
         description: 'Arahkan kursor (*hover*) pada garis penghubung untuk melihat intisari interaksi, atau klik garis relasi untuk membaca dasar hukum dan pola koordinasi lengkap di Side Panel.',
         placement: 'top'
@@ -266,17 +266,17 @@ export class WalkthroughBeacons {
     this.overlay = doc.createElement('div');
     this.overlay.className = 'walkthrough-overlay is-active';
     this.overlay.id = 'walkthrough-overlay';
-    this.overlay.style.cssText = 'position:fixed !important; inset:0 !important; z-index:999999 !important; pointer-events:auto !important; display:block !important;';
+    this.overlay.style.cssText = 'position:fixed !important; inset:0 !important; z-index:1000000 !important; pointer-events:auto !important; display:block !important;';
 
     this.popover = doc.createElement('div');
     this.popover.className = 'walkthrough-popover';
-    this.popover.style.cssText = 'position:fixed !important; z-index:1000001 !important; pointer-events:auto !important;';
+    this.popover.style.cssText = 'position:fixed !important; z-index:1000020 !important; pointer-events:auto !important;';
     this.popover.addEventListener('click', (e) => e.stopPropagation());
     this.overlay.appendChild(this.popover);
 
     this.beacon = doc.createElement('div');
     this.beacon.className = 'walkthrough-beacon';
-    this.beacon.style.cssText = 'position:fixed !important; z-index:1000000 !important; pointer-events:none !important;';
+    this.beacon.style.cssText = 'position:fixed !important; z-index:1000015 !important; pointer-events:none !important;';
     this.overlay.appendChild(this.beacon);
 
     const container = doc.body || doc.getElementById('app-container') || doc.documentElement;
@@ -410,16 +410,23 @@ export class WalkthroughBeacons {
     let rect = null;
     let hasValidRect = false;
 
-    if (targetEl && typeof targetEl.getBoundingClientRect === 'function') {
-      rect = targetEl.getBoundingClientRect();
-      if (rect.width > 0 && rect.height > 0 && rect.right > 0 && rect.bottom > 0) {
-        hasValidRect = true;
+    if (targetEl) {
+      if (typeof targetEl.scrollIntoView === 'function') {
+        try {
+          targetEl.scrollIntoView({ behavior: 'auto', block: 'nearest', inline: 'nearest' });
+        } catch (e) {}
+      }
+      if (typeof targetEl.getBoundingClientRect === 'function') {
+        rect = targetEl.getBoundingClientRect();
+        if (rect.width > 0 && rect.height > 0 && rect.right > 0 && rect.bottom > 0) {
+          hasValidRect = true;
+        }
       }
     }
 
     // Default center placement fallback
     if (!hasValidRect || placement === 'center') {
-      const top = Math.max(padding, Math.round(winHeight * 0.28));
+      const top = Math.max(padding, Math.round(winHeight * 0.24));
       const left = Math.max(padding, Math.round(winWidth * 0.5 - popoverWidth * 0.5));
 
       this.popover.style.top = `${top}px`;
@@ -429,9 +436,15 @@ export class WalkthroughBeacons {
       this.popover.style.transform = 'none';
 
       if (this.beacon) {
-        this.beacon.style.display = 'flex';
-        this.beacon.style.left = `${Math.round(winWidth * 0.5)}px`;
-        this.beacon.style.top = `${Math.max(40, top - 40)}px`;
+        if (hasValidRect && rect) {
+          this.beacon.style.display = 'flex';
+          this.beacon.style.left = `${Math.round(rect.left + rect.width / 2)}px`;
+          this.beacon.style.top = `${Math.round(rect.top + rect.height / 2)}px`;
+        } else {
+          this.beacon.style.display = 'flex';
+          this.beacon.style.left = `${Math.round(winWidth * 0.5)}px`;
+          this.beacon.style.top = `${Math.max(40, top - 40)}px`;
+        }
       }
       return;
     }
@@ -441,7 +454,7 @@ export class WalkthroughBeacons {
     }
     this.currentTarget = targetEl;
 
-    // Beacon position
+    // Beacon position directly over target center
     if (this.beacon) {
       this.beacon.style.display = 'flex';
       const beaconX = Math.min(winWidth - 24, Math.max(24, Math.round(rect.left + rect.width / 2)));
@@ -460,12 +473,22 @@ export class WalkthroughBeacons {
     } else if (placement === 'top') {
       top = rect.top - popoverEstimatedHeight - 16;
       left = rect.left + rect.width / 2 - popoverWidth / 2;
+      // If top space is too tight, flip to bottom
+      if (top < padding) {
+        top = rect.bottom + 16;
+      }
     } else if (placement === 'left') {
       top = Math.max(padding, rect.top);
       left = rect.left - popoverWidth - 20;
+      if (left < padding) {
+        left = rect.right + 20;
+      }
     } else if (placement === 'right') {
       top = Math.max(padding, rect.top);
       left = rect.right + 20;
+      if (left + popoverWidth > winWidth - padding) {
+        left = rect.left - popoverWidth - 20;
+      }
     } else {
       top = rect.bottom + 16;
       left = rect.left + rect.width / 2 - popoverWidth / 2;
@@ -483,7 +506,6 @@ export class WalkthroughBeacons {
       top = padding;
     }
     if (top + popoverEstimatedHeight > winHeight - padding) {
-      // If bottom overflow, flip to above target if possible
       if (rect.top - popoverEstimatedHeight - 16 >= padding) {
         top = rect.top - popoverEstimatedHeight - 16;
       } else {
