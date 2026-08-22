@@ -116,7 +116,7 @@ export class IndonesiaMapEngine {
           <div id="maplibre-container" style="width:100%;height:100%;"></div>
 
           <!-- Floating Zoom Controls Widget (Bottom Left on Map Canvas above maplibregl-ctrl-bottom-left) -->
-          <div class="map-floating-zoom-ctrl" style="position:absolute;bottom:28px;left:20px;display:flex;flex-direction:column;align-items:center;gap:3px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:10px;padding:4px;box-shadow:0 4px 18px rgba(6,43,82,0.12);z-index:25;">
+          <div class="map-floating-zoom-ctrl" style="position:absolute;bottom:56px;left:20px;display:flex;flex-direction:column;align-items:center;gap:3px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:10px;padding:4px;box-shadow:0 4px 18px rgba(6,43,82,0.12);z-index:25;">
             <button id="map-btn-zoom-in" style="width:32px;height:32px;border:none;background:transparent;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#334155;transition:all 0.15s;" title="Perbesar (Zoom In)">
               <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4"/></svg>
             </button>

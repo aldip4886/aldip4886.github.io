@@ -2010,7 +2010,7 @@
 /* Floating Zoom Control Widget on Map Canvas */
 .map-floating-zoom-ctrl {
   position: absolute;
-  bottom: 28px;
+  bottom: 56px;
   left: 20px;
   display: flex;
   flex-direction: column;
