@@ -536,61 +536,67 @@
 .landing-features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  background: rgba(13, 34, 66, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 22px 24px;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 16px 20px;
 }
 
 .landing-feature-card {
   display: flex;
   align-items: flex-start;
-  gap: 16px;
+  gap: 14px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
   user-select: none;
 }
 
 .landing-feature-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 216, 89, 0.25);
   transform: translateY(-2px);
 }
 
 .landing-feature-card.bordered {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
-  padding-left: 20px;
+  padding-left: 16px;
 }
 
 .landing-feature-icon-circle {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .landing-feature-icon-circle svg {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   color: #ffd859;
 }
 
 .landing-feature-text h4 {
   color: #ffffff;
   font-weight: 600;
-  font-size: 14px;
-  margin: 0 0 4px;
+  font-size: 13.5px;
+  margin: 0 0 3px;
 }
 
 .landing-feature-text p {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11.5px;
   line-height: 1.45;
   margin: 0;
 }
@@ -2938,9 +2944,15 @@ body.theme-dark .landing-viewport {
 
 [data-theme="dark"] .landing-main-card,
 body.theme-dark .landing-main-card {
-  background: #0F172A !important;
+  background-color: #070F26 !important;
   border-color: #1E293B !important;
+  border-bottom-color: #FBBF24 !important;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-theme="dark"] .landing-map-bg,
+body.theme-dark .landing-map-bg {
+  background: transparent !important;
 }
 
 [data-theme="dark"] .landing-logo-text h1,
@@ -2963,17 +2975,27 @@ body.theme-dark .landing-hero-desc {
   color: #CBD5E1 !important;
 }
 
+[data-theme="dark"] .landing-features-grid,
+body.theme-dark .landing-features-grid {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
 [data-theme="dark"] .landing-feature-card,
 body.theme-dark .landing-feature-card {
-  background: #1C2541 !important;
-  border-color: #334155 !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
 }
 
 [data-theme="dark"] .landing-feature-card:hover,
 body.theme-dark .landing-feature-card:hover {
-  background: #233154 !important;
-  border-color: #38BDF8 !important;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+}
+
+[data-theme="dark"] .landing-feature-card.bordered,
+body.theme-dark .landing-feature-card.bordered {
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 [data-theme="dark"] .landing-feature-title,
@@ -2983,14 +3005,14 @@ body.theme-dark .landing-feature-title {
 
 [data-theme="dark"] .landing-feature-desc,
 body.theme-dark .landing-feature-desc {
-  color: #94A3B8 !important;
+  color: #CBD5E1 !important;
 }
 
 [data-theme="dark"] .landing-feature-icon-circle,
 body.theme-dark .landing-feature-icon-circle {
-  background: #0F172A !important;
-  border-color: #334155 !important;
-  color: #38BDF8 !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  color: #ffd859 !important;
 }
 
 [data-theme="dark"] .landing-secondary-btn,
