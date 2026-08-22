@@ -262,9 +262,10 @@ export class SVGTreeEngine {
     hitRect.setAttribute('height', node.height + (node.type === 'pillar' ? 30 : 0));
     hitRect.setAttribute('rx', '12');
     hitRect.setAttribute('ry', '12');
-    hitRect.setAttribute('fill', isSelected ? (node.type === 'subunit4' ? '#DCFCE7' : (node.type === 'subunit' ? '#FEF3C7' : '#EFF6FF')) : '#FFFFFF');
-    hitRect.setAttribute('stroke', isSelected ? (node.type === 'subunit4' ? '#059669' : '#D9B45B') : '#CBD5E1');
-    hitRect.setAttribute('stroke-width', isSelected ? '2.5' : '1.5');
+    hitRect.setAttribute('fill', 'transparent');
+    hitRect.setAttribute('stroke', 'none');
+    hitRect.setAttribute('stroke-width', '0');
+    hitRect.setAttribute('pointer-events', 'all');
     hitRect.style.cursor = 'pointer';
     g.appendChild(hitRect);
 

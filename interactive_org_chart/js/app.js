@@ -73,10 +73,10 @@ export class DJBCExplorerApp {
   }
 
   loadData() {
-    this.orgTreeData = window.DATA_ORGANIZATION || window.__DJBC_ORG_DATA__ || {};
-    this.unitsDict = window.DATA_UNITS || window.__DJBC_UNITS_DATA__ || {};
-    this.relationshipsData = window.DATA_RELATIONSHIPS || window.__DJBC_RELATIONSHIPS__ || [];
-    this.assessmentsData = window.DATA_ASSESSMENTS || window.__DJBC_ASSESSMENTS__ || window.assessmentsData || [];
+    this.orgTreeData = window.DATA_ORGANIZATION || window.ORGANIZATION_DATA || window.__DJBC_ORG_DATA__ || {};
+    this.unitsDict = window.DATA_UNITS || window.UNITS_DATA || window.__DJBC_UNITS_DATA__ || {};
+    this.relationshipsData = window.DATA_RELATIONSHIPS || window.RELATIONSHIPS_DATA || window.__DJBC_RELATIONSHIPS__ || [];
+    this.assessmentsData = window.DATA_ASSESSMENTS || window.assessmentsData || window.__DJBC_ASSESSMENTS__ || [];
     this.geoData = window.DATA_GEO_UNITS || window.__DJBC_GEO_DATA__ || [];
     this.kanwilMapping = window.DATA_KANWIL_MAPPING || window.__DJBC_KANWIL_MAPPING__ || {};
     this.searchIndex = window.DATA_SEARCH_INDEX || window.__DJBC_SEARCH_INDEX__ || [];

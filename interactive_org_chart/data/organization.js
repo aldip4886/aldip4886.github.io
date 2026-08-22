@@ -1,4 +1,4 @@
-window.ORGANIZATION_DATA = {
+window.DATA_ORGANIZATION = window.ORGANIZATION_DATA = window.__DJBC_ORG_DATA__ = {
   "id": "djbc",
   "nama": "Direktorat Jenderal Bea dan Cukai",
   "singkatan": "DJBC",
@@ -11012,4 +11012,4 @@ window.ORGANIZATION_DATA = {
     }
   ]
 };
-if (typeof module !== 'undefined' && module.exports) { module.exports = window.ORGANIZATION_DATA; }
+if (typeof module !== 'undefined' && module.exports) { module.exports = window.DATA_ORGANIZATION; }
