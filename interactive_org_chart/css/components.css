@@ -3929,3 +3929,210 @@ body.theme-dark #network-edge-tooltip {
   border: 1.5px solid #38BDF8 !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7) !important;
 }
+
+/* ==========================================================================
+   Mobile Component Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  /* Landing / Beranda Mobile View */
+  .landing-viewport {
+    padding: 12px !important;
+    overflow-y: auto !important;
+  }
+
+  .landing-main-card {
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+
+  .landing-header-title {
+    font-size: 20px !important;
+    line-height: 1.3 !important;
+  }
+
+  .landing-header-subtitle {
+    font-size: 12px !important;
+  }
+
+  .bento-grid,
+  .landing-bento-cards {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .landing-stats-container,
+  .quick-stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  .stat-card-number {
+    font-size: 20px !important;
+  }
+
+  /* Explorer Filters on Mobile */
+  .explorer-filter-bar,
+  .explorer-controls {
+    flex-wrap: wrap !important;
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+
+  .filter-pill,
+  .filter-btn {
+    min-height: 44px !important;
+    padding: 8px 12px !important;
+    font-size: 12px !important;
+  }
+
+  /* Floating Help Tips Card on Mobile */
+  .floating-help-tips-card,
+  #explorer-help-tips-card,
+  #map-help-tips-card {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 76px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-width: none !important;
+    z-index: 400 !important;
+    padding: 14px !important;
+    border-radius: 14px !important;
+  }
+
+  /* SOP / Process Flow Detail Modal Dialog on Mobile */
+  .sop-modal-dialog,
+  .process-modal-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+    border-radius: 0 !important;
+    padding: 16px !important;
+  }
+
+  .sop-timeline-stepper {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .sop-step-card {
+    padding: 12px !important;
+  }
+
+  /* Quiz & Assessment View on Mobile */
+  .quiz-viewport,
+  .quiz-container {
+    padding: 12px !important;
+    overflow-y: auto !important;
+  }
+
+  .quiz-header-bar {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: stretch !important;
+  }
+
+  .quiz-timer-floating-bar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 100 !important;
+    width: 100% !important;
+    margin-bottom: 12px !important;
+  }
+
+  .quiz-question-card {
+    padding: 16px !important;
+    border-radius: 14px !important;
+  }
+
+  .quiz-option-card {
+    min-height: 48px !important;
+    padding: 12px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .quiz-results-card {
+    padding: 16px !important;
+  }
+
+  .result-gauge-svg {
+    width: 140px !important;
+    height: 140px !important;
+  }
+
+  /* Learning Modules View on Mobile */
+  .learning-modules-header {
+    flex-direction: column !important;
+    gap: 10px !important;
+  }
+
+  .learning-topics-stepper {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    padding-bottom: 8px !important;
+  }
+
+  .learning-topic-tab {
+    min-height: 44px !important;
+  }
+
+  /* Global Quick Facts Footer Bar on Mobile */
+  .global-quickfacts-footer {
+    height: 52px !important;
+    padding: 0 8px !important;
+  }
+
+  .quickfacts-inner {
+    gap: 6px !important;
+  }
+
+  .quickfacts-badge {
+    padding: 4px 8px !important;
+  }
+
+  .quickfacts-title {
+    display: none !important;
+  }
+
+  .quickfacts-text {
+    font-size: 11.5px !important;
+    line-height: 1.3 !important;
+  }
+
+  .quickfacts-nav-btn {
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-stats-container,
+  .quick-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .quiz-question-title {
+    font-size: 14px !important;
+  }
+
+  .quiz-option-card {
+    font-size: 12px !important;
+  }
+
+  .quickfacts-badge .quickfacts-icon {
+    font-size: 14px !important;
+  }
+
+  #view-connections > div {
+    padding: 12px 14px !important;
+  }
+
+  .relationships-filter-bar {
+    padding: 8px 12px !important;
+  }
+}
+
+

@@ -542,6 +542,54 @@ export class SVGTreeEngine {
         if (this.gZoom) this.gZoom.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
       }, 100);
     }, { passive: false });
+
+    // Touch pan and pinch-zoom handlers for mobile touchscreens
+    let initialPinchDist = null;
+    let initialScale = this.scale;
+
+    this.svg.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        let el = touch.target;
+        while (el && el !== this.svg) {
+          if (el.classList && (el.classList.contains('node-card') || el.classList.contains('tree-toolbar'))) return;
+          el = el.parentElement;
+        }
+        this.isDragging = true;
+        if (this.gZoom) this.gZoom.style.transition = 'none';
+        this.startX = touch.clientX - this.translateX;
+        this.startY = touch.clientY - this.translateY;
+      } else if (e.touches.length === 2) {
+        this.isDragging = false;
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        initialPinchDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        initialScale = this.scale;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (this.isDragging && e.touches.length === 1) {
+        const touch = e.touches[0];
+        this.translateX = touch.clientX - this.startX;
+        this.translateY = touch.clientY - this.startY;
+        this.updateTransform();
+      } else if (e.touches.length === 2 && initialPinchDist) {
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        const currentDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        const factor = currentDist / initialPinchDist;
+        this.scale = Math.max(0.25, Math.min(2.5, initialScale * factor));
+        this.updateTransform();
+        this.updateZoomLabel();
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      this.isDragging = false;
+      initialPinchDist = null;
+      if (this.gZoom) this.gZoom.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    });
   }
 
   updateTransform() {

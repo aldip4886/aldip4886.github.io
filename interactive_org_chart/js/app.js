@@ -164,6 +164,28 @@ export class DJBCExplorerApp {
   }
 
   initNavigation() {
+    // Mobile Hamburger Menu Toggle & Sidebar Backdrop
+    const mobileMenuToggle = (typeof document !== 'undefined' && typeof document.getElementById === 'function') ? document.getElementById('mobile-menu-toggle') : null;
+    const sidebar = (typeof document !== 'undefined' && typeof document.querySelector === 'function') ? document.querySelector('.sidebar') : null;
+    const sidebarBackdrop = (typeof document !== 'undefined' && typeof document.getElementById === 'function') ? document.getElementById('sidebar-backdrop') : null;
+
+    if (mobileMenuToggle && sidebar) {
+      mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = sidebar.classList.toggle('mobile-open');
+        if (sidebarBackdrop) {
+          sidebarBackdrop.classList.toggle('active', isOpen);
+        }
+      });
+    }
+
+    if (sidebarBackdrop && sidebar) {
+      sidebarBackdrop.addEventListener('click', () => {
+        sidebar.classList.remove('mobile-open');
+        sidebarBackdrop.classList.remove('active');
+      });
+    }
+
     // Sidebar Header click to Beranda
     const sidebarHeader = document.querySelector('.sidebar-header');
     if (sidebarHeader && typeof sidebarHeader.addEventListener === 'function') {
@@ -320,6 +342,12 @@ export class DJBCExplorerApp {
   switchView(viewId) {
     const prevView = this.currentView;
     this.currentView = viewId;
+
+    // Auto-close mobile sidebar when changing view
+    const sidebarEl = (typeof document !== 'undefined' && typeof document.querySelector === 'function') ? document.querySelector('.sidebar') : null;
+    const sidebarBackdropEl = (typeof document !== 'undefined' && typeof document.getElementById === 'function') ? document.getElementById('sidebar-backdrop') : null;
+    if (sidebarEl && sidebarEl.classList) sidebarEl.classList.remove('mobile-open');
+    if (sidebarBackdropEl && sidebarBackdropEl.classList) sidebarBackdropEl.classList.remove('active');
 
     // Automatically close side panel drawer whenever user switches page/view
     if (prevView && prevView !== viewId) {

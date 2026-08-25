@@ -1803,6 +1803,54 @@ class SVGTreeEngine {
         if (this.gZoom) this.gZoom.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
       }, 100);
     }, { passive: false });
+
+    // Touch pan and pinch-zoom handlers for mobile touchscreens
+    let initialPinchDist = null;
+    let initialScale = this.scale;
+
+    this.svg.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        let el = touch.target;
+        while (el && el !== this.svg) {
+          if (el.classList && (el.classList.contains('node-card') || el.classList.contains('tree-toolbar'))) return;
+          el = el.parentElement;
+        }
+        this.isDragging = true;
+        if (this.gZoom) this.gZoom.style.transition = 'none';
+        this.startX = touch.clientX - this.translateX;
+        this.startY = touch.clientY - this.translateY;
+      } else if (e.touches.length === 2) {
+        this.isDragging = false;
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        initialPinchDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        initialScale = this.scale;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (this.isDragging && e.touches.length === 1) {
+        const touch = e.touches[0];
+        this.translateX = touch.clientX - this.startX;
+        this.translateY = touch.clientY - this.startY;
+        this.updateTransform();
+      } else if (e.touches.length === 2 && initialPinchDist) {
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        const currentDist = Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+        const factor = currentDist / initialPinchDist;
+        this.scale = Math.max(0.25, Math.min(2.5, initialScale * factor));
+        this.updateTransform();
+        this.updateZoomLabel();
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      this.isDragging = false;
+      initialPinchDist = null;
+      if (this.gZoom) this.gZoom.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    });
   }
 
   updateTransform() {
@@ -2132,6 +2180,12 @@ class DetailPanel {
 
     this.currentUnit = unitData;
     this.isOpen = true;
+
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (backdrop) {
+      backdrop.classList.add('active');
+      backdrop.onclick = () => this.close();
+    }
 
     // Fill header elements
     const badgeEl = this.panel.querySelector('#drawer-badge');
@@ -2597,6 +2651,12 @@ class DetailPanel {
     this.isOpen = true;
     this.currentUnit = null;
 
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (backdrop) {
+      backdrop.classList.add('active');
+      backdrop.onclick = () => this.close();
+    }
+
     const fromName = this.getUnitDisplayName(rel.from);
     const toName = this.getUnitDisplayName(rel.to);
     const categoryColor = this.getCategoryColor(rel.category);
@@ -2709,6 +2769,10 @@ class DetailPanel {
   close() {
     this.isOpen = false;
     this.panel.classList.remove('open');
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (backdrop) {
+      backdrop.classList.remove('active');
+    }
   }
 }
 
@@ -8798,6 +8862,28 @@ class DJBCExplorerApp {
   }
 
   initNavigation() {
+    // Mobile Hamburger Menu Toggle & Sidebar Backdrop
+    const mobileMenuToggle = (typeof document !== 'undefined' && typeof document.getElementById === 'function') ? document.getElementById('mobile-menu-toggle') : null;
+    const sidebar = (typeof document !== 'undefined' && typeof document.querySelector === 'function') ? document.querySelector('.sidebar') : null;
+    const sidebarBackdrop = (typeof document !== 'undefined' && typeof document.getElementById === 'function') ? document.getElementById('sidebar-backdrop') : null;
+
+    if (mobileMenuToggle && sidebar) {
+      mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = sidebar.classList.toggle('mobile-open');
+        if (sidebarBackdrop) {
+          sidebarBackdrop.classList.toggle('active', isOpen);
+        }
+      });
+    }
+
+    if (sidebarBackdrop && sidebar) {
+      sidebarBackdrop.addEventListener('click', () => {
+        sidebar.classList.remove('mobile-open');
+        sidebarBackdrop.classList.remove('active');
+      });
+    }
+
     // Sidebar Header click to Beranda
     const sidebarHeader = document.querySelector('.sidebar-header');
     if (sidebarHeader && typeof sidebarHeader.addEventListener === 'function') {
@@ -8954,6 +9040,12 @@ class DJBCExplorerApp {
   switchView(viewId) {
     const prevView = this.currentView;
     this.currentView = viewId;
+
+    // Auto-close mobile sidebar when changing view
+    const sidebarEl = (typeof document !== 'undefined' && typeof document.querySelector === 'function') ? document.querySelector('.sidebar') : null;
+    const sidebarBackdropEl = (typeof document !== 'undefined' && typeof document.getElementById === 'function') ? document.getElementById('sidebar-backdrop') : null;
+    if (sidebarEl && sidebarEl.classList) sidebarEl.classList.remove('mobile-open');
+    if (sidebarBackdropEl && sidebarBackdropEl.classList) sidebarBackdropEl.classList.remove('active');
 
     // Automatically close side panel drawer whenever user switches page/view
     if (prevView && prevView !== viewId) {

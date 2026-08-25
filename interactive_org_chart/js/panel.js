@@ -160,6 +160,12 @@ export class DetailPanel {
     this.currentUnit = unitData;
     this.isOpen = true;
 
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (backdrop) {
+      backdrop.classList.add('active');
+      backdrop.onclick = () => this.close();
+    }
+
     // Fill header elements
     const badgeEl = this.panel.querySelector('#drawer-badge');
     const levelStr = unitData.level || unitData.kategori_fungsi || 'Eselon II';
@@ -624,6 +630,12 @@ export class DetailPanel {
     this.isOpen = true;
     this.currentUnit = null;
 
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (backdrop) {
+      backdrop.classList.add('active');
+      backdrop.onclick = () => this.close();
+    }
+
     const fromName = this.getUnitDisplayName(rel.from);
     const toName = this.getUnitDisplayName(rel.to);
     const categoryColor = this.getCategoryColor(rel.category);
@@ -736,5 +748,9 @@ export class DetailPanel {
   close() {
     this.isOpen = false;
     this.panel.classList.remove('open');
+    const backdrop = document.getElementById('drawer-backdrop');
+    if (backdrop) {
+      backdrop.classList.remove('active');
+    }
   }
 }
