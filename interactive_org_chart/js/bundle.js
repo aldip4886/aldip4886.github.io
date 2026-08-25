@@ -6625,37 +6625,37 @@ class ProcessFlowEngine {
 
     // Build Main List View HTML
     const listHtml = `
-      <div class="process-catalog-view" style="padding: 24px 32px; max-width: 1400px; margin: 0 auto; width: 100%; height: calc(100vh - 76px); display: flex; flex-direction: column; box-sizing: border-box; overflow-y: auto; font-family:'Poppins',sans-serif;">
+      <div class="process-catalog-view" style="padding: 16px 24px; max-width: 1400px; margin: 0 auto; width: 100%; height: calc(100vh - 76px); display: flex; flex-direction: column; box-sizing: border-box; overflow-y: auto; font-family:'Poppins',sans-serif;">
         
         <!-- Header Banner & Intro -->
-        <div style="margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #E2E8F0; padding-bottom: 16px;">
+        <div style="margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 12px;">
           <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px;">
-              <span class="badge" style="background:#0B3A6F15; color:#0B3A6F; font-size:11px; font-weight:700; border:1px solid #0B3A6F30; text-transform:uppercase;">
+            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 3px;">
+              <span class="badge" style="background:#0B3A6F15; color:#0B3A6F; font-size:10.5px; font-weight:700; border:1px solid #0B3A6F30; text-transform:uppercase;">
                 STANDAR OPERASIONAL PROSEDUR (SOP)
               </span>
-              <span class="badge" style="background:#FEF3C7; color:#92400E; font-size:11px; font-weight:700; border:1px solid #FDE68A;">
+              <span class="badge" style="background:#FEF3C7; color:#92400E; font-size:10.5px; font-weight:700; border:1px solid #FDE68A;">
                 ${this.processData.length} Alur Bisnis Utama
               </span>
             </div>
-            <h2 style="font-size: 22px; font-weight: 800; color: #001631; margin: 0; line-height: 1.2;">
+            <h2 style="font-size: 20px; font-weight: 800; color: #001631; margin: 0; line-height: 1.2;">
               Katalog Alur Kerja &amp; SOP DJBC
             </h2>
-            <p style="font-size: 13px; color: #64748B; margin: 4px 0 0 0;">
+            <p style="font-size: 12px; color: #64748B; margin: 3px 0 0 0;">
               Pilih salah satu alur kerja di bawah untuk membuka dialog interaktif tahapan proses, SLA, dan unit kerja yang terlibat.
             </p>
           </div>
 
           <!-- Search & Filter Controls -->
-          <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
             <!-- Search Box -->
-            <div style="position: relative; min-width: 260px;">
-              <input type="text" id="sop-search-input" placeholder="Cari nama SOP, regulasi, kata kunci..." value="${this.searchQuery}" style="width: 100%; padding: 8px 12px 8px 34px; font-size: 12.5px; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; font-family: inherit;">
-              <span style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 14px;">🔍</span>
+            <div style="position: relative; min-width: 240px;">
+              <input type="text" id="sop-search-input" placeholder="Cari nama SOP, regulasi, kata kunci..." value="${this.searchQuery}" style="width: 100%; padding: 6px 12px 6px 32px; font-size: 12px; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; font-family: inherit;">
+              <span style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 13px;">🔍</span>
             </div>
 
             <!-- Tutorial Beacon Trigger Button -->
-            <button id="process-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:6px 14px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startProcessTour(true);}" title="Buka Panduan Interaktif Alur Kerja">
+            <button id="process-tour-btn" class="btn btn-outline" style="font-size:11.5px; font-weight:600; padding:5px 12px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startProcessTour(true);}" title="Buka Panduan Interaktif Alur Kerja">
               <span>💡</span>
               <span>Panduan SOP</span>
             </button>
@@ -6663,21 +6663,21 @@ class ProcessFlowEngine {
         </div>
 
         <!-- Category Filter Tabs -->
-        <div id="sop-categories-container" style="display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;">
+        <div id="sop-categories-container" style="display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap;">
           ${categories.map(cat => {
             const isSelected = this.selectedCategory === cat;
             const count = cat === 'ALL' ? this.processData.length : this.processData.filter(p => p.kategori === cat).length;
             const label = cat === 'ALL' ? 'Semua Alur Kerja' : cat;
             return `
-              <button class="sop-filter-btn" data-category="${cat}" style="padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; border: 1px solid ${isSelected ? '#0B3A6F' : '#E2E8F0'}; background: ${isSelected ? '#0B3A6F' : '#FFFFFF'}; color: ${isSelected ? '#FFFFFF' : '#475569'}; font-family: inherit;">
+              <button class="sop-filter-btn" data-category="${cat}" style="padding: 5px 12px; border-radius: 20px; font-size: 11.5px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; border: 1px solid ${isSelected ? '#0B3A6F' : '#E2E8F0'}; background: ${isSelected ? '#0B3A6F' : '#FFFFFF'}; color: ${isSelected ? '#FFFFFF' : '#475569'}; font-family: inherit;">
                 ${label} (${count})
               </button>
             `;
           }).join('')}
         </div>
 
-        <!-- SOP Cards Grid List -->
-        <div id="sop-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-bottom: 24px;">
+        <!-- SOP Cards Grid List (Compact & Visible on 1 Page) -->
+        <div id="sop-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-bottom: 16px;">
           ${filtered.map((proc) => {
             const originalIndex = this.processData.indexOf(proc);
             const stepCount = proc.tahapan ? proc.tahapan.length : 0;
@@ -6685,47 +6685,47 @@ class ProcessFlowEngine {
               <div class="card sop-card-item" data-process-idx="${originalIndex}">
                 <div>
                   <!-- Top Badge Line -->
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 6px;">
-                    <span class="badge" style="background: #F1F5F9; color: #0B3A6F; font-size: 11px; font-weight: 700; border: 1px solid #E2E8F0;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 4px;">
+                    <span class="badge" style="background: #F1F5F9; color: #0B3A6F; font-size: 10.5px; font-weight: 700; border: 1px solid #E2E8F0; padding: 2px 6px;">
                       ${proc.kategori || 'SOP DJBC'}
                     </span>
-                    <span style="font-size: 11px; font-weight: 800; color: #D9B45B; background: #0B3A6F; padding: 2px 8px; border-radius: 6px;">
+                    <span style="font-size: 10.5px; font-weight: 800; color: #D9B45B; background: #0B3A6F; padding: 2px 6px; border-radius: 4px;">
                       SOP #${String(originalIndex + 1).padStart(2, '0')}
                     </span>
                   </div>
 
                   <!-- SOP Title -->
-                  <h3 style="font-size: 15px; font-weight: 800; color: #001631; margin: 0 0 8px 0; line-height: 1.35;">
+                  <h3 style="font-size: 13.5px; font-weight: 800; color: #001631; margin: 0 0 4px 0; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" title="${proc.nama}">
                     ${proc.nama}
                   </h3>
 
                   <!-- SOP Short Description -->
-                  <p style="font-size: 12.5px; color: #475569; line-height: 1.5; margin: 0 0 14px 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                  <p style="font-size: 11.5px; color: #64748B; line-height: 1.4; margin: 0 0 8px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                     ${proc.deskripsi_singkat || ''}
                   </p>
                 </div>
 
                 <!-- Footer Metadata & Action -->
                 <div>
-                  <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; font-size: 11px;">
-                    <span class="badge" style="background:#EFF6FF; color:#1D4ED8; font-weight:600; border:1px solid #DBEAFE;">
-                      📌 ${stepCount} Tahapan
+                  <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; font-size: 10.5px;">
+                    <span class="badge" style="background:#EFF6FF; color:#1D4ED8; font-weight:600; border:1px solid #DBEAFE; padding: 2px 6px;">
+                      📌 ${stepCount} Tahap
                     </span>
                     ${proc.sla_total ? `
-                      <span class="badge" style="background:#FEF3C7; color:#92400E; font-weight:600; border:1px solid #FDE68A;">
+                      <span class="badge" style="background:#FEF3C7; color:#92400E; font-weight:600; border:1px solid #FDE68A; padding: 2px 6px;">
                         ⏱ ${proc.sla_total}
                       </span>
                     ` : ''}
                     ${proc.dasar_hukum_utama ? `
-                      <span class="badge" style="background:#F8FAFC; color:#64748B; font-weight:500; border:1px solid #E2E8F0; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${proc.dasar_hukum_utama}">
+                      <span class="badge" style="background:#F8FAFC; color:#64748B; font-weight:500; border:1px solid #E2E8F0; padding: 2px 6px; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${proc.dasar_hukum_utama}">
                         ⚖ ${proc.dasar_hukum_utama}
                       </span>
                     ` : ''}
                   </div>
 
-                  <button class="btn btn-primary btn-open-sop" data-process-idx="${originalIndex}" style="width: 100%; justify-content: center; padding: 8px 14px; font-size: 12.5px; font-weight: 700; border-radius: 8px;">
+                  <button class="btn btn-primary btn-open-sop" data-process-idx="${originalIndex}" style="width: 100%; justify-content: center; padding: 6px 10px; font-size: 11.5px; font-weight: 700; border-radius: 6px;">
                     <span>Buka Detail Alur Kerja</span>
-                    <span style="font-size: 14px;">➔</span>
+                    <span style="font-size: 13px;">➔</span>
                   </button>
                 </div>
               </div>
@@ -6734,10 +6734,10 @@ class ProcessFlowEngine {
         </div>
 
         ${filtered.length === 0 ? `
-          <div style="padding: 40px; text-align: center; background: #FFFFFF; border-radius: 12px; border: 1px dashed #CBD5E1; color: #64748B;">
-            <div style="font-size: 32px; margin-bottom: 8px;">🔍</div>
-            <div style="font-weight: 700; font-size: 15px; color: #001631;">Tidak ada Alur Kerja yang cocok</div>
-            <div style="font-size: 12.5px; margin-top: 4px;">Coba ubah kata kunci pencarian atau pilih kategori lain.</div>
+          <div style="padding: 30px; text-align: center; background: #FFFFFF; border-radius: 12px; border: 1px dashed #CBD5E1; color: #64748B;">
+            <div style="font-size: 28px; margin-bottom: 6px;">🔍</div>
+            <div style="font-weight: 700; font-size: 14px; color: #001631;">Tidak ada Alur Kerja yang cocok</div>
+            <div style="font-size: 12px; margin-top: 4px;">Coba ubah kata kunci pencarian atau pilih kategori lain.</div>
           </div>
         ` : ''}
 
@@ -6751,10 +6751,10 @@ class ProcessFlowEngine {
         <div id="sop-detail-modal-dialog" style="background: #FFFFFF; border-radius: 18px; width: 100%; max-width: 1200px; max-height: 92vh; display: flex; flex-direction: column; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(217, 180, 91, 0.25); overflow: hidden; position: relative;">
           
           <!-- MODAL HEADER: Title, Badges & Process Navigation -->
-          <div style="padding: 16px 24px; background: linear-gradient(135deg, #0B3A6F 0%, #062347 100%); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid #D9B45B;">
+          <div style="padding: 14px 20px; background: linear-gradient(135deg, #0B3A6F 0%, #062347 100%); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid #D9B45B; flex-shrink: 0;">
             
             <!-- Left: Title & Badges -->
-            <div style="flex: 1; min-width: 260px;">
+            <div style="flex: 1; min-width: 240px;">
               <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
                 <span style="font-size: 11px; font-weight: 800; color: #001631; background: #D9B45B; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">
                   ${currentProcess.kategori || 'SOP & ALUR KERJA'}
@@ -6768,18 +6768,18 @@ class ProcessFlowEngine {
                   </span>
                 ` : ''}
               </div>
-              <h2 style="font-size: 18px; font-weight: 800; color: #FFFFFF; margin: 0; line-height: 1.3;">
+              <h2 style="font-size: 17px; font-weight: 800; color: #FFFFFF; margin: 0; line-height: 1.3;">
                 ${currentProcess.nama}
               </h2>
             </div>
 
             <!-- Right: Process Navigation Controls & Close Button -->
             <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-              <button id="modal-btn-prev-process" class="btn" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.25); padding: 6px 12px; font-size: 12px; font-weight: 700; border-radius: 8px; cursor: ${this.currentProcessIndex === 0 ? 'not-allowed' : 'pointer'}; opacity: ${this.currentProcessIndex === 0 ? '0.4' : '1'};" ${this.currentProcessIndex === 0 ? 'disabled' : ''} title="Alur Sebelumnya (Alt+Left)">
+              <button id="modal-btn-prev-process" class="btn" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.25); padding: 5px 10px; font-size: 11.5px; font-weight: 700; border-radius: 6px; cursor: ${this.currentProcessIndex === 0 ? 'not-allowed' : 'pointer'}; opacity: ${this.currentProcessIndex === 0 ? '0.4' : '1'};" ${this.currentProcessIndex === 0 ? 'disabled' : ''} title="Alur Sebelumnya (Alt+Left)">
                 ← Alur Sebelumnya
               </button>
 
-              <select id="modal-process-dropdown" style="padding: 6px 10px; font-size: 12px; font-weight: 700; color: #0B3A6F; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 8px; cursor: pointer; max-width: 180px;">
+              <select id="modal-process-dropdown" style="padding: 5px 8px; font-size: 11.5px; font-weight: 700; color: #0B3A6F; background: #FFFFFF; border: 1px solid #CBD5E1; border-radius: 6px; cursor: pointer; max-width: 170px;">
                 ${this.processData.map((proc, idx) => `
                   <option value="${idx}" ${idx === this.currentProcessIndex ? 'selected' : ''}>
                     Alur ${idx + 1}: ${proc.nama.split('(')[0].trim()}
@@ -6787,52 +6787,52 @@ class ProcessFlowEngine {
                 `).join('')}
               </select>
 
-              <button id="modal-btn-next-process" class="btn" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.25); padding: 6px 12px; font-size: 12px; font-weight: 700; border-radius: 8px; cursor: ${this.currentProcessIndex === totalProcesses - 1 ? 'not-allowed' : 'pointer'}; opacity: ${this.currentProcessIndex === totalProcesses - 1 ? '0.4' : '1'};" ${this.currentProcessIndex === totalProcesses - 1 ? 'disabled' : ''} title="Alur Berikutnya (Alt+Right)">
+              <button id="modal-btn-next-process" class="btn" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.25); padding: 5px 10px; font-size: 11.5px; font-weight: 700; border-radius: 6px; cursor: ${this.currentProcessIndex === totalProcesses - 1 ? 'not-allowed' : 'pointer'}; opacity: ${this.currentProcessIndex === totalProcesses - 1 ? '0.4' : '1'};" ${this.currentProcessIndex === totalProcesses - 1 ? 'disabled' : ''} title="Alur Berikutnya (Alt+Right)">
                 Alur Berikutnya →
               </button>
 
-              <button id="modal-btn-close-x" style="background: rgba(255,255,255,0.2); border: none; color: #FFFFFF; font-size: 18px; font-weight: 700; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 4px;" title="Tutup Dialog (Esc)">
+              <button id="modal-btn-close-x" style="background: rgba(255,255,255,0.2); border: none; color: #FFFFFF; font-size: 16px; font-weight: 700; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; margin-left: 2px;" title="Tutup Dialog (Esc)">
                 ✕
               </button>
             </div>
 
           </div>
 
-          <!-- MODAL BODY: Horizontal Timeline Stepper & 2-Column Detail -->
-          <div style="padding: 18px 24px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; background: #F8FAFC;">
-            
-            <!-- Horizontal Timeline Stepper Bar -->
-            <div class="sop-timeline-stepper-container">
-              <div class="sop-timeline-stepper-track">
-                
-                <!-- Background Timeline Track -->
-                <div class="sop-stepper-line-bg"></div>
-                <div class="sop-stepper-line-progress" style="width: ${totalSteps > 1 ? (this.currentStepIndex / (totalSteps - 1)) * 100 : 0}%;"></div>
+          <!-- Horizontal Timeline Stepper Bar (Anchored at Top of Modal Dialog - Always 100% Visible) -->
+          <div class="sop-timeline-stepper-container" style="margin: 12px 20px 0 20px; flex-shrink: 0;">
+            <div class="sop-timeline-stepper-track">
+              
+              <!-- Background Timeline Track -->
+              <div class="sop-stepper-line-bg"></div>
+              <div class="sop-stepper-line-progress" style="width: ${totalSteps > 1 ? (this.currentStepIndex / (totalSteps - 1)) * 100 : 0}%;"></div>
 
-                ${steps.map((st, idx) => {
-                  const isSelected = idx === this.currentStepIndex;
-                  const isCompleted = idx < this.currentStepIndex;
-                  const nodeBg = isSelected ? '#0B3A6F' : (isCompleted ? '#059669' : '#FFFFFF');
-                  const nodeColor = (isSelected || isCompleted) ? '#FFFFFF' : '#475569';
-                  const nodeBorder = isSelected ? '3px solid #D9B45B' : (isCompleted ? '2.5px solid #059669' : '2px solid #CBD5E1');
+              ${steps.map((st, idx) => {
+                const isSelected = idx === this.currentStepIndex;
+                const isCompleted = idx < this.currentStepIndex;
+                const nodeBg = isSelected ? '#0B3A6F' : (isCompleted ? '#059669' : '#FFFFFF');
+                const nodeColor = (isSelected || isCompleted) ? '#FFFFFF' : '#475569';
+                const nodeBorder = isSelected ? '3px solid #D9B45B' : (isCompleted ? '2.5px solid #059669' : '2px solid #CBD5E1');
 
-                  return `
-                    <div class="timeline-step-node ${isSelected ? 'active' : (isCompleted ? 'completed' : '')}" data-step-idx="${idx}">
-                      <div class="timeline-step-circle" style="background: ${nodeBg}; color: ${nodeColor}; border: ${nodeBorder};">
-                        ${isCompleted ? '✓' : (st.no || idx + 1)}
-                      </div>
-                      <div class="timeline-step-label">
-                        ${st.judul.split('&')[0].split('(')[0].trim()}
-                      </div>
+                return `
+                  <div class="timeline-step-node ${isSelected ? 'active' : (isCompleted ? 'completed' : '')}" data-step-idx="${idx}" title="Tahap ${idx + 1}: ${st.judul}">
+                    <div class="timeline-step-circle" style="background: ${nodeBg}; color: ${nodeColor}; border: ${nodeBorder};">
+                      ${isCompleted ? '✓' : (st.no || idx + 1)}
                     </div>
-                  `;
-                }).join('')}
+                    <div class="timeline-step-label">
+                      ${st.judul.split('&')[0].split('(')[0].trim()}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
 
-              </div>
             </div>
+          </div>
 
+          <!-- MODAL BODY: 2-Column Step Detail -->
+          <div style="padding: 12px 20px 16px 20px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; background: #F8FAFC;">
+            
             <!-- Main Step Content (2 Columns) -->
-            <div class="sop-step-content-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; flex: 1;">
+            <div class="sop-step-content-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; flex: 1;">
               
               <!-- Column 1: Step Details & Outputs -->
               <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
