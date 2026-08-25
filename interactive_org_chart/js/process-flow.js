@@ -348,7 +348,7 @@ export class ProcessFlowEngine {
             </div>
 
             <!-- Main Step Content (2 Columns) -->
-            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; flex: 1;">
+            <div class="sop-step-content-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; flex: 1;">
               
               <!-- Column 1: Step Details & Outputs -->
               <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">

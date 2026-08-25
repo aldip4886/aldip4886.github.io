@@ -73,7 +73,7 @@ export class ProgressTracker {
     ];
 
     containerEl.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1100px; margin: 0 auto; width: 100%;">
+      <div class="progress-page-wrapper" style="padding: 24px 32px; max-width: 1100px; margin: 0 auto; width: 100%;">
         <!-- Header Row -->
         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 28px; flex-wrap:wrap; gap:16px;">
           <div>

@@ -76,7 +76,7 @@ export class AssessmentEngine {
     if (!this.container) return;
 
     this.container.innerHTML = `
-      <div style="padding: 28px 32px; max-width: 980px; margin: 0 auto; width: 100%;">
+      <div class="quiz-page-wrapper" style="padding: 28px 32px; max-width: 980px; margin: 0 auto; width: 100%;">
         <!-- Intro Hero Card -->
         <div class="card" style="background: #FFFFFF; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 24px rgba(11, 58, 111, 0.08); overflow: hidden; padding: 0;">
           
@@ -95,7 +95,7 @@ export class AssessmentEngine {
 
           <!-- Instruction Details (Bento Grid 2x2) -->
           <div style="padding: 32px 36px;">
-            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 28px;">
+            <div class="quiz-intro-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 28px;">
               
               <!-- Point 1 -->
               <div style="background: #F8FAFC; border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;">
@@ -299,7 +299,7 @@ export class AssessmentEngine {
     })) : [];
 
     this.container.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1040px; margin: 0 auto; width: 100%;">
+      <div class="quiz-page-wrapper" style="padding: 24px 32px; max-width: 1040px; margin: 0 auto; width: 100%;">
         
         <!-- Mode & Tab Navigation Bar (2 Tabs: PILIHAN GANDA & STUDI KASUS) -->
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom: 20px; border-bottom:1px solid #E2E8F0; padding-bottom:14px;">

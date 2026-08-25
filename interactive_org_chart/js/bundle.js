@@ -406,7 +406,7 @@ class ProgressTracker {
     ];
 
     containerEl.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1100px; margin: 0 auto; width: 100%;">
+      <div class="progress-page-wrapper" style="padding: 24px 32px; max-width: 1100px; margin: 0 auto; width: 100%;">
         <!-- Header Row -->
         <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom: 28px; flex-wrap:wrap; gap:16px;">
           <div>
@@ -4527,7 +4527,7 @@ class AssessmentEngine {
     if (!this.container) return;
 
     this.container.innerHTML = `
-      <div style="padding: 28px 32px; max-width: 980px; margin: 0 auto; width: 100%;">
+      <div class="quiz-page-wrapper" style="padding: 28px 32px; max-width: 980px; margin: 0 auto; width: 100%;">
         <!-- Intro Hero Card -->
         <div class="card" style="background: #FFFFFF; border-radius: 16px; border: 1px solid #E2E8F0; box-shadow: 0 4px 24px rgba(11, 58, 111, 0.08); overflow: hidden; padding: 0;">
           
@@ -4546,7 +4546,7 @@ class AssessmentEngine {
 
           <!-- Instruction Details (Bento Grid 2x2) -->
           <div style="padding: 32px 36px;">
-            <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 28px;">
+            <div class="quiz-intro-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-bottom: 28px;">
               
               <!-- Point 1 -->
               <div style="background: #F8FAFC; border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: flex-start;">
@@ -4750,7 +4750,7 @@ class AssessmentEngine {
     })) : [];
 
     this.container.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1040px; margin: 0 auto; width: 100%;">
+      <div class="quiz-page-wrapper" style="padding: 24px 32px; max-width: 1040px; margin: 0 auto; width: 100%;">
         
         <!-- Mode & Tab Navigation Bar (2 Tabs: PILIHAN GANDA & STUDI KASUS) -->
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom: 20px; border-bottom:1px solid #E2E8F0; padding-bottom:14px;">
@@ -6226,7 +6226,7 @@ class LearningModuleEngine {
     const activeTopic = activeModule.topics[this.currentTopicIndex] || activeModule.topics[0];
 
     this.container.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1240px; margin: 0 auto; width: 100%;">
+      <div class="learning-page-wrapper" style="padding: 24px 32px; max-width: 1240px; margin: 0 auto; width: 100%;">
         <!-- Header Bar with Breadcrumb and Tour Button -->
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
           <!-- Breadcrumb Bar -->
@@ -6256,7 +6256,7 @@ class LearningModuleEngine {
         </div>
 
         <!-- Grid Layout: Sub-Topic Stepper (Left) & Lesson Content (Right) -->
-        <div style="display:grid; grid-template-columns: 290px 1fr; gap: 28px; align-items:flex-start;">
+        <div class="learning-content-grid" style="display:grid; grid-template-columns: 290px 1fr; gap: 28px; align-items:flex-start;">
           <!-- Left Column: Vertical Sub-Topic Stepper -->
           <div id="learning-stepper-sidebar" class="card" style="padding: 20px; position:sticky; top: 20px;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #E2E8F0;">
@@ -6765,7 +6765,7 @@ class ProcessFlowEngine {
             </div>
 
             <!-- Main Step Content (2 Columns) -->
-            <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; flex: 1;">
+            <div class="sop-step-content-grid" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; flex: 1;">
               
               <!-- Column 1: Step Details & Outputs -->
               <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 18px 20px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.02);">
@@ -7124,7 +7124,7 @@ class RelationshipsViewEngine {
     const countPembinaan = this.relationships.filter(r => r.category === 'pembinaan-sdm' || r.category === 'pembinaan').length;
 
     this.container.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1400px; margin: 0 auto; width: 100%; position:relative;">
+      <div class="relationships-page-wrapper" style="padding: 24px 32px; max-width: 1400px; margin: 0 auto; width: 100%; position:relative;">
         
         <!-- Floating Network Tooltip Element -->
         <div id="network-edge-tooltip" style="position:fixed; display:none; pointer-events:none; z-index:9999; background:#001631; color:#FFFFFF; padding:10px 14px; border-radius:8px; font-size:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); max-width:340px; line-height:1.45; border:1px solid #D9B45B;"></div>

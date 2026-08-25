@@ -884,7 +884,7 @@ export class LearningModuleEngine {
     const activeTopic = activeModule.topics[this.currentTopicIndex] || activeModule.topics[0];
 
     this.container.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1240px; margin: 0 auto; width: 100%;">
+      <div class="learning-page-wrapper" style="padding: 24px 32px; max-width: 1240px; margin: 0 auto; width: 100%;">
         <!-- Header Bar with Breadcrumb and Tour Button -->
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
           <!-- Breadcrumb Bar -->
@@ -914,7 +914,7 @@ export class LearningModuleEngine {
         </div>
 
         <!-- Grid Layout: Sub-Topic Stepper (Left) & Lesson Content (Right) -->
-        <div style="display:grid; grid-template-columns: 290px 1fr; gap: 28px; align-items:flex-start;">
+        <div class="learning-content-grid" style="display:grid; grid-template-columns: 290px 1fr; gap: 28px; align-items:flex-start;">
           <!-- Left Column: Vertical Sub-Topic Stepper -->
           <div id="learning-stepper-sidebar" class="card" style="padding: 20px; position:sticky; top: 20px;">
             <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #E2E8F0;">

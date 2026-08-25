@@ -3931,121 +3931,333 @@ body.theme-dark #network-edge-tooltip {
 }
 
 /* ==========================================================================
-   Mobile Component Responsive Adjustments
+   Comprehensive Mobile & Tablet Responsive Styles (v3.2.0)
    ========================================================================== */
 
+@media (max-width: 860px) {
+  .learning-content-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+  }
+  #learning-stepper-sidebar {
+    position: static !important;
+    width: 100% !important;
+    top: auto !important;
+  }
+}
+
 @media (max-width: 768px) {
-  /* Landing / Beranda Mobile View */
+  /* Global Page View Bottom Safe Padding (so no content is covered by Quick Facts) */
+  #view-learning,
+  #view-process,
+  #view-connections,
+  #view-quiz,
+  #view-progress,
+  #view-search,
+  #view-help,
+  #view-about {
+    padding-bottom: 76px !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* 1. Landing / Beranda Mobile View */
   .landing-viewport {
-    padding: 12px !important;
+    padding: 12px 12px 36px 12px !important;
     overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    height: auto !important;
+    min-height: 100% !important;
   }
 
   .landing-main-card {
     padding: 16px !important;
     border-radius: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: auto !important;
   }
 
-  .landing-header-title {
-    font-size: 20px !important;
-    line-height: 1.3 !important;
+  .landing-header {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 12px !important;
   }
 
-  .landing-header-subtitle {
+  .landing-logo-emblem {
+    width: 34px !important;
+    height: 34px !important;
+  }
+
+  .landing-logo-text h1 {
+    font-size: 13px !important;
+    line-height: 1.2 !important;
+  }
+
+  .landing-logo-text p {
+    font-size: 10.5px !important;
+  }
+
+  .landing-hero-content {
+    padding: 10px 0 16px 0 !important;
+  }
+
+  .landing-hero-title {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .landing-hero-subtitle {
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .landing-hero-desc {
     font-size: 12px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 16px !important;
+    max-width: 100% !important;
   }
 
-  .bento-grid,
-  .landing-bento-cards {
-    grid-template-columns: 1fr !important;
-    gap: 12px !important;
+  .landing-cta-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 10px !important;
   }
 
-  .landing-stats-container,
-  .quick-stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 8px !important;
-  }
-
-  .stat-card-number {
-    font-size: 20px !important;
-  }
-
-  /* Explorer Filters on Mobile */
-  .explorer-filter-bar,
-  .explorer-controls {
-    flex-wrap: wrap !important;
-    padding: 8px 12px !important;
-    gap: 8px !important;
-  }
-
-  .filter-pill,
-  .filter-btn {
+  .landing-cta-btn,
+  .landing-secondary-btn {
+    width: 100% !important;
+    justify-content: center !important;
     min-height: 44px !important;
-    padding: 8px 12px !important;
-    font-size: 12px !important;
+    font-size: 13.5px !important;
   }
 
-  /* Floating Help Tips Card on Mobile */
-  .floating-help-tips-card,
+  .landing-features-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-top: 14px !important;
+  }
+
+  .landing-feature-card {
+    padding: 12px 14px !important;
+  }
+
+  /* 2. Organization Explorer on Mobile */
+  .explorer-breadcrumb-wrapper {
+    top: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+    max-width: calc(100vw - 20px) !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    padding: 6px 12px !important;
+  }
+
+  #explorer-help-toggle-btn {
+    top: 10px !important;
+    right: 10px !important;
+    padding: 6px 10px !important;
+    font-size: 11.5px !important;
+  }
+
   #explorer-help-tips-card,
   #map-help-tips-card {
     position: fixed !important;
-    top: auto !important;
-    bottom: 76px !important;
+    bottom: 68px !important;
     left: 12px !important;
     right: 12px !important;
     width: auto !important;
     max-width: none !important;
-    z-index: 400 !important;
-    padding: 14px !important;
+    max-height: 60vh !important;
+    overflow-y: auto !important;
+    z-index: 95 !important;
     border-radius: 14px !important;
+    padding: 14px !important;
   }
 
-  /* SOP / Process Flow Detail Modal Dialog on Mobile */
-  .sop-modal-dialog,
-  .process-modal-content {
+  /* 3. Peta Unit Kerja (MapLibre) Mobile View */
+  .map-controls-bar {
+    height: auto !important;
+    min-height: 48px !important;
+    padding: 8px 12px !important;
+    gap: 8px !important;
+  }
+
+  .map-controls-bar > div {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+
+  #map-pill-filters {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    max-width: 100% !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px !important;
+    padding-bottom: 2px !important;
+  }
+
+  .map-filter-pill {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    min-height: 36px !important;
+    padding: 5px 12px !important;
+    font-size: 12px !important;
+  }
+
+  #map-filter-island {
+    width: 100% !important;
+    min-height: 36px !important;
+  }
+
+  .map-floating-zoom-ctrl {
+    bottom: 68px !important;
+    left: 12px !important;
+    z-index: 25 !important;
+  }
+
+  .map-legend-card {
+    bottom: 68px !important;
+    right: 12px !important;
+    max-width: 220px !important;
+    z-index: 25 !important;
+    padding: 8px 10px !important;
+    font-size: 11px !important;
+    max-height: 40vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* 4. Modul Pembelajaran Mobile View */
+  .learning-page-wrapper {
+    padding: 12px 12px !important;
+    width: 100% !important;
+  }
+
+  #learning-module-tabs {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 14px !important;
+  }
+
+  #learning-module-tabs button {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  /* 5. Alur Kerja & SOP Mobile View */
+  .process-catalog-view {
+    padding: 12px 12px !important;
+    height: auto !important;
+    min-height: 100% !important;
+    width: 100% !important;
+  }
+
+  #sop-categories-container {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 14px !important;
+  }
+
+  .sop-filter-btn {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    min-height: 36px !important;
+    padding: 6px 12px !important;
+    font-size: 11.5px !important;
+  }
+
+  #sop-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  .sop-card-item {
+    padding: 14px 16px !important;
+  }
+
+  /* SOP Detail Modal on Mobile */
+  #sop-detail-modal {
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 100000 !important;
+    background: rgba(11, 26, 44, 0.75) !important;
+  }
+
+  #sop-detail-modal > div {
     width: 100% !important;
     max-width: 100% !important;
     height: 100% !important;
     max-height: 100% !important;
     border-radius: 0 !important;
-    padding: 16px !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
   }
 
-  .sop-timeline-stepper {
+  .sop-step-content-grid {
+    display: flex !important;
     flex-direction: column !important;
     gap: 12px !important;
   }
 
-  .sop-step-card {
-    padding: 12px !important;
-  }
-
-  /* Quiz & Assessment View on Mobile */
-  .quiz-viewport,
-  .quiz-container {
-    padding: 12px !important;
-    overflow-y: auto !important;
-  }
-
-  .quiz-header-bar {
-    flex-direction: column !important;
-    gap: 8px !important;
-    align-items: stretch !important;
-  }
-
-  .quiz-timer-floating-bar {
-    position: sticky !important;
-    top: 0 !important;
-    z-index: 100 !important;
+  /* 6. Keterkaitan Antar Unit (Relationships) Mobile View */
+  .relationships-page-wrapper {
+    padding: 12px 12px !important;
     width: 100% !important;
+  }
+
+  #relationships-filter-bar {
+    display: flex !important;
+    overflow-x: auto !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px !important;
+    padding: 8px 10px !important;
     margin-bottom: 12px !important;
   }
 
-  .quiz-question-card {
-    padding: 16px !important;
-    border-radius: 14px !important;
+  #relationships-filter-bar button {
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+    min-height: 36px !important;
+    padding: 5px 10px !important;
+    font-size: 11.5px !important;
+  }
+
+  /* 7. Kuis & Evaluasi Mobile View */
+  .quiz-page-wrapper,
+  .progress-page-wrapper {
+    padding: 12px 12px !important;
+    width: 100% !important;
+  }
+
+  .quiz-intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+
+  .quiz-card-wrapper {
+    padding: 16px 14px !important;
   }
 
   .quiz-option-card {
@@ -4054,35 +4266,73 @@ body.theme-dark #network-edge-tooltip {
     font-size: 13px !important;
   }
 
-  .quiz-results-card {
-    padding: 16px !important;
+  /* 8. Panduan Pengguna (Help Steps Timeline) Mobile View */
+  .help-page-container {
+    padding: 16px 12px 76px !important;
   }
 
-  .result-gauge-svg {
-    width: 140px !important;
-    height: 140px !important;
+  .help-steps-card {
+    padding: 20px 16px !important;
   }
 
-  /* Learning Modules View on Mobile */
-  .learning-modules-header {
+  .help-steps-timeline::before {
+    left: 20px !important;
+    transform: none !important;
+  }
+
+  .help-step-item {
+    justify-content: flex-start !important;
+    padding-left: 52px !important;
+    position: relative !important;
+  }
+
+  .help-step-number-bubble {
+    left: 20px !important;
+    top: 24px !important;
+    transform: translate(-50%, -50%) !important;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 13px !important;
+  }
+
+  .help-step-left .help-step-body,
+  .help-step-right .help-step-body,
+  .help-step-item:nth-child(odd) .help-step-body,
+  .help-step-item:nth-child(even) .help-step-body {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: left !important;
+    border-left: 3px solid #0B3A6F !important;
+    border-right: none !important;
+    padding: 14px 16px !important;
+  }
+
+  .help-step-left .help-step-title,
+  .help-step-right .help-step-title,
+  .help-step-item:nth-child(odd) .help-step-title,
+  .help-step-item:nth-child(even) .help-step-title {
+    justify-content: flex-start !important;
+  }
+
+  /* 9. Search Page Bento Grid Mobile View */
+  .search-grid-layout > div {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 16px !important;
   }
 
-  .learning-topics-stepper {
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-    padding-bottom: 8px !important;
+  .search-primary-col,
+  .search-sidebar-col {
+    grid-column: span 12 / span 12 !important;
+    width: 100% !important;
   }
 
-  .learning-topic-tab {
-    min-height: 44px !important;
-  }
-
-  /* Global Quick Facts Footer Bar on Mobile */
+  /* 10. Global Quick Facts Footer Bar on Mobile */
   .global-quickfacts-footer {
-    height: 52px !important;
+    height: 48px !important;
     padding: 0 8px !important;
+    z-index: 90 !important;
   }
 
   .quickfacts-inner {
@@ -4090,7 +4340,7 @@ body.theme-dark #network-edge-tooltip {
   }
 
   .quickfacts-badge {
-    padding: 4px 8px !important;
+    padding: 3px 8px !important;
   }
 
   .quickfacts-title {
@@ -4098,13 +4348,13 @@ body.theme-dark #network-edge-tooltip {
   }
 
   .quickfacts-text {
-    font-size: 11.5px !important;
-    line-height: 1.3 !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
   }
 
   .quickfacts-nav-btn {
-    width: 34px !important;
-    height: 34px !important;
+    width: 32px !important;
+    height: 32px !important;
   }
 }
 
@@ -4115,7 +4365,7 @@ body.theme-dark #network-edge-tooltip {
   }
 
   .quiz-question-title {
-    font-size: 14px !important;
+    font-size: 13.5px !important;
   }
 
   .quiz-option-card {
@@ -4123,15 +4373,7 @@ body.theme-dark #network-edge-tooltip {
   }
 
   .quickfacts-badge .quickfacts-icon {
-    font-size: 14px !important;
-  }
-
-  #view-connections > div {
-    padding: 12px 14px !important;
-  }
-
-  .relationships-filter-bar {
-    padding: 8px 12px !important;
+    font-size: 13px !important;
   }
 }
 

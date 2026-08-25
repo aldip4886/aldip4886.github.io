@@ -97,7 +97,7 @@ export class RelationshipsViewEngine {
     const countPembinaan = this.relationships.filter(r => r.category === 'pembinaan-sdm' || r.category === 'pembinaan').length;
 
     this.container.innerHTML = `
-      <div style="padding: 24px 32px; max-width: 1400px; margin: 0 auto; width: 100%; position:relative;">
+      <div class="relationships-page-wrapper" style="padding: 24px 32px; max-width: 1400px; margin: 0 auto; width: 100%; position:relative;">
         
         <!-- Floating Network Tooltip Element -->
         <div id="network-edge-tooltip" style="position:fixed; display:none; pointer-events:none; z-index:9999; background:#001631; color:#FFFFFF; padding:10px 14px; border-radius:8px; font-size:12px; box-shadow:0 8px 24px rgba(0,0,0,0.25); max-width:340px; line-height:1.45; border:1px solid #D9B45B;"></div>
