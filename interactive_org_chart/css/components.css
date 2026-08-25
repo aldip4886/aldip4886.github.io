@@ -1235,6 +1235,66 @@
 /* ==========================================================================
    4. Modul Pembelajaran Stepper & Content Cards (Interactive Hover Effects)
    ========================================================================== */
+.learning-header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+  width: 100%;
+}
+
+.learning-breadcrumb-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-secondary, #64748B);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.learning-breadcrumb-module {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  color: #0B3A6F;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.learning-breadcrumb-sep {
+  color: #94A3B8;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.learning-breadcrumb-topic {
+  font-weight: 700;
+  color: var(--color-text-primary, #001631);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+}
+
+.learning-tour-btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  gap: 6px;
+  border-radius: 20px;
+  cursor: pointer;
+  flex-shrink: 0;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
 .learning-stepper-item {
   position: relative;
   display: flex;
@@ -3183,6 +3243,21 @@ body.theme-dark #view-learning .card {
   color: #F8FAFC !important;
 }
 
+[data-theme="dark"] .learning-breadcrumb-module,
+body.theme-dark .learning-breadcrumb-module {
+  color: #38BDF8 !important;
+}
+
+[data-theme="dark"] .learning-breadcrumb-sep,
+body.theme-dark .learning-breadcrumb-sep {
+  color: #64748B !important;
+}
+
+[data-theme="dark"] .learning-breadcrumb-topic,
+body.theme-dark .learning-breadcrumb-topic {
+  color: #F8FAFC !important;
+}
+
 [data-theme="dark"] .learning-stepper-item,
 body.theme-dark .learning-stepper-item {
   color: #CBD5E1 !important;
@@ -4411,6 +4486,69 @@ body.theme-dark #network-edge-tooltip {
   .learning-page-wrapper {
     padding: 12px 12px !important;
     width: 100% !important;
+  }
+
+  .learning-header-bar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-bottom: 12px !important;
+    gap: 8px !important;
+    width: 100% !important;
+    flex-wrap: nowrap !important;
+    min-height: 32px !important;
+  }
+
+  .learning-breadcrumb-bar {
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px !important;
+    font-size: 11.5px !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  .learning-breadcrumb-module {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: #0B3A6F !important;
+    flex-shrink: 0 !important;
+    gap: 3px !important;
+  }
+
+  .learning-breadcrumb-module svg {
+    width: 13px !important;
+    height: 13px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .learning-breadcrumb-sep {
+    font-size: 10.5px !important;
+    color: #94A3B8 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .learning-breadcrumb-topic {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    color: #1E293B !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+
+  .learning-tour-btn {
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+    border-radius: 14px !important;
+    min-height: 28px !important;
+    flex-shrink: 0 !important;
+    gap: 4px !important;
   }
 
   #learning-module-tabs {

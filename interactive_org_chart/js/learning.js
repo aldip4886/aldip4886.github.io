@@ -886,21 +886,21 @@ export class LearningModuleEngine {
     this.container.innerHTML = `
       <div class="learning-page-wrapper" style="padding: 24px 32px; max-width: 1240px; margin: 0 auto; width: 100%;">
         <!-- Header Bar with Breadcrumb and Tour Button -->
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+        <div class="learning-header-bar" style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px; gap: 12px; width: 100%;">
           <!-- Breadcrumb Bar -->
-          <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:#64748B;">
-            <span style="display:flex; align-items:center; gap:4px; font-weight:600; color:#0B3A6F;">
+          <div class="learning-breadcrumb-bar" style="display:flex; align-items:center; gap:8px; font-size:13px; color:#64748B; flex:1; min-width:0; overflow:hidden;">
+            <span class="learning-breadcrumb-module" style="display:flex; align-items:center; gap:5px; font-weight:700; color:#0B3A6F; white-space:nowrap; flex-shrink:0;">
               <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
               ${activeModule.title.split(':')[0]}
             </span>
-            <span>›</span>
-            <span style="font-weight:700; color:#001631;">${activeTopic.title}</span>
+            <span class="learning-breadcrumb-sep" style="color:#94A3B8; font-weight:600; flex-shrink:0;">›</span>
+            <span class="learning-breadcrumb-topic" style="font-weight:700; color:#001631; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;" title="${activeTopic.title}">${activeTopic.title}</span>
           </div>
 
           <!-- Tutorial Beacon Trigger Button -->
-          <button id="learning-tour-btn" class="btn btn-outline" style="font-size:12px; font-weight:600; padding:5px 12px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startLearningTour(true);}" title="Buka Panduan Interaktif Modul">
+          <button id="learning-tour-btn" class="btn btn-outline learning-tour-btn" style="font-size:12px; font-weight:600; padding:5px 12px; gap:6px; border-radius:20px; cursor:pointer; flex-shrink:0; white-space:nowrap; display:flex; align-items:center;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startLearningTour(true);}" title="Buka Panduan Interaktif Modul">
             <span>💡</span>
-            <span>Panduan Modul</span>
+            <span class="learning-tour-btn-text">Panduan Modul</span>
           </button>
         </div>
 
