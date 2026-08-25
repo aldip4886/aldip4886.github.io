@@ -88,18 +88,20 @@ export class IndonesiaMapEngine {
     this.container.innerHTML = `
       <div class="map-page-wrapper" style="height:100%;display:flex;flex-direction:column;background:#EEF2F7;overflow:hidden;position:relative;font-family:'Poppins',sans-serif;">
 
-        <header class="map-controls-bar" style="height:64px;background:#FFF;border-bottom:1px solid #D9E0E8;display:flex;align-items:center;justify-content:space-between;padding:0 24px;z-index:30;flex-shrink:0;box-shadow:0 1px 4px rgba(0,0,0,0.02);flex-wrap:wrap;gap:12px;">
-          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
-            <span style="font-size:13.5px;font-weight:600;color:#475569;letter-spacing:0.01em;">Filter Tipe Kantor:</span>
-            <div id="map-pill-filters" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
-              <button class="map-filter-pill active" data-type="all"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#38BDF8;"></span>Semua (137)</button>
-              <button class="map-filter-pill" data-type="kanwil"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0284C7;"></span>Kanwil (21)</button>
-              <button class="map-filter-pill" data-type="kpu"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#D97706;"></span>KPU (3)</button>
-              <button class="map-filter-pill" data-type="kppbc"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0B3A6F;"></span>KPPBC (104)</button>
-              <button class="map-filter-pill" data-type="upt"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#059669;"></span>UPT (9)</button>
+        <header class="map-controls-bar">
+          <div class="map-controls-left">
+            <div class="map-filter-group-row">
+              <span class="map-filter-heading">Filter Tipe Kantor:</span>
+              <div id="map-pill-filters">
+                <button class="map-filter-pill active" data-type="all"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#38BDF8;"></span>Semua (137)</button>
+                <button class="map-filter-pill" data-type="kanwil"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0284C7;"></span>Kanwil (21)</button>
+                <button class="map-filter-pill" data-type="kpu"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#D97706;"></span>KPU (3)</button>
+                <button class="map-filter-pill" data-type="kppbc"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#0B3A6F;"></span>KPPBC (104)</button>
+                <button class="map-filter-pill" data-type="upt"><span class="map-pill-dot" style="width:8px;height:8px;border-radius:50%;background:#059669;"></span>UPT (9)</button>
+              </div>
             </div>
-            <div style="height:24px;width:1px;background:#E2E8F0;margin:0 4px;"></div>
-            <select id="map-filter-island" style="padding:6px 12px;font-size:12.5px;font-weight:500;color:#334155;background:#FFF;border:1px solid #D9E0E8;border-radius:8px;outline:none;cursor:pointer;font-family:inherit;">
+            <div class="map-controls-divider"></div>
+            <select id="map-filter-island" title="Pilih Wilayah / Pulau">
               <option value="all">Seluruh Wilayah Indonesia</option>
               <option value="Sumatera">Sumatera</option>
               <option value="Jawa">Jawa</option>
@@ -189,14 +191,26 @@ export class IndonesiaMapEngine {
           </div>
         </div>
 
-        <footer class="map-stats-bar" style="height:76px;background:#FFF;border-top:1px solid #D9E0E8;display:flex;align-items:center;justify-content:space-around;padding:0 32px;box-shadow:0 -2px 10px rgba(0,0,0,0.02);z-index:30;flex-shrink:0;">
-          <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-kanwil" style="font-size:22px;font-weight:700;color:#062B52;line-height:1.2;">21</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Kantor Wilayah &amp; Pusat</span></div>
-          <div style="width:1px;height:36px;background:#E2E8F0;"></div>
-          <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-kpu" style="font-size:22px;font-weight:700;color:#D97706;line-height:1.2;">3</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">KPU Bea Cukai</span></div>
-          <div style="width:1px;height:36px;background:#E2E8F0;"></div>
-          <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-kppbc" style="font-size:22px;font-weight:700;color:#0B3A6F;line-height:1.2;">104</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">KPPBC Pelayanan</span></div>
-          <div style="width:1px;height:36px;background:#E2E8F0;"></div>
-          <div style="display:flex;flex-direction:column;align-items:center;"><span id="stat-count-upt" style="font-size:22px;font-weight:700;color:#059669;line-height:1.2;">9</span><span style="font-size:11px;font-weight:600;color:#64748B;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">UPT (BLBC &amp; PSO)</span></div>
+        <footer class="map-stats-bar">
+          <div class="map-stat-item">
+            <span id="stat-count-kanwil" class="map-stat-number" style="color:#0284C7;">21</span>
+            <span class="map-stat-label">Kanwil &amp; Pusat</span>
+          </div>
+          <div class="map-stat-divider"></div>
+          <div class="map-stat-item">
+            <span id="stat-count-kpu" class="map-stat-number" style="color:#D97706;">3</span>
+            <span class="map-stat-label">KPU Bea Cukai</span>
+          </div>
+          <div class="map-stat-divider"></div>
+          <div class="map-stat-item">
+            <span id="stat-count-kppbc" class="map-stat-number" style="color:#0B3A6F;">104</span>
+            <span class="map-stat-label">KPPBC Pelayanan</span>
+          </div>
+          <div class="map-stat-divider"></div>
+          <div class="map-stat-item">
+            <span id="stat-count-upt" class="map-stat-number" style="color:#059669;">9</span>
+            <span class="map-stat-label">UPT (BLBC &amp; PSO)</span>
+          </div>
         </footer>
 
         <div id="map-unit-modal-overlay" class="modal-overlay" style="display:none;position:fixed;inset:0;background:rgba(6,43,82,0.45);backdrop-filter:blur(4px);z-index:120;align-items:center;justify-content:center;">

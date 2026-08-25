@@ -3332,12 +3332,16 @@ body.theme-dark .map-stats-bar span[style*="color:#062B52"] {
 
 [data-theme="dark"] .map-stats-bar span[style*="color:#64748B"],
 [data-theme="dark"] .map-stats-bar span[style*="color: #64748B"],
-body.theme-dark .map-stats-bar span[style*="color:#64748B"] {
+[data-theme="dark"] .map-stat-label,
+body.theme-dark .map-stats-bar span[style*="color:#64748B"],
+body.theme-dark .map-stat-label {
   color: #CBD5E1 !important;
 }
 
 [data-theme="dark"] .map-stats-bar div[style*="background:#E2E8F0"],
-body.theme-dark .map-stats-bar div[style*="background:#E2E8F0"] {
+[data-theme="dark"] .map-stat-divider,
+body.theme-dark .map-stats-bar div[style*="background:#E2E8F0"],
+body.theme-dark .map-stat-divider {
   background: #334155 !important;
 }
 
@@ -3931,6 +3935,133 @@ body.theme-dark #network-edge-tooltip {
 }
 
 /* ==========================================================================
+   Map View Components (Desktop & Shared Base)
+   ========================================================================== */
+.map-controls-bar {
+  height: 64px;
+  background: var(--color-surface, #FFFFFF);
+  border-bottom: 1px solid var(--color-border, #D9E0E8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  z-index: 30;
+  flex-shrink: 0;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.map-controls-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: 0;
+}
+
+.map-filter-group-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.map-filter-heading {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-text-secondary, #475569);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+#map-pill-filters {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.map-controls-divider {
+  height: 24px;
+  width: 1px;
+  background: var(--color-border, #E2E8F0);
+  margin: 0 4px;
+}
+
+#map-filter-island {
+  padding: 7px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #334155;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+#map-filter-island:hover {
+  border-color: #0B3A6F;
+}
+
+#map-filter-island:focus {
+  border-color: #0284C7;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* Map Stats Bar Desktop Base */
+.map-stats-bar {
+  height: 70px;
+  background: var(--color-surface, #FFFFFF);
+  border-top: 1px solid var(--color-border, #D9E0E8);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 32px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.02);
+  z-index: 30;
+  flex-shrink: 0;
+}
+
+.map-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.map-stat-number {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.map-stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary, #64748B);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.map-stat-divider {
+  width: 1px;
+  height: 36px;
+  background: var(--color-border, #E2E8F0);
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
    Comprehensive Mobile & Tablet Responsive Styles (v3.2.0)
    ========================================================================== */
 
@@ -4082,18 +4213,44 @@ body.theme-dark #network-edge-tooltip {
   }
 
   /* 3. Peta Unit Kerja (MapLibre) Mobile View */
+  #map-help-toggle-btn {
+    top: 8px !important;
+    right: 10px !important;
+    padding: 5px 10px !important;
+    font-size: 11.5px !important;
+    z-index: 35 !important;
+    position: absolute !important;
+  }
+
   .map-controls-bar {
     height: auto !important;
     min-height: 48px !important;
-    padding: 8px 12px !important;
+    padding: 8px 10px !important;
     gap: 8px !important;
+    position: relative !important;
   }
 
-  .map-controls-bar > div {
+  .map-controls-left {
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     gap: 8px !important;
+    padding-right: 80px !important;
+  }
+
+  .map-filter-group-row {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 6px !important;
+  }
+
+  .map-filter-heading {
+    height: 26px !important;
+    display: flex !important;
+    align-items: center !important;
+    font-size: 12.5px !important;
   }
 
   #map-pill-filters {
@@ -4104,19 +4261,32 @@ body.theme-dark #network-edge-tooltip {
     -webkit-overflow-scrolling: touch;
     gap: 6px !important;
     padding-bottom: 2px !important;
+    width: 100% !important;
   }
 
   .map-filter-pill {
     white-space: nowrap !important;
     flex-shrink: 0 !important;
-    min-height: 36px !important;
-    padding: 5px 12px !important;
-    font-size: 12px !important;
+    min-height: 34px !important;
+    padding: 4px 10px !important;
+    font-size: 11.5px !important;
+  }
+
+  .map-controls-divider {
+    display: none !important;
   }
 
   #map-filter-island {
     width: 100% !important;
-    min-height: 36px !important;
+    min-height: 38px !important;
+    position: relative !important;
+    z-index: 40 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    font-size: 12px !important;
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05) !important;
   }
 
   .map-floating-zoom-ctrl {
@@ -4134,6 +4304,40 @@ body.theme-dark #network-edge-tooltip {
     font-size: 11px !important;
     max-height: 40vh !important;
     overflow-y: auto !important;
+  }
+
+  /* Centered, proportional map-stats-bar on mobile */
+  .map-stats-bar {
+    height: 52px !important;
+    padding: 0 6px !important;
+    justify-content: space-evenly !important;
+    gap: 2px !important;
+  }
+
+  .map-stat-item {
+    padding: 0 2px !important;
+    flex: 1 !important;
+    text-align: center !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .map-stat-number {
+    font-size: 15.5px !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+  }
+
+  .map-stat-label {
+    font-size: 9px !important;
+    letter-spacing: 0.01em !important;
+    margin-top: 1px !important;
+    text-align: center !important;
+    line-height: 1.15 !important;
+  }
+
+  .map-stat-divider {
+    height: 20px !important;
   }
 
   /* 4. Modul Pembelajaran Mobile View */
