@@ -6625,59 +6625,59 @@ class ProcessFlowEngine {
 
     // Build Main List View HTML
     const listHtml = `
-      <div class="process-catalog-view" style="padding: 16px 24px; max-width: 1400px; margin: 0 auto; width: 100%; height: calc(100vh - 76px); display: flex; flex-direction: column; box-sizing: border-box; overflow-y: auto; font-family:'Poppins',sans-serif;">
+      <div class="process-catalog-view" style="padding: 12px 20px; max-width: 1400px; margin: 0 auto; width: 100%; height: calc(100vh - 76px); display: flex; flex-direction: column; box-sizing: border-box; overflow-y: auto; font-family:'Poppins',sans-serif;">
         
         <!-- Header Banner & Intro -->
-        <div style="margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 12px;">
+        <div style="margin-bottom: 10px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px;">
           <div>
-            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 3px;">
-              <span class="badge" style="background:#0B3A6F15; color:#0B3A6F; font-size:10.5px; font-weight:700; border:1px solid #0B3A6F30; text-transform:uppercase;">
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 2px;">
+              <span class="badge" style="background:#0B3A6F15; color:#0B3A6F; font-size:10px; font-weight:700; border:1px solid #0B3A6F30; text-transform:uppercase; padding: 2px 6px;">
                 STANDAR OPERASIONAL PROSEDUR (SOP)
               </span>
-              <span class="badge" style="background:#FEF3C7; color:#92400E; font-size:10.5px; font-weight:700; border:1px solid #FDE68A;">
+              <span class="badge" style="background:#FEF3C7; color:#92400E; font-size:10px; font-weight:700; border:1px solid #FDE68A; padding: 2px 6px;">
                 ${this.processData.length} Alur Bisnis Utama
               </span>
             </div>
-            <h2 style="font-size: 20px; font-weight: 800; color: #001631; margin: 0; line-height: 1.2;">
+            <h2 style="font-size: 18px; font-weight: 800; color: #001631; margin: 0; line-height: 1.2;">
               Katalog Alur Kerja &amp; SOP DJBC
             </h2>
-            <p style="font-size: 12px; color: #64748B; margin: 3px 0 0 0;">
-              Pilih salah satu alur kerja di bawah untuk membuka dialog interaktif tahapan proses, SLA, dan unit kerja yang terlibat.
+            <p style="font-size: 11.5px; color: #64748B; margin: 2px 0 0 0;">
+              Pilih alur kerja untuk membuka tahapan proses interaktif, SLA, dan unit kerja yang terlibat.
             </p>
           </div>
 
           <!-- Search & Filter Controls -->
-          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+          <div style="display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
             <!-- Search Box -->
-            <div style="position: relative; min-width: 240px;">
-              <input type="text" id="sop-search-input" placeholder="Cari nama SOP, regulasi, kata kunci..." value="${this.searchQuery}" style="width: 100%; padding: 6px 12px 6px 32px; font-size: 12px; border: 1px solid #CBD5E1; border-radius: 8px; background: #FFFFFF; font-family: inherit;">
-              <span style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 13px;">🔍</span>
+            <div style="position: relative; min-width: 220px;">
+              <input type="text" id="sop-search-input" placeholder="Cari SOP, regulasi, kata kunci..." value="${this.searchQuery}" style="width: 100%; padding: 5px 10px 5px 28px; font-size: 11.5px; border: 1px solid #CBD5E1; border-radius: 6px; background: #FFFFFF; font-family: inherit;">
+              <span style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: #94A3B8; font-size: 12px;">🔍</span>
             </div>
 
             <!-- Tutorial Beacon Trigger Button -->
-            <button id="process-tour-btn" class="btn btn-outline" style="font-size:11.5px; font-weight:600; padding:5px 12px; gap:6px; border-radius:20px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startProcessTour(true);}" title="Buka Panduan Interaktif Alur Kerja">
+            <button id="process-tour-btn" class="btn btn-outline" style="font-size:11px; font-weight:600; padding:4px 10px; gap:4px; border-radius:16px; cursor:pointer;" onclick="if(window.walkthroughBeacons){window.walkthroughBeacons.startProcessTour(true);}" title="Buka Panduan Interaktif Alur Kerja">
               <span>💡</span>
-              <span>Panduan SOP</span>
+              <span>Panduan</span>
             </button>
           </div>
         </div>
 
         <!-- Category Filter Tabs -->
-        <div id="sop-categories-container" style="display: flex; gap: 6px; margin-bottom: 12px; flex-wrap: wrap;">
+        <div id="sop-categories-container" style="display: flex; gap: 5px; margin-bottom: 10px; flex-wrap: wrap;">
           ${categories.map(cat => {
             const isSelected = this.selectedCategory === cat;
             const count = cat === 'ALL' ? this.processData.length : this.processData.filter(p => p.kategori === cat).length;
-            const label = cat === 'ALL' ? 'Semua Alur Kerja' : cat;
+            const label = cat === 'ALL' ? 'Semua Alur' : cat;
             return `
-              <button class="sop-filter-btn" data-category="${cat}" style="padding: 5px 12px; border-radius: 20px; font-size: 11.5px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; border: 1px solid ${isSelected ? '#0B3A6F' : '#E2E8F0'}; background: ${isSelected ? '#0B3A6F' : '#FFFFFF'}; color: ${isSelected ? '#FFFFFF' : '#475569'}; font-family: inherit;">
+              <button class="sop-filter-btn" data-category="${cat}" style="padding: 4px 10px; border-radius: 16px; font-size: 11px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; border: 1px solid ${isSelected ? '#0B3A6F' : '#E2E8F0'}; background: ${isSelected ? '#0B3A6F' : '#FFFFFF'}; color: ${isSelected ? '#FFFFFF' : '#475569'}; font-family: inherit;">
                 ${label} (${count})
               </button>
             `;
           }).join('')}
         </div>
 
-        <!-- SOP Cards Grid List (Compact & Visible on 1 Page) -->
-        <div id="sop-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin-bottom: 16px;">
+        <!-- SOP Cards Grid List (4 Columns Compact - Fits 1 Screen) -->
+        <div id="sop-cards-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 10px;">
           ${filtered.map((proc) => {
             const originalIndex = this.processData.indexOf(proc);
             const stepCount = proc.tahapan ? proc.tahapan.length : 0;
@@ -6685,47 +6685,47 @@ class ProcessFlowEngine {
               <div class="card sop-card-item" data-process-idx="${originalIndex}">
                 <div>
                   <!-- Top Badge Line -->
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 4px;">
-                    <span class="badge" style="background: #F1F5F9; color: #0B3A6F; font-size: 10.5px; font-weight: 700; border: 1px solid #E2E8F0; padding: 2px 6px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; flex-wrap: wrap; gap: 4px;">
+                    <span class="badge" style="background: #F1F5F9; color: #0B3A6F; font-size: 9.5px; font-weight: 700; border: 1px solid #E2E8F0; padding: 1px 5px;">
                       ${proc.kategori || 'SOP DJBC'}
                     </span>
-                    <span style="font-size: 10.5px; font-weight: 800; color: #D9B45B; background: #0B3A6F; padding: 2px 6px; border-radius: 4px;">
+                    <span style="font-size: 9.5px; font-weight: 800; color: #D9B45B; background: #0B3A6F; padding: 1px 5px; border-radius: 3px;">
                       SOP #${String(originalIndex + 1).padStart(2, '0')}
                     </span>
                   </div>
 
                   <!-- SOP Title -->
-                  <h3 style="font-size: 13.5px; font-weight: 800; color: #001631; margin: 0 0 4px 0; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" title="${proc.nama}">
+                  <h3 style="font-size: 12.5px; font-weight: 800; color: #001631; margin: 0 0 3px 0; line-height: 1.25; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;" title="${proc.nama}">
                     ${proc.nama}
                   </h3>
 
                   <!-- SOP Short Description -->
-                  <p style="font-size: 11.5px; color: #64748B; line-height: 1.4; margin: 0 0 8px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                  <p style="font-size: 11px; color: #64748B; line-height: 1.35; margin: 0 0 6px 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
                     ${proc.deskripsi_singkat || ''}
                   </p>
                 </div>
 
                 <!-- Footer Metadata & Action -->
                 <div>
-                  <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; font-size: 10.5px;">
-                    <span class="badge" style="background:#EFF6FF; color:#1D4ED8; font-weight:600; border:1px solid #DBEAFE; padding: 2px 6px;">
+                  <div style="display: flex; flex-wrap: wrap; gap: 3px; margin-bottom: 6px; font-size: 10px;">
+                    <span class="badge" style="background:#EFF6FF; color:#1D4ED8; font-weight:600; border:1px solid #DBEAFE; padding: 1px 5px;">
                       📌 ${stepCount} Tahap
                     </span>
                     ${proc.sla_total ? `
-                      <span class="badge" style="background:#FEF3C7; color:#92400E; font-weight:600; border:1px solid #FDE68A; padding: 2px 6px;">
+                      <span class="badge" style="background:#FEF3C7; color:#92400E; font-weight:600; border:1px solid #FDE68A; padding: 1px 5px;">
                         ⏱ ${proc.sla_total}
                       </span>
                     ` : ''}
                     ${proc.dasar_hukum_utama ? `
-                      <span class="badge" style="background:#F8FAFC; color:#64748B; font-weight:500; border:1px solid #E2E8F0; padding: 2px 6px; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${proc.dasar_hukum_utama}">
+                      <span class="badge" style="background:#F8FAFC; color:#64748B; font-weight:500; border:1px solid #E2E8F0; padding: 1px 5px; max-width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" title="${proc.dasar_hukum_utama}">
                         ⚖ ${proc.dasar_hukum_utama}
                       </span>
                     ` : ''}
                   </div>
 
-                  <button class="btn btn-primary btn-open-sop" data-process-idx="${originalIndex}" style="width: 100%; justify-content: center; padding: 6px 10px; font-size: 11.5px; font-weight: 700; border-radius: 6px;">
-                    <span>Buka Detail Alur Kerja</span>
-                    <span style="font-size: 13px;">➔</span>
+                  <button class="btn btn-primary btn-open-sop" data-process-idx="${originalIndex}" style="width: 100%; justify-content: center; padding: 5px 8px; font-size: 11px; font-weight: 700; border-radius: 6px; min-height: 28px;">
+                    <span>Buka Detail Alur</span>
+                    <span style="font-size: 12px;">➔</span>
                   </button>
                 </div>
               </div>
