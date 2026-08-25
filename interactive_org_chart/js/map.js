@@ -101,21 +101,30 @@ export class IndonesiaMapEngine {
               </div>
             </div>
             <div class="map-controls-divider"></div>
-            <select id="map-filter-island" title="Pilih Wilayah / Pulau">
-              <option value="all">Seluruh Wilayah Indonesia</option>
-              <option value="Sumatera">Sumatera</option>
-              <option value="Jawa">Jawa</option>
-              <option value="Kalimantan">Kalimantan</option>
-              <option value="Sulawesi">Sulawesi</option>
-              <option value="Bali-Nusa Tenggara">Bali &amp; Nusa Tenggara</option>
-              <option value="Maluku">Maluku</option>
-              <option value="Papua">Papua</option>
-            </select>
+            <div class="map-island-filter-wrap">
+              <span class="map-island-icon">🏝️</span>
+              <select id="map-filter-island" title="Pilih Wilayah / Pulau di Indonesia">
+                <option value="all">Seluruh Wilayah Indonesia</option>
+                <option value="Sumatera">Sumatera</option>
+                <option value="Jawa">Jawa</option>
+                <option value="Kalimantan">Kalimantan</option>
+                <option value="Sulawesi">Sulawesi</option>
+                <option value="Bali-Nusa Tenggara">Bali &amp; Nusa Tenggara</option>
+                <option value="Maluku">Maluku</option>
+                <option value="Papua">Papua</option>
+              </select>
+            </div>
           </div>
         </header>
 
         <div id="map-canvas-viewport" style="flex:1;position:relative;overflow:hidden;">
           <div id="maplibre-container" style="width:100%;height:100%;"></div>
+
+          <!-- Floating Help / Guide Button directly on Map Canvas (Top Right) -->
+          <button id="map-help-toggle-btn" class="floating-help-btn" style="position:absolute;top:16px;right:16px;z-index:25;" title="Buka / Tutup Panduan Peta" type="button">
+            <span class="help-btn-icon">💡</span>
+            <span>Panduan</span>
+          </button>
 
           <!-- Floating Zoom Controls Widget (Bottom Left on Map Canvas above maplibregl-ctrl-bottom-left) -->
           <div class="map-floating-zoom-ctrl" style="position:absolute;bottom:56px;left:20px;display:flex;flex-direction:column;align-items:center;gap:3px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:10px;padding:4px;box-shadow:0 4px 18px rgba(6,43,82,0.12);z-index:25;">
@@ -273,6 +282,18 @@ export class IndonesiaMapEngine {
       this._applyLayersFilter();
       this.updateStats();
     });
+
+    // Floating Help / Guide Button on Map Canvas
+    const mapHelpBtn = this.container.querySelector('#map-help-toggle-btn');
+    if (mapHelpBtn) {
+      mapHelpBtn.addEventListener('click', (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+        if (window.app && typeof window.app.toggleHelpTip === 'function') {
+          window.app.toggleHelpTip('map');
+        }
+      });
+    }
 
     // Floating Zoom controls
     this.container.querySelector('#map-btn-zoom-in').addEventListener('click', () => {
