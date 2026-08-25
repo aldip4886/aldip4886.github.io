@@ -3571,13 +3571,18 @@ class IndonesiaMapEngine {
           </div>
 
           <!-- Interactive Clickable Map Legend (Two-Way Synchronized Filter) -->
-          <div class="map-legend-card" style="position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:12px;padding:12px 14px;box-shadow:0 4px 20px rgba(6,43,82,0.1);z-index:25;min-width:215px;">
+          <div id="map-legend-card" class="map-legend-card" style="position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:12px;padding:12px 14px;box-shadow:0 4px 20px rgba(6,43,82,0.1);z-index:25;min-width:215px;">
             <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #F1F5F9;">
               <div style="font-size:12px;font-weight:700;color:#062B52;display:flex;align-items:center;gap:6px;">
                 <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
                 Legenda Peta
               </div>
-              <span style="font-size:10px;color:#94A3B8;font-weight:500;">Filter Interaktif</span>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <span style="font-size:10px;color:#94A3B8;font-weight:500;">Filter Interaktif</span>
+                <button id="map-legend-close-btn" class="map-legend-close-btn" style="width:22px;height:22px;border-radius:5px;border:none;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#64748B;transition:all 0.15s;" title="Tutup Legenda Peta">
+                  <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+              </div>
             </div>
             <div class="map-legend-items-list" style="display:flex;flex-direction:column;gap:3px;font-size:11.5px;color:#475569;font-weight:500;">
               <div class="map-legend-item active" data-type="all" title="Tampilkan Seluruh Tipe Kantor">
@@ -3625,6 +3630,12 @@ class IndonesiaMapEngine {
             </div>
             <div style="margin-top:6px;padding-top:6px;border-top:1px solid #F1F5F9;font-size:10px;color:#94A3B8;text-align:center;">Klik item legenda untuk memfilter peta</div>
           </div>
+
+          <!-- Floating Reopen Legend Toggle Button (visible when legend card is closed) -->
+          <button id="map-legend-open-btn" class="map-legend-open-btn" style="display:none;position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,0.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #D9E0E8;border-radius:10px;padding:7px 12px;box-shadow:0 4px 18px rgba(6,43,82,0.12);z-index:25;cursor:pointer;font-size:12px;font-weight:600;color:#0B3A6F;align-items:center;gap:6px;transition:all 0.2s;" title="Buka Legenda Peta">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4m0-4h.01"/></svg>
+            <span>Legenda Peta</span>
+          </button>
         </div>
 
         <footer class="map-stats-bar">
@@ -3719,6 +3730,27 @@ class IndonesiaMapEngine {
         if (window.app && typeof window.app.toggleHelpTip === 'function') {
           window.app.toggleHelpTip('map');
         }
+      });
+    }
+
+    // Legend Close & Reopen Toggle Buttons
+    const legendCard = this.container.querySelector('#map-legend-card');
+    const legendCloseBtn = this.container.querySelector('#map-legend-close-btn');
+    const legendOpenBtn = this.container.querySelector('#map-legend-open-btn');
+
+    if (legendCloseBtn && legendCard && legendOpenBtn) {
+      legendCloseBtn.addEventListener('click', (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+        legendCard.style.display = 'none';
+        legendOpenBtn.style.display = 'flex';
+      });
+
+      legendOpenBtn.addEventListener('click', (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        if (e && typeof e.stopPropagation === 'function') e.stopPropagation();
+        legendCard.style.display = 'block';
+        legendOpenBtn.style.display = 'none';
       });
     }
 
