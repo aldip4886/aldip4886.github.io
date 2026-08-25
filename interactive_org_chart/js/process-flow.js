@@ -198,10 +198,10 @@ export class ProcessFlowEngine {
             const originalIndex = this.processData.indexOf(proc);
             const stepCount = proc.tahapan ? proc.tahapan.length : 0;
             return `
-              <div class="card sop-card-item" data-process-idx="${originalIndex}" style="padding: 18px 20px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03); cursor: pointer; transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); display: flex; flex-direction: column; justify-content: space-between; position: relative;">
+              <div class="card sop-card-item" data-process-idx="${originalIndex}">
                 <div>
                   <!-- Top Badge Line -->
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; flex-wrap: wrap; gap: 6px;">
                     <span class="badge" style="background: #F1F5F9; color: #0B3A6F; font-size: 11px; font-weight: 700; border: 1px solid #E2E8F0;">
                       ${proc.kategori || 'SOP DJBC'}
                     </span>
@@ -270,7 +270,7 @@ export class ProcessFlowEngine {
           <div style="padding: 16px 24px; background: linear-gradient(135deg, #0B3A6F 0%, #062347 100%); color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid #D9B45B;">
             
             <!-- Left: Title & Badges -->
-            <div style="flex: 1; min-width: 280px;">
+            <div style="flex: 1; min-width: 260px;">
               <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 4px; flex-wrap: wrap;">
                 <span style="font-size: 11px; font-weight: 800; color: #001631; background: #D9B45B; padding: 2px 8px; border-radius: 4px; text-transform: uppercase;">
                   ${currentProcess.kategori || 'SOP & ALUR KERJA'}
@@ -290,7 +290,7 @@ export class ProcessFlowEngine {
             </div>
 
             <!-- Right: Process Navigation Controls & Close Button -->
-            <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
               <button id="modal-btn-prev-process" class="btn" style="background: rgba(255,255,255,0.12); color: #FFFFFF; border: 1px solid rgba(255,255,255,0.25); padding: 6px 12px; font-size: 12px; font-weight: 700; border-radius: 8px; cursor: ${this.currentProcessIndex === 0 ? 'not-allowed' : 'pointer'}; opacity: ${this.currentProcessIndex === 0 ? '0.4' : '1'};" ${this.currentProcessIndex === 0 ? 'disabled' : ''} title="Alur Sebelumnya (Alt+Left)">
                 ← Alur Sebelumnya
               </button>
@@ -318,12 +318,12 @@ export class ProcessFlowEngine {
           <div style="padding: 18px 24px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; background: #F8FAFC;">
             
             <!-- Horizontal Timeline Stepper Bar -->
-            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 12px 16px; box-shadow: 0 2px 6px rgba(0,0,0,0.02); overflow-x: auto;">
-              <div style="display: flex; align-items: center; justify-content: space-between; min-width: 600px; position: relative; padding: 4px 10px;">
+            <div class="sop-timeline-stepper-container">
+              <div class="sop-timeline-stepper-track">
                 
                 <!-- Background Timeline Track -->
-                <div style="position: absolute; top: 18px; left: 24px; right: 24px; height: 3px; background: #E2E8F0; z-index: 1;"></div>
-                <div style="position: absolute; top: 18px; left: 24px; width: ${totalSteps > 1 ? (this.currentStepIndex / (totalSteps - 1)) * 100 : 0}%; max-width: calc(100% - 48px); height: 3px; background: linear-gradient(90deg, #0B3A6F 0%, #D9B45B 100%); z-index: 2; transition: width 0.25s ease;"></div>
+                <div class="sop-stepper-line-bg"></div>
+                <div class="sop-stepper-line-progress" style="width: ${totalSteps > 1 ? (this.currentStepIndex / (totalSteps - 1)) * 100 : 0}%;"></div>
 
                 ${steps.map((st, idx) => {
                   const isSelected = idx === this.currentStepIndex;
@@ -333,11 +333,11 @@ export class ProcessFlowEngine {
                   const nodeBorder = isSelected ? '3px solid #D9B45B' : (isCompleted ? '2.5px solid #059669' : '2px solid #CBD5E1');
 
                   return `
-                    <div class="timeline-step-node" data-step-idx="${idx}" style="display: flex; flex-direction: column; align-items: center; z-index: 3; cursor: pointer; position: relative; min-width: 75px; text-align: center; padding: 0 4px;">
-                      <div style="width: 28px; height: 28px; border-radius: 50%; background: ${nodeBg}; color: ${nodeColor}; border: ${nodeBorder}; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 11.5px; box-shadow: ${isSelected ? '0 0 0 3px rgba(217, 180, 91, 0.35)' : '0 1px 3px rgba(0,0,0,0.05)'}; transition: all 0.15s ease;">
+                    <div class="timeline-step-node ${isSelected ? 'active' : (isCompleted ? 'completed' : '')}" data-step-idx="${idx}">
+                      <div class="timeline-step-circle" style="background: ${nodeBg}; color: ${nodeColor}; border: ${nodeBorder};">
                         ${isCompleted ? '✓' : (st.no || idx + 1)}
                       </div>
-                      <div style="font-size: 10.5px; font-weight: ${isSelected ? '800' : '600'}; color: ${isSelected ? '#0B3A6F' : '#64748B'}; margin-top: 4px; line-height: 1.2; max-width: 85px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                      <div class="timeline-step-label">
                         ${st.judul.split('&')[0].split('(')[0].trim()}
                       </div>
                     </div>
@@ -465,30 +465,34 @@ export class ProcessFlowEngine {
           </div>
 
           <!-- MODAL FOOTER: Step Navigation Controls & Close Button -->
-          <div style="padding: 12px 24px; background: #FFFFFF; border-top: 1px solid #E2E8F0; display: flex; justify-content: space-between; align-items: center;">
+          <div class="sop-modal-footer">
             
-            <button id="modal-btn-prev-step" class="btn btn-outline" style="font-size: 12px; font-weight: 700; padding: 6px 16px; gap: 6px;" ${this.currentStepIndex === 0 ? 'disabled' : ''}>
-              ← Tahap Sebelumnya
-            </button>
-
-            <!-- Step Dots Indicator -->
-            <div style="display: flex; align-items: center; gap: 8px;">
-              <span style="font-size: 12px; font-weight: 700; color: #0B3A6F;">
+            <!-- Step Info Indicator -->
+            <div class="sop-modal-footer-step-info">
+              <span class="sop-modal-step-text">
                 Tahap ${this.currentStepIndex + 1} dari ${totalSteps}
               </span>
-              <div style="display: flex; gap: 4px;">
+              <div class="sop-modal-step-dots">
                 ${steps.map((_, sIdx) => `
-                  <div class="modal-step-dot" data-step-idx="${sIdx}" style="width: 10px; height: 10px; border-radius: 50%; background: ${sIdx === this.currentStepIndex ? '#0B3A6F' : (sIdx < this.currentStepIndex ? '#059669' : '#CBD5E1')}; cursor: pointer; transition: all 0.15s ease;"></div>
+                  <div class="modal-step-dot ${sIdx === this.currentStepIndex ? 'active' : (sIdx < this.currentStepIndex ? 'completed' : '')}" data-step-idx="${sIdx}" title="Menuju Tahap ${sIdx + 1}"></div>
                 `).join('')}
               </div>
             </div>
 
-            <div style="display: flex; gap: 8px;">
-              <button id="modal-btn-next-step" class="btn btn-primary" style="font-size: 12px; font-weight: 700; padding: 6px 16px; gap: 6px;" ${this.currentStepIndex === totalSteps - 1 ? 'disabled' : ''}>
-                Tahap Berikutnya →
+            <!-- Action Buttons Group -->
+            <div class="sop-modal-footer-actions">
+              <button id="modal-btn-prev-step" class="btn btn-outline sop-modal-nav-btn" ${this.currentStepIndex === 0 ? 'disabled' : ''} title="Tahap Sebelumnya (Left Arrow)">
+                <span>←</span>
+                <span class="btn-step-label">Sebelumnya</span>
               </button>
-              <button id="modal-btn-close-footer" class="btn btn-outline" style="font-size: 12px; font-weight: 600; padding: 6px 12px;">
-                Tutup
+
+              <button id="modal-btn-next-step" class="btn btn-primary sop-modal-nav-btn" ${this.currentStepIndex === totalSteps - 1 ? 'disabled' : ''} title="Tahap Berikutnya (Right Arrow)">
+                <span class="btn-step-label">Berikutnya</span>
+                <span>→</span>
+              </button>
+
+              <button id="modal-btn-close-footer" class="btn btn-outline sop-modal-close-btn" title="Tutup Dialog (Esc)">
+                <span>✕ Tutup</span>
               </button>
             </div>
 
